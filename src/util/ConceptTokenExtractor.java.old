@@ -1,0 +1,54 @@
+package sharpfix.util;
+
+import java.util.List;
+import java.util.ArrayList;
+import sharpfix.util.rebase.*;
+
+public class ConceptTokenExtractor
+{
+    static RebaseWordStemmer stemmer;
+    static { stemmer = new RebaseWordStemmer(); }
+
+    public static List<String> extract(String cnts) {
+	return extract(cnts, false, false);
+    }
+    
+    public static List<String> extract(String cnts, boolean filter_stopwords, boolean filter_short_long_words) {
+
+	List<String> tk_list = new ArrayList<String>();
+	int size = cnts.length();
+	int m = 0, n = 0;
+	while (m < size) {
+	    char ch_m = cnts.charAt(m);
+	    if (Character.isJavaIdentifierPart(ch_m)) {
+		for (int j=m+1; j<size; j++) {
+		    char ch_j = cnts.charAt(j);
+		    if (!Character.isJavaIdentifierPart(ch_j)) {
+			n = j;
+			break;
+		    }
+		}
+		//Get the concept words
+		List<String> tk_list0 = RebaseWordFactory.getCandidateWords(stemmer, cnts, m, n-m, filter_stopwords, filter_short_long_words);
+		for (String tk0 : tk_list0) { tk_list.add(tk0); }
+		m = n;
+	    }
+	    else if (Character.isSpace(ch_m)) {
+		m += 1;
+	    }
+	    else {
+		//Non-Identifier, non-space symbols
+		for (int j=m+1; j<size; j++) {
+		    char ch_j = cnts.charAt(j);
+		    if (Character.isJavaIdentifierPart(ch_j) ||
+			Character.isSpace(ch_j)) {
+			n = j;
+			break;
+		    }
+		}
+		tk_list.add(cnts.substring(m, n));
+		m = n;
+	    }
+	}
+    }
+}

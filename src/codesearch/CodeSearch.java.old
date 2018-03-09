@@ -1,0 +1,126 @@
+package sharpfix.codesearch;
+
+import java.io.File;
+import java.util.List;
+import java.util.ArrayList;
+import org.apache.commons.io.FileUtils;
+import org.eclipse.jdt.core.dom.ASTNode;
+import org.eclipse.jdt.core.dom.CompilationUnit;
+import org.eclipse.jdt.core.dom.MethodDeclaration;
+import org.eclipse.jdt.core.dom.AbstractTypeDeclaration;
+import org.eclipse.jdt.core.dom.SingleVariableDeclaration;
+import org.eclipse.jdt.core.dom.PackageDeclaration;
+import sharpfix.global.*;
+
+public class CodeSearch
+{
+    public static void main(String[] args) {
+	String bfpath = args[0];
+	String bstmtloc = args[1];
+	String idxfpath = args[2];
+	int maxcandidates = Integer.parseInt(args[3]);
+
+	CodeSearch cs = new CodeSearch();
+	List<String> rslt_list = cs.search(bfpath, bstmtloc, idxfpath, maxcandidates);
+	for (String rslt : rslt_list) {
+	    System.out.println(rslt);
+	}
+    }
+    
+    /* This method does not do any filtering (for any bug-fixed candidates or any
+       redundant candidates). */
+    public List<String> search(String bfpath, String bstmt_loc, String idxfpath, int max_candidates) {
+	List<String> rslt = new ArrayList<String>();
+	BuggyChunk bchunk = ChunkFactory.getBuggyChunk(bfpath, bstmt_loc);
+	if (!bchunk.isValid()) {
+	    System.err.println("Failed producing a chunk from "+bfpath+","+bstmt_loc);
+	    return rslt;
+	}
+	CompilationUnit bcu = bchunk.getCompilationUnit();
+	List<ASTNode> bnode_list = bchunk.getNodeList();
+	ASTNode bnode = bnode_list.get(0);
+
+	List<String> lsearch_rslt_lines = new ArrayList<String>();
+	List<String> gsearch_rslt_lines = new ArrayList<String>();
+
+	//Local Code Search using LCS1
+	LocalCodeSearch lcs = new LocalCodeSearch();
+	File idxf = new File(idxfpath);
+	List<SearchItem> lsi_list = lcs.search(bnode, bfpath, bstmt_loc, idxf, 1);
+	for (SearchItem lsi : lsi_list) {
+	    lsearch_rslt_lines.add(lsi.getPathLoc()+","+lsi.getScore());
+	}
+
+	//Global Code Search using K3WMD
+	String bmd_loc = null;
+	int bmd_length_in_lines = -1;
+	ASTNode bnode_par = bnode;
+	while (bnode_par != null) {
+	    if (bnode_par instanceof MethodDeclaration) {
+		MethodDeclaration bmd = (MethodDeclaration) bnode_par;
+		int bmd_startpos = bmd.getStartPosition();
+		int bmd_startln = bcu.getLineNumber(bmd_startpos);
+		int bmd_endln = bcu.getLineNumber(bmd_startpos+bmd.getLength());
+		bmd_length_in_lines = bmd_endln - bmd_startln + 1;
+		bmd_loc = "slc:" + bmd_startln + "," + bcu.getColumnNumber(bmd_startpos);
+		break;
+	    }
+	    bnode_par = bnode_par.getParent();
+	}
+	if (bmd_loc == null) {
+	    System.err.println("Cannot locate the parent method of the target suspicious statement.");
+	}
+	//else if (bmd_length_in_lines <= 100) { //Currently ignored...
+	else {
+	    CockerInvoker ci = new CockerInvoker();
+	    gsearch_rslt_lines = ci.invoke(bfpath, bmd_loc, "kgram3wordmd", null, 3l); //When the last parameter is null, cocker doesn't write but only return the results
+	}
+
+	//Merge the results from local & global code search
+	int lsearch_rslt_lines_size = lsearch_rslt_lines.size();
+	int gsearch_rslt_lines_size = gsearch_rslt_lines.size();
+	float lsearch_highest_score = -1, gsearch_highest_score = -1;
+	if (lsearch_rslt_lines_size > 0) {
+	    String lsearch_rslt_line0 = lsearch_rslt_lines.get(0);
+	    int split_index1 = lsearch_rslt_line0.lastIndexOf(",");
+	    lsearch_highest_score = Float.parseFloat(lsearch_rslt_line0.substring(split_index1+1).trim());
+	}
+	if (gsearch_rslt_lines_size > 0) {
+	    String gsearch_rslt_line0 = gsearch_rslt_lines.get(0);
+	    int split_index1 = gsearch_rslt_line0.lastIndexOf(",");
+	    gsearch_highest_score = Float.parseFloat(gsearch_rslt_line0.substring(split_index1+1).trim());
+	}
+
+	int i=0, j=0;
+	int cchunk_count = 0;
+	while (i<lsearch_rslt_lines_size || j<gsearch_rslt_lines_size) {
+	    if (cchunk_count >= max_candidates) { break; }
+	    String lsearch_rslt_line = null, gsearch_rslt_line = null;
+	    int lsplit_index1 = -1, gsplit_index1 = -1;
+	    float lpscore = -1, gpscore = -1;
+	    if (i<lsearch_rslt_lines_size) {
+		lsearch_rslt_line = lsearch_rslt_lines.get(i);
+		lsplit_index1 = lsearch_rslt_line.lastIndexOf(",");
+		lpscore = Float.parseFloat(lsearch_rslt_line.substring(lsplit_index1+1).trim()) / lsearch_highest_score;
+	    }
+	    if (j<gsearch_rslt_lines_size) {
+		gsearch_rslt_line = gsearch_rslt_lines.get(j);
+		gsplit_index1 = gsearch_rslt_line.lastIndexOf(",");
+		gpscore = Float.parseFloat(gsearch_rslt_line.substring(gsplit_index1+1).trim()) / gsearch_highest_score;
+	    }
+
+	    if (lpscore >= gpscore) {
+		rslt.add(lsearch_rslt_line);
+		i += 1;
+	    }
+	    else {
+		rslt.add(gsearch_rslt_line);
+		j += 1;
+	    }
+
+	    cchunk_count += 1;
+	}
+
+	return rslt;
+    }
+}
