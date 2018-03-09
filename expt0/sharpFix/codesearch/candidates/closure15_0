@@ -1,0 +1,4 @@
+EM,RM,PM:-1,-1,110
+EM:null,null
+RM:null,null
+PM:/home/qx5/defects4j_bugs/bugs/closures/projs/Closure_15_buggy/src/com/google/javascript/jscomp/ExploitAssigns.java,slc:208,4

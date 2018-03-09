@@ -1,0 +1,21 @@
+*** /home/qx5/defects4j_bugs/bugs/closures/projs/Closure_13_buggy/src/com/google/javascript/jscomp/PeepholeOptimizationsPass.java	Mon Feb 20 16:46:28 2017
+--- /home/qx5/sharpfix_expts/repair/repairflag2_faulocflag3_cignoreflag0/Closure_13/e0/f0/repair/c84/p0/PeepholeOptimizationsPass.java	Wed Jan 31 21:05:04 2018
+***************
+*** 116,122 ****
+      // So we track whether a "unit of code" has changed,
+      // and revisit immediately.
+      if (!shouldVisit(node)) {
+!       return;
+      }
+  
+      int visits = 0;
+--- 116,124 ----
+      // So we track whether a "unit of code" has changed,
+      // and revisit immediately.
+      if (!shouldVisit(node)) {
+!       if (node == null) {
+! 		return;
+! 	}
+      }
+  
+      int visits = 0;

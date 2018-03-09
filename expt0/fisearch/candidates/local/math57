@@ -1,0 +1,3 @@
+EM,PM:400,309
+EM:/home/qx5/defects4j_bugs/bugs/maths/projs/Math_57_buggy/src/main/java/org/apache/commons/math/optimization/general/AbstractLeastSquaresOptimizer.java,slc:186,8
+PM:/home/qx5/defects4j_bugs/bugs/maths/projs/Math_57_buggy/src/main/java/org/apache/commons/math/optimization/general/NonLinearConjugateGradientOptimizer.java,slc:131,8

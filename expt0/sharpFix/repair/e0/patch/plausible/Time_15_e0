@@ -1,0 +1,46 @@
+*** /home/qx5/defects4j_bugs/bugs/times/projs/Time_15_buggy/src/main/java/org/joda/time/field/FieldUtils.java	Mon Feb 20 16:48:07 2017
+--- /home/qx5/sharpfix_expts/repair/repairflag2_faulocflag0_cignoreflag0/Time_15/e0/f3/repair/c6/p1/FieldUtils.java	Sat Feb  3 08:17:07 2018
+***************
+*** 134,153 ****
+       * @since 1.2
+       */
+      public static long safeMultiply(long val1, int scalar) {
+!         switch (scalar) {
+!         case -1:
+!             return -val1;
+!         case 0:
+!             return 0L;
+!         case 1:
+!             return val1;
+!         }
+!         long total = val1 * scalar;
+!         if (total / scalar != val1) {
+!             throw new ArithmeticException
+!                 ("The calculation caused an overflow: " + val1 + " * " + scalar);
+!         }
+!         return total;
+      }
+  
+      /**
+--- 134,154 ----
+       * @since 1.2
+       */
+      public static long safeMultiply(long val1, int scalar) {
+!         if (scalar == 1) {
+! 			return val1;
+! 		}
+! 		if (val1 == 1) {
+! 			return scalar;
+! 		}
+! 		if (val1 == 0 || scalar == 0) {
+! 			return 0;
+! 		}
+! 		long total = val1 * scalar;
+! 		if (total / scalar != val1 || val1 == Long.MIN_VALUE && scalar == -1
+! 				|| scalar == Long.MIN_VALUE && val1 == -1) {
+! 			throw new ArithmeticException("Multiplication overflows a long: " + val1 + " * " + scalar);
+! 		}
+! 		return total;
+      }
+  
+      /**

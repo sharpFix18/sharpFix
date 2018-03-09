@@ -1,0 +1,36 @@
+*** /home/qx5/defects4j_bugs/bugs/langs/projs/Lang_21_buggy/src/main/java/org/apache/commons/lang3/time/DateUtils.java	Wed Mar  1 10:48:33 2017
+--- /home/qx5/sharpfix_expts/repair/repairflag2_faulocflag0_cignoreflag0/Lang_21/e0/f0/repair/c7/m0/p0/DateUtils.java	Sun Feb  4 11:27:19 2018
+***************
+*** 257,272 ****
+       */
+      public static boolean isSameLocalTime(Calendar cal1, Calendar cal2) {
+          if (cal1 == null || cal2 == null) {
+!             throw new IllegalArgumentException("The date must not be null");
+!         }
+!         return (cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) &&
+!                 cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) &&
+!                 cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE) &&
+!                 cal1.get(Calendar.HOUR) == cal2.get(Calendar.HOUR) &&
+!                 cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR) &&
+!                 cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR) &&
+!                 cal1.get(Calendar.ERA) == cal2.get(Calendar.ERA) &&
+!                 cal1.getClass() == cal2.getClass());
+      }
+  
+      //-----------------------------------------------------------------------
+--- 257,271 ----
+       */
+      public static boolean isSameLocalTime(Calendar cal1, Calendar cal2) {
+          if (cal1 == null || cal2 == null) {
+! 			throw new IllegalArgumentException("The date must not be null");
+! 		}
+! 		return (cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND)
+! 				&& cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND)
+! 				&& cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE)
+! 				&& cal1.get(Calendar.HOUR_OF_DAY) == cal2.get(Calendar.HOUR_OF_DAY)
+! 				&& cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR)
+! 				&& cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR)
+! 				&& cal1.get(Calendar.ERA) == cal2.get(Calendar.ERA) && cal1.getClass() == cal2.getClass());
+      }
+  
+      //-----------------------------------------------------------------------

@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/charts/projs/Chart_1_buggy/source/org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java	Sun Dec  4 09:40:50 2016
+--- /home/qx5/sharpfix_expts/repair/repairflag2_faulocflag3_cignoreflag0/Chart_1/e0/f5/repair/c2/p0/AbstractCategoryItemRenderer.java	Wed Jan 31 10:47:56 2018
+***************
+*** 1794,1800 ****
+          }
+          int index = this.plot.getIndexOf(this);
+          CategoryDataset dataset = this.plot.getDataset(index);
+!         if (dataset != null) {
+              return result;
+          }
+          int seriesCount = dataset.getRowCount();
+--- 1794,1800 ----
+          }
+          int index = this.plot.getIndexOf(this);
+          CategoryDataset dataset = this.plot.getDataset(index);
+!         if (dataset == null) {
+              return result;
+          }
+          int seriesCount = dataset.getRowCount();

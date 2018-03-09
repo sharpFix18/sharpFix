@@ -1,0 +1,20 @@
+*** /home/qx5/defects4j_bugs/bugs/maths/projs/Math_58_buggy/src/main/java/org/apache/commons/math/optimization/fitting/GaussianFitter.java	Thu Dec 17 08:52:24 2015
+--- /home/qx5/ssFix_expts/repair/repairflag0_faulocflag0_cignoreflag0/Math_58/e0/patches/f10/c0/p0/GaussianFitter.java	Thu Jan  4 12:45:52 2018
+***************
+*** 117,124 ****
+       * observed points (in the same order as above).
+       */
+      public double[] fit() {
+!         return fit(new Gaussian.Parametric(),
+!                    (new ParameterGuesser(getObservations())).guess());
+      }
+  
+      /**
+--- 117,123 ----
+       * observed points (in the same order as above).
+       */
+      public double[] fit() {
+!         return fit((new ParameterGuesser(getObservations())).guess());
+      }
+  
+      /**

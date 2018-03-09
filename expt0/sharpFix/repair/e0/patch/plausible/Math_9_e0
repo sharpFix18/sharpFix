@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/maths/projs/Math_9_buggy/src/main/java/org/apache/commons/math3/geometry/euclidean/threed/Vector3D.java	Fri Aug  5 17:06:36 2016
+--- /home/qx5/sharpfix_expts/repair/repairflag2_faulocflag0_cignoreflag0/Math_9/e0/f1/repair/c188/m0/p0/Vector3D.java	Fri Feb  2 06:53:35 2018
+***************
+*** 219,225 ****
+       * @see #Vector3D(double[])
+       */
+      public double[] toArray() {
+!         return new double[] { x, y, z };
+      }
+  
+      /** {@inheritDoc} */
+--- 219,225 ----
+       * @see #Vector3D(double[])
+       */
+      public double[] toArray() {
+!         return new double[] { 1, 2, 3 };
+      }
+  
+      /** {@inheritDoc} */

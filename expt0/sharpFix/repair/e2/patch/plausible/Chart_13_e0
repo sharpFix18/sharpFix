@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/charts/projs/Chart_13_buggy/source/org/jfree/chart/block/BorderArrangement.java	Tue Oct 13 14:40:19 2015
+--- /home/qx5/sharpfix_expts/repair/repairflag2_faulocflag3_cignoreflag0/Chart_13/e0/f0/repair/c3/p0/BorderArrangement.java	Wed Jan 31 13:08:05 2018
+***************
+*** 491,497 ****
+          h[3] = h[2];
+          if (this.rightBlock != null) {
+              RectangleConstraint c4 = new RectangleConstraint(
+!                 0.0, new Range(0.0, constraint.getWidth() - w[2]), 
+                  LengthConstraintType.RANGE,
+                  h[2], null, LengthConstraintType.FIXED
+              );
+--- 491,497 ----
+          h[3] = h[2];
+          if (this.rightBlock != null) {
+              RectangleConstraint c4 = new RectangleConstraint(
+!                 0.0, new Range(0.0, constraint.getHeight() - w[2]), 
+                  LengthConstraintType.RANGE,
+                  h[2], null, LengthConstraintType.FIXED
+              );

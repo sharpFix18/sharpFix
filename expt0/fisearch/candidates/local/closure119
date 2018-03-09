@@ -1,0 +1,3 @@
+EM,PM:6713,1472
+EM:/home/qx5/defects4j_bugs/bugs/closures/projs/Closure_119_buggy/src/com/google/javascript/jscomp/UnreachableCodeElimination.java,slc:212,6
+PM:/home/qx5/defects4j_bugs/bugs/closures/projs/Closure_119_buggy/src/com/google/javascript/rhino/IR.java,slc:504,4

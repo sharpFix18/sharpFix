@@ -1,0 +1,22 @@
+*** /home/qx5/defects4j_bugs/bugs/langs/projs/Lang_54_buggy/src/java/org/apache/commons/lang/LocaleUtils.java	Sun Sep 13 10:39:35 2015
+--- /home/qx5/ssFix_expts/repair/repairflag0_faulocflag3_cignoreflag0/Lang_54/e0/patches/f0/c38/p3/LocaleUtils.java	Mon Dec 25 04:37:46 2017
+***************
+*** 112,118 ****
+              }
+              char ch3 = str.charAt(3);
+              char ch4 = str.charAt(4);
+!             if (ch3 < 'A' || ch3 > 'Z' || ch4 < 'A' || ch4 > 'Z') {
+                  throw new IllegalArgumentException("Invalid locale format: " + str);
+              }
+              if (len == 5) {
+--- 112,121 ----
+              }
+              char ch3 = str.charAt(3);
+              char ch4 = str.charAt(4);
+!             if (ch3 == '_' || ch3 == '-') {
+! 				return new Locale(str.substring(0, 2), "", str.substring(4));
+! 			}
+! 			if (ch3 < 'A' || ch3 > 'Z' || ch4 < 'A' || ch4 > 'Z') {
+                  throw new IllegalArgumentException("Invalid locale format: " + str);
+              }
+              if (len == 5) {

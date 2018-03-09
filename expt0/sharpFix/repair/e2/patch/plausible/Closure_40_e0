@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/closures/projs/Closure_40_buggy/src/com/google/javascript/jscomp/NameAnalyzer.java	Fri Oct 14 14:04:38 2016
+--- /home/qx5/sharpfix_expts/repair/repairflag2_faulocflag3_cignoreflag0/Closure_40/e0/f0/repair/c2/p0/NameAnalyzer.java	Wed Jan 31 20:32:54 2018
+***************
+*** 632,638 ****
+          Node nameNode = n.getFirstChild();
+          NameInformation ns = createNameInformation(t, nameNode, n);
+          if (ns != null && ns.onlyAffectsClassDef) {
+!           JsName name = getName(ns.name, false);
+            if (name != null) {
+             refNodes.add(new ClassDefiningFunctionNode(
+                   name, n, parent, parent.getParent()));
+--- 632,638 ----
+          Node nameNode = n.getFirstChild();
+          NameInformation ns = createNameInformation(t, nameNode, n);
+          if (ns != null && ns.onlyAffectsClassDef) {
+!           JsName name = getName(ns.name, true);
+            if (name != null) {
+             refNodes.add(new ClassDefiningFunctionNode(
+                   name, n, parent, parent.getParent()));

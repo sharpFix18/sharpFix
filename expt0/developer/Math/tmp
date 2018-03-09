@@ -1,0 +1,131 @@
+101.src.patch:diff --git a/org/apache/commons/math/complex/ComplexFormat.java b/org/apache/commons/math/complex/ComplexFormat.java
+101.src.patch:--- a/org/apache/commons/math/complex/ComplexFormat.java
+101.src.patch:+++ b/org/apache/commons/math/complex/ComplexFormat.java
+101.src.patch:@@ -374,9 +374,7 @@ public class ComplexFormat extends Format implements Serializable {
+101.test.patch:diff --git a/org/apache/commons/math/complex/ComplexFormatAbstractTest.java b/org/apache/commons/math/complex/ComplexFormatAbstractTest.java
+101.test.patch:--- a/org/apache/commons/math/complex/ComplexFormatAbstractTest.java
+101.test.patch:+++ b/org/apache/commons/math/complex/ComplexFormatAbstractTest.java
+101.test.patch:@@ -349,10 +348,4 @@ public abstract class ComplexFormatAbstractTest extends TestCase {
+101.test.patch:-        assertNull(new ComplexFormat().parse("1 + 1", pos));
+37.src.patch:diff --git a/org/apache/commons/math/complex/Complex.java b/org/apache/commons/math/complex/Complex.java
+37.src.patch:--- a/org/apache/commons/math/complex/Complex.java
+37.src.patch:+++ b/org/apache/commons/math/complex/Complex.java
+37.src.patch:@@ -1015,15 +1015,9 @@ public class Complex implements FieldElement<Complex>, Serializable  {
+37.src.patch:     public Complex tan() {
+37.src.patch:-            return createComplex(0.0, 1.0);
+37.src.patch:-            return createComplex(0.0, -1.0);
+37.src.patch:@@ -1066,15 +1060,10 @@ public class Complex implements FieldElement<Complex>, Serializable  {
+37.src.patch:     public Complex tanh() {
+37.src.patch:-            return createComplex(1.0, 0.0);
+37.src.patch:-            return createComplex(-1.0, 0.0);
+37.test.patch:diff --git a/org/apache/commons/math/complex/ComplexTest.java b/org/apache/commons/math/complex/ComplexTest.java
+37.test.patch:--- a/org/apache/commons/math/complex/ComplexTest.java
+37.test.patch:+++ b/org/apache/commons/math/complex/ComplexTest.java
+37.test.patch:@@ -996,13 +996,6 @@ public class ComplexTest {
+37.test.patch:         Complex z = new Complex(3, 4);
+37.test.patch:         Complex expected = new Complex(-0.000187346, 0.999356);
+37.test.patch:-        Complex actual = new Complex(3.0, 1E10).tan();
+37.test.patch:-        expected = new Complex(0, 1);
+37.test.patch:-        actual = new Complex(3.0, -1E10).tan();
+37.test.patch:-        expected = new Complex(0, -1);
+37.test.patch:@@ -1012,8 +1005,8 @@ public class ComplexTest {
+37.test.patch:-        TestUtils.assertSame(Complex.valueOf(0.0, 1.0), oneInf.tan());
+37.test.patch:-        TestUtils.assertSame(Complex.valueOf(0.0, -1.0), oneNegInf.tan());
+37.test.patch:         TestUtils.assertSame(Complex.NaN, infOne.tan());
+37.test.patch:         TestUtils.assertSame(Complex.NaN, negInfOne.tan());
+37.test.patch:         TestUtils.assertSame(Complex.NaN, infInf.tan());
+37.test.patch:@@ -1033,13 +1026,6 @@ public class ComplexTest {
+37.test.patch:         Complex z = new Complex(3, 4);
+37.test.patch:         Complex expected = new Complex(1.00071, 0.00490826);
+37.test.patch:-        Complex actual = new Complex(1E10, 3.0).tanh();
+37.test.patch:-        expected = new Complex(1, 0);
+37.test.patch:-        actual = new Complex(-1E10, 3.0).tanh();
+37.test.patch:-        expected = new Complex(-1, 0);
+37.test.patch:@@ -1051,8 +1037,8 @@ public class ComplexTest {
+37.test.patch:         TestUtils.assertSame(Complex.NaN, oneInf.tanh());
+37.test.patch:         TestUtils.assertSame(Complex.NaN, oneNegInf.tanh());
+37.test.patch:-        TestUtils.assertSame(Complex.valueOf(1.0, 0.0), infOne.tanh());
+37.test.patch:-        TestUtils.assertSame(Complex.valueOf(-1.0, 0.0), negInfOne.tanh());
+37.test.patch:         TestUtils.assertSame(Complex.NaN, infInf.tanh());
+37.test.patch:         TestUtils.assertSame(Complex.NaN, infNegInf.tanh());
+37.test.patch:         TestUtils.assertSame(Complex.NaN, negInfInf.tanh());
+46.src.patch:diff --git a/org/apache/commons/math/complex/Complex.java b/org/apache/commons/math/complex/Complex.java
+46.src.patch:--- a/org/apache/commons/math/complex/Complex.java
+46.src.patch:+++ b/org/apache/commons/math/complex/Complex.java
+46.src.patch:@@ -256,8 +256,7 @@ public class Complex implements FieldElement<Complex>, Serializable  {
+46.src.patch:@@ -293,8 +292,7 @@ public class Complex implements FieldElement<Complex>, Serializable  {
+46.test.patch:diff --git a/org/apache/commons/math/complex/ComplexTest.java b/org/apache/commons/math/complex/ComplexTest.java
+46.test.patch:--- a/org/apache/commons/math/complex/ComplexTest.java
+46.test.patch:+++ b/org/apache/commons/math/complex/ComplexTest.java
+46.test.patch:@@ -229,8 +229,7 @@ public class ComplexTest {
+46.test.patch:         Complex x = new Complex(3.0, 4.0);
+46.test.patch:         Complex z = x.divide(Complex.ZERO);
+46.test.patch:-        // Assert.assertEquals(z, Complex.INF); // See MATH-657
+46.test.patch:-        Assert.assertEquals(z, Complex.NaN);
+46.test.patch:+        Assert.assertEquals(z, Complex.INF);
+46.test.patch:@@ -574,7 +573,10 @@ public class ComplexTest {
+46.test.patch:-        Assert.assertTrue(Complex.I.atan().isNaN());
+46.test.patch:+            System.out.println(new Complex(0, 1 - 0.1 * i).atan());
+46.test.patch:+        Assert.assertTrue(Complex.I.atan().isInfinite());
+47.src.patch:diff --git a/org/apache/commons/math/complex/Complex.java b/org/apache/commons/math/complex/Complex.java
+47.src.patch:--- a/org/apache/commons/math/complex/Complex.java
+47.src.patch:+++ b/org/apache/commons/math/complex/Complex.java
+47.src.patch:@@ -78,8 +78,6 @@ public class Complex implements FieldElement<Complex>, Serializable  {
+47.src.patch:@@ -103,7 +101,6 @@ public class Complex implements FieldElement<Complex>, Serializable  {
+47.src.patch:@@ -255,17 +249,16 @@ public class Complex implements FieldElement<Complex>, Serializable  {
+47.src.patch:@@ -292,7 +285,7 @@ public class Complex implements FieldElement<Complex>, Serializable  {
+47.test.patch:diff --git a/org/apache/commons/math/complex/ComplexTest.java b/org/apache/commons/math/complex/ComplexTest.java
+47.test.patch:--- a/org/apache/commons/math/complex/ComplexTest.java
+47.test.patch:+++ b/org/apache/commons/math/complex/ComplexTest.java
+47.test.patch:@@ -229,13 +229,6 @@ public class ComplexTest {
+47.test.patch:         Complex x = new Complex(3.0, 4.0);
+47.test.patch:         Complex z = x.divide(Complex.ZERO);
+47.test.patch:-        Assert.assertEquals(z, Complex.INF);
+47.test.patch:-        Complex x = new Complex(0.0, 0.0);
+47.test.patch:-        Complex z = x.divide(Complex.ZERO);
+47.test.patch:         Assert.assertEquals(z, Complex.NaN);
+47.test.patch:@@ -356,13 +349,13 @@ public class ComplexTest {
+47.test.patch:-        Complex x = new Complex(1, 1);
+47.test.patch:+        Complex x = new Complex(1,1);
+47.test.patch:         Complex yComplex = new Complex(yDouble);
+47.test.patch:         Assert.assertEquals(x.multiply(yComplex), x.multiply(yDouble));
+47.test.patch:-        yComplex = new Complex(yDouble);
+47.test.patch:+         yComplex = new Complex(yDouble);
+47.test.patch:         Assert.assertEquals(x.multiply(yComplex), x.multiply(yDouble));
+47.test.patch:@@ -572,16 +565,9 @@ public class ComplexTest {
+47.test.patch:-            System.out.println(new Complex(0, 1 - 0.1 * i).atan());
+47.test.patch:-        Assert.assertTrue(Complex.I.atan().isInfinite());
+47.test.patch:         Assert.assertTrue(Complex.NaN.atan().isNaN());
+47.test.patch:+        Assert.assertTrue(Complex.I.atan().isNaN());
+5.src.patch:diff --git a/org/apache/commons/math3/complex/Complex.java b/org/apache/commons/math3/complex/Complex.java
+5.src.patch:--- a/org/apache/commons/math3/complex/Complex.java
+5.src.patch:+++ b/org/apache/commons/math3/complex/Complex.java
+5.src.patch:@@ -302,7 +302,7 @@ public class Complex implements FieldElement<Complex>, Serializable  {
+5.test.patch:diff --git a/org/apache/commons/math3/complex/ComplexTest.java b/org/apache/commons/math3/complex/ComplexTest.java
+5.test.patch:--- a/org/apache/commons/math3/complex/ComplexTest.java
+5.test.patch:+++ b/org/apache/commons/math3/complex/ComplexTest.java
+5.test.patch:@@ -331,7 +331,7 @@ public class ComplexTest {
+5.test.patch:-        Assert.assertEquals(Complex.ZERO.reciprocal(), Complex.INF);
+5.test.patch:+        Assert.assertEquals(Complex.ZERO.reciprocal(), Complex.NaN);
+53.src.patch:diff --git a/org/apache/commons/math/complex/Complex.java b/org/apache/commons/math/complex/Complex.java
+53.src.patch:--- a/org/apache/commons/math/complex/Complex.java
+53.src.patch:+++ b/org/apache/commons/math/complex/Complex.java
+53.src.patch:@@ -150,9 +150,6 @@ public class Complex implements FieldElement<Complex>, Serializable  {
+53.src.patch:     public Complex add(Complex rhs)
+53.src.patch:         return createComplex(real + rhs.getReal(),
+53.test.patch:diff --git a/org/apache/commons/math/complex/ComplexTest.java b/org/apache/commons/math/complex/ComplexTest.java
+53.test.patch:--- a/org/apache/commons/math/complex/ComplexTest.java
+53.test.patch:+++ b/org/apache/commons/math/complex/ComplexTest.java
+53.test.patch:@@ -113,7 +113,7 @@ public class ComplexTest {
+53.test.patch:         z = new Complex(1, nan);
+53.test.patch:         Complex w = x.add(z);
+96.src.patch:diff --git a/org/apache/commons/math/complex/Complex.java b/org/apache/commons/math/complex/Complex.java
+96.src.patch:--- a/org/apache/commons/math/complex/Complex.java
+96.src.patch:+++ b/org/apache/commons/math/complex/Complex.java
+96.src.patch:@@ -255,7 +255,10 @@ public class Complex implements Serializable  {
+96.test.patch:diff --git a/org/apache/commons/math/complex/ComplexTest.java b/org/apache/commons/math/complex/ComplexTest.java
+96.test.patch:--- a/org/apache/commons/math/complex/ComplexTest.java
+96.test.patch:+++ b/org/apache/commons/math/complex/ComplexTest.java
+96.test.patch:@@ -690,10 +690,4 @@ public class ComplexTest extends TestCase {
+96.test.patch:         TestUtils.assertSame(nanInf, new Complex(0, pi/2).tanh());
+96.test.patch:-        assertEquals(new Complex(0,-1), new Complex(0,1).multiply(new Complex(-1,0)));

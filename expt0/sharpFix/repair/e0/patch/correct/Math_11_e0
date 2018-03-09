@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/maths/projs/Math_11_buggy/src/main/java/org/apache/commons/math3/distribution/MultivariateNormalDistribution.java	Mon Feb 20 16:48:25 2017
+--- /home/qx5/sharpfix_expts/repair/repairflag2_faulocflag0_cignoreflag0/Math_11/e0/f2/repair/c73/p0/MultivariateNormalDistribution.java	Fri Feb  2 09:11:59 2018
+***************
+*** 180,186 ****
+              throw new DimensionMismatchException(vals.length, dim);
+          }
+  
+!         return FastMath.pow(2 * FastMath.PI, -dim / 2) *
+              FastMath.pow(covarianceMatrixDeterminant, -0.5) *
+              getExponentTerm(vals);
+      }
+--- 180,186 ----
+              throw new DimensionMismatchException(vals.length, dim);
+          }
+  
+!         return FastMath.pow(2 * FastMath.PI, -dim / 2.0) *
+              FastMath.pow(covarianceMatrixDeterminant, -0.5) *
+              getExponentTerm(vals);
+      }

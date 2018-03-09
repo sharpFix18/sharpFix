@@ -1,0 +1,21 @@
+*** /home/qx5/defects4j_bugs/bugs/closures/projs/Closure_122_buggy/src/com/google/javascript/jscomp/testing/TestErrorReporter.java	Mon Feb 20 17:30:38 2017
+--- /home/qx5/sharpfix_expts/repair/repairflag2_faulocflag0_cignoreflag0/Closure_122/e0/f5/repair/c22/p5/TestErrorReporter.java	Fri Feb  2 18:34:30 2018
+***************
+*** 75,83 ****
+     * Returns whether all warnings were reported to this reporter.
+     */
+    public boolean hasEncounteredAllWarnings() {
+!     return (warnings == null) ?
+!         warningsIndex == 0 :
+!         warnings.length == warningsIndex;
+    }
+  
+    /**
+--- 75,81 ----
+     * Returns whether all warnings were reported to this reporter.
+     */
+    public boolean hasEncounteredAllWarnings() {
+!     return (errors == null) ? errorsIndex == 0 : errors.length == errorsIndex;
+    }
+  
+    /**

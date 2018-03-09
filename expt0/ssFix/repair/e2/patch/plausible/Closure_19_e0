@@ -1,0 +1,13 @@
+*** /home/qx5/defects4j_bugs/bugs/closures/projs/Closure_19_buggy/src/com/google/javascript/jscomp/type/ChainableReverseAbstractInterpreter.java	Tue Dec  8 20:18:52 2015
+--- /home/qx5/ssFix_expts/repair/repairflag0_faulocflag3_cignoreflag0/Closure_19/e0/patches/f2/c3/p12/ChainableReverseAbstractInterpreter.java	Mon Dec 25 14:09:23 2017
+***************
+*** 170,177 ****
+          break;
+  
+        default:
+-         throw new IllegalArgumentException("Node cannot be refined. \n" +
+-             node.toStringTree());
+      }
+    }
+  
+--- 170,175 ----

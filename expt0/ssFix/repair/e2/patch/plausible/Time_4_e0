@@ -1,0 +1,16 @@
+*** /home/qx5/defects4j_bugs/bugs/times/projs/Time_4_buggy/src/main/java/org/joda/time/Partial.java	Wed Apr  6 20:12:45 2016
+--- /home/qx5/ssFix_expts/repair/repairflag0_faulocflag3_cignoreflag0/Time_4/e0/patches/f2/c156/p0/Partial.java	Mon Dec 25 09:26:15 2017
+***************
+*** 446,451 ****
+--- 446,456 ----
+                          } else if (compare == 0) {
+                              DurationField rangeField = fieldType.getRangeDurationType().getField(iChronology);
+                              DurationField loopRangeField = loopType.getRangeDurationType().getField(iChronology);
++ 							if (rangeField.compareTo(loopRangeField) == 0) {
++ 								throw new IllegalArgumentException(
++ 										"Types array must not contain duplicate: "
++ 												+ loopType.getName());
++ 							}
+                              if (rangeField.compareTo(loopRangeField) > 0) {
+                                  break;
+                              }

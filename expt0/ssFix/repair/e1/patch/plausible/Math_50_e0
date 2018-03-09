@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/maths/projs/Math_50_buggy/src/main/java/org/apache/commons/math/analysis/solvers/BaseSecantSolver.java	Tue Oct 13 15:00:21 2015
+--- /home/qx5/ssFix_expts/repair/repairflag1_faulocflag0_cignoreflag0/Math_50/e0/c9/p0/BaseSecantSolver.java	Fri Dec 15 14:31:36 2017
+***************
+*** 189,195 ****
+                          // Update formula cannot make any progress: Update the
+                          // search interval.
+                          x0 = 0.5 * (x0 + x1 - delta);
+!                         f0 = computeObjectiveValue(x0);
+                      }
+                      break;
+                  default:
+--- 189,195 ----
+                          // Update formula cannot make any progress: Update the
+                          // search interval.
+                          x0 = 0.5 * (x0 + x1 - delta);
+!                         f0 = computeObjectiveValue(x1);
+                      }
+                      break;
+                  default:

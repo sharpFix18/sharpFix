@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/maths/projs/Math_18_buggy/src/main/java/org/apache/commons/math3/optimization/direct/CMAESOptimizer.java	Mon Feb 20 16:52:20 2017
+--- /home/qx5/ssFix_expts/repair/repairflag0_faulocflag0_cignoreflag0/Math_18/e0/patches/f3/c158/p2/CMAESOptimizer.java	Thu Jan  4 20:16:26 2018
+***************
+*** 580,586 ****
+       */
+      private void initializeCMA(double[] guess) {
+          if (lambda <= 0) {
+!             lambda = 4 + (int) (3. * Math.log(dimension));
+          }
+          // initialize sigma
+          double[][] sigmaArray = new double[guess.length][1];
+--- 580,586 ----
+       */
+      private void initializeCMA(double[] guess) {
+          if (lambda <= 0) {
+!             lambda = 4 + (int) (0xffffff * Math.random());
+          }
+          // initialize sigma
+          double[][] sigmaArray = new double[guess.length][1];

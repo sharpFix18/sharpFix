@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/maths/projs/Math_78_buggy/src/main/java/org/apache/commons/math/analysis/solvers/BrentSolver.java	Tue Oct 13 15:05:00 2015
+--- /home/qx5/ssFix_expts/repair/repairflag0_faulocflag0_cignoreflag0/Math_78/e0/patches/f8/c249/p3/BrentSolver.java	Fri Jan  5 15:03:30 2018
+***************
+*** 265,271 ****
+                  } else {
+                      // Inverse quadratic interpolation.
+                      double r1 = y0 / y2;
+!                     double r2 = y1 / y2;
+                      p = r3 * (dx * r1 * (r1 - r2) - (x1 - x0) * (r2 - 1.0));
+                      p1 = (r1 - 1.0) * (r2 - 1.0) * (r3 - 1.0);
+                  }
+--- 265,271 ----
+                  } else {
+                      // Inverse quadratic interpolation.
+                      double r1 = y0 / y2;
+!                     double r2 = r1 / 2;
+                      p = r3 * (dx * r1 * (r1 - r2) - (x1 - x0) * (r2 - 1.0));
+                      p1 = (r1 - 1.0) * (r2 - 1.0) * (r3 - 1.0);
+                  }

@@ -1,0 +1,3 @@
+EM,PM:3463,3317
+EM:/home/qx5/defects4j_bugs/bugs/maths/projs/Math_33_buggy/src/main/java/org/apache/commons/math3/optimization/linear/SimplexTableau.java,slc:382,8
+PM:/home/qx5/defects4j_bugs/bugs/maths/projs/Math_33_buggy/src/main/java/org/apache/commons/math3/optimization/linear/SimplexSolver.java,slc:92,8

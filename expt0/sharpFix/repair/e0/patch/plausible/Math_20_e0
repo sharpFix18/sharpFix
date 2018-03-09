@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/maths/projs/Math_20_buggy/src/main/java/org/apache/commons/math3/optimization/direct/CMAESOptimizer.java	Mon Feb 20 16:53:58 2017
+--- /home/qx5/sharpfix_expts/repair/repairflag2_faulocflag0_cignoreflag0/Math_20/e0/f3/repair/c1/p0/CMAESOptimizer.java	Fri Feb  2 21:55:42 2018
+***************
+*** 983,989 ****
+                  if (x[i] < 0) {
+                      repaired[i] = 0;
+                  } else if (x[i] > 1.0) {
+!                     repaired[i] = 1.0;
+                  } else {
+                      repaired[i] = x[i];
+                  }
+--- 983,989 ----
+                  if (x[i] < 0) {
+                      repaired[i] = 0;
+                  } else if (x[i] > 1.0) {
+!                     repaired[i] = 0;
+                  } else {
+                      repaired[i] = x[i];
+                  }

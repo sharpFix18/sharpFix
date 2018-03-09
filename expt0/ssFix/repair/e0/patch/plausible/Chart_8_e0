@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/charts/projs/Chart_8_buggy/source/org/jfree/data/time/Week.java	Thu Mar 23 16:31:38 2017
+--- /home/qx5/ssFix_expts/repair/repairflag0_faulocflag0_cignoreflag0/Chart_8/e0/patches/f0/c29/p0/Week.java	Thu Jan  4 06:00:08 2018
+***************
+*** 172,178 ****
+       */
+      public Week(Date time, TimeZone zone) {
+          // defer argument checking...
+! 	this(time, RegularTimePeriod.DEFAULT_TIME_ZONE, Locale.getDefault());
+      }
+  
+      /**
+--- 172,178 ----
+       */
+      public Week(Date time, TimeZone zone) {
+          // defer argument checking...
+! 	this(time, zone, Locale.getDefault());
+      }
+  
+      /**

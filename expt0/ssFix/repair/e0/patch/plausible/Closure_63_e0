@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/closures/projs/Closure_63_buggy/src/com/google/javascript/jscomp/LightweightMessageFormatter.java	Mon Feb 20 17:10:08 2017
+--- /home/qx5/ssFix_expts/repair/repairflag0_faulocflag0_cignoreflag0/Closure_63/e0/patches/f3/c121/p0/LightweightMessageFormatter.java	Sun Jan  7 00:46:35 2018
+***************
+*** 93,99 ****
+  
+        // padding equal to the excerpt and arrow at the end
+        if (excerpt.equals(LINE)
+!           && 0 <= charno && charno < sourceExcerpt.length()) {
+          for (int i = 0; i < charno; i++) {
+            char c = sourceExcerpt.charAt(i);
+            if (Character.isWhitespace(c)) {
+--- 93,99 ----
+  
+        // padding equal to the excerpt and arrow at the end
+        if (excerpt.equals(LINE)
+!           && 0 <= charno && charno < b.length()) {
+          for (int i = 0; i < charno; i++) {
+            char c = sourceExcerpt.charAt(i);
+            if (Character.isWhitespace(c)) {

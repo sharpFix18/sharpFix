@@ -1,0 +1,26 @@
+*** /home/qx5/defects4j_bugs/bugs/maths/projs/Math_100_buggy/src/java/org/apache/commons/math/estimation/SimpleEstimationProblem.java	Mon Feb 20 17:18:33 2017
+--- /home/qx5/sharpfix_expts/repair/repairflag2_faulocflag0_cignoreflag0/Math_100/e0/f1/repair/c2/p0/SimpleEstimationProblem.java	Fri Feb  2 04:52:41 2018
+***************
+*** 55,61 ****
+       * @return parameters
+       */
+      public EstimatedParameter[] getAllParameters() {
+!         return (EstimatedParameter[]) parameters.toArray(new EstimatedParameter[parameters.size()]);
+      }
+  
+      /** 
+--- 55,68 ----
+       * @return parameters
+       */
+      public EstimatedParameter[] getAllParameters() {
+!         List unbound = new ArrayList(parameters.size());
+! 		for (Iterator iterator = parameters.iterator(); iterator.hasNext();) {
+! 			EstimatedParameter p = (EstimatedParameter) iterator.next();
+! 			if (!p.isBound()) {
+! 				unbound.add(p);
+! 			}
+! 		}
+! 		return (EstimatedParameter[]) unbound.toArray(new EstimatedParameter[unbound.size()]);
+      }
+  
+      /** 

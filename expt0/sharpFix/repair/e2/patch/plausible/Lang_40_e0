@@ -1,0 +1,30 @@
+*** /home/qx5/defects4j_bugs/bugs/langs/projs/Lang_40_buggy/src/java/org/apache/commons/lang/StringUtils.java	Wed Nov 18 16:40:59 2015
+--- /home/qx5/sharpfix_expts/repair/repairflag2_faulocflag3_cignoreflag0/Lang_40/e0/f1/repair/c30/m0/p0/StringUtils.java	Wed Jan 31 16:10:13 2018
+***************
+*** 1043,1051 ****
+       */
+      public static boolean containsIgnoreCase(String str, String searchStr) {
+          if (str == null || searchStr == null) {
+!             return false;
+!         }
+!         return contains(str.toUpperCase(), searchStr.toUpperCase());
+      }
+  
+      // IndexOfAny chars
+--- 1043,1058 ----
+       */
+      public static boolean containsIgnoreCase(String str, String searchStr) {
+          if (str == null || searchStr == null) {
+! 			return false;
+! 		}
+! 		int len = searchStr.length();
+! 		int max = str.length() - len;
+! 		for (int i = 0; i <= max; i++) {
+! 			if (str.regionMatches(true, i, searchStr, 0, len)) {
+! 				return true;
+! 			}
+! 		}
+! 		return false;
+      }
+  
+      // IndexOfAny chars

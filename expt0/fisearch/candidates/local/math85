@@ -1,0 +1,3 @@
+EM,PM:17479,16938
+EM:/home/qx5/defects4j_bugs/bugs/maths/projs/Math_85_buggy/src/java/org/apache/commons/math/analysis/solvers/UnivariateRealSolverUtils.java,slc:188,8
+PM:/home/qx5/defects4j_bugs/bugs/maths/projs/Math_85_buggy/src/java/org/apache/commons/math/analysis/solvers/BisectionSolver.java,slc:86,8

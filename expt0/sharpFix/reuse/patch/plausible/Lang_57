@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/langs/projs/Lang_57_buggy/LocaleUtils.java	Sat Feb  3 11:15:26 2018
+--- /home/qx5/sharpfix_expts/candidatereuse/Lang_57/p0/LocaleUtils.java	Sat Feb  3 11:22:49 2018
+***************
+*** 220,226 ****
+       * @return true if the locale is a known locale
+       */
+      public static boolean isAvailableLocale(Locale locale) {
+!         return cAvailableLocaleSet.contains(locale);
+      }
+  
+      //-----------------------------------------------------------------------
+--- 220,226 ----
+       * @return true if the locale is a known locale
+       */
+      public static boolean isAvailableLocale(Locale locale) {
+!         return availableLocaleList().contains(locale);
+      }
+  
+      //-----------------------------------------------------------------------

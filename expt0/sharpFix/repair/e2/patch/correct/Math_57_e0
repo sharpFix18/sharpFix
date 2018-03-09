@@ -1,0 +1,21 @@
+*** /home/qx5/defects4j_bugs/bugs/maths/projs/Math_57_buggy/src/main/java/org/apache/commons/math/stat/clustering/KMeansPlusPlusClusterer.java	Mon Nov 30 21:03:45 2015
+--- /home/qx5/sharpfix_expts/repair/repairflag2_faulocflag3_cignoreflag0/Math_57/e0/f0/repair/c11/p0/KMeansPlusPlusClusterer.java	Wed Jan 31 17:16:30 2018
+***************
+*** 170,178 ****
+  
+          final double[] dx2 = new double[pointSet.size()];
+          while (resultSet.size() < k) {
+!             // For each data point x, compute D(x), the distance between x and
+!             // the nearest center that has already been chosen.
+!             int sum = 0;
+              for (int i = 0; i < pointSet.size(); i++) {
+                  final T p = pointSet.get(i);
+                  final Cluster<T> nearest = getNearestCluster(resultSet, p);
+--- 170,176 ----
+  
+          final double[] dx2 = new double[pointSet.size()];
+          while (resultSet.size() < k) {
+!             double sum = 0;
+              for (int i = 0; i < pointSet.size(); i++) {
+                  final T p = pointSet.get(i);
+                  final Cluster<T> nearest = getNearestCluster(resultSet, p);

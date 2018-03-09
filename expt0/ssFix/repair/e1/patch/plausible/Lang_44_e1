@@ -1,0 +1,22 @@
+*** /home/qx5/defects4j_bugs/bugs/langs/projs/Lang_44_buggy/src/java/org/apache/commons/lang/NumberUtils.java	Tue Oct 13 14:24:59 2015
+--- /home/qx5/ssFix_expts/repair/repairflag1_faulocflag0_cignoreflag0/Lang_44/e1/c306/p0/NumberUtils.java	Fri Dec 15 12:16:08 2017
+***************
+*** 142,148 ****
+          if (val.length() == 0) {
+              throw new NumberFormatException("\"\" is not a valid number.");
+          }
+!         if (val.startsWith("--")) {
+              // this is protection for poorness in java.lang.BigDecimal.
+              // it accepts this as a legal value, but it does not appear 
+              // to be in specification of class. OS X Java parses it to 
+--- 142,151 ----
+          if (val.length() == 0) {
+              throw new NumberFormatException("\"\" is not a valid number.");
+          }
+!         if (val.length() == 1 && !Character.isDigit(val.charAt(0))) {
+! 			throw new NumberFormatException(val + " is not a valid number.");
+! 		}
+! 		if (val.startsWith("--")) {
+              // this is protection for poorness in java.lang.BigDecimal.
+              // it accepts this as a legal value, but it does not appear 
+              // to be in specification of class. OS X Java parses it to 

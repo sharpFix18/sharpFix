@@ -1,0 +1,20 @@
+*** /home/qx5/defects4j_bugs/bugs/maths/projs/Math_50_buggy/src/main/java/org/apache/commons/math/analysis/solvers/BaseSecantSolver.java	Tue Oct 13 15:00:21 2015
+--- /home/qx5/sharpfix_expts/repair/repairflag2_faulocflag3_cignoreflag0/Math_50/e0/f0/repair/c6/p0/BaseSecantSolver.java	Wed Jan 31 13:13:03 2018
+***************
+*** 184,190 ****
+                      break;
+                  case REGULA_FALSI:
+                      if (x == x1) {
+!                         final double delta = FastMath.max(rtol * FastMath.abs(x1),
+                                                            atol);
+                          // Update formula cannot make any progress: Update the
+                          // search interval.
+--- 184,191 ----
+                      break;
+                  case REGULA_FALSI:
+                      if (x == x1) {
+!                         final double y = computeObjectiveValue(x1);
+! 						final double delta = FastMath.max(rtol * FastMath.abs(x1),
+                                                            atol);
+                          // Update formula cannot make any progress: Update the
+                          // search interval.

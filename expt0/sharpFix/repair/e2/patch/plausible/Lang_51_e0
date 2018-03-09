@@ -1,0 +1,24 @@
+*** /home/qx5/defects4j_bugs/bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java	Tue Oct 13 16:52:20 2015
+--- /home/qx5/sharpfix_expts/repair/repairflag2_faulocflag3_cignoreflag0/Lang_51/e0/f0/repair/c9/m1/p0/BooleanUtils.java	Wed Jan 31 17:27:59 2018
+***************
+*** 684,692 ****
+                  char ch = str.charAt(0);
+                  if (ch == 't') {
+                      return 
+!                         (str.charAt(1) == 'r' || str.charAt(1) == 'R') &&
+!                         (str.charAt(2) == 'u' || str.charAt(2) == 'U') &&
+!                         (str.charAt(3) == 'e' || str.charAt(3) == 'E');
+                  }
+                  if (ch == 'T') {
+                      return 
+--- 684,693 ----
+                  char ch = str.charAt(0);
+                  if (ch == 't') {
+                      return 
+!                         (str.length() == 4) && (str.charAt(0) == 't' || str.charAt(0) == 'T')
+! 							&& (str.charAt(1) == 'r' || str.charAt(1) == 'R')
+! 							&& (str.charAt(2) == 'u' || str.charAt(2) == 'U')
+! 							&& (str.charAt(3) == 'e' || str.charAt(3) == 'E');
+                  }
+                  if (ch == 'T') {
+                      return 

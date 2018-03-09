@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/closures/projs/Closure_111_buggy/src/com/google/javascript/rhino/testing/Asserts.java	Tue Dec  8 20:40:16 2015
+--- /home/qx5/sharpfix_expts/repair/repairflag2_faulocflag0_cignoreflag0/Closure_111/e0/f1/repair/c145/p0/Asserts.java	Thu Feb  1 23:35:35 2018
+***************
+*** 93,99 ****
+    }
+  
+    public static void assertTypeEquals(JSType a, JSType b) {
+!     assertTypeEquals("", a, b);
+    }
+  
+    public static void assertTypeEquals(String message, JSType a, JSType b) {
+--- 93,99 ----
+    }
+  
+    public static void assertTypeEquals(JSType a, JSType b) {
+!     assertTypeEquals("", b, b);
+    }
+  
+    public static void assertTypeEquals(String message, JSType a, JSType b) {

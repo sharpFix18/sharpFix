@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/closures/projs/Closure_70_buggy/src/com/google/javascript/jscomp/TypedScopeCreator.java	Tue Dec  8 20:32:20 2015
+--- /home/qx5/ssFix_expts/repair/repairflag0_faulocflag3_cignoreflag0/Closure_70/e0/patches/f0/c20/p0/TypedScopeCreator.java	Sun Dec 24 18:43:26 2017
+***************
+*** 1742,1748 ****
+            for (Node astParameter : astParameters.children()) {
+              if (jsDocParameter != null) {
+                defineSlot(astParameter, functionNode,
+!                   jsDocParameter.getJSType(), true);
+                jsDocParameter = jsDocParameter.getNext();
+              } else {
+                defineSlot(astParameter, functionNode, null, true);
+--- 1742,1748 ----
+            for (Node astParameter : astParameters.children()) {
+              if (jsDocParameter != null) {
+                defineSlot(astParameter, functionNode,
+!                   jsDocParameter.getJSType(), false);
+                jsDocParameter = jsDocParameter.getNext();
+              } else {
+                defineSlot(astParameter, functionNode, null, true);

@@ -1,0 +1,22 @@
+*** /home/qx5/defects4j_bugs/bugs/langs/projs/Lang_38_buggy/FastDateFormat.java	Wed Nov 18 16:39:44 2015
+--- /home/qx5/ssFix_expts/candidatereuse/Lang_38/p1/FastDateFormat.java	Sun Jan 28 15:45:50 2018
+***************
+*** 869,876 ****
+       */
+      public StringBuffer format(Calendar calendar, StringBuffer buf) {
+          if (mTimeZoneForced) {
+!             calendar = (Calendar) calendar.clone();
+!             calendar.setTimeZone(mTimeZone);
+          }
+          return applyRules(calendar, buf);
+      }
+--- 869,877 ----
+       */
+      public StringBuffer format(Calendar calendar, StringBuffer buf) {
+          if (mTimeZoneForced) {
+!             calendar.getTime();
+! 			calendar = (Calendar) calendar.clone();
+! 			calendar.setTimeZone(mTimeZone);
+          }
+          return applyRules(calendar, buf);
+      }

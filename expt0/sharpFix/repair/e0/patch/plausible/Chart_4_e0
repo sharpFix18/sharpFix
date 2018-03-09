@@ -1,0 +1,35 @@
+*** /home/qx5/defects4j_bugs/bugs/charts/projs/Chart_4_buggy/source/org/jfree/chart/plot/XYPlot.java	Fri Feb  9 09:51:36 2018
+--- /home/qx5/sharpfix_expts/repair/repairflag2_faulocflag0_cignoreflag0/Chart_4/e0/f0/repair/c106/p0/XYPlot.java	Fri Feb  2 01:30:27 2018
+***************
+*** 4490,4503 ****
+                      }
+                  }
+                  
+!                 Collection c = r.getAnnotations();
+!                 Iterator i = c.iterator();
+!                 while (i.hasNext()) {
+!                     XYAnnotation a = (XYAnnotation) i.next();
+!                     if (a instanceof XYAnnotationBoundsInfo) {
+!                         includedAnnotations.add(a);
+!                     }
+!                 }
+              }
+          }
+  
+--- 4490,4505 ----
+                      }
+                  }
+                  
+!                 if (r != null) {
+! 					Collection c = r.getAnnotations();
+! 					Iterator i = c.iterator();
+! 					while (i.hasNext()) {
+! 						XYAnnotation a = (XYAnnotation) i.next();
+! 						if (a instanceof XYAnnotationBoundsInfo) {
+! 							includedAnnotations.add(a);
+! 						}
+! 					}
+! 				}
+              }
+          }
+  

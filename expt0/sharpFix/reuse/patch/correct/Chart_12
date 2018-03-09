@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/charts/projs/Chart_12_buggy/MultiplePiePlot.java	Tue Sep 13 14:55:11 2016
+--- /home/qx5/sharpfix_expts/candidatereuse/Chart_12/p2/MultiplePiePlot.java	Sun Jan 28 20:48:35 2018
+***************
+*** 142,148 ****
+       */
+      public MultiplePiePlot(CategoryDataset dataset) {
+          super();
+!         this.dataset = dataset;
+          PiePlot piePlot = new PiePlot(null);
+          this.pieChart = new JFreeChart(piePlot);
+          this.pieChart.removeLegend();
+--- 142,148 ----
+       */
+      public MultiplePiePlot(CategoryDataset dataset) {
+          super();
+!         this.setDataset(dataset);
+          PiePlot piePlot = new PiePlot(null);
+          this.pieChart = new JFreeChart(piePlot);
+          this.pieChart.removeLegend();

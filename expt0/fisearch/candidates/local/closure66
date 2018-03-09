@@ -1,0 +1,3 @@
+EM,PM:17395,211
+EM:/home/qx5/defects4j_bugs/bugs/closures/projs/Closure_66_buggy/src/com/google/javascript/jscomp/TypeCheck.java,slc:468,4
+PM:/home/qx5/defects4j_bugs/bugs/closures/projs/Closure_66_buggy/src/com/google/debugging/sourcemap/SourceMapGeneratorV1.java,slc:463,6

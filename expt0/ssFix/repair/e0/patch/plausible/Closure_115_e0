@@ -1,0 +1,12 @@
+*** /home/qx5/defects4j_bugs/bugs/closures/projs/Closure_115_buggy/src/com/google/javascript/jscomp/FunctionInjector.java	Mon Feb 20 17:29:14 2017
+--- /home/qx5/ssFix_expts/repair/repairflag0_faulocflag0_cignoreflag0/Closure_115/e0/patches/f0/c6/p0/FunctionInjector.java	Thu Jan  4 04:09:27 2018
+***************
+*** 730,736 ****
+        if (fnParam != null) {
+          if (cArg != null) {
+            if (hasSideEffects && NodeUtil.canBeSideEffected(cArg)) {
+-             return CanInlineResult.NO;
+            }
+  
+            // Check for arguments that are evaluated more than once.
+--- 730,735 ----

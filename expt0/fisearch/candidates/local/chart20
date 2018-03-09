@@ -1,0 +1,3 @@
+EM,PM:10821,5615
+EM:/home/qx5/defects4j_bugs/bugs/charts/projs/Chart_20_buggy/src/org/jfree/chart/plot/IntervalMarker.java,slc:105,8
+PM:/home/qx5/defects4j_bugs/bugs/charts/projs/Chart_20_buggy/src/org/jfree/chart/axis/CyclicNumberAxis.java,slc:379,12

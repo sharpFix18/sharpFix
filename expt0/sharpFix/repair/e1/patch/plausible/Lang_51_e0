@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/langs/projs/Lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java	Tue Oct 13 16:52:20 2015
+--- /home/qx5/sharpfix_expts/repair/repairflag5_faulocflag0_cignoreflag0/Lang_51/e0/repair/c5/p9/BooleanUtils.java	Tue Jan 30 22:13:32 2018
+***************
+*** 674,680 ****
+                          (str.charAt(1) == 'e' || str.charAt(1) == 'E') &&
+                          (str.charAt(2) == 's' || str.charAt(2) == 'S');
+                  }
+!                 if (ch == 'Y') {
+                      return 
+                          (str.charAt(1) == 'E' || str.charAt(1) == 'e') &&
+                          (str.charAt(2) == 'S' || str.charAt(2) == 's');
+--- 674,680 ----
+                          (str.charAt(1) == 'e' || str.charAt(1) == 'E') &&
+                          (str.charAt(2) == 's' || str.charAt(2) == 'S');
+                  }
+!                 if (ch == 'Y' || ch == 't') {
+                      return 
+                          (str.charAt(1) == 'E' || str.charAt(1) == 'e') &&
+                          (str.charAt(2) == 'S' || str.charAt(2) == 's');

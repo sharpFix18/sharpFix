@@ -1,0 +1,3 @@
+EM,PM:7393,5
+EM:/home/qx5/defects4j_bugs/bugs/charts/projs/Chart_1_buggy/source/org/jfree/chart/labels/StandardCategorySeriesLabelGenerator.java,slc:99,8
+PM:/home/qx5/defects4j_bugs/bugs/charts/projs/Chart_1_buggy/source/org/jfree/chart/util/StandardGradientPaintTransformer.java,slc:78,8

@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/maths/projs/Math_49_buggy/src/main/java/org/apache/commons/math/linear/OpenMapRealVector.java	Tue Oct 13 14:59:38 2015
+--- /home/qx5/sharpfix_expts/repair/repairflag2_faulocflag0_cignoreflag0/Math_49/e0/f16/repair/c7/p0/OpenMapRealVector.java	Fri Feb  2 04:37:58 2018
+***************
+*** 664,670 ****
+          if (!isDefaultValue(value)) {
+              entries.put(index, value);
+          } else if (entries.containsKey(index)) {
+!             entries.remove(index);
+          }
+      }
+  
+--- 664,670 ----
+          if (!isDefaultValue(value)) {
+              entries.put(index, value);
+          } else if (entries.containsKey(index)) {
+!             entries.put(index, value);
+          }
+      }
+  

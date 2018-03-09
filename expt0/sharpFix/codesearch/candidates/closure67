@@ -1,0 +1,4 @@
+EM,RM,PM:-1,-1,9
+EM:null,null
+RM:null,null
+PM:/home/qx5/defects4j_bugs/bugs/closures/projs/Closure_67_buggy/src/com/google/javascript/jscomp/InlineFunctions.java,slc:440,4

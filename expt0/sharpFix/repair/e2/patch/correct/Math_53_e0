@@ -1,0 +1,14 @@
+*** /home/qx5/defects4j_bugs/bugs/maths/projs/Math_53_buggy/src/main/java/org/apache/commons/math/complex/Complex.java	Sun Oct 11 19:16:21 2015
+--- /home/qx5/sharpfix_expts/repair/repairflag2_faulocflag3_cignoreflag0/Math_53/e0/f0/repair/c1/p0/Complex.java	Wed Jan 31 15:14:17 2018
+***************
+*** 150,155 ****
+--- 150,158 ----
+      public Complex add(Complex rhs)
+          throws NullArgumentException {
+          MathUtils.checkNotNull(rhs);
++ 		if (isNaN || rhs.isNaN) {
++ 			return NaN;
++ 		}
+          return createComplex(real + rhs.getReal(),
+              imaginary + rhs.getImaginary());
+      }

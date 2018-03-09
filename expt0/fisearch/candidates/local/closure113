@@ -1,0 +1,3 @@
+EM,PM:16209,15
+EM:/home/qx5/defects4j_bugs/bugs/closures/projs/Closure_113_buggy/src/com/google/javascript/jscomp/ProcessClosurePrimitives.java,slc:161,4
+PM:/home/qx5/defects4j_bugs/bugs/closures/projs/Closure_113_buggy/src/com/google/debugging/sourcemap/SourceMapConsumerV2.java,slc:99,4

@@ -1,0 +1,4 @@
+EM,RM,PM:-1,-1,21
+EM:null,null
+RM:null,null
+PM:/vol/ssFix_local_projects/Closure_14_buggy/com/google/javascript/jscomp/CheckGlobalNames.java,slc:151,4;slc:153,4;slc:154,4

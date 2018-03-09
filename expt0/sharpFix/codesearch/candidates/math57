@@ -1,0 +1,4 @@
+EM,RM,PM:9,9,9
+EM:/home/qx5/defects4j_bugs/bugs/maths/projs/Math_57_buggy/src/main/java/org/apache/commons/math/linear/BlockRealMatrix.java,slc:615,20
+RM:/home/qx5/defects4j_bugs/bugs/maths/projs/Math_57_buggy/src/main/java/org/apache/commons/math/linear/BlockRealMatrix.java,slc:615,20
+PM:/home/qx5/defects4j_bugs/bugs/maths/projs/Math_57_buggy/src/main/java/org/apache/commons/math/linear/BlockRealMatrix.java,slc:615,20

@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/maths/projs/Math_63_buggy/src/main/java/org/apache/commons/math/util/MathUtils.java	Thu Oct  1 09:33:57 2015
+--- /home/qx5/ssFix_expts/repair/repairflag0_faulocflag0_cignoreflag0/Math_63/e0/patches/f0/c170/p0/MathUtils.java	Thu Jan  4 17:09:15 2018
+***************
+*** 420,426 ****
+       * equalsIncludingNaN}.
+       */
+      public static boolean equals(double x, double y) {
+!         return (Double.isNaN(x) && Double.isNaN(y)) || x == y;
+      }
+  
+      /**
+--- 420,426 ----
+       * equalsIncludingNaN}.
+       */
+      public static boolean equals(double x, double y) {
+!         return (x == y) || x == y;
+      }
+  
+      /**

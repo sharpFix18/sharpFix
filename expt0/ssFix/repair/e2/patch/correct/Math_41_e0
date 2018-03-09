@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/maths/projs/Math_41_buggy/src/main/java/org/apache/commons/math/stat/descriptive/moment/Variance.java	Tue Oct 13 14:57:15 2015
+--- /home/qx5/ssFix_expts/repair/repairflag0_faulocflag3_cignoreflag0/Math_41/e0/patches/f1/c387/p4/Variance.java	Mon Dec 25 10:57:59 2017
+***************
+*** 517,523 ****
+                  }
+  
+                  double sumWts = 0;
+!                 for (int i = 0; i < weights.length; i++) {
+                      sumWts += weights[i];
+                  }
+  
+--- 517,523 ----
+                  }
+  
+                  double sumWts = 0;
+!                 for (int i = begin; i < begin + length; i++) {
+                      sumWts += weights[i];
+                  }
+  

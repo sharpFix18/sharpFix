@@ -1,0 +1,21 @@
+#!/bin/bash
+
+for i in 24 8
+do
+    cp plausible/Chart_${i}_e0 correct/
+done
+
+for i in 14 40 57 65 70 73
+do
+    cp plausible/Closure_${i}_e0 correct/
+done
+
+for i in 16 21 26 33 39 43 45 49 52 59 6
+do
+    cp plausible/Lang_${i}_e0 correct/
+done
+
+for i in 33 41 42 50 53 57 58 59 70
+do
+    cp plausible/Math_${i}_e0 correct/
+done

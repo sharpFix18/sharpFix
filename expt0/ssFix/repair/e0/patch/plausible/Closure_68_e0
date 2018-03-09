@@ -1,0 +1,12 @@
+*** /home/qx5/defects4j_bugs/bugs/closures/projs/Closure_68_buggy/src/com/google/javascript/jscomp/testing/TestErrorReporter.java	Mon Feb 20 17:11:57 2017
+--- /home/qx5/ssFix_expts/repair/repairflag0_faulocflag0_cignoreflag0/Closure_68/e0/patches/f0/c0/p0/TestErrorReporter.java	Thu Jan  4 01:59:32 2018
+***************
+*** 59,65 ****
+      if (warnings != null && warningsIndex < warnings.length) {
+        assertEquals(warnings[warningsIndex++], message);
+      } else {
+-       fail("extra warning: " + message);
+      }
+    }
+  
+--- 59,64 ----

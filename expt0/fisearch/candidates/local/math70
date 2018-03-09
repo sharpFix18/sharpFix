@@ -1,0 +1,3 @@
+EM,PM:17296,981
+EM:/home/qx5/defects4j_bugs/bugs/maths/projs/Math_70_buggy/src/main/java/org/apache/commons/math/analysis/solvers/BisectionSolver.java,slc:59,8
+PM:/home/qx5/defects4j_bugs/bugs/maths/projs/Math_70_buggy/src/main/java/org/apache/commons/math/optimization/direct/MultiDirectional.java,slc:65,8

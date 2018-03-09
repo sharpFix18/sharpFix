@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/charts/projs/Chart_7_buggy/source/org/jfree/data/time/TimePeriodValues.java	Sun Jul  3 14:59:30 2016
+--- /home/qx5/sharpfix_expts/repair/repairflag2_faulocflag0_cignoreflag0/Chart_7/e0/f0/repair/c7/p0/TimePeriodValues.java	Fri Feb  2 03:33:15 2018
+***************
+*** 549,555 ****
+       * @return The index.
+       */
+      public int getMaxMiddleIndex() {
+!         return this.maxMiddleIndex;
+      }
+  
+      /**
+--- 549,555 ----
+       * @return The index.
+       */
+      public int getMaxMiddleIndex() {
+!         return this.maxStartIndex;
+      }
+  
+      /**

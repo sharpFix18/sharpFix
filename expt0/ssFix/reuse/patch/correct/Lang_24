@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/langs/projs/Lang_24_buggy/NumberUtils.java	Mon Sep 28 12:09:38 2015
+--- /home/qx5/ssFix_expts/candidatereuse/Lang_24/p0/NumberUtils.java	Sun Jan 28 15:43:47 2018
+***************
+*** 1410,1416 ****
+              if (chars[i] == 'l'
+                  || chars[i] == 'L') {
+                  // not allowing L with an exponent
+!                 return foundDigit && !hasExp;
+              }
+              // last character is illegal
+              return false;
+--- 1410,1416 ----
+              if (chars[i] == 'l'
+                  || chars[i] == 'L') {
+                  // not allowing L with an exponent
+!                 return foundDigit && !hasExp && !hasDecPoint;
+              }
+              // last character is illegal
+              return false;
