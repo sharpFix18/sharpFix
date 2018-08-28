@@ -1,4 +1,4 @@
-# This is a temporary repository containing supplementary materials associated with the paper titled "Revisiting ssFix for Better Program Repair" which was submitted to FSE'18
+# This is a temporary repository containing supplementary materials associated with the paper titled "Revisiting ssFix for Better Program Repair" which was submitted to ICSE'19
 
 The experimental materials and results can be found at `./expt0`.
 
