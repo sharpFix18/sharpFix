@@ -1,0 +1,70 @@
+*** /home/qx5/elixir_bdj_bugs/wicket/bugs-dot-jar_WICKET-5359_61122bab/wicket-util/src/main/java/org/apache/wicket/util/lang/Objects.java	Fri Jun 22 04:45:51 2018
+--- /home/qx5/sharpfix_expts_bdj/repair/repairflag2_faulocflag0_cignoreflag0/bugs-dot-jar_WICKET-5359_61122bab/e0/f0/repair/c60/p2/Objects.java	Fri Jul 13 16:42:49 2018
+***************
+*** 223,280 ****
+  	@SuppressWarnings({ "unchecked", "rawtypes" })
+  	public static int compareWithConversion(final Object v1, final Object v2)
+  	{
+! 		int result;
+! 
+! 		if (v1 == v2)
+! 		{
+! 			result = 0;
+! 		}
+! 		else
+! 		{
+! 			int t1 = getNumericType(v1), t2 = getNumericType(v2), type = getNumericType(t1, t2,
+! 				true);
+! 
+! 			switch (type)
+! 			{
+! 				case BIGINT :
+! 					result = bigIntValue(v1).compareTo(bigIntValue(v2));
+! 					break;
+! 
+! 				case BIGDEC :
+! 					result = bigDecValue(v1).compareTo(bigDecValue(v2));
+! 					break;
+! 
+! 				case NONNUMERIC :
+! 					if ((t1 == NONNUMERIC) && (t2 == NONNUMERIC))
+! 					{
+! 						if ((v1 instanceof Comparable) &&
+! 							v1.getClass().isAssignableFrom(v2.getClass()))
+! 						{
+! 							result = ((Comparable)v1).compareTo(v2);
+! 							break;
+! 						}
+! 						else
+! 						{
+! 							throw new IllegalArgumentException("invalid comparison: " +
+! 								v1.getClass().getName() + " and " + v2.getClass().getName());
+! 						}
+! 					}
+! 					// else fall through
+! 				case FLOAT :
+! 				case DOUBLE :
+! 					double dv1 = doubleValue(v1),
+! 					dv2 = doubleValue(v2);
+! 
+! 					return (dv1 == dv2) ? 0 : ((dv1 < dv2) ? -1 : 1);
+! 
+! 				default :
+! 					long lv1 = longValue(v1),
+! 					lv2 = longValue(v2);
+! 
+! 					return (lv1 == lv2) ? 0 : ((lv1 < lv2) ? -1 : 1);
+! 			}
+! 		}
+! 		return result;
+  	}
+  
+  	/**
+--- 223,229 ----
+  	@SuppressWarnings({ "unchecked", "rawtypes" })
+  	public static int compareWithConversion(final Object v1, final Object v2)
+  	{
+! 		return getNumericType(v1, v2, false);
+  	}
+  
+  	/**

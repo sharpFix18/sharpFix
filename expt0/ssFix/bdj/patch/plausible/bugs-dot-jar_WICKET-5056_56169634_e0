@@ -1,0 +1,25 @@
+*** /home/qx5/elixir_bdj_bugs/wicket/bugs-dot-jar_WICKET-5056_56169634/wicket-core/src/main/java/org/apache/wicket/core/request/mapper/MountedMapper.java	Wed Jun 13 21:41:40 2018
+--- /home/qx5/ssFix_expts_bdj/repair/repairflag0_faulocflag0_cignoreflag0/bugs-dot-jar_WICKET-5056_56169634/e0/patches/f1/c46/p3/MountedMapper.java	Sun Jul 29 03:26:40 2018
+***************
+*** 495,501 ****
+  	{
+  		if (urlStartsWith(request.getUrl(), mountSegments))
+  		{
+! 			return mountSegments.length;
+  		}
+  		else
+  		{
+--- 495,507 ----
+  	{
+  		if (urlStartsWith(request.getUrl(), mountSegments))
+  		{
+! 			int countOptional = 0;
+! 			int fixedSegments = 0;
+! 			for (MountPathSegment pathSegment : pathSegments) {
+! 				fixedSegments += pathSegment.getFixedPartSize();
+! 				countOptional += pathSegment.getOptionalParameters();
+! 			}
+! 			return mountSegments.length - countOptional + fixedSegments;
+  		}
+  		else
+  		{

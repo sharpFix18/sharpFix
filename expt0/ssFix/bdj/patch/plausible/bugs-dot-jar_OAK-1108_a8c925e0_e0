@@ -1,0 +1,12 @@
+*** /home/qx5/elixir_bdj_bugs/jackrabbit-oak/bugs-dot-jar_OAK-1108_a8c925e0/oak-core/src/main/java/org/apache/jackrabbit/oak/query/index/FilterImpl.java	Wed Jun 13 20:58:25 2018
+--- /home/qx5/ssFix_expts_bdj/repair/repairflag0_faulocflag0_cignoreflag0/bugs-dot-jar_OAK-1108_a8c925e0/e0/patches/f1/c0/p0/FilterImpl.java	Fri Jul 27 16:35:15 2018
+***************
+*** 287,293 ****
+          }
+          if (x.first != null && x.last != null) {
+              if (x.first.compareTo(x.last) > 0) {
+-                 setAlwaysFalse();
+              } else if (x.first.compareTo(x.last) == 0 && (!x.firstIncluding || !x.lastIncluding)) {
+                  setAlwaysFalse();
+              }
+--- 287,292 ----

@@ -1,0 +1,12 @@
+*** /home/qx5/elixir_bdj_bugs/wicket/bugs-dot-jar_WICKET-5176_34634266/wicket-core/src/main/java/org/apache/wicket/model/LoadableDetachableModel.java	Fri Jun 22 04:43:51 2018
+--- /home/qx5/ssFix_expts_bdj/repair/repairflag0_faulocflag0_cignoreflag0/bugs-dot-jar_WICKET-5176_34634266/e0/patches/f1/c44/p3/LoadableDetachableModel.java	Sun Jul 29 05:31:38 2018
+***************
+*** 92,97 ****
+--- 92,98 ----
+  	@Override
+  	public void detach()
+  	{
++ 		attached = true;
+  		if (attached)
+  		{
+  			try

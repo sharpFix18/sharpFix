@@ -1,0 +1,19 @@
+*** /home/qx5/elixir_bdj_bugs/wicket/bugs-dot-jar_WICKET-5209_55eb5212/wicket-core/src/main/java/org/apache/wicket/MarkupContainer.java	Wed Jun 13 21:42:22 2018
+--- /home/qx5/sharpfix_expts_bdj/repair/repairflag2_faulocflag0_cignoreflag0/bugs-dot-jar_WICKET-5209_55eb5212/e0/f2/repair/c89/p0/MarkupContainer.java	Fri Jul 13 14:11:52 2018
+***************
+*** 448,454 ****
+  	public IMarkupFragment getMarkup(final Component child)
+  	{
+  		// Delegate request to attached markup sourcing strategy.
+! 		return getMarkupSourcingStrategy().getMarkup(this, child);
+  	}
+  
+  	/**
+--- 448,454 ----
+  	public IMarkupFragment getMarkup(final Component child)
+  	{
+  		// Delegate request to attached markup sourcing strategy.
+! 		return getPage().getMarkup();
+  	}
+  
+  	/**

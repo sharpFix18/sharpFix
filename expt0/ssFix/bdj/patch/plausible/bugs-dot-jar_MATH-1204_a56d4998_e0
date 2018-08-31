@@ -1,0 +1,19 @@
+*** /home/qx5/elixir_bdj_bugs/math/bugs-dot-jar_MATH-1204_a56d4998//src/main/java/org/apache/commons/math4/analysis/solvers/UnivariateSolverUtils.java	Fri Jun 22 06:18:05 2018
+--- /home/qx5/ssFix_expts_bdj/repair/repairflag0_faulocflag0_cignoreflag0/bugs-dot-jar_MATH-1204_a56d4998/e0/patches/f3/c0/p5/UnivariateSolverUtils.java	Fri Aug  3 01:00:20 2018
+***************
+*** 314,320 ****
+          double delta = 0;
+  
+          for (int numIterations = 0;
+!              (numIterations < maximumIterations) && (a > lowerBound || b > upperBound);
+               ++numIterations) {
+  
+              final double previousA  = a;
+--- 314,320 ----
+          double delta = 0;
+  
+          for (int numIterations = 0;
+!              (numIterations < maximumIterations) && (a > lowerBound || (b < maximumIterations));
+               ++numIterations) {
+  
+              final double previousA  = a;

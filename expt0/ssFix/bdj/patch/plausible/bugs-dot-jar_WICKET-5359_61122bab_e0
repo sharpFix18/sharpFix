@@ -1,0 +1,15 @@
+*** /home/qx5/elixir_bdj_bugs/wicket/bugs-dot-jar_WICKET-5359_61122bab/wicket-util/src/main/java/org/apache/wicket/util/lang/Objects.java	Fri Jun 22 04:45:51 2018
+--- /home/qx5/ssFix_expts_bdj/repair/repairflag0_faulocflag0_cignoreflag0/bugs-dot-jar_WICKET-5359_61122bab/e0/patches/f1/c1/p0/Objects.java	Sun Jul 29 09:56:04 2018
+***************
+*** 622,631 ****
+  			}
+  			else
+  			{
+- 				// Check for converted equivalence first, then equals()
+- 				// equivalence
+- 				result = (object1 != null) && (object2 != null) &&
+- 					((compareWithConversion(object1, object2) == 0) || object1.equals(object2));
+  			}
+  		}
+  		return result;
+--- 622,627 ----

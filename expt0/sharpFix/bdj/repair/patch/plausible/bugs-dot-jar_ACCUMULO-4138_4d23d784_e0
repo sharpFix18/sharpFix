@@ -1,0 +1,19 @@
+*** /home/qx5/elixir_bdj_bugs/accumulo/bugs-dot-jar_ACCUMULO-4138_4d23d784/core/src/main/java/org/apache/accumulo/core/util/shell/commands/OptUtil.java	Wed Jun 13 20:57:10 2018
+--- /home/qx5/sharpfix_expts_bdj/repair/repairflag2_faulocflag0_cignoreflag0/bugs-dot-jar_ACCUMULO-4138_4d23d784/e0/f0/repair/c5/m0/p0/OptUtil.java	Thu Jul 12 15:14:49 2018
+***************
+*** 117,123 ****
+    }
+  
+    public static Option startRowOpt() {
+!     final Option o = new Option(START_ROW_OPT, "begin-row", true, "begin row (NOT) inclusive");
+      o.setArgName("begin-row");
+      return o;
+    }
+--- 117,123 ----
+    }
+  
+    public static Option startRowOpt() {
+!     final Option o = new Option(OptUtil.START_ROW_OPT, "begin-row", true, "begin row (exclusive)");
+      o.setArgName("begin-row");
+      return o;
+    }

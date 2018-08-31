@@ -1,0 +1,19 @@
+*** /home/qx5/elixir_bdj_bugs/math/bugs-dot-jar_MATH-329_6dd3724b//src/main/java/org/apache/commons/math/stat/Frequency.java	Fri Jun 22 06:20:08 2018
+--- /home/qx5/sharpfix_expts_bdj/repair/repairflag2_faulocflag0_cignoreflag0/bugs-dot-jar_MATH-329_6dd3724b/e0/f0/repair/c11/p0/Frequency.java	Thu Jul 12 23:51:51 2018
+***************
+*** 300,306 ****
+       */
+      @Deprecated
+      public double getPct(Object v) {
+!         return getCumPct((Comparable<?>) v);
+      }
+  
+      /**
+--- 300,306 ----
+       */
+      @Deprecated
+      public double getPct(Object v) {
+!         return getPct((Comparable<?>) v);
+      }
+  
+      /**

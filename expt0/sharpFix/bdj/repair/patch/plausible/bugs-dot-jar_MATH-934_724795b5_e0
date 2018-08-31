@@ -1,0 +1,19 @@
+*** /home/qx5/elixir_bdj_bugs/math/bugs-dot-jar_MATH-934_724795b5//src/main/java/org/apache/commons/math3/complex/Complex.java	Fri Jun 22 06:21:45 2018
+--- /home/qx5/sharpfix_expts_bdj/repair/repairflag2_faulocflag0_cignoreflag0/bugs-dot-jar_MATH-934_724795b5/e0/f4/repair/c57/p1/Complex.java	Fri Jul 13 06:52:57 2018
+***************
+*** 345,351 ****
+              if (c.isNaN) {
+                  return isNaN;
+              } else {
+!                 return (real == c.real) && (imaginary == c.imaginary);
+              }
+          }
+          return false;
+--- 345,351 ----
+              if (c.isNaN) {
+                  return isNaN;
+              } else {
+!                 return (real == c.real) == (imaginary == c.imaginary);
+              }
+          }
+          return false;

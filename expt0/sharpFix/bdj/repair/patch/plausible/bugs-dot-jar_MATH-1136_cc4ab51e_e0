@@ -1,0 +1,19 @@
+*** /home/qx5/elixir_bdj_bugs/math/bugs-dot-jar_MATH-1136_cc4ab51e//src/main/java/org/apache/commons/math3/distribution/SaddlePointExpansion.java	Fri Jun 22 06:17:42 2018
+--- /home/qx5/sharpfix_expts_bdj/repair/repairflag2_faulocflag0_cignoreflag0/bugs-dot-jar_MATH-1136_cc4ab51e/e0/f1/repair/c13/m0/p9/SaddlePointExpansion.java	Thu Jul 12 11:13:23 2018
+***************
+*** 179,185 ****
+          double ret;
+          if (x == 0) {
+              if (p < 0.1) {
+!                 ret = -getDeviancePart(n, n * q) - n * p;
+              } else {
+                  ret = n * FastMath.log(q);
+              }
+--- 179,185 ----
+          double ret;
+          if (x == 0) {
+              if (p < 0.1) {
+!                 ret = -SaddlePointExpansion.getStirlingError(x) - n * p;
+              } else {
+                  ret = n * FastMath.log(q);
+              }

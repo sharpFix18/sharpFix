@@ -1,0 +1,12 @@
+*** /home/qx5/elixir_bdj_bugs/jackrabbit-oak/bugs-dot-jar_OAK-421_36e70bd7/oak-core/src/main/java/org/apache/jackrabbit/oak/plugins/memory/MemoryNodeBuilder.java	Wed Jun 13 21:10:05 2018
+--- /home/qx5/ssFix_expts_bdj/repair/repairflag0_faulocflag0_cignoreflag0/bugs-dot-jar_OAK-421_36e70bd7/e0/patches/f0/c0/p3/MemoryNodeBuilder.java	Sat Jul 28 11:14:05 2018
+***************
+*** 265,271 ****
+          if (this == root) {
+              baseState = checkNotNull(newBase);
+              writeState = new MutableNodeState(baseState);
+-             revision++;
+          } else {
+              throw new IllegalStateException("Cannot reset a non-root builder");
+          }
+--- 265,270 ----

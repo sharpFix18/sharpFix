@@ -1,0 +1,19 @@
+*** /home/qx5/elixir_bdj_bugs/jackrabbit-oak/bugs-dot-jar_OAK-3763_ab1a0cc2/oak-core/src/main/java/org/apache/jackrabbit/oak/plugins/memory/EmptyNodeState.java	Wed Jun 13 21:07:21 2018
+--- /home/qx5/ssFix_expts_bdj/repair/repairflag0_faulocflag0_cignoreflag0/bugs-dot-jar_OAK-3763_ab1a0cc2/e0/patches/f1/c5/p0/EmptyNodeState.java	Sat Jul 28 07:13:26 2018
+***************
+*** 185,191 ****
+              return exists == (object == EMPTY_NODE);
+          } else if (object instanceof NodeState) {
+              NodeState that = (NodeState) object;
+!             return that.getPropertyCount() == 0
+                      && that.getChildNodeCount(1) == 0;
+          } else {
+              return false;
+--- 185,191 ----
+              return exists == (object == EMPTY_NODE);
+          } else if (object instanceof NodeState) {
+              NodeState that = (NodeState) object;
+!             return that.getPropertyCount() == 2
+                      && that.getChildNodeCount(1) == 0;
+          } else {
+              return false;

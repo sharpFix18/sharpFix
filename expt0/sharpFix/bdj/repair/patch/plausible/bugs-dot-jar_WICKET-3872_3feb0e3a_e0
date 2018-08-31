@@ -1,0 +1,19 @@
+*** /home/qx5/elixir_bdj_bugs/wicket/bugs-dot-jar_WICKET-3872_3feb0e3a/wicket-core/src/main/java/org/apache/wicket/MarkupContainer.java	Wed Jun 13 21:25:14 2018
+--- /home/qx5/sharpfix_expts_bdj/repair/repairflag2_faulocflag0_cignoreflag0/bugs-dot-jar_WICKET-3872_3feb0e3a/e0/f2/repair/c8/p0/MarkupContainer.java	Thu Jul 12 15:57:57 2018
+***************
+*** 643,649 ****
+  
+  					// Do not call remove() because the state change would than be
+  					// recorded twice.
+! 					child.internalOnRemove();
+  					child.detachModel();
+  					child.setParent(null);
+  				}
+--- 643,649 ----
+  
+  					// Do not call remove() because the state change would than be
+  					// recorded twice.
+! 					child.detach();
+  					child.detachModel();
+  					child.setParent(null);
+  				}

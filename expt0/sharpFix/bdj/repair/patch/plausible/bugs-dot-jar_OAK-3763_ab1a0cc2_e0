@@ -1,0 +1,46 @@
+*** /home/qx5/elixir_bdj_bugs/jackrabbit-oak/bugs-dot-jar_OAK-3763_ab1a0cc2/oak-core/src/main/java/org/apache/jackrabbit/oak/plugins/memory/ModifiedNodeState.java	Wed Jun 13 21:07:21 2018
+--- /home/qx5/sharpfix_expts_bdj/repair/repairflag2_faulocflag0_cignoreflag0/bugs-dot-jar_OAK-3763_ab1a0cc2/e0/f0/repair/c59/p0/ModifiedNodeState.java	Thu Jul 12 21:32:13 2018
+***************
+*** 190,223 ****
+  
+      static long getChildNodeCount(
+              NodeState base, Map<String, ? extends NodeState> nodes, long max) {
+!         if (!base.exists()) {
+!             return 0;
+!         }
+!         long deleted = 0, added = 0;
+!         for (Entry<String, ? extends NodeState> entry
+!                 : nodes.entrySet()) {
+!             if (!base.hasChildNode(entry.getKey())) {
+!                 added++;
+!             }
+!             if (!entry.getValue().exists()) {
+!                 deleted++;
+!             }
+!         }
+!         // if we deleted 100 entries, then we need to 
+!         // be sure there are 100 more entries than max
+!         if (max + deleted < 0) {
+!             // avoid overflow
+!             max = Long.MAX_VALUE;
+!         } else {
+!             max += deleted;
+!         }
+!         long count = base.getChildNodeCount(max);
+!         if (count + added - deleted < 0) {
+!             count = Long.MAX_VALUE;
+!         } else {
+!             count = count + added - deleted;
+!         }
+!         return count;
+      }
+  
+      static Iterable<String> getChildNodeNames(
+--- 190,196 ----
+  
+      static long getChildNodeCount(
+              NodeState base, Map<String, ? extends NodeState> nodes, long max) {
+!         return -1;
+      }
+  
+      static Iterable<String> getChildNodeNames(

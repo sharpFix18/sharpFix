@@ -1,0 +1,19 @@
+*** /home/qx5/elixir_bdj_bugs/wicket/bugs-dot-jar_WICKET-3845_afc7034d/wicket-request/src/main/java/org/apache/wicket/request/HttpHeaderCollection.java	Wed Jun 13 21:24:16 2018
+--- /home/qx5/sharpfix_expts_bdj/repair/repairflag2_faulocflag0_cignoreflag0/bugs-dot-jar_WICKET-3845_afc7034d/e0/f0/repair/c3/p0/HttpHeaderCollection.java	Thu Jul 12 14:37:10 2018
+***************
+*** 99,105 ****
+  	public void addHeader(String name, String value)
+  	{
+  		// be lenient and strip leading / trailing blanks
+! 		value = Args.notEmpty(value, "value").trim();
+  
+  		internalAdd(name, value);
+  	}
+--- 99,105 ----
+  	public void addHeader(String name, String value)
+  	{
+  		// be lenient and strip leading / trailing blanks
+! 		value = Args.notNull(value, "value").trim();
+  
+  		internalAdd(name, value);
+  	}

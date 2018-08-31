@@ -1,0 +1,19 @@
+*** /home/qx5/elixir_bdj_bugs/wicket/bugs-dot-jar_WICKET-5686_8e794fc4/wicket-spring/src/main/java/org/apache/wicket/spring/injection/annot/AnnotProxyFieldValueFactory.java	Wed Jun 13 21:51:50 2018
+--- /home/qx5/sharpfix_expts_bdj/repair/repairflag2_faulocflag0_cignoreflag0/bugs-dot-jar_WICKET-5686_8e794fc4/e0/f2/repair/c29/m1/p0/AnnotProxyFieldValueFactory.java	Tue Aug  7 17:44:27 2018
+***************
+*** 123,129 ****
+  			{
+  				Named named = field.getAnnotation(Named.class);
+  				name = named != null ? named.value() : "";
+! 				required = false;
+  			}
+  
+  			String beanName = getBeanName(field, name, required);
+--- 123,129 ----
+  			{
+  				Named named = field.getAnnotation(Named.class);
+  				name = named != null ? named.value() : "";
+! 				required = true;
+  			}
+  
+  			String beanName = getBeanName(field, name, required);

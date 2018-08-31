@@ -1,0 +1,19 @@
+*** /home/qx5/elixir_bdj_bugs/math/bugs-dot-jar_MATH-309_0596e314//src/main/java/org/apache/commons/math/random/RandomDataImpl.java	Fri Jun 22 06:19:32 2018
+--- /home/qx5/ssFix_expts_bdj/repair/repairflag0_faulocflag0_cignoreflag0/bugs-dot-jar_MATH-309_0596e314/e0/patches/f0/c2/p0/RandomDataImpl.java	Sat Jul 28 06:00:19 2018
+***************
+*** 462,468 ****
+       * @return the random Exponential value
+       */
+      public double nextExponential(double mean) {
+!         if (mean < 0.0) {
+              throw MathRuntimeException.createIllegalArgumentException(
+                    "mean must be positive ({0})", mean);
+          }
+--- 462,468 ----
+       * @return the random Exponential value
+       */
+      public double nextExponential(double mean) {
+!         if (mean <= 0.0) {
+              throw MathRuntimeException.createIllegalArgumentException(
+                    "mean must be positive ({0})", mean);
+          }

@@ -1,0 +1,20 @@
+*** /home/qx5/elixir_bdj_bugs/jackrabbit-oak/bugs-dot-jar_OAK-1168_c05cec12/oak-core/src/main/java/org/apache/jackrabbit/oak/namepath/NamePathMapperImpl.java	Fri Jun 22 03:48:33 2018
+--- /home/qx5/sharpfix_expts_bdj/repair/repairflag2_faulocflag0_cignoreflag0/bugs-dot-jar_OAK-1168_c05cec12/e0/f17/repair/c134/p0/NamePathMapperImpl.java	Thu Jul 12 08:33:39 2018
+***************
+*** 256,262 ****
+              switch (path.charAt(i)) {
+              case '{': // possibly an expanded name
+              case '[': // possibly an index
+!                 return true;
+              case '.':
+                  if (i == slash + 1) {
+                      return true; // possibly "." or ".."
+--- 256,263 ----
+              switch (path.charAt(i)) {
+              case '{': // possibly an expanded name
+              case '[': // possibly an index
+! 			default:
+! 				return true;
+              case '.':
+                  if (i == slash + 1) {
+                      return true; // possibly "." or ".."

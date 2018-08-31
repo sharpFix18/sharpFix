@@ -1,0 +1,12 @@
+*** /home/qx5/elixir_bdj_bugs/wicket/bugs-dot-jar_WICKET-3098_1b7afefc/wicket/src/main/java/org/apache/wicket/RequestListenerInterface.java	Wed Jun 13 21:17:06 2018
+--- /home/qx5/sharpfix_expts_bdj/repair/repairflag2_faulocflag0_cignoreflag0/bugs-dot-jar_WICKET-3098_1b7afefc/e0/f0/repair/c1/m0/p0/RequestListenerInterface.java	Thu Jul 12 05:56:48 2018
+***************
+*** 255,260 ****
+--- 255,261 ----
+  		{
+  			log.warn("behavior not enabled; ignore call. Behavior {} at component {}", behavior,
+  				component);
++ 			return;
+  		}
+  
+  		try

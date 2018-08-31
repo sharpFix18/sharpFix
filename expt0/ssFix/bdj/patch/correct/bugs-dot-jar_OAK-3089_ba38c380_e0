@@ -1,0 +1,19 @@
+*** /home/qx5/elixir_bdj_bugs/jackrabbit-oak/bugs-dot-jar_OAK-3089_ba38c380/oak-core/src/main/java/org/apache/jackrabbit/oak/cache/CacheLIRS.java	Wed Jun 13 21:05:41 2018
+--- /home/qx5/ssFix_expts_bdj/repair/repairflag0_faulocflag0_cignoreflag0/bugs-dot-jar_OAK-3089_ba38c380/e0/patches/f0/c12/p0/CacheLIRS.java	Sat Jul 28 05:08:41 2018
+***************
+*** 409,415 ****
+       * @param maxMemory the maximum size (1 or larger)
+       */
+      public void setMaxMemory(long maxMemory) {
+!         if (maxMemory <= 0) {
+              throw new IllegalArgumentException("Max memory must be larger than 0");
+          }
+          this.maxMemory = maxMemory;
+--- 409,415 ----
+       * @param maxMemory the maximum size (1 or larger)
+       */
+      public void setMaxMemory(long maxMemory) {
+!         if (maxMemory < 0) {
+              throw new IllegalArgumentException("Max memory must be larger than 0");
+          }
+          this.maxMemory = maxMemory;
