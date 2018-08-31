@@ -1,0 +1,159 @@
+2018-08-11 00:17:04,724 INFO main - command line arguments: [-jvm4testexecution  /home/qxin/jdk1.8.0_111/bin  -dependencies  /home/qx5/elixir_bdj_bugs/accumulo/bugs-dot-jar_ACCUMULO-151_b007b22e/all0.jar  -id  bugs-dot-jar_ACCUMULO-151_b007b22e  -failing  org.apache.accumulo.core.iterators.CombinerTest  -location  /home/qx5/elixir_bdj_bugs/accumulo/bugs-dot-jar_ACCUMULO-151_b007b22e  -package  org.apache.accumulo  -maxtime  120  -stopfirst  true  -srcjavafolder  //src/core/src/main/java/  -srctestfolder  //src/core/src/test/java/  -binjavafolder  //src/core/target/classes/  -bintestfolder  //src/core/target/test-classes/  -out  /home/qxin/jgenprog_expts_bdj/repair/bugs-dot-jar_ACCUMULO-151_b007b22e/r1]
+2018-08-11 00:17:58,872 INFO main - -Executing Gzoltar classpath: /home/qxin/jgenprog_expts_bdj/repair/bugs-dot-jar_ACCUMULO-151_b007b22e/r1/AstorMain-bugs-dot-jar_ACCUMULO-151_b007b22e//bin//default from 54 classes with test cases
+2018-08-11 00:17:58,874 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Gzoltar fault localization: min susp value parameter: 0.1
+2018-08-11 00:17:59,660 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - -gz-Adding classpath: [/home/qxin/jgenprog_expts_bdj/repair/bugs-dot-jar_ACCUMULO-151_b007b22e/r1/AstorMain-bugs-dot-jar_ACCUMULO-151_b007b22e//bin//default, /home/qx5/elixir_bdj_bugs/accumulo/bugs-dot-jar_ACCUMULO-151_b007b22e/all0.jar]
+2018-08-11 00:18:45,262 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.apache.accumulo.core.iterators.CombinerTest#test1
+2018-08-11 00:18:45,268 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Gzoltar Test Result Total:261, fails: 1, GZoltar suspicious 5426
+2018-08-11 00:18:45,308 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Gzoltar found: 137 with susp > 0.1, we consider: 137
+2018-08-11 00:18:45,319 INFO main - building model: /home/qxin/jgenprog_expts_bdj/repair/bugs-dot-jar_ACCUMULO-151_b007b22e/r1/AstorMain-bugs-dot-jar_ACCUMULO-151_b007b22e//src//default, compliance level: 8
+2018-08-11 00:22:12,999 INFO main - 
+---- Initial suspicious size: 137
+2018-08-11 00:22:13,127 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.iterators.LongCombiner$VarNumEncoder, methodName=org.apache.accumulo.core.iterators.LongCombiner$VarNumEncoder{encode(Ljava/lang/Long;)[B 0.0, lineNumber=102, susp=0.5]
+2018-08-11 00:22:13,299 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.iterators.Combiner, methodName=org.apache.accumulo.core.iterators.Combiner{findTop()V 0.0, lineNumber=173, susp=0.31622776601683794]
+2018-08-11 00:22:13,308 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.iterators.Combiner, methodName=org.apache.accumulo.core.iterators.Combiner{seek(Lorg/apache/accumulo/core/data/Range;Ljava/util/Collection;Z)V 0.0, lineNumber=196, susp=0.31622776601683794]
+2018-08-11 00:22:13,316 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.iterators.Combiner, methodName=org.apache.accumulo.core.iterators.Combiner{init(Lorg/apache/accumulo/core/iterators/SortedKeyValueIterator;Ljava/util/Map;Lorg/apache/accumulo/core/iterators/IteratorEnvironment;)V 0.0, lineNumber=220, susp=0.31622776601683794]
+2018-08-11 00:22:13,319 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.iterators.Combiner, methodName=org.apache.accumulo.core.iterators.Combiner{init(Lorg/apache/accumulo/core/iterators/SortedKeyValueIterator;Ljava/util/Map;Lorg/apache/accumulo/core/iterators/IteratorEnvironment;)V 0.0, lineNumber=222, susp=0.31622776601683794]
+2018-08-11 00:22:13,369 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.iterators.Combiner$ValueIterator, methodName=org.apache.accumulo.core.iterators.Combiner$ValueIterator{next()Lorg/apache/accumulo/core/data/Value; 0.0, lineNumber=101, susp=0.30151134457776363]
+2018-08-11 00:22:13,387 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.iterators.WrappingIterator, methodName=org.apache.accumulo.core.iterators.WrappingIterator{init(Lorg/apache/accumulo/core/iterators/SortedKeyValueIterator;Ljava/util/Map;Lorg/apache/accumulo/core/iterators/IteratorEnvironment;)V 0.0, lineNumber=79, susp=0.20412414523193154]
+2018-08-11 00:22:13,542 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.data.Key, methodName=org.apache.accumulo.core.data.Key{setDeleted(Z)V 0.0, lineNumber=299, susp=0.14002800840280097]
+2018-08-11 00:22:13,547 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.iterators.WrappingIterator, methodName=org.apache.accumulo.core.iterators.WrappingIterator{seek(Lorg/apache/accumulo/core/data/Range;Ljava/util/Collection;Z)V 0.0, lineNumber=94, susp=0.13130643285972254]
+2018-08-11 00:22:13,549 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.iterators.WrappingIterator, methodName=org.apache.accumulo.core.iterators.WrappingIterator{setSource(Lorg/apache/accumulo/core/iterators/SortedKeyValueIterator;)V 0.0, lineNumber=35, susp=0.12803687993289598]
+2018-08-11 00:22:13,560 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.data.Key, methodName=org.apache.accumulo.core.data.Key{set(Lorg/apache/accumulo/core/data/Key;)V 0.0, lineNumber=322, susp=0.125]
+2018-08-11 00:22:13,654 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.iterators.SortedMapIterator, methodName=org.apache.accumulo.core.iterators.SortedMapIterator{next()V 0.0, lineNumber=98, susp=0.10660035817780521]
+2018-08-11 00:22:13,665 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.iterators.SortedMapIterator, methodName=org.apache.accumulo.core.iterators.SortedMapIterator{seek(Lorg/apache/accumulo/core/data/Range;Ljava/util/Collection;Z)V 0.0, lineNumber=129, susp=0.105999788000636]
+2018-08-11 00:22:13,670 INFO main - Total suspicious from FL: 137,  107
+2018-08-11 00:22:13,670 INFO main - Total ModPoint created: 107
+2018-08-11 00:22:13,671 INFO main - Creating program variant #1, [Variant id: 1, #gens: 107, #ops: 0, parent:-]
+2018-08-11 00:22:13,690 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.iterators.LongCombiner$VarNumEncoder, methodName=org.apache.accumulo.core.iterators.LongCombiner$VarNumEncoder{encode(Ljava/lang/Long;)[B 0.0, lineNumber=102, susp=0.5]
+2018-08-11 00:22:13,758 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.iterators.Combiner, methodName=org.apache.accumulo.core.iterators.Combiner{findTop()V 0.0, lineNumber=173, susp=0.31622776601683794]
+2018-08-11 00:22:13,762 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.iterators.Combiner, methodName=org.apache.accumulo.core.iterators.Combiner{seek(Lorg/apache/accumulo/core/data/Range;Ljava/util/Collection;Z)V 0.0, lineNumber=196, susp=0.31622776601683794]
+2018-08-11 00:22:13,765 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.iterators.Combiner, methodName=org.apache.accumulo.core.iterators.Combiner{init(Lorg/apache/accumulo/core/iterators/SortedKeyValueIterator;Ljava/util/Map;Lorg/apache/accumulo/core/iterators/IteratorEnvironment;)V 0.0, lineNumber=220, susp=0.31622776601683794]
+2018-08-11 00:22:13,767 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.iterators.Combiner, methodName=org.apache.accumulo.core.iterators.Combiner{init(Lorg/apache/accumulo/core/iterators/SortedKeyValueIterator;Ljava/util/Map;Lorg/apache/accumulo/core/iterators/IteratorEnvironment;)V 0.0, lineNumber=222, susp=0.31622776601683794]
+2018-08-11 00:22:13,791 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.iterators.Combiner$ValueIterator, methodName=org.apache.accumulo.core.iterators.Combiner$ValueIterator{next()Lorg/apache/accumulo/core/data/Value; 0.0, lineNumber=101, susp=0.30151134457776363]
+2018-08-11 00:22:13,802 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.iterators.WrappingIterator, methodName=org.apache.accumulo.core.iterators.WrappingIterator{init(Lorg/apache/accumulo/core/iterators/SortedKeyValueIterator;Ljava/util/Map;Lorg/apache/accumulo/core/iterators/IteratorEnvironment;)V 0.0, lineNumber=79, susp=0.20412414523193154]
+2018-08-11 00:22:13,947 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.data.Key, methodName=org.apache.accumulo.core.data.Key{setDeleted(Z)V 0.0, lineNumber=299, susp=0.14002800840280097]
+2018-08-11 00:22:13,951 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.iterators.WrappingIterator, methodName=org.apache.accumulo.core.iterators.WrappingIterator{seek(Lorg/apache/accumulo/core/data/Range;Ljava/util/Collection;Z)V 0.0, lineNumber=94, susp=0.13130643285972254]
+2018-08-11 00:22:13,951 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.iterators.WrappingIterator, methodName=org.apache.accumulo.core.iterators.WrappingIterator{setSource(Lorg/apache/accumulo/core/iterators/SortedKeyValueIterator;)V 0.0, lineNumber=35, susp=0.12803687993289598]
+2018-08-11 00:22:13,962 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.data.Key, methodName=org.apache.accumulo.core.data.Key{set(Lorg/apache/accumulo/core/data/Key;)V 0.0, lineNumber=322, susp=0.125]
+2018-08-11 00:22:14,092 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.iterators.SortedMapIterator, methodName=org.apache.accumulo.core.iterators.SortedMapIterator{next()V 0.0, lineNumber=98, susp=0.10660035817780521]
+2018-08-11 00:22:14,109 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.iterators.SortedMapIterator, methodName=org.apache.accumulo.core.iterators.SortedMapIterator{seek(Lorg/apache/accumulo/core/data/Range;Ljava/util/Collection;Z)V 0.0, lineNumber=129, susp=0.105999788000636]
+2018-08-11 00:22:14,115 INFO main - Total suspicious from FL: 137,  107
+2018-08-11 00:22:14,115 INFO main - Total ModPoint created: 107
+2018-08-11 00:22:14,116 INFO main - Creating program variant #2, [Variant id: 2, #gens: 107, #ops: 0, parent:-]
+2018-08-11 00:22:14,124 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.iterators.LongCombiner$VarNumEncoder, methodName=org.apache.accumulo.core.iterators.LongCombiner$VarNumEncoder{encode(Ljava/lang/Long;)[B 0.0, lineNumber=102, susp=0.5]
+2018-08-11 00:22:14,175 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.iterators.Combiner, methodName=org.apache.accumulo.core.iterators.Combiner{findTop()V 0.0, lineNumber=173, susp=0.31622776601683794]
+2018-08-11 00:22:14,179 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.iterators.Combiner, methodName=org.apache.accumulo.core.iterators.Combiner{seek(Lorg/apache/accumulo/core/data/Range;Ljava/util/Collection;Z)V 0.0, lineNumber=196, susp=0.31622776601683794]
+2018-08-11 00:22:14,183 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.iterators.Combiner, methodName=org.apache.accumulo.core.iterators.Combiner{init(Lorg/apache/accumulo/core/iterators/SortedKeyValueIterator;Ljava/util/Map;Lorg/apache/accumulo/core/iterators/IteratorEnvironment;)V 0.0, lineNumber=220, susp=0.31622776601683794]
+2018-08-11 00:22:14,184 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.iterators.Combiner, methodName=org.apache.accumulo.core.iterators.Combiner{init(Lorg/apache/accumulo/core/iterators/SortedKeyValueIterator;Ljava/util/Map;Lorg/apache/accumulo/core/iterators/IteratorEnvironment;)V 0.0, lineNumber=222, susp=0.31622776601683794]
+2018-08-11 00:22:14,212 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.iterators.Combiner$ValueIterator, methodName=org.apache.accumulo.core.iterators.Combiner$ValueIterator{next()Lorg/apache/accumulo/core/data/Value; 0.0, lineNumber=101, susp=0.30151134457776363]
+2018-08-11 00:22:14,220 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.iterators.WrappingIterator, methodName=org.apache.accumulo.core.iterators.WrappingIterator{init(Lorg/apache/accumulo/core/iterators/SortedKeyValueIterator;Ljava/util/Map;Lorg/apache/accumulo/core/iterators/IteratorEnvironment;)V 0.0, lineNumber=79, susp=0.20412414523193154]
+2018-08-11 00:22:14,285 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.data.Key, methodName=org.apache.accumulo.core.data.Key{setDeleted(Z)V 0.0, lineNumber=299, susp=0.14002800840280097]
+2018-08-11 00:22:14,289 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.iterators.WrappingIterator, methodName=org.apache.accumulo.core.iterators.WrappingIterator{seek(Lorg/apache/accumulo/core/data/Range;Ljava/util/Collection;Z)V 0.0, lineNumber=94, susp=0.13130643285972254]
+2018-08-11 00:22:14,290 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.iterators.WrappingIterator, methodName=org.apache.accumulo.core.iterators.WrappingIterator{setSource(Lorg/apache/accumulo/core/iterators/SortedKeyValueIterator;)V 0.0, lineNumber=35, susp=0.12803687993289598]
+2018-08-11 00:22:14,300 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.data.Key, methodName=org.apache.accumulo.core.data.Key{set(Lorg/apache/accumulo/core/data/Key;)V 0.0, lineNumber=322, susp=0.125]
+2018-08-11 00:22:14,349 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.iterators.SortedMapIterator, methodName=org.apache.accumulo.core.iterators.SortedMapIterator{next()V 0.0, lineNumber=98, susp=0.10660035817780521]
+2018-08-11 00:22:14,357 INFO main - -any mod point created for suspicious Candidate [className=org.apache.accumulo.core.iterators.SortedMapIterator, methodName=org.apache.accumulo.core.iterators.SortedMapIterator{seek(Lorg/apache/accumulo/core/data/Range;Ljava/util/Collection;Z)V 0.0, lineNumber=129, susp=0.105999788000636]
+2018-08-11 00:22:14,362 INFO main - Total suspicious from FL: 137,  107
+2018-08-11 00:22:14,362 INFO main - Total ModPoint created: 107
+2018-08-11 00:22:14,362 INFO main - Creating program variant #3, [Variant id: 3, #gens: 107, #ops: 0, parent:-]
+2018-08-11 00:22:46,726 INFO fr.inria.astor.core.setup.ConfigurationProperties - ----------------------------
+2018-08-11 00:22:46,726 INFO fr.inria.astor.core.setup.ConfigurationProperties - ---Configuration properties:---Execution values
+2018-08-11 00:22:46,730 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:packageToInstrument= org.apache.accumulo
+2018-08-11 00:22:46,730 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:flthreshold= 0.1
+2018-08-11 00:22:46,730 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:numberExecutions= 1
+2018-08-11 00:22:46,730 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evosuiteresultfolder= evosuite
+2018-08-11 00:22:46,731 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:ignoredTestCases= org.apache.commons.math.ode.nonstiff:org.apache.commons.math.ode2.nonstiff:org.apache.commons.lang.LocaleUtilsTest
+2018-08-11 00:22:46,731 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:skipfaultlocalization= false
+2018-08-11 00:22:46,731 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:maxGeneration= 200
+2018-08-11 00:22:46,731 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:maxsuspcandidates= 1000
+2018-08-11 00:22:46,731 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:tmax2= 960000
+2018-08-11 00:22:46,731 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:tmax1= 120000
+2018-08-11 00:22:46,731 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:workingDirectory= /home/qxin/jgenprog_expts_bdj/repair/bugs-dot-jar_ACCUMULO-151_b007b22e/r1
+2018-08-11 00:22:46,731 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:mode= statement
+2018-08-11 00:22:46,731 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:ignoreflakyinfl= true
+2018-08-11 00:22:46,731 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:uniqueoptogen= false
+2018-08-11 00:22:46,731 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:testcasesregression= org.apache.accumulo.core.client.mapreduce.AccumuloFileOutputFormatTest:org.apache.accumulo.core.client.ClientSideIteratorTest:org.apache.accumulo.core.client.mock.MockConnectorTest:org.apache.accumulo.core.security.VisibilityEvaluatorTest:org.apache.accumulo.core.client.mapreduce.lib.partition.RangePartitionerTest:org.apache.accumulo.core.iterators.RegExFilterTest:org.apache.accumulo.core.file.blockfile.cache.TestCachedBlockQueue:org.apache.accumulo.core.client.RowIteratorTest:org.apache.accumulo.core.iterators.system.TimeSettingIteratorTest:org.apache.accumulo.core.iterators.CombinerTest:org.apache.accumulo.core.conf.PropertyTest:org.apache.accumulo.core.iterators.LargeRowFilterTest:org.apache.accumulo.core.iterators.ColumnFamilySkippingIteratorTest:org.apache.accumulo.core.util.EscapeTokenizerTest:org.apache.accumulo.core.util.LocalityGroupUtilTest:org.apache.accumulo.core.util.MergeTest:org.apache.accumulo.core.client.admin.FindMaxTest:org.apache.accumulo.core.util.TextUtilTest:org.apache.accumulo.core.iterators.system.DeletingIteratorTest:org.apache.accumulo.core.util.TestStringUtil:org.apache.accumulo.core.iterators.aggregation.NumSummationTest:org.apache.accumulo.core.data.KeyExtentTest:org.apache.accumulo.core.iterators.FilterTest:org.apache.accumulo.core.iterators.RegExIteratorTest:org.apache.accumulo.core.security.AuthorizationsTest:org.apache.accumulo.core.iterators.RowDeletingIteratorTest:org.apache.accumulo.core.util.AddressUtilTest:org.apache.accumulo.core.data.RangeTest:org.apache.accumulo.core.file.rfile.RFileTest:org.apache.accumulo.core.iterators.VersioningIteratorTest:org.apache.accumulo.core.iterators.AggregatingIteratorTest:org.apache.accumulo.core.iterators.FilteringIteratorTest:org.apache.accumulo.core.client.admin.TableOperationsHelperTest:org.apache.accumulo.core.iterators.user.IntersectingIteratorTest2:org.apache.accumulo.core.iterators.ColumnFilterTest:org.apache.accumulo.core.data.MutationTest:org.apache.accumulo.core.iterators.FamilyIntersectingIteratorTest:org.apache.accumulo.core.iterators.aggregation.conf.AggregatorConfigurationTest:org.apache.accumulo.core.iterators.IterUtilTest:org.apache.accumulo.core.util.TestVersion:org.apache.accumulo.core.client.impl.ScannerOptionsTest:org.apache.accumulo.core.file.rfile.MultiLevelIndexTest:org.apache.accumulo.core.iterators.WholeRowIteratorTest:org.apache.accumulo.core.client.impl.TabletLocatorImplTest:org.apache.accumulo.core.iterators.IntersectingIteratorTest:org.apache.accumulo.core.security.ColumnVisibilityTest:org.apache.accumulo.core.data.MapFileTest:org.apache.accumulo.core.iterators.system.MultiIteratorTest:org.apache.accumulo.core.util.MetadataTableTest:org.apache.accumulo.core.data.ColumnTest:org.apache.accumulo.core.data.KeyTest:org.apache.accumulo.core.iterators.filter.ColumnFilterTest:org.apache.accumulo.core.file.blockfile.cache.TestLruBlockCache:org.apache.accumulo.core.iterators.system.SourceSwitchingIteratorTest:
+2018-08-11 00:22:46,732 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:pathToMVNRepository= 
+2018-08-11 00:22:46,732 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:executeRegression= true
+2018-08-11 00:22:46,732 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:modificationpointnavigation= weight
+2018-08-11 00:22:46,732 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:maxtime= 120
+2018-08-11 00:22:46,732 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:probagenmutation= false
+2018-08-11 00:22:46,732 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:alternativecompliancelevel= 4
+2018-08-11 00:22:46,732 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:version-location= ./math-version/
+2018-08-11 00:22:46,732 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:location= /home/qx5/elixir_bdj_bugs/accumulo/bugs-dot-jar_ACCUMULO-151_b007b22e
+2018-08-11 00:22:46,732 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:stopfirst= true
+2018-08-11 00:22:46,732 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:jvm4testexecution= /home/qxin/jdk1.8.0_111/bin
+2018-08-11 00:22:46,733 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:bugId= 280
+2018-08-11 00:22:46,733 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:mutationrate= 1 
+2018-08-11 00:22:46,733 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:projectIdentifier= bugs-dot-jar_ACCUMULO-151_b007b22e
+2018-08-11 00:22:46,733 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evo_buggy_class= true
+2018-08-11 00:22:46,733 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evoRunOnBuggyClass= true
+2018-08-11 00:22:46,733 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:jvm4evosuitetestexecution= /home/qxin/jdk1.8.0_111/bin
+2018-08-11 00:22:46,733 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:resetoperations= false
+2018-08-11 00:22:46,733 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:seed= 0
+2018-08-11 00:22:46,733 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:testbystep= false
+2018-08-11 00:22:46,733 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:srctestfolder= //src/core/src/test/java/
+2018-08-11 00:22:46,734 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:javacompliancelevel= 8
+2018-08-11 00:22:46,734 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:bintestfolder= //src/core/target/test-classes/
+2018-08-11 00:22:46,734 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:commandTrunk= 50000
+2018-08-11 00:22:46,734 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:dependenciespath= /home/qx5/elixir_bdj_bugs/accumulo/bugs-dot-jar_ACCUMULO-151_b007b22e/all0.jar
+2018-08-11 00:22:46,734 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:multipointmodification= false
+2018-08-11 00:22:46,734 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:validation= process
+2018-08-11 00:22:46,734 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:scope= package
+2018-08-11 00:22:46,734 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evosuitetimeout= 120
+2018-08-11 00:22:46,734 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evoDSE= false
+2018-08-11 00:22:46,734 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:elementsToMutate= 10
+2018-08-11 00:22:46,734 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:lastJUnitVersion= ./examples/libs/junit-4.11.jar
+2018-08-11 00:22:46,734 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:failing= org.apache.accumulo.core.iterators.CombinerTest
+2018-08-11 00:22:46,734 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:allpoints= false
+2018-08-11 00:22:46,735 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:resourcesfolder= /src/main/resources:/src/test/resources:
+2018-08-11 00:22:46,735 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:regressionforfaultlocalization= true
+2018-08-11 00:22:46,735 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:population= 3
+2018-08-11 00:22:46,735 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:saveall= false
+2018-08-11 00:22:46,735 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:pvariantfoldername= variant-
+2018-08-11 00:22:46,735 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:savesolution= true
+2018-08-11 00:22:46,735 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:srcjavafolder= //src/core/src/main/java/
+2018-08-11 00:22:46,735 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evo_affected_by_op= true
+2018-08-11 00:22:46,735 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:binjavafolder= //src/core/target/classes/
+2018-08-11 00:22:46,735 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:reintroduce= original-parents
+2018-08-11 00:22:46,736 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evosuitejar= ./lib/evosuite-master-1.0.4-SNAPSHOT.jar
+2018-08-11 00:22:46,736 INFO fr.inria.astor.core.setup.ConfigurationProperties - ----------------------------
+2018-08-11 00:22:46,737 INFO main - 
+----Starting Solution Search
+2018-08-11 00:31:01,831 INFO main - The Process that runs JUnit test cases had problems: process hasn't exited
+2018-08-11 00:48:19,656 INFO main - The Process that runs JUnit test cases had problems: process hasn't exited
+2018-08-11 00:54:41,111 INFO main - The Process that runs JUnit test cases had problems: process hasn't exited
+2018-08-11 01:17:30,345 INFO main - The Process that runs JUnit test cases had problems: process hasn't exited
+2018-08-11 01:19:10,150 INFO main - -Found Solution, child variant #697
+2018-08-11 01:19:10,158 DEBUG spoon.support.StandardEnvironment - printing org.apache.accumulo.core.iterators.user.SummingCombiner to /home/qxin/jgenprog_expts_bdj/repair/bugs-dot-jar_ACCUMULO-151_b007b22e/r1/AstorMain-bugs-dot-jar_ACCUMULO-151_b007b22e/src/variant-697
+2018-08-11 01:19:10,271 DEBUG spoon.support.StandardEnvironment - printing org.apache.accumulo.core.data.Key to /home/qxin/jgenprog_expts_bdj/repair/bugs-dot-jar_ACCUMULO-151_b007b22e/r1/AstorMain-bugs-dot-jar_ACCUMULO-151_b007b22e/src/variant-697
+2018-08-11 01:19:10,377 DEBUG spoon.support.StandardEnvironment - printing org.apache.accumulo.core.data.Value to /home/qxin/jgenprog_expts_bdj/repair/bugs-dot-jar_ACCUMULO-151_b007b22e/r1/AstorMain-bugs-dot-jar_ACCUMULO-151_b007b22e/src/variant-697
+2018-08-11 01:19:10,461 DEBUG spoon.support.StandardEnvironment - printing org.apache.accumulo.core.iterators.TypedValueCombiner to /home/qxin/jgenprog_expts_bdj/repair/bugs-dot-jar_ACCUMULO-151_b007b22e/r1/AstorMain-bugs-dot-jar_ACCUMULO-151_b007b22e/src/variant-697
+2018-08-11 01:19:10,488 DEBUG spoon.support.StandardEnvironment - printing org.apache.accumulo.core.iterators.IteratorUtil to /home/qxin/jgenprog_expts_bdj/repair/bugs-dot-jar_ACCUMULO-151_b007b22e/r1/AstorMain-bugs-dot-jar_ACCUMULO-151_b007b22e/src/variant-697
+2018-08-11 01:19:10,519 DEBUG spoon.support.StandardEnvironment - printing org.apache.accumulo.core.iterators.Combiner to /home/qxin/jgenprog_expts_bdj/repair/bugs-dot-jar_ACCUMULO-151_b007b22e/r1/AstorMain-bugs-dot-jar_ACCUMULO-151_b007b22e/src/variant-697
+2018-08-11 01:19:10,553 DEBUG spoon.support.StandardEnvironment - printing org.apache.accumulo.core.iterators.conf.ColumnSet to /home/qxin/jgenprog_expts_bdj/repair/bugs-dot-jar_ACCUMULO-151_b007b22e/r1/AstorMain-bugs-dot-jar_ACCUMULO-151_b007b22e/src/variant-697
+2018-08-11 01:19:10,597 DEBUG spoon.support.StandardEnvironment - printing org.apache.accumulo.core.iterators.SortedMapIterator to /home/qxin/jgenprog_expts_bdj/repair/bugs-dot-jar_ACCUMULO-151_b007b22e/r1/AstorMain-bugs-dot-jar_ACCUMULO-151_b007b22e/src/variant-697
+2018-08-11 01:19:10,640 DEBUG spoon.support.StandardEnvironment - printing org.apache.accumulo.core.iterators.WrappingIterator to /home/qxin/jgenprog_expts_bdj/repair/bugs-dot-jar_ACCUMULO-151_b007b22e/r1/AstorMain-bugs-dot-jar_ACCUMULO-151_b007b22e/src/variant-697
+2018-08-11 01:19:10,674 DEBUG spoon.support.StandardEnvironment - printing org.apache.accumulo.core.iterators.LongCombiner to /home/qxin/jgenprog_expts_bdj/repair/bugs-dot-jar_ACCUMULO-151_b007b22e/r1/AstorMain-bugs-dot-jar_ACCUMULO-151_b007b22e/src/variant-697
+2018-08-11 01:19:10,926 INFO main - Time Repair Loop (s): 3384.189
+2018-08-11 01:19:10,926 INFO main - 
+----SUMMARY_EXECUTION---
+2018-08-11 01:19:10,926 INFO main - 
+Solution details
+2018-08-11 01:19:10,927 INFO main - 
+ --SOLUTIONS DESCRIPTION--
+
+ ----
+ProgramVariant 697
+ 
+time(sec)= 3384
+operation: ReplaceOp
+location= org.apache.accumulo.core.iterators.conf.ColumnSet
+line= 81
+lineSuspiciousness= 0.316
+original statement= return ((objectsCol.size()) == 0) && ((objectsCF.size()) == 0)
+fixed statement= return objectsCF.contains(lookupCF)
+generation= 174
+ingredientScope= LOCAL
+validation=|true|0|261|[]|
+2018-08-11 01:19:10,927 INFO fr.inria.main.evolution.AstorMain - Time Total(s): 3726.189

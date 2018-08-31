@@ -1,0 +1,957 @@
+2018-08-09 07:50:55,079 INFO main - command line arguments: [-jvm4testexecution  /home/qxin/jdk1.8.0_111/bin  -dependencies  /home/qx5/elixir_bdj_bugs/wicket/bugs-dot-jar_WICKET-5359_61122bab/all0.jar  -id  bugs-dot-jar_WICKET-5359_61122bab  -failing  org.apache.wicket.util.string.StringValueTest  -mode  statement-remove  -location  /home/qx5/elixir_bdj_bugs/wicket/bugs-dot-jar_WICKET-5359_61122bab  -package  org.apache.wicket  -maxtime  120  -stopfirst  true  -srcjavafolder  //wicket-util/src/main/java/  -srctestfolder  //wicket-util/src/test/java/  -binjavafolder  //wicket-util/target/classes/  -bintestfolder  //wicket-util/target/test-classes/  -out  /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_WICKET-5359_61122bab/r1]
+2018-08-09 07:51:30,774 INFO main - -Executing Gzoltar classpath: /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_WICKET-5359_61122bab/r1/AstorMain-bugs-dot-jar_WICKET-5359_61122bab//bin//default from 41 classes with test cases
+2018-08-09 07:51:30,777 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Gzoltar fault localization: min susp value parameter: 0.1
+2018-08-09 07:51:31,682 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - -gz-Adding classpath: [/home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_WICKET-5359_61122bab/r1/AstorMain-bugs-dot-jar_WICKET-5359_61122bab//bin//default, /home/qx5/elixir_bdj_bugs/wicket/bugs-dot-jar_WICKET-5359_61122bab/all0.jar]
+2018-08-09 08:09:35,168 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.apache.wicket.util.markup.xhtml.WellFormedXmlTestCase#markupFiles
+2018-08-09 08:09:35,168 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.apache.wicket.util.license.ApacheLicenceHeaderTest#licenseHeaders
+2018-08-09 08:09:35,169 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.apache.wicket.util.string.StringValueTest#equals
+2018-08-09 08:09:35,170 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Gzoltar Test Result Total:171, fails: 3, GZoltar suspicious 2055
+2018-08-09 08:09:35,224 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Gzoltar found: 346 with susp > 0.1, we consider: 346
+2018-08-09 08:09:35,232 INFO main - building model: /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_WICKET-5359_61122bab/r1/AstorMain-bugs-dot-jar_WICKET-5359_61122bab//src//default, compliance level: 8
+2018-08-09 08:09:54,425 INFO main - 
+---- Initial suspicious size: 346
+2018-08-09 08:09:54,671 INFO main - -any mod point created for suspicious Candidate [className=org.apache.wicket.util.io.IOUtils, methodName=org.apache.wicket.util.io.IOUtils{close(Ljava/io/Closeable;)V 0.0, lineNumber=105, susp=0.5773502691896258]
+2018-08-09 08:09:54,674 INFO main - -any mod point created for suspicious Candidate [className=org.apache.wicket.util.io.IOUtils, methodName=org.apache.wicket.util.io.IOUtils{closeQuietly(Ljava/io/Closeable;)V 0.0, lineNumber=127, susp=0.5773502691896258]
+2018-08-09 08:09:54,676 INFO main - -any mod point created for suspicious Candidate [className=org.apache.wicket.util.io.IOUtils, methodName=org.apache.wicket.util.io.IOUtils{closeQuietly(Ljava/io/Closeable;)V 0.0, lineNumber=128, susp=0.5773502691896258]
+2018-08-09 08:09:54,694 INFO main - -any mod point created for suspicious Candidate [className=org.apache.wicket.util.diff.Delta, methodName=org.apache.wicket.util.diff.Delta{newDelta(Lorg/apache/wicket/util/diff/Chunk;Lorg/apache/wicket/util/diff/Chunk;)Lorg/apache/wicket/util/diff/Delta; 0.0, lineNumber=123, susp=0.5773502691896258]
+2018-08-09 08:09:54,701 INFO main - -any mod point created for suspicious Candidate [className=org.apache.wicket.util.diff.Delta, methodName=org.apache.wicket.util.diff.Delta{init(Lorg/apache/wicket/util/diff/Chunk;Lorg/apache/wicket/util/diff/Chunk;)V 0.0, lineNumber=156, susp=0.5773502691896258]
+2018-08-09 08:09:54,748 INFO main - -any mod point created for suspicious Candidate [className=org.apache.wicket.util.license.PropertiesLicenseHeaderHandler, methodName=org.apache.wicket.util.license.PropertiesLicenseHeaderHandler{checkLicenseHeader(Ljava/io/File;)Z 0.0, lineNumber=59, susp=0.5773502691896258]
+2018-08-09 08:09:54,805 INFO main - -any mod point created for suspicious Candidate [className=org.apache.wicket.util.diff.Revision, methodName=org.apache.wicket.util.diff.Revision{insertDelta(Lorg/apache/wicket/util/diff/Delta;)V 0.0, lineNumber=122, susp=0.5773502691896258]
+2018-08-09 08:09:54,871 INFO main - -any mod point created for suspicious Candidate [className=org.apache.wicket.util.license.AbstractLicenseHeaderHandler, methodName=org.apache.wicket.util.license.AbstractLicenseHeaderHandler{getLicenseHeader()Ljava/lang/String; 0.0, lineNumber=103, susp=0.5773502691896258]
+2018-08-09 08:09:54,882 INFO main - -any mod point created for suspicious Candidate [className=org.apache.wicket.util.license.AbstractLicenseHeaderHandler, methodName=org.apache.wicket.util.license.AbstractLicenseHeaderHandler{extractLicenseHeader(Ljava/io/File;II)Ljava/lang/String; 0.0, lineNumber=138, susp=0.5773502691896258]
+2018-08-09 08:09:54,964 INFO main - -any mod point created for suspicious Candidate [className=org.apache.wicket.util.license.ApacheLicenseHeaderTestCase, methodName=org.apache.wicket.util.license.ApacheLicenseHeaderTestCase{before()V 0.0, lineNumber=253, susp=0.5773502691896258]
+2018-08-09 08:09:55,046 INFO main - -any mod point created for suspicious Candidate [className=org.apache.wicket.util.license.ApacheLicenseHeaderTestCase, methodName=org.apache.wicket.util.license.ApacheLicenseHeaderTestCase{failIncorrectLicenceHeaders(Ljava/util/Map;)V 0.0, lineNumber=338, susp=0.5773502691896258]
+2018-08-09 08:09:55,047 INFO main - -any mod point created for suspicious Candidate [className=org.apache.wicket.util.license.ApacheLicenseHeaderTestCase, methodName=org.apache.wicket.util.license.ApacheLicenseHeaderTestCase{failIncorrectLicenceHeaders(Ljava/util/Map;)V 0.0, lineNumber=339, susp=0.5773502691896258]
+2018-08-09 08:09:55,061 INFO main - -any mod point created for suspicious Candidate [className=org.apache.wicket.util.license.ApacheLicenseHeaderTestCase, methodName=org.apache.wicket.util.license.ApacheLicenseHeaderTestCase{visitFiles(Ljava/util/List;Ljava/util/List;Lorg/apache/wicket/util/license/ApacheLicenseHeaderTestCase$FileVisitor;)V 0.0, lineNumber=350, susp=0.5773502691896258]
+2018-08-09 08:09:55,086 INFO main - -any mod point created for suspicious Candidate [className=org.apache.wicket.util.license.ApacheLicenseHeaderTestCase, methodName=org.apache.wicket.util.license.ApacheLicenseHeaderTestCase{visitDirectory(Ljava/util/List;Ljava/util/List;Ljava/io/File;Lorg/apache/wicket/util/license/ApacheLicenseHeaderTestCase$FileVisitor;)V 0.0, lineNumber=375, susp=0.5773502691896258]
+2018-08-09 08:09:55,339 INFO main - -any mod point created for suspicious Candidate [className=org.apache.wicket.util.diff.myers.MyersDiff, methodName=org.apache.wicket.util.diff.myers.MyersDiff{buildRevision(Lorg/apache/wicket/util/diff/myers/PathNode;[Ljava/lang/Object;[Ljava/lang/Object;)Lorg/apache/wicket/util/diff/Revision; 0.0, lineNumber=242, susp=0.5773502691896258]
+2018-08-09 08:09:55,356 INFO main - -any mod point created for suspicious Candidate [className=org.apache.wicket.util.license.ApacheLicenseHeaderTestCase$DirectoryFileFilter, methodName=org.apache.wicket.util.license.ApacheLicenseHeaderTestCase$DirectoryFileFilter{accept(Ljava/io/File;)Z 0.0, lineNumber=166, susp=0.5773502691896258]
+2018-08-09 08:09:55,384 INFO main - -any mod point created for suspicious Candidate [className=org.apache.wicket.util.license.CssLicenseHeaderHandler, methodName=org.apache.wicket.util.license.CssLicenseHeaderHandler{checkLicenseHeader(Ljava/io/File;)Z 0.0, lineNumber=59, susp=0.5773502691896258]
+2018-08-09 08:09:55,393 INFO main - -any mod point created for suspicious Candidate [className=org.apache.wicket.util.license.VelocityLicenseHeaderHandler, methodName=org.apache.wicket.util.license.VelocityLicenseHeaderHandler{checkLicenseHeader(Ljava/io/File;)Z 0.0, lineNumber=59, susp=0.5773502691896258]
+2018-08-09 08:09:55,408 INFO main - -any mod point created for suspicious Candidate [className=org.apache.wicket.util.license.ApacheLicenseHeaderTestCase$1, methodName=org.apache.wicket.util.license.ApacheLicenseHeaderTestCase$1{visitFile(Ljava/io/File;)V 0.0, lineNumber=297, susp=0.5773502691896258]
+2018-08-09 08:09:55,438 INFO main - -any mod point created for suspicious Candidate [className=org.apache.wicket.util.license.XmlLicenseHeaderHandler, methodName=org.apache.wicket.util.license.XmlLicenseHeaderHandler{checkLicenseHeader(Ljava/io/File;)Z 0.0, lineNumber=86, susp=0.5773502691896258]
+2018-08-09 08:09:55,514 INFO main - -any mod point created for suspicious Candidate [className=org.apache.wicket.util.license.ApacheLicenseHeaderTestCase$SuffixAndIgnoreFileFilter, methodName=org.apache.wicket.util.license.ApacheLicenseHeaderTestCase$SuffixAndIgnoreFileFilter{accept(Ljava/io/File;)Z 0.0, lineNumber=93, susp=0.5773502691896258]
+2018-08-09 08:09:55,565 INFO main - -any mod point created for suspicious Candidate [className=org.apache.wicket.util.license.ApacheLicenseHeaderTestCase$SuffixAndIgnoreFileFilter, methodName=org.apache.wicket.util.license.ApacheLicenseHeaderTestCase$SuffixAndIgnoreFileFilter{ignoreFile(Ljava/io/File;)Z 0.0, lineNumber=113, susp=0.5773502691896258]
+2018-08-09 08:09:55,655 INFO main - -any mod point created for suspicious Candidate [className=org.apache.wicket.util.license.ApacheLicenseHeaderTestCase$SuffixAndIgnoreFileFilter, methodName=org.apache.wicket.util.license.ApacheLicenseHeaderTestCase$SuffixAndIgnoreFileFilter{ignoreFile(Ljava/io/File;)Z 0.0, lineNumber=145, susp=0.5773502691896258]
+2018-08-09 08:09:56,053 INFO main - -any mod point created for suspicious Candidate [className=org.apache.wicket.util.string.Strings, methodName=org.apache.wicket.util.string.Strings{append(Lorg/apache/wicket/util/string/AppendingStringBuffer;Ljava/lang/CharSequence;II)V 0.0, lineNumber=1235, susp=0.3333333333333333]
+2018-08-09 08:09:56,151 INFO main - Total suspicious from FL: 346,  312
+2018-08-09 08:09:56,151 INFO main - Total ModPoint created: 312
+2018-08-09 08:09:56,151 INFO main - Creating program variant #1, [Variant id: 1, #gens: 312, #ops: 0, parent:-]
+2018-08-09 08:09:57,187 INFO fr.inria.astor.core.setup.ConfigurationProperties - ----------------------------
+2018-08-09 08:09:57,187 INFO fr.inria.astor.core.setup.ConfigurationProperties - ---Configuration properties:---Execution values
+2018-08-09 08:09:57,188 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:packageToInstrument= org.apache.wicket
+2018-08-09 08:09:57,188 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:flthreshold= 0.1
+2018-08-09 08:09:57,188 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:numberExecutions= 1
+2018-08-09 08:09:57,188 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evosuiteresultfolder= evosuite
+2018-08-09 08:09:57,188 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:ignoredTestCases= org.apache.commons.math.ode.nonstiff:org.apache.commons.math.ode2.nonstiff:org.apache.commons.lang.LocaleUtilsTest:org.apache.wicket.util.markup.xhtml.WellFormedXmlTestCase:org.apache.wicket.util.license.ApacheLicenceHeaderTest
+2018-08-09 08:09:57,188 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:skipfaultlocalization= false
+2018-08-09 08:09:57,188 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:maxGeneration= 200
+2018-08-09 08:09:57,188 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:maxsuspcandidates= 1000
+2018-08-09 08:09:57,188 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:tmax2= 960000
+2018-08-09 08:09:57,188 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:tmax1= 120000
+2018-08-09 08:09:57,188 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:workingDirectory= /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_WICKET-5359_61122bab/r1
+2018-08-09 08:09:57,188 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:mode= statement-remove
+2018-08-09 08:09:57,188 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:ignoreflakyinfl= true
+2018-08-09 08:09:57,188 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:uniqueoptogen= false
+2018-08-09 08:09:57,188 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:testcasesregression= org.apache.wicket.util.encoding.UrlDecoderTest:org.apache.wicket.util.value.LongValueTest:org.apache.wicket.util.file.WebXmlFileTest:org.apache.wicket.util.parse.metapattern.parsers.VariableAssignmentParserTest:org.apache.wicket.util.lang.NumbersTest:org.apache.wicket.util.size.BytesTest:org.apache.wicket.util.string.PrependingStringBufferTest:org.apache.wicket.util.file.FilesTest:org.apache.wicket.util.io.FullyBufferedReaderTest:org.apache.wicket.util.io.XmlReaderTest:org.apache.wicket.util.time.DurationTest:org.apache.wicket.util.LongEncoderTest:org.apache.wicket.util.string.AppendingStringBufferTest:org.apache.wicket.util.collections.MicroMapTest:org.apache.wicket.util.lang.ObjectsTest:org.apache.wicket.util.convert.converters.ConvertersTest:org.apache.wicket.util.string.StringListTest:org.apache.wicket.util.string.interpolator.VariableInterpolatorTest:org.apache.wicket.util.time.TimeMapTest:org.apache.wicket.util.visit.AllVisitFilterTest:org.apache.wicket.util.markup.xhtml.WellFormedXmlTestCase:org.apache.wicket.util.license.ApacheLicenceHeaderTest:org.apache.wicket.util.collections.MostRecentlyUsedMapTest:org.apache.wicket.util.encoding.UrlEncoderTest:org.apache.wicket.util.time.TimeFrameTest:org.apache.wicket.util.lang.ClassesTest:org.apache.wicket.util.visit.ClassVisitFilterTest:org.apache.wicket.util.string.StringValueTest:org.apache.wicket.util.time.TimeTest:org.apache.wicket.util.lang.BytesTest:org.apache.wicket.util.lang.PrimitivesTest:org.apache.wicket.util.value.ValueMapTest:org.apache.wicket.util.parse.metapattern.MetaPatternTest:org.apache.wicket.util.io.LastModifiedTest:org.apache.wicket.util.lang.ArgsTest:org.apache.wicket.util.time.TimeOfDayTest:org.apache.wicket.util.collections.MiniMapTest:org.apache.wicket.util.lang.PackagesTest:org.apache.wicket.util.string.StringsTest:org.apache.wicket.util.crypt.Base64Test:org.apache.wicket.util.collections.ReverseListIteratorTest:
+2018-08-09 08:09:57,189 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:pathToMVNRepository= 
+2018-08-09 08:09:57,189 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:executeRegression= true
+2018-08-09 08:09:57,189 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:modificationpointnavigation= weight
+2018-08-09 08:09:57,189 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:maxtime= 120
+2018-08-09 08:09:57,189 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:probagenmutation= false
+2018-08-09 08:09:57,189 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:alternativecompliancelevel= 4
+2018-08-09 08:09:57,189 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:version-location= ./math-version/
+2018-08-09 08:09:57,189 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:location= /home/qx5/elixir_bdj_bugs/wicket/bugs-dot-jar_WICKET-5359_61122bab
+2018-08-09 08:09:57,189 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:stopfirst= true
+2018-08-09 08:09:57,189 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:jvm4testexecution= /home/qxin/jdk1.8.0_111/bin
+2018-08-09 08:09:57,189 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:bugId= 280
+2018-08-09 08:09:57,189 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:mutationrate= 1 
+2018-08-09 08:09:57,189 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:projectIdentifier= bugs-dot-jar_WICKET-5359_61122bab
+2018-08-09 08:09:57,189 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evo_buggy_class= true
+2018-08-09 08:09:57,189 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evoRunOnBuggyClass= true
+2018-08-09 08:09:57,189 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:jvm4evosuitetestexecution= /home/qxin/jdk1.8.0_111/bin
+2018-08-09 08:09:57,189 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:resetoperations= false
+2018-08-09 08:09:57,189 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:seed= 0
+2018-08-09 08:09:57,189 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:testbystep= false
+2018-08-09 08:09:57,189 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:srctestfolder= //wicket-util/src/test/java/
+2018-08-09 08:09:57,189 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:javacompliancelevel= 8
+2018-08-09 08:09:57,190 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:bintestfolder= //wicket-util/target/test-classes/
+2018-08-09 08:09:57,190 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:commandTrunk= 50000
+2018-08-09 08:09:57,190 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:dependenciespath= /home/qx5/elixir_bdj_bugs/wicket/bugs-dot-jar_WICKET-5359_61122bab/all0.jar
+2018-08-09 08:09:57,190 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:multipointmodification= false
+2018-08-09 08:09:57,190 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:validation= process
+2018-08-09 08:09:57,190 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:scope= package
+2018-08-09 08:09:57,190 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evosuitetimeout= 120
+2018-08-09 08:09:57,190 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evoDSE= false
+2018-08-09 08:09:57,190 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:elementsToMutate= 10
+2018-08-09 08:09:57,190 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:lastJUnitVersion= ./examples/libs/junit-4.11.jar
+2018-08-09 08:09:57,190 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:failing= org.apache.wicket.util.string.StringValueTest
+2018-08-09 08:09:57,190 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:allpoints= false
+2018-08-09 08:09:57,190 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:resourcesfolder= /src/main/resources:/src/test/resources:
+2018-08-09 08:09:57,190 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:regressionforfaultlocalization= true
+2018-08-09 08:09:57,190 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:population= 1
+2018-08-09 08:09:57,190 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:saveall= false
+2018-08-09 08:09:57,190 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:pvariantfoldername= variant-
+2018-08-09 08:09:57,190 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:savesolution= true
+2018-08-09 08:09:57,190 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:srcjavafolder= //wicket-util/src/main/java/
+2018-08-09 08:09:57,190 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evo_affected_by_op= true
+2018-08-09 08:09:57,190 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:binjavafolder= //wicket-util/target/classes/
+2018-08-09 08:09:57,191 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:reintroduce= original-parents
+2018-08-09 08:09:57,191 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evosuitejar= ./lib/evosuite-master-1.0.4-SNAPSHOT.jar
+2018-08-09 08:09:57,191 INFO fr.inria.astor.core.setup.ConfigurationProperties - ----------------------------
+2018-08-09 08:09:57,192 INFO main - mod_point ModificPoint=PathNode line: 112, el: CtReturnImpl
+2018-08-09 08:09:57,193 INFO main - -->op: RemoveOp: `return ((i) < 0) || ((j) [...] ` ---> `-` at pos 0 of parent `{ 	return ((i) < 0) || (([...]`
+2018-08-09 08:10:00,087 INFO main - mod_point ModificPoint=PathNode line: 124, el: CtIfImpl
+2018-08-09 08:10:00,088 INFO main - -->op: ReplaceIfBooleanOp: `if (isBootstrap()) { 	ret[...] ` ---> `if (true) { 	return null;[...]` at pos 0 of parent `{ 	if (isBootstrap()) { 	[...]`
+2018-08-09 08:10:03,092 INFO main - mod_point ModificPoint=PathNode line: 124, el: CtIfImpl
+2018-08-09 08:10:03,092 INFO main - -->op: ReplaceIfBooleanOp: `if (isBootstrap()) { 	ret[...] ` ---> `if (false) { 	return null[...]` at pos 0 of parent `{ 	if (isBootstrap()) { 	[...]`
+2018-08-09 08:10:05,885 INFO main - mod_point ModificPoint=PathNode line: 124, el: CtIfImpl
+2018-08-09 08:10:05,886 INFO main - -->op: RemoveOp: `if (isBootstrap()) { 	ret[...] ` ---> `-` at pos 0 of parent `{ 	if (isBootstrap()) { 	[...]`
+2018-08-09 08:10:08,553 INFO main - mod_point ModificPoint=PathNode line: 126, el: CtReturnImpl
+2018-08-09 08:10:08,554 INFO main - -->op: RemoveOp: `return null ` ---> `-` at pos 0 of parent `{ 	return null; }`
+2018-08-09 08:10:11,043 INFO main - mod_point ModificPoint=PathNode line: 128, el: CtIfImpl
+2018-08-09 08:10:11,044 INFO main - -->op: ReplaceIfBooleanOp: `if ((!(isSnake())) && ((p[...] ` ---> `if (true) { 	return prev.[...]` at pos 1 of parent `{ 	if (isBootstrap()) { 	[...]`
+2018-08-09 08:10:14,066 INFO main - mod_point ModificPoint=PathNode line: 128, el: CtIfImpl
+2018-08-09 08:10:14,067 INFO main - -->op: ReplaceIfBooleanOp: `if ((!(isSnake())) && ((p[...] ` ---> `if (false) { 	return prev[...]` at pos 1 of parent `{ 	if (isBootstrap()) { 	[...]`
+2018-08-09 08:10:16,870 INFO main - mod_point ModificPoint=PathNode line: 128, el: CtIfImpl
+2018-08-09 08:10:16,870 INFO main - -->op: RemoveOp: `if ((!(isSnake())) && ((p[...] ` ---> `-` at pos 1 of parent `{ 	if (isBootstrap()) { 	[...]`
+2018-08-09 08:10:19,456 INFO main - mod_point ModificPoint=PathNode line: 130, el: CtReturnImpl
+2018-08-09 08:10:19,457 INFO main - -->op: RemoveOp: `return prev.previousSnake[...] ` ---> `-` at pos 0 of parent `{ 	return prev.previousSn[...]`
+2018-08-09 08:10:22,248 INFO main - mod_point ModificPoint=PathNode line: 132, el: CtReturnImpl
+2018-08-09 08:10:22,249 INFO main - -->op: RemoveOp: `return org.apache.wicket.[...] ` ---> `-` at pos 2 of parent `{ 	if (isBootstrap()) { 	[...]`
+2018-08-09 08:10:24,144 INFO main - mod_point ModificPoint=IOUtils line: 101, el: CtIfImpl
+2018-08-09 08:10:24,144 INFO main - -->op: ReplaceIfBooleanOp: `if (closeable != null) { [...] ` ---> `if (true) { 	closeable.cl[...]` at pos 0 of parent `{ 	if (closeable != null)[...]`
+2018-08-09 08:10:26,428 INFO main - mod_point ModificPoint=IOUtils line: 101, el: CtIfImpl
+2018-08-09 08:10:26,428 INFO main - -->op: ReplaceIfBooleanOp: `if (closeable != null) { [...] ` ---> `if (false) { 	closeable.c[...]` at pos 0 of parent `{ 	if (closeable != null)[...]`
+2018-08-09 08:10:28,815 INFO main - mod_point ModificPoint=IOUtils line: 101, el: CtIfImpl
+2018-08-09 08:10:28,816 INFO main - -->op: RemoveOp: `if (closeable != null) { [...] ` ---> `-` at pos 0 of parent `{ 	if (closeable != null)[...]`
+2018-08-09 08:10:31,884 INFO main - mod_point ModificPoint=IOUtils line: 103, el: CtInvocationImpl
+2018-08-09 08:10:31,885 INFO main - -->op: RemoveOp: `closeable.close() ` ---> `-` at pos 0 of parent `{ 	closeable.close(); }`
+2018-08-09 08:10:34,676 INFO main - mod_point ModificPoint=IOUtils line: 122, el: CtInvocationImpl
+2018-08-09 08:10:34,677 INFO main - -->op: RemoveOp: `org.apache.wicket.util.io[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.wicket.util[...]`
+2018-08-09 08:10:35,974 INFO main - mod_point ModificPoint=Delta line: 114, el: CtLocalVariableImpl
+2018-08-09 08:10:35,974 INFO main - -->op: RemoveOp: `java.lang.Class<?> c = or[...] ` ---> `-` at pos 0 of parent `{ 	java.lang.Class<?> c =[...]`
+2018-08-09 08:10:36,945 INFO main - mod_point ModificPoint=Delta line: 118, el: CtAssignmentImpl
+2018-08-09 08:10:36,945 INFO main - -->op: RemoveOp: `result = ((org.apache.wic[...] ` ---> `-` at pos 0 of parent `{ 	result = ((org.apache.[...]`
+2018-08-09 08:10:38,032 INFO main - mod_point ModificPoint=Delta line: 124, el: CtInvocationImpl
+2018-08-09 08:10:38,032 INFO main - -->op: RemoveOp: `result.init(orig, rev) ` ---> `-` at pos 3 of parent `{ 	java.lang.Class<?> c =[...]`
+2018-08-09 08:10:40,515 INFO main - mod_point ModificPoint=Delta line: 125, el: CtReturnImpl
+2018-08-09 08:10:40,515 INFO main - -->op: RemoveOp: `return result ` ---> `-` at pos 4 of parent `{ 	java.lang.Class<?> c =[...]`
+2018-08-09 08:10:41,705 INFO main - mod_point ModificPoint=Delta line: 154, el: CtAssignmentImpl
+2018-08-09 08:10:41,706 INFO main - -->op: RemoveOp: `original = orig ` ---> `-` at pos 0 of parent `{ 	original = orig; 	revi[...]`
+2018-08-09 08:10:44,238 INFO main - mod_point ModificPoint=Delta line: 155, el: CtAssignmentImpl
+2018-08-09 08:10:44,238 INFO main - -->op: RemoveOp: `revised = rev ` ---> `-` at pos 1 of parent `{ 	original = orig; 	revi[...]`
+2018-08-09 08:10:46,898 INFO main - mod_point ModificPoint=PropertiesLicenseHeaderHandler line: 42, el: CtReturnImpl
+2018-08-09 08:10:46,898 INFO main - -->op: RemoveOp: `return "propertiesLicense[...] ` ---> `-` at pos 0 of parent `{ 	return "propertiesLice[...]`
+2018-08-09 08:10:48,032 INFO main - mod_point ModificPoint=PropertiesLicenseHeaderHandler line: 48, el: CtLocalVariableImpl
+2018-08-09 08:10:48,032 INFO main - -->op: RemoveOp: `org.apache.wicket.util.di[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.wicket.util[...]`
+2018-08-09 08:10:49,357 INFO main - mod_point ModificPoint=PropertiesLicenseHeaderHandler line: 52, el: CtLocalVariableImpl
+2018-08-09 08:10:49,357 INFO main - -->op: RemoveOp: `java.lang.String header =[...] ` ---> `-` at pos 0 of parent `{ 	java.lang.String heade[...]`
+2018-08-09 08:10:50,412 INFO main - mod_point ModificPoint=PropertiesLicenseHeaderHandler line: 54, el: CtAssignmentImpl
+2018-08-09 08:10:50,412 INFO main - -->op: RemoveOp: `revision = org.apache.wic[...] ` ---> `-` at pos 1 of parent `{ 	java.lang.String heade[...]`
+2018-08-09 08:10:53,044 INFO main - mod_point ModificPoint=PropertiesLicenseHeaderHandler line: 61, el: CtReturnImpl
+2018-08-09 08:10:53,044 INFO main - -->op: RemoveOp: `return (revision.size()) [...] ` ---> `-` at pos 2 of parent `{ 	org.apache.wicket.util[...]`
+2018-08-09 08:10:54,051 INFO main - mod_point ModificPoint=PropertiesLicenseHeaderHandler line: 67, el: CtReturnImpl
+2018-08-09 08:10:54,051 INFO main - -->op: RemoveOp: `return java.util.Arrays.a[...] ` ---> `-` at pos 0 of parent `{ 	return java.util.Array[...]`
+2018-08-09 08:10:55,210 INFO main - mod_point ModificPoint=Chunk line: 175, el: CtReturnImpl
+2018-08-09 08:10:55,211 INFO main - -->op: RemoveOp: `return count ` ---> `-` at pos 0 of parent `{ 	return count; }`
+2018-08-09 08:10:56,297 INFO main - mod_point ModificPoint=Chunk line: 337, el: CtIfImpl
+2018-08-09 08:10:56,297 INFO main - -->op: ReplaceIfBooleanOp: `if (count <= 0) { 	return[...] ` ---> `if (true) { 	return new j[...]` at pos 0 of parent `{ 	if (count <= 0) { 		re[...]`
+2018-08-09 08:10:59,120 INFO main - mod_point ModificPoint=Chunk line: 337, el: CtIfImpl
+2018-08-09 08:10:59,120 INFO main - -->op: ReplaceIfBooleanOp: `if (count <= 0) { 	return[...] ` ---> `if (false) { 	return new [...]` at pos 0 of parent `{ 	if (count <= 0) { 		re[...]`
+2018-08-09 08:11:01,728 INFO main - mod_point ModificPoint=Chunk line: 337, el: CtIfImpl
+2018-08-09 08:11:01,728 INFO main - -->op: RemoveOp: `if (count <= 0) { 	return[...] ` ---> `-` at pos 0 of parent `{ 	if (count <= 0) { 		re[...]`
+2018-08-09 08:11:02,754 INFO main - mod_point ModificPoint=Chunk line: 339, el: CtReturnImpl
+2018-08-09 08:11:02,755 INFO main - -->op: RemoveOp: `return new java.util.Arra[...] ` ---> `-` at pos 0 of parent `{ 	return new java.util.A[...]`
+2018-08-09 08:11:03,806 INFO main - mod_point ModificPoint=Chunk line: 343, el: CtReturnImpl
+2018-08-09 08:11:03,806 INFO main - -->op: RemoveOp: `return new java.util.Arra[...] ` ---> `-` at pos 0 of parent `{ 	return new java.util.A[...]`
+2018-08-09 08:11:04,823 INFO main - mod_point ModificPoint=Chunk line: 360, el: CtReturnImpl
+2018-08-09 08:11:04,823 INFO main - -->op: RemoveOp: `return org.apache.wicket.[...] ` ---> `-` at pos 0 of parent `{ 	return org.apache.wick[...]`
+2018-08-09 08:11:05,787 INFO main - mod_point ModificPoint=Generics line: 96, el: CtReturnImpl
+2018-08-09 08:11:05,787 INFO main - -->op: RemoveOp: `return new java.util.Arra[...] ` ---> `-` at pos 0 of parent `{ 	return new java.util.A[...]`
+2018-08-09 08:11:06,709 INFO main - mod_point ModificPoint=Diff line: 155, el: CtReturnImpl
+2018-08-09 08:11:06,709 INFO main - -->op: RemoveOp: `return new org.apache.wic[...] ` ---> `-` at pos 0 of parent `{ 	return new org.apache.[...]`
+2018-08-09 08:11:07,710 INFO main - mod_point ModificPoint=Diff line: 171, el: CtIfImpl
+2018-08-09 08:11:07,710 INFO main - -->op: ReplaceIfBooleanOp: `if ((orig == null) || (re[...] ` ---> `if (true) { 	throw new ja[...]` at pos 0 of parent `{ 	if ((orig == null) || [...]`
+2018-08-09 08:11:10,094 INFO main - mod_point ModificPoint=Diff line: 171, el: CtIfImpl
+2018-08-09 08:11:10,095 INFO main - -->op: ReplaceIfBooleanOp: `if ((orig == null) || (re[...] ` ---> `if (false) { 	throw new j[...]` at pos 0 of parent `{ 	if ((orig == null) || [...]`
+2018-08-09 08:11:12,680 INFO main - mod_point ModificPoint=Diff line: 171, el: CtIfImpl
+2018-08-09 08:11:12,681 INFO main - -->op: RemoveOp: `if ((orig == null) || (re[...] ` ---> `-` at pos 0 of parent `{ 	if ((orig == null) || [...]`
+2018-08-09 08:11:15,672 INFO main - mod_point ModificPoint=Diff line: 176, el: CtReturnImpl
+2018-08-09 08:11:15,672 INFO main - -->op: RemoveOp: `return org.apache.wicket.[...] ` ---> `-` at pos 1 of parent `{ 	if ((orig == null) || [...]`
+2018-08-09 08:11:16,756 INFO main - mod_point ModificPoint=Diff line: 194, el: CtIfImpl
+2018-08-09 08:11:16,757 INFO main - -->op: ReplaceIfBooleanOp: `if ((orig == null) || (re[...] ` ---> `if (true) { 	throw new ja[...]` at pos 0 of parent `{ 	if ((orig == null) || [...]`
+2018-08-09 08:11:19,346 INFO main - mod_point ModificPoint=Diff line: 194, el: CtIfImpl
+2018-08-09 08:11:19,346 INFO main - -->op: ReplaceIfBooleanOp: `if ((orig == null) || (re[...] ` ---> `if (false) { 	throw new j[...]` at pos 0 of parent `{ 	if ((orig == null) || [...]`
+2018-08-09 08:11:21,885 INFO main - mod_point ModificPoint=Diff line: 194, el: CtIfImpl
+2018-08-09 08:11:21,886 INFO main - -->op: RemoveOp: `if ((orig == null) || (re[...] ` ---> `-` at pos 0 of parent `{ 	if ((orig == null) || [...]`
+2018-08-09 08:11:24,380 INFO main - mod_point ModificPoint=Diff line: 199, el: CtReturnImpl
+2018-08-09 08:11:24,380 INFO main - -->op: RemoveOp: `return new org.apache.wic[...] ` ---> `-` at pos 1 of parent `{ 	if ((orig == null) || [...]`
+2018-08-09 08:11:25,475 INFO main - mod_point ModificPoint=Diff line: 212, el: CtIfImpl
+2018-08-09 08:11:25,476 INFO main - -->op: ReplaceIfBooleanOp: `if (((orig.length) == 0) [...] ` ---> `if (true) { 	return new o[...]` at pos 0 of parent `{ 	if (((orig.length) == [...]`
+2018-08-09 08:11:27,890 INFO main - mod_point ModificPoint=Diff line: 212, el: CtIfImpl
+2018-08-09 08:11:27,891 INFO main - -->op: ReplaceIfBooleanOp: `if (((orig.length) == 0) [...] ` ---> `if (false) { 	return new [...]` at pos 0 of parent `{ 	if (((orig.length) == [...]`
+2018-08-09 08:11:30,546 INFO main - mod_point ModificPoint=Diff line: 212, el: CtIfImpl
+2018-08-09 08:11:30,546 INFO main - -->op: RemoveOp: `if (((orig.length) == 0) [...] ` ---> `-` at pos 0 of parent `{ 	if (((orig.length) == [...]`
+2018-08-09 08:11:31,739 INFO main - mod_point ModificPoint=Diff line: 218, el: CtReturnImpl
+2018-08-09 08:11:31,739 INFO main - -->op: RemoveOp: `return algorithm.diff(ori[...] ` ---> `-` at pos 0 of parent `{ 	return algorithm.diff([...]`
+2018-08-09 08:11:32,768 INFO main - mod_point ModificPoint=Revision line: 117, el: CtIfImpl
+2018-08-09 08:11:32,768 INFO main - -->op: ReplaceIfBooleanOp: `if (delta == null) { 	thr[...] ` ---> `if (true) { 	throw new ja[...]` at pos 0 of parent `{ 	if (delta == null) { 	[...]`
+2018-08-09 08:11:35,203 INFO main - mod_point ModificPoint=Revision line: 117, el: CtIfImpl
+2018-08-09 08:11:35,203 INFO main - -->op: ReplaceIfBooleanOp: `if (delta == null) { 	thr[...] ` ---> `if (false) { 	throw new j[...]` at pos 0 of parent `{ 	if (delta == null) { 	[...]`
+2018-08-09 08:11:37,790 INFO main - mod_point ModificPoint=Revision line: 117, el: CtIfImpl
+2018-08-09 08:11:37,791 INFO main - -->op: RemoveOp: `if (delta == null) { 	thr[...] ` ---> `-` at pos 0 of parent `{ 	if (delta == null) { 	[...]`
+2018-08-09 08:11:40,467 INFO main - mod_point ModificPoint=Revision line: 121, el: CtInvocationImpl
+2018-08-09 08:11:40,467 INFO main - -->op: RemoveOp: `deltas_.add(0, delta) ` ---> `-` at pos 1 of parent `{ 	if (delta == null) { 	[...]`
+2018-08-09 08:11:43,075 INFO main - mod_point ModificPoint=Revision line: 143, el: CtReturnImpl
+2018-08-09 08:11:43,075 INFO main - -->op: RemoveOp: `return deltas_.size() ` ---> `-` at pos 0 of parent `{ 	return deltas_.size();[...]`
+2018-08-09 08:11:43,949 INFO main - mod_point ModificPoint=HtmlLicenseHeaderHandler line: 37, el: CtReturnImpl
+2018-08-09 08:11:43,949 INFO main - -->op: RemoveOp: `return java.util.Arrays.a[...] ` ---> `-` at pos 0 of parent `{ 	return java.util.Array[...]`
+2018-08-09 08:11:44,820 INFO main - mod_point ModificPoint=XmlPrologHeaderHandler line: 40, el: CtReturnImpl
+2018-08-09 08:11:44,821 INFO main - -->op: RemoveOp: `return java.util.Arrays.a[...] ` ---> `-` at pos 0 of parent `{ 	return java.util.Array[...]`
+2018-08-09 08:11:45,537 INFO main - mod_point ModificPoint=XmlPrologHeaderHandler line: 51, el: CtLocalVariableImpl
+2018-08-09 08:11:45,537 INFO main - -->op: RemoveOp: `java.lang.String header =[...] ` ---> `-` at pos 0 of parent `{ 	java.lang.String heade[...]`
+2018-08-09 08:11:46,317 INFO main - mod_point ModificPoint=XmlPrologHeaderHandler line: 52, el: CtReturnImpl
+2018-08-09 08:11:46,317 INFO main - -->op: RemoveOp: `return (header.startsWith[...] ` ---> `-` at pos 1 of parent `{ 	java.lang.String heade[...]`
+2018-08-09 08:11:48,820 INFO main - mod_point ModificPoint=AbstractLicenseHeaderHandler line: 51, el: CtReturnImpl
+2018-08-09 08:11:48,820 INFO main - -->op: RemoveOp: `return ignoreFiles ` ---> `-` at pos 0 of parent `{ 	return ignoreFiles; }`
+2018-08-09 08:11:49,908 INFO main - mod_point ModificPoint=AbstractLicenseHeaderHandler line: 64, el: CtReturnImpl
+2018-08-09 08:11:49,909 INFO main - -->op: RemoveOp: `return null ` ---> `-` at pos 0 of parent `{ 	return null; }`
+2018-08-09 08:11:50,976 INFO main - mod_point ModificPoint=AbstractLicenseHeaderHandler line: 71, el: CtIfImpl
+2018-08-09 08:11:50,977 INFO main - -->op: ReplaceIfBooleanOp: `if (org.apache.wicket.uti[...] ` ---> `if (true) { 	java.io.Line[...]` at pos 0 of parent `{ 	if (org.apache.wicket.[...]`
+2018-08-09 08:11:53,478 INFO main - mod_point ModificPoint=AbstractLicenseHeaderHandler line: 71, el: CtIfImpl
+2018-08-09 08:11:53,479 INFO main - -->op: ReplaceIfBooleanOp: `if (org.apache.wicket.uti[...] ` ---> `if (false) { 	java.io.Lin[...]` at pos 0 of parent `{ 	if (org.apache.wicket.[...]`
+2018-08-09 08:11:55,946 INFO main - mod_point ModificPoint=AbstractLicenseHeaderHandler line: 71, el: CtIfImpl
+2018-08-09 08:11:55,947 INFO main - -->op: RemoveOp: `if (org.apache.wicket.uti[...] ` ---> `-` at pos 0 of parent `{ 	if (org.apache.wicket.[...]`
+2018-08-09 08:11:58,352 INFO main - mod_point ModificPoint=AbstractLicenseHeaderHandler line: 73, el: CtLocalVariableImpl
+2018-08-09 08:11:58,353 INFO main - -->op: RemoveOp: `java.io.LineNumberReader [...] ` ---> `-` at pos 0 of parent `{ 	java.io.LineNumberRead[...]`
+2018-08-09 08:11:59,417 INFO main - mod_point ModificPoint=AbstractLicenseHeaderHandler line: 74, el: CtLocalVariableImpl
+2018-08-09 08:11:59,417 INFO main - -->op: RemoveOp: `java.io.InputStream input[...] ` ---> `-` at pos 1 of parent `{ 	java.io.LineNumberRead[...]`
+2018-08-09 08:12:00,447 INFO main - mod_point ModificPoint=AbstractLicenseHeaderHandler line: 75, el: CtLocalVariableImpl
+2018-08-09 08:12:00,448 INFO main - -->op: RemoveOp: `java.io.InputStreamReader[...] ` ---> `-` at pos 2 of parent `{ 	java.io.LineNumberRead[...]`
+2018-08-09 08:12:01,535 INFO main - mod_point ModificPoint=AbstractLicenseHeaderHandler line: 79, el: CtAssignmentImpl
+2018-08-09 08:12:01,535 INFO main - -->op: RemoveOp: `inputStream = org.apache.[...] ` ---> `-` at pos 0 of parent `{ 	inputStream = org.apac[...]`
+2018-08-09 08:12:03,942 INFO main - mod_point ModificPoint=AbstractLicenseHeaderHandler line: 80, el: CtAssignmentImpl
+2018-08-09 08:12:03,943 INFO main - -->op: RemoveOp: `inputStreamReader = new j[...] ` ---> `-` at pos 1 of parent `{ 	inputStream = org.apac[...]`
+2018-08-09 08:12:06,311 INFO main - mod_point ModificPoint=AbstractLicenseHeaderHandler line: 81, el: CtAssignmentImpl
+2018-08-09 08:12:06,311 INFO main - -->op: RemoveOp: `lineNumberReader = new ja[...] ` ---> `-` at pos 2 of parent `{ 	inputStream = org.apac[...]`
+2018-08-09 08:12:08,593 INFO main - mod_point ModificPoint=AbstractLicenseHeaderHandler line: 83, el: CtLocalVariableImpl
+2018-08-09 08:12:08,593 INFO main - -->op: RemoveOp: `java.lang.StringBuilder h[...] ` ---> `-` at pos 3 of parent `{ 	inputStream = org.apac[...]`
+2018-08-09 08:12:09,581 INFO main - mod_point ModificPoint=AbstractLicenseHeaderHandler line: 84, el: CtLocalVariableImpl
+2018-08-09 08:12:09,581 INFO main - -->op: RemoveOp: `java.lang.String line = l[...] ` ---> `-` at pos 4 of parent `{ 	inputStream = org.apac[...]`
+2018-08-09 08:12:10,535 INFO main - mod_point ModificPoint=AbstractLicenseHeaderHandler line: 85, el: CtWhileImpl
+2018-08-09 08:12:10,536 INFO main - -->op: RemoveOp: `while (line != null) { 	h[...] ` ---> `-` at pos 5 of parent `{ 	inputStream = org.apac[...]`
+2018-08-09 08:12:12,858 INFO main - mod_point ModificPoint=AbstractLicenseHeaderHandler line: 87, el: CtInvocationImpl
+2018-08-09 08:12:12,858 INFO main - -->op: RemoveOp: `header.append(line) ` ---> `-` at pos 0 of parent `{ 	header.append(line); 	[...]`
+2018-08-09 08:12:15,403 INFO main - mod_point ModificPoint=AbstractLicenseHeaderHandler line: 88, el: CtInvocationImpl
+2018-08-09 08:12:15,403 INFO main - -->op: RemoveOp: `header.append(org.apache.[...] ` ---> `-` at pos 1 of parent `{ 	header.append(line); 	[...]`
+2018-08-09 08:12:17,771 INFO main - mod_point ModificPoint=AbstractLicenseHeaderHandler line: 89, el: CtAssignmentImpl
+2018-08-09 08:12:17,771 INFO main - -->op: RemoveOp: `line = lineNumberReader.r[...] ` ---> `-` at pos 2 of parent `{ 	header.append(line); 	[...]`
+2018-08-09 08:12:20,225 INFO main - mod_point ModificPoint=AbstractLicenseHeaderHandler line: 92, el: CtAssignmentImpl
+2018-08-09 08:12:20,225 INFO main - -->op: RemoveOp: `licenseHeader = header.to[...] ` ---> `-` at pos 6 of parent `{ 	inputStream = org.apac[...]`
+2018-08-09 08:12:22,702 INFO main - mod_point ModificPoint=AbstractLicenseHeaderHandler line: 100, el: CtInvocationImpl
+2018-08-09 08:12:22,702 INFO main - -->op: RemoveOp: `org.apache.wicket.util.io[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.wicket.util[...]`
+2018-08-09 08:12:25,540 INFO main - mod_point ModificPoint=AbstractLicenseHeaderHandler line: 101, el: CtInvocationImpl
+2018-08-09 08:12:25,540 INFO main - -->op: RemoveOp: `org.apache.wicket.util.io[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.wicket.util[...]`
+2018-08-09 08:12:27,832 INFO main - mod_point ModificPoint=AbstractLicenseHeaderHandler line: 102, el: CtInvocationImpl
+2018-08-09 08:12:27,832 INFO main - -->op: RemoveOp: `org.apache.wicket.util.io[...] ` ---> `-` at pos 2 of parent `{ 	org.apache.wicket.util[...]`
+2018-08-09 08:12:30,490 INFO main - mod_point ModificPoint=AbstractLicenseHeaderHandler line: 106, el: CtReturnImpl
+2018-08-09 08:12:30,491 INFO main - -->op: RemoveOp: `return licenseHeader ` ---> `-` at pos 1 of parent `{ 	if (org.apache.wicket.[...]`
+2018-08-09 08:12:31,620 INFO main - mod_point ModificPoint=AbstractLicenseHeaderHandler line: 111, el: CtLocalVariableImpl
+2018-08-09 08:12:31,621 INFO main - -->op: RemoveOp: `java.lang.StringBuilder h[...] ` ---> `-` at pos 0 of parent `{ 	java.lang.StringBuilde[...]`
+2018-08-09 08:12:32,610 INFO main - mod_point ModificPoint=AbstractLicenseHeaderHandler line: 112, el: CtLocalVariableImpl
+2018-08-09 08:12:32,611 INFO main - -->op: RemoveOp: `java.io.LineNumberReader [...] ` ---> `-` at pos 1 of parent `{ 	java.lang.StringBuilde[...]`
+2018-08-09 08:12:33,719 INFO main - mod_point ModificPoint=AbstractLicenseHeaderHandler line: 116, el: CtLocalVariableImpl
+2018-08-09 08:12:33,720 INFO main - -->op: RemoveOp: `java.io.FileReader fileRe[...] ` ---> `-` at pos 0 of parent `{ 	java.io.FileReader fil[...]`
+2018-08-09 08:12:34,756 INFO main - mod_point ModificPoint=AbstractLicenseHeaderHandler line: 117, el: CtAssignmentImpl
+2018-08-09 08:12:34,756 INFO main - -->op: RemoveOp: `lineNumberReader = new ja[...] ` ---> `-` at pos 1 of parent `{ 	java.io.FileReader fil[...]`
+2018-08-09 08:12:37,069 INFO main - mod_point ModificPoint=AbstractLicenseHeaderHandler line: 119, el: CtForImpl
+2018-08-09 08:12:37,069 INFO main - -->op: RemoveOp: `for (int i = start ; i < [...] ` ---> `-` at pos 2 of parent `{ 	java.io.FileReader fil[...]`
+2018-08-09 08:12:39,592 INFO main - mod_point ModificPoint=AbstractLicenseHeaderHandler line: 121, el: CtInvocationImpl
+2018-08-09 08:12:39,593 INFO main - -->op: RemoveOp: `header.append(lineNumberR[...] ` ---> `-` at pos 0 of parent `{ 	header.append(lineNumb[...]`
+2018-08-09 08:12:42,052 INFO main - mod_point ModificPoint=AbstractLicenseHeaderHandler line: 122, el: CtInvocationImpl
+2018-08-09 08:12:42,052 INFO main - -->op: RemoveOp: `header.append(org.apache.[...] ` ---> `-` at pos 1 of parent `{ 	header.append(lineNumb[...]`
+2018-08-09 08:12:44,546 INFO main - mod_point ModificPoint=AbstractLicenseHeaderHandler line: 133, el: CtInvocationImpl
+2018-08-09 08:12:44,547 INFO main - -->op: RemoveOp: `org.apache.wicket.util.io[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.wicket.util[...]`
+2018-08-09 08:12:45,585 INFO main - mod_point ModificPoint=AbstractLicenseHeaderHandler line: 141, el: CtReturnImpl
+2018-08-09 08:12:45,586 INFO main - -->op: RemoveOp: `return header.toString().[...] ` ---> `-` at pos 3 of parent `{ 	java.lang.StringBuilde[...]`
+2018-08-09 08:12:46,450 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 248, el: CtLocalVariableImpl
+2018-08-09 08:12:46,450 INFO main - -->op: RemoveOp: `java.lang.String property[...] ` ---> `-` at pos 0 of parent `{ 	java.lang.String prope[...]`
+2018-08-09 08:12:47,324 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 249, el: CtIfImpl
+2018-08-09 08:12:47,325 INFO main - -->op: ReplaceIfBooleanOp: `if (!(org.apache.wicket.u[...] ` ---> `if (true) { 	Error in pri[...]` at pos 1 of parent `{ 	java.lang.String prope[...]`
+2018-08-09 08:12:49,577 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 249, el: CtIfImpl
+2018-08-09 08:12:49,577 INFO main - -->op: ReplaceIfBooleanOp: `if (!(org.apache.wicket.u[...] ` ---> `if (false) { 	Error in pr[...]` at pos 1 of parent `{ 	java.lang.String prope[...]`
+2018-08-09 08:12:52,095 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 249, el: CtIfImpl
+2018-08-09 08:12:52,095 INFO main - -->op: RemoveOp: `if (!(org.apache.wicket.u[...] ` ---> `-` at pos 1 of parent `{ 	java.lang.String prope[...]`
+2018-08-09 08:12:54,774 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 261, el: CtAssignmentImpl
+2018-08-09 08:12:54,775 INFO main - -->op: RemoveOp: `licenseHeaderHandlers = n[...] ` ---> `-` at pos 0 of parent `{ 	licenseHeaderHandlers [...]`
+2018-08-09 08:12:57,150 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 271, el: CtLocalVariableImpl
+2018-08-09 08:12:57,151 INFO main - -->op: RemoveOp: `final java.util.Map<org.a[...] ` ---> `-` at pos 1 of parent `{ 	licenseHeaderHandlers [...]`
+2018-08-09 08:12:58,058 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 273, el: CtForEachImpl
+2018-08-09 08:12:58,058 INFO main - -->op: RemoveOp: `for (final org.apache.wic[...] ` ---> `-` at pos 2 of parent `{ 	licenseHeaderHandlers [...]`
+2018-08-09 08:13:00,440 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 275, el: CtInvocationImpl
+2018-08-09 08:13:00,441 INFO main - -->op: RemoveOp: `visitFiles(licenseHeaderH[...] ` ---> `-` at pos 0 of parent `{ 	visitFiles(licenseHead[...]`
+2018-08-09 08:13:02,964 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 301, el: CtInvocationImpl
+2018-08-09 08:13:02,964 INFO main - -->op: RemoveOp: `failIncorrectLicenceHeade[...] ` ---> `-` at pos 3 of parent `{ 	licenseHeaderHandlers [...]`
+2018-08-09 08:13:05,510 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 306, el: CtIfImpl
+2018-08-09 08:13:05,511 INFO main - -->op: ReplaceIfBooleanOp: `if ((files.size()) > 0) {[...] ` ---> `if (true) { 	java.lang.St[...]` at pos 0 of parent `{ 	if ((files.size()) > 0[...]`
+2018-08-09 08:13:07,660 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 306, el: CtIfImpl
+2018-08-09 08:13:07,661 INFO main - -->op: ReplaceIfBooleanOp: `if ((files.size()) > 0) {[...] ` ---> `if (false) { 	java.lang.S[...]` at pos 0 of parent `{ 	if ((files.size()) > 0[...]`
+2018-08-09 08:13:09,984 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 306, el: CtIfImpl
+2018-08-09 08:13:09,985 INFO main - -->op: RemoveOp: `if ((files.size()) > 0) {[...] ` ---> `-` at pos 0 of parent `{ 	if ((files.size()) > 0[...]`
+2018-08-09 08:13:12,367 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 308, el: CtLocalVariableImpl
+2018-08-09 08:13:12,367 INFO main - -->op: RemoveOp: `java.lang.StringBuilder f[...] ` ---> `-` at pos 0 of parent `{ 	java.lang.StringBuilde[...]`
+2018-08-09 08:13:13,335 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 310, el: CtForEachImpl
+2018-08-09 08:13:13,335 INFO main - -->op: RemoveOp: `for (java.util.Map.Entry<[...] ` ---> `-` at pos 1 of parent `{ 	java.lang.StringBuilde[...]`
+2018-08-09 08:13:15,940 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 312, el: CtLocalVariableImpl
+2018-08-09 08:13:15,940 INFO main - -->op: RemoveOp: `org.apache.wicket.util.li[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.wicket.util[...]`
+2018-08-09 08:13:17,034 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 313, el: CtLocalVariableImpl
+2018-08-09 08:13:17,034 INFO main - -->op: RemoveOp: `java.util.List<java.io.Fi[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.wicket.util[...]`
+2018-08-09 08:13:17,945 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 315, el: CtInvocationImpl
+2018-08-09 08:13:17,945 INFO main - -->op: RemoveOp: `failString.append("\n") ` ---> `-` at pos 2 of parent `{ 	org.apache.wicket.util[...]`
+2018-08-09 08:13:20,426 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 316, el: CtInvocationImpl
+2018-08-09 08:13:20,427 INFO main - -->op: RemoveOp: `failString.append(license[...] ` ---> `-` at pos 3 of parent `{ 	org.apache.wicket.util[...]`
+2018-08-09 08:13:23,105 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 317, el: CtInvocationImpl
+2018-08-09 08:13:23,106 INFO main - -->op: RemoveOp: `failString.append(" faile[...] ` ---> `-` at pos 4 of parent `{ 	org.apache.wicket.util[...]`
+2018-08-09 08:13:25,783 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 318, el: CtInvocationImpl
+2018-08-09 08:13:25,784 INFO main - -->op: RemoveOp: `failString.append(fileLis[...] ` ---> `-` at pos 5 of parent `{ 	org.apache.wicket.util[...]`
+2018-08-09 08:13:28,107 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 319, el: CtInvocationImpl
+2018-08-09 08:13:28,107 INFO main - -->op: RemoveOp: `failString.append(") didn[...] ` ---> `-` at pos 6 of parent `{ 	org.apache.wicket.util[...]`
+2018-08-09 08:13:30,883 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 321, el: CtForEachImpl
+2018-08-09 08:13:30,883 INFO main - -->op: RemoveOp: `for (java.io.File file : [...] ` ---> `-` at pos 7 of parent `{ 	org.apache.wicket.util[...]`
+2018-08-09 08:13:33,258 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 323, el: CtLocalVariableImpl
+2018-08-09 08:13:33,259 INFO main - -->op: RemoveOp: `java.lang.String filename[...] ` ---> `-` at pos 0 of parent `{ 	java.lang.String filen[...]`
+2018-08-09 08:13:34,310 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 326, el: CtLocalVariableImpl
+2018-08-09 08:13:34,311 INFO main - -->op: RemoveOp: `java.lang.String licenseT[...] ` ---> `-` at pos 1 of parent `{ 	java.lang.String filen[...]`
+2018-08-09 08:13:35,392 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 328, el: CtIfImpl
+2018-08-09 08:13:35,392 INFO main - -->op: ReplaceIfBooleanOp: `if (licenseType == null) [...] ` ---> `if (true) { 	failString.a[...]` at pos 2 of parent `{ 	java.lang.String filen[...]`
+2018-08-09 08:13:37,785 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 328, el: CtIfImpl
+2018-08-09 08:13:37,785 INFO main - -->op: ReplaceIfBooleanOp: `if (licenseType == null) [...] ` ---> `if (false) { 	failString.[...]` at pos 2 of parent `{ 	java.lang.String filen[...]`
+2018-08-09 08:13:40,291 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 328, el: CtIfImpl
+2018-08-09 08:13:40,291 INFO main - -->op: RemoveOp: `if (licenseType == null) [...] ` ---> `-` at pos 2 of parent `{ 	java.lang.String filen[...]`
+2018-08-09 08:13:42,797 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 330, el: CtInvocationImpl
+2018-08-09 08:13:42,797 INFO main - -->op: RemoveOp: `failString.append("NONE") ` ---> `-` at pos 0 of parent `{ 	failString.append("NON[...]`
+2018-08-09 08:13:45,249 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 334, el: CtInvocationImpl
+2018-08-09 08:13:45,249 INFO main - -->op: RemoveOp: `failString.append(license[...] ` ---> `-` at pos 0 of parent `{ 	failString.append(lice[...]`
+2018-08-09 08:13:47,767 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 337, el: CtInvocationImpl
+2018-08-09 08:13:47,768 INFO main - -->op: RemoveOp: `failString.append(" ").ap[...] ` ---> `-` at pos 3 of parent `{ 	java.lang.String filen[...]`
+2018-08-09 08:13:50,412 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 341, el: CtInvocationImpl
+2018-08-09 08:13:50,412 INFO main - -->op: RemoveOp: `java.lang.System.out.prin[...] ` ---> `-` at pos 2 of parent `{ 	java.lang.StringBuilde[...]`
+2018-08-09 08:13:52,914 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 342, el: CtInvocationImpl
+2018-08-09 08:13:52,915 INFO main - -->op: RemoveOp: `org.junit.Assert.fail(fai[...] ` ---> `-` at pos 3 of parent `{ 	java.lang.StringBuilde[...]`
+2018-08-09 08:13:55,462 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 349, el: CtInvocationImpl
+2018-08-09 08:13:55,462 INFO main - -->op: RemoveOp: `visitDirectory(suffixes, [...] ` ---> `-` at pos 0 of parent `{ 	visitDirectory(suffixe[...]`
+2018-08-09 08:13:58,101 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 355, el: CtLocalVariableImpl
+2018-08-09 08:13:58,101 INFO main - -->op: RemoveOp: `java.io.File[] files = di[...] ` ---> `-` at pos 0 of parent `{ 	java.io.File[] files =[...]`
+2018-08-09 08:13:59,242 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 357, el: CtIfImpl
+2018-08-09 08:13:59,242 INFO main - -->op: ReplaceIfBooleanOp: `if (files != null) { 	for[...] ` ---> `if (true) { 	for (java.io[...]` at pos 1 of parent `{ 	java.io.File[] files =[...]`
+2018-08-09 08:14:01,680 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 357, el: CtIfImpl
+2018-08-09 08:14:01,681 INFO main - -->op: ReplaceIfBooleanOp: `if (files != null) { 	for[...] ` ---> `if (false) { 	for (java.i[...]` at pos 1 of parent `{ 	java.io.File[] files =[...]`
+2018-08-09 08:14:04,191 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 357, el: CtIfImpl
+2018-08-09 08:14:04,191 INFO main - -->op: RemoveOp: `if (files != null) { 	for[...] ` ---> `-` at pos 1 of parent `{ 	java.io.File[] files =[...]`
+2018-08-09 08:14:07,140 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 359, el: CtForEachImpl
+2018-08-09 08:14:07,140 INFO main - -->op: RemoveOp: `for (java.io.File file : [...] ` ---> `-` at pos 0 of parent `{ 	for (java.io.File file[...]`
+2018-08-09 08:14:09,761 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 361, el: CtInvocationImpl
+2018-08-09 08:14:09,761 INFO main - -->op: RemoveOp: `fileVisitor.visitFile(fil[...] ` ---> `-` at pos 0 of parent `{ 	fileVisitor.visitFile([...]`
+2018-08-09 08:14:12,164 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 366, el: CtAssignmentImpl
+2018-08-09 08:14:12,165 INFO main - -->op: RemoveOp: `files = directory.listFil[...] ` ---> `-` at pos 2 of parent `{ 	java.io.File[] files =[...]`
+2018-08-09 08:14:14,965 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 368, el: CtIfImpl
+2018-08-09 08:14:14,965 INFO main - -->op: ReplaceIfBooleanOp: `if (files != null) { 	for[...] ` ---> `if (true) { 	for (java.io[...]` at pos 3 of parent `{ 	java.io.File[] files =[...]`
+2018-08-09 08:14:17,766 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 368, el: CtIfImpl
+2018-08-09 08:14:17,767 INFO main - -->op: ReplaceIfBooleanOp: `if (files != null) { 	for[...] ` ---> `if (false) { 	for (java.i[...]` at pos 3 of parent `{ 	java.io.File[] files =[...]`
+2018-08-09 08:14:20,433 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 368, el: CtIfImpl
+2018-08-09 08:14:20,433 INFO main - -->op: RemoveOp: `if (files != null) { 	for[...] ` ---> `-` at pos 3 of parent `{ 	java.io.File[] files =[...]`
+2018-08-09 08:14:22,981 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 370, el: CtForEachImpl
+2018-08-09 08:14:22,981 INFO main - -->op: RemoveOp: `for (java.io.File childDi[...] ` ---> `-` at pos 0 of parent `{ 	for (java.io.File chil[...]`
+2018-08-09 08:14:25,518 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 372, el: CtInvocationImpl
+2018-08-09 08:14:25,518 INFO main - -->op: RemoveOp: `visitDirectory(suffixes, [...] ` ---> `-` at pos 0 of parent `{ 	visitDirectory(suffixe[...]`
+2018-08-09 08:14:28,162 INFO main - mod_point ModificPoint=MyersDiff line: 97, el: CtLocalVariableImpl
+2018-08-09 08:14:28,162 INFO main - -->op: RemoveOp: `org.apache.wicket.util.di[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.wicket.util[...]`
+2018-08-09 08:14:29,456 INFO main - mod_point ModificPoint=MyersDiff line: 98, el: CtReturnImpl
+2018-08-09 08:14:29,456 INFO main - -->op: RemoveOp: `return org.apache.wicket.[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.wicket.util[...]`
+2018-08-09 08:14:30,556 INFO main - mod_point ModificPoint=MyersDiff line: 116, el: CtIfImpl
+2018-08-09 08:14:30,557 INFO main - -->op: ReplaceIfBooleanOp: `if (orig == null) { 	thro[...] ` ---> `if (true) { 	throw new ja[...]` at pos 0 of parent `{ 	if (orig == null) { 		[...]`
+2018-08-09 08:14:33,763 INFO main - mod_point ModificPoint=MyersDiff line: 116, el: CtIfImpl
+2018-08-09 08:14:33,763 INFO main - -->op: ReplaceIfBooleanOp: `if (orig == null) { 	thro[...] ` ---> `if (false) { 	throw new j[...]` at pos 0 of parent `{ 	if (orig == null) { 		[...]`
+2018-08-09 08:14:36,411 INFO main - mod_point ModificPoint=MyersDiff line: 116, el: CtIfImpl
+2018-08-09 08:14:36,412 INFO main - -->op: RemoveOp: `if (orig == null) { 	thro[...] ` ---> `-` at pos 0 of parent `{ 	if (orig == null) { 		[...]`
+2018-08-09 08:14:39,094 INFO main - mod_point ModificPoint=MyersDiff line: 120, el: CtIfImpl
+2018-08-09 08:14:39,095 INFO main - -->op: ReplaceIfBooleanOp: `if (rev == null) { 	throw[...] ` ---> `if (true) { 	throw new ja[...]` at pos 1 of parent `{ 	if (orig == null) { 		[...]`
+2018-08-09 08:14:41,673 INFO main - mod_point ModificPoint=MyersDiff line: 120, el: CtIfImpl
+2018-08-09 08:14:41,674 INFO main - -->op: ReplaceIfBooleanOp: `if (rev == null) { 	throw[...] ` ---> `if (false) { 	throw new j[...]` at pos 1 of parent `{ 	if (orig == null) { 		[...]`
+2018-08-09 08:14:44,326 INFO main - mod_point ModificPoint=MyersDiff line: 120, el: CtIfImpl
+2018-08-09 08:14:44,326 INFO main - -->op: RemoveOp: `if (rev == null) { 	throw[...] ` ---> `-` at pos 1 of parent `{ 	if (orig == null) { 		[...]`
+2018-08-09 08:14:46,577 INFO main - mod_point ModificPoint=MyersDiff line: 126, el: CtLocalVariableImpl
+2018-08-09 08:14:46,578 INFO main - -->op: RemoveOp: `final int N = orig.length ` ---> `-` at pos 2 of parent `{ 	if (orig == null) { 		[...]`
+2018-08-09 08:14:47,525 INFO main - mod_point ModificPoint=MyersDiff line: 127, el: CtLocalVariableImpl
+2018-08-09 08:14:47,526 INFO main - -->op: RemoveOp: `final int M = rev.length ` ---> `-` at pos 3 of parent `{ 	if (orig == null) { 		[...]`
+2018-08-09 08:14:48,449 INFO main - mod_point ModificPoint=MyersDiff line: 129, el: CtLocalVariableImpl
+2018-08-09 08:14:48,450 INFO main - -->op: RemoveOp: `final int MAX = (N + M) +[...] ` ---> `-` at pos 4 of parent `{ 	if (orig == null) { 		[...]`
+2018-08-09 08:14:49,456 INFO main - mod_point ModificPoint=MyersDiff line: 130, el: CtLocalVariableImpl
+2018-08-09 08:14:49,456 INFO main - -->op: RemoveOp: `final int size = 1 + (2 *[...] ` ---> `-` at pos 5 of parent `{ 	if (orig == null) { 		[...]`
+2018-08-09 08:14:50,340 INFO main - mod_point ModificPoint=MyersDiff line: 131, el: CtLocalVariableImpl
+2018-08-09 08:14:50,340 INFO main - -->op: RemoveOp: `final int middle = (size [...] ` ---> `-` at pos 6 of parent `{ 	if (orig == null) { 		[...]`
+2018-08-09 08:14:51,432 INFO main - mod_point ModificPoint=MyersDiff line: 132, el: CtLocalVariableImpl
+2018-08-09 08:14:51,433 INFO main - -->op: RemoveOp: `final org.apache.wicket.u[...] ` ---> `-` at pos 7 of parent `{ 	if (orig == null) { 		[...]`
+2018-08-09 08:14:52,449 INFO main - mod_point ModificPoint=MyersDiff line: 134, el: CtAssignmentImpl
+2018-08-09 08:14:52,449 INFO main - -->op: RemoveOp: `diagonal[(middle + 1)] = [...] ` ---> `-` at pos 8 of parent `{ 	if (orig == null) { 		[...]`
+2018-08-09 08:14:55,134 INFO main - mod_point ModificPoint=MyersDiff line: 135, el: CtForImpl
+2018-08-09 08:14:55,135 INFO main - -->op: RemoveOp: `for (int d = 0 ; d < MAX [...] ` ---> `-` at pos 9 of parent `{ 	if (orig == null) { 		[...]`
+2018-08-09 08:14:57,835 INFO main - mod_point ModificPoint=MyersDiff line: 137, el: CtForImpl
+2018-08-09 08:14:57,836 INFO main - -->op: RemoveOp: `for (int k = -d ; k <= d [...] ` ---> `-` at pos 0 of parent `{ 	for (int k = -d ; k <=[...]`
+2018-08-09 08:15:00,316 INFO main - mod_point ModificPoint=MyersDiff line: 139, el: CtLocalVariableImpl
+2018-08-09 08:15:00,316 INFO main - -->op: RemoveOp: `final int kmiddle = middl[...] ` ---> `-` at pos 0 of parent `{ 	final int kmiddle = mi[...]`
+2018-08-09 08:15:01,087 INFO main - mod_point ModificPoint=MyersDiff line: 140, el: CtLocalVariableImpl
+2018-08-09 08:15:01,087 INFO main - -->op: RemoveOp: `final int kplus = kmiddle[...] ` ---> `-` at pos 1 of parent `{ 	final int kmiddle = mi[...]`
+2018-08-09 08:15:02,032 INFO main - mod_point ModificPoint=MyersDiff line: 141, el: CtLocalVariableImpl
+2018-08-09 08:15:02,032 INFO main - -->op: RemoveOp: `final int kminus = kmiddl[...] ` ---> `-` at pos 2 of parent `{ 	final int kmiddle = mi[...]`
+2018-08-09 08:15:02,942 INFO main - mod_point ModificPoint=MyersDiff line: 142, el: CtLocalVariableImpl
+2018-08-09 08:15:02,942 INFO main - -->op: RemoveOp: `org.apache.wicket.util.di[...] ` ---> `-` at pos 3 of parent `{ 	final int kmiddle = mi[...]`
+2018-08-09 08:15:04,044 INFO main - mod_point ModificPoint=MyersDiff line: 145, el: CtIfImpl
+2018-08-09 08:15:04,044 INFO main - -->op: ReplaceIfBooleanOp: `if ((k == (-d)) || ((k !=[...] ` ---> `if (true) { 	i = diagonal[...]` at pos 5 of parent `{ 	final int kmiddle = mi[...]`
+2018-08-09 08:15:06,802 INFO main - mod_point ModificPoint=MyersDiff line: 145, el: CtIfImpl
+2018-08-09 08:15:06,803 INFO main - -->op: ReplaceIfBooleanOp: `if ((k == (-d)) || ((k !=[...] ` ---> `if (false) { 	i = diagona[...]` at pos 5 of parent `{ 	final int kmiddle = mi[...]`
+2018-08-09 08:15:09,646 INFO main - mod_point ModificPoint=MyersDiff line: 145, el: CtIfImpl
+2018-08-09 08:15:09,647 INFO main - -->op: RemoveOp: `if ((k == (-d)) || ((k !=[...] ` ---> `-` at pos 5 of parent `{ 	final int kmiddle = mi[...]`
+2018-08-09 08:15:10,693 INFO main - mod_point ModificPoint=MyersDiff line: 147, el: CtAssignmentImpl
+2018-08-09 08:15:10,693 INFO main - -->op: RemoveOp: `i = diagonal[kplus].i ` ---> `-` at pos 0 of parent `{ 	i = diagonal[kplus].i;[...]`
+2018-08-09 08:15:11,791 INFO main - mod_point ModificPoint=MyersDiff line: 148, el: CtAssignmentImpl
+2018-08-09 08:15:11,791 INFO main - -->op: RemoveOp: `prev = diagonal[kplus] ` ---> `-` at pos 1 of parent `{ 	i = diagonal[kplus].i;[...]`
+2018-08-09 08:15:14,385 INFO main - mod_point ModificPoint=MyersDiff line: 152, el: CtAssignmentImpl
+2018-08-09 08:15:14,385 INFO main - -->op: RemoveOp: `i = (diagonal[kminus].i) [...] ` ---> `-` at pos 0 of parent `{ 	i = (diagonal[kminus].[...]`
+2018-08-09 08:15:15,520 INFO main - mod_point ModificPoint=MyersDiff line: 153, el: CtAssignmentImpl
+2018-08-09 08:15:15,520 INFO main - -->op: RemoveOp: `prev = diagonal[kminus] ` ---> `-` at pos 1 of parent `{ 	i = (diagonal[kminus].[...]`
+2018-08-09 08:15:18,566 INFO main - mod_point ModificPoint=MyersDiff line: 156, el: CtAssignmentImpl
+2018-08-09 08:15:18,567 INFO main - -->op: RemoveOp: `diagonal[kminus] = null ` ---> `-` at pos 6 of parent `{ 	final int kmiddle = mi[...]`
+2018-08-09 08:15:21,087 INFO main - mod_point ModificPoint=MyersDiff line: 158, el: CtLocalVariableImpl
+2018-08-09 08:15:21,087 INFO main - -->op: RemoveOp: `int j = i - k ` ---> `-` at pos 7 of parent `{ 	final int kmiddle = mi[...]`
+2018-08-09 08:15:22,001 INFO main - mod_point ModificPoint=MyersDiff line: 160, el: CtLocalVariableImpl
+2018-08-09 08:15:22,002 INFO main - -->op: RemoveOp: `org.apache.wicket.util.di[...] ` ---> `-` at pos 8 of parent `{ 	final int kmiddle = mi[...]`
+2018-08-09 08:15:22,938 INFO main - mod_point ModificPoint=MyersDiff line: 165, el: CtWhileImpl
+2018-08-09 08:15:22,938 INFO main - -->op: RemoveOp: `while (((i < N) && (j < M[...] ` ---> `-` at pos 9 of parent `{ 	final int kmiddle = mi[...]`
+2018-08-09 08:15:25,557 INFO main - mod_point ModificPoint=MyersDiff line: 167, el: CtUnaryOperatorImpl
+2018-08-09 08:15:25,557 INFO main - -->op: RemoveOp: `i++ ` ---> `-` at pos 0 of parent `{ 	i++; 	j++; }`
+2018-08-09 08:15:28,105 INFO main - mod_point ModificPoint=MyersDiff line: 168, el: CtUnaryOperatorImpl
+2018-08-09 08:15:28,105 INFO main - -->op: RemoveOp: `j++ ` ---> `-` at pos 1 of parent `{ 	i++; 	j++; }`
+2018-08-09 08:15:30,528 INFO main - mod_point ModificPoint=MyersDiff line: 170, el: CtIfImpl
+2018-08-09 08:15:30,529 INFO main - -->op: ReplaceIfBooleanOp: `if (i > (node.i)) { 	node[...] ` ---> `if (true) { 	node = new o[...]` at pos 10 of parent `{ 	final int kmiddle = mi[...]`
+2018-08-09 08:15:33,129 INFO main - mod_point ModificPoint=MyersDiff line: 170, el: CtIfImpl
+2018-08-09 08:15:33,129 INFO main - -->op: ReplaceIfBooleanOp: `if (i > (node.i)) { 	node[...] ` ---> `if (false) { 	node = new [...]` at pos 10 of parent `{ 	final int kmiddle = mi[...]`
+2018-08-09 08:15:36,215 INFO main - mod_point ModificPoint=MyersDiff line: 170, el: CtIfImpl
+2018-08-09 08:15:36,215 INFO main - -->op: RemoveOp: `if (i > (node.i)) { 	node[...] ` ---> `-` at pos 10 of parent `{ 	final int kmiddle = mi[...]`
+2018-08-09 08:15:38,984 INFO main - mod_point ModificPoint=MyersDiff line: 172, el: CtAssignmentImpl
+2018-08-09 08:15:38,984 INFO main - -->op: RemoveOp: `node = new org.apache.wic[...] ` ---> `-` at pos 0 of parent `{ 	node = new org.apache.[...]`
+2018-08-09 08:15:41,483 INFO main - mod_point ModificPoint=MyersDiff line: 175, el: CtAssignmentImpl
+2018-08-09 08:15:41,484 INFO main - -->op: RemoveOp: `diagonal[kmiddle] = node ` ---> `-` at pos 11 of parent `{ 	final int kmiddle = mi[...]`
+2018-08-09 08:15:44,215 INFO main - mod_point ModificPoint=MyersDiff line: 177, el: CtIfImpl
+2018-08-09 08:15:44,216 INFO main - -->op: ReplaceIfBooleanOp: `if ((i >= N) && (j >= M))[...] ` ---> `if (true) { 	return diago[...]` at pos 12 of parent `{ 	final int kmiddle = mi[...]`
+2018-08-09 08:15:46,803 INFO main - mod_point ModificPoint=MyersDiff line: 177, el: CtIfImpl
+2018-08-09 08:15:46,804 INFO main - -->op: ReplaceIfBooleanOp: `if ((i >= N) && (j >= M))[...] ` ---> `if (false) { 	return diag[...]` at pos 12 of parent `{ 	final int kmiddle = mi[...]`
+2018-08-09 08:15:49,415 INFO main - mod_point ModificPoint=MyersDiff line: 177, el: CtIfImpl
+2018-08-09 08:15:49,415 INFO main - -->op: RemoveOp: `if ((i >= N) && (j >= M))[...] ` ---> `-` at pos 12 of parent `{ 	final int kmiddle = mi[...]`
+2018-08-09 08:15:52,077 INFO main - mod_point ModificPoint=MyersDiff line: 179, el: CtReturnImpl
+2018-08-09 08:15:52,078 INFO main - -->op: RemoveOp: `return diagonal[kmiddle] ` ---> `-` at pos 0 of parent `{ 	return diagonal[kmiddl[...]`
+2018-08-09 08:15:54,884 INFO main - mod_point ModificPoint=MyersDiff line: 182, el: CtAssignmentImpl
+2018-08-09 08:15:54,884 INFO main - -->op: RemoveOp: `diagonal[((middle + d) - [...] ` ---> `-` at pos 1 of parent `{ 	for (int k = -d ; k <=[...]`
+2018-08-09 08:15:57,518 INFO main - mod_point ModificPoint=MyersDiff line: 204, el: CtIfImpl
+2018-08-09 08:15:57,519 INFO main - -->op: ReplaceIfBooleanOp: `if (path == null) { 	thro[...] ` ---> `if (true) { 	throw new ja[...]` at pos 0 of parent `{ 	if (path == null) { 		[...]`
+2018-08-09 08:16:00,114 INFO main - mod_point ModificPoint=MyersDiff line: 204, el: CtIfImpl
+2018-08-09 08:16:00,114 INFO main - -->op: ReplaceIfBooleanOp: `if (path == null) { 	thro[...] ` ---> `if (false) { 	throw new j[...]` at pos 0 of parent `{ 	if (path == null) { 		[...]`
+2018-08-09 08:16:02,448 INFO main - mod_point ModificPoint=MyersDiff line: 204, el: CtIfImpl
+2018-08-09 08:16:02,448 INFO main - -->op: RemoveOp: `if (path == null) { 	thro[...] ` ---> `-` at pos 0 of parent `{ 	if (path == null) { 		[...]`
+2018-08-09 08:16:05,054 INFO main - mod_point ModificPoint=MyersDiff line: 208, el: CtIfImpl
+2018-08-09 08:16:05,054 INFO main - -->op: ReplaceIfBooleanOp: `if (orig == null) { 	thro[...] ` ---> `if (true) { 	throw new ja[...]` at pos 1 of parent `{ 	if (path == null) { 		[...]`
+2018-08-09 08:16:07,679 INFO main - mod_point ModificPoint=MyersDiff line: 208, el: CtIfImpl
+2018-08-09 08:16:07,680 INFO main - -->op: ReplaceIfBooleanOp: `if (orig == null) { 	thro[...] ` ---> `if (false) { 	throw new j[...]` at pos 1 of parent `{ 	if (path == null) { 		[...]`
+2018-08-09 08:16:10,267 INFO main - mod_point ModificPoint=MyersDiff line: 208, el: CtIfImpl
+2018-08-09 08:16:10,267 INFO main - -->op: RemoveOp: `if (orig == null) { 	thro[...] ` ---> `-` at pos 1 of parent `{ 	if (path == null) { 		[...]`
+2018-08-09 08:16:12,991 INFO main - mod_point ModificPoint=MyersDiff line: 212, el: CtIfImpl
+2018-08-09 08:16:12,992 INFO main - -->op: ReplaceIfBooleanOp: `if (rev == null) { 	throw[...] ` ---> `if (true) { 	throw new ja[...]` at pos 2 of parent `{ 	if (path == null) { 		[...]`
+2018-08-09 08:16:15,411 INFO main - mod_point ModificPoint=MyersDiff line: 212, el: CtIfImpl
+2018-08-09 08:16:15,411 INFO main - -->op: ReplaceIfBooleanOp: `if (rev == null) { 	throw[...] ` ---> `if (false) { 	throw new j[...]` at pos 2 of parent `{ 	if (path == null) { 		[...]`
+2018-08-09 08:16:18,110 INFO main - mod_point ModificPoint=MyersDiff line: 212, el: CtIfImpl
+2018-08-09 08:16:18,110 INFO main - -->op: RemoveOp: `if (rev == null) { 	throw[...] ` ---> `-` at pos 2 of parent `{ 	if (path == null) { 		[...]`
+2018-08-09 08:16:20,942 INFO main - mod_point ModificPoint=MyersDiff line: 217, el: CtLocalVariableImpl
+2018-08-09 08:16:20,942 INFO main - -->op: RemoveOp: `org.apache.wicket.util.di[...] ` ---> `-` at pos 3 of parent `{ 	if (path == null) { 		[...]`
+2018-08-09 08:16:21,802 INFO main - mod_point ModificPoint=MyersDiff line: 218, el: CtIfImpl
+2018-08-09 08:16:21,802 INFO main - -->op: ReplaceIfBooleanOp: `if (path.isSnake()) { 	pa[...] ` ---> `if (true) { 	path = Error[...]` at pos 4 of parent `{ 	if (path == null) { 		[...]`
+2018-08-09 08:16:24,074 INFO main - mod_point ModificPoint=MyersDiff line: 218, el: CtIfImpl
+2018-08-09 08:16:24,075 INFO main - -->op: ReplaceIfBooleanOp: `if (path.isSnake()) { 	pa[...] ` ---> `if (false) { 	path = Erro[...]` at pos 4 of parent `{ 	if (path == null) { 		[...]`
+2018-08-09 08:16:26,461 INFO main - mod_point ModificPoint=MyersDiff line: 218, el: CtIfImpl
+2018-08-09 08:16:26,461 INFO main - -->op: RemoveOp: `if (path.isSnake()) { 	pa[...] ` ---> `-` at pos 4 of parent `{ 	if (path == null) { 		[...]`
+2018-08-09 08:16:28,888 INFO main - mod_point ModificPoint=MyersDiff line: 220, el: CtAssignmentImpl
+2018-08-09 08:16:28,888 INFO main - -->op: RemoveOp: `path = path.prev ` ---> `-` at pos 0 of parent `{ 	path = path.prev; }`
+2018-08-09 08:16:30,822 INFO main - mod_point ModificPoint=MyersDiff line: 222, el: CtWhileImpl
+2018-08-09 08:16:30,822 INFO main - -->op: RemoveOp: `while (((path != null) &&[...] ` ---> `-` at pos 5 of parent `{ 	if (path == null) { 		[...]`
+2018-08-09 08:16:32,550 INFO main - mod_point ModificPoint=MyersDiff line: 224, el: CtIfImpl
+2018-08-09 08:16:32,551 INFO main - -->op: ReplaceIfBooleanOp: `if (path.isSnake()) { 	th[...] ` ---> `if (true) { 	throw new ja[...]` at pos 0 of parent `{ 	if (path.isSnake()) { [...]`
+2018-08-09 08:16:34,405 INFO main - mod_point ModificPoint=MyersDiff line: 224, el: CtIfImpl
+2018-08-09 08:16:34,406 INFO main - -->op: ReplaceIfBooleanOp: `if (path.isSnake()) { 	th[...] ` ---> `if (false) { 	throw new j[...]` at pos 0 of parent `{ 	if (path.isSnake()) { [...]`
+2018-08-09 08:16:36,440 INFO main - mod_point ModificPoint=MyersDiff line: 224, el: CtIfImpl
+2018-08-09 08:16:36,440 INFO main - -->op: RemoveOp: `if (path.isSnake()) { 	th[...] ` ---> `-` at pos 0 of parent `{ 	if (path.isSnake()) { [...]`
+2018-08-09 08:16:38,306 INFO main - mod_point ModificPoint=MyersDiff line: 228, el: CtLocalVariableImpl
+2018-08-09 08:16:38,306 INFO main - -->op: RemoveOp: `int i = path.i ` ---> `-` at pos 1 of parent `{ 	if (path.isSnake()) { [...]`
+2018-08-09 08:16:39,112 INFO main - mod_point ModificPoint=MyersDiff line: 229, el: CtLocalVariableImpl
+2018-08-09 08:16:39,112 INFO main - -->op: RemoveOp: `int j = path.j ` ---> `-` at pos 2 of parent `{ 	if (path.isSnake()) { [...]`
+2018-08-09 08:16:39,886 INFO main - mod_point ModificPoint=MyersDiff line: 231, el: CtAssignmentImpl
+2018-08-09 08:16:39,886 INFO main - -->op: RemoveOp: `path = path.prev ` ---> `-` at pos 3 of parent `{ 	if (path.isSnake()) { [...]`
+2018-08-09 08:16:41,767 INFO main - mod_point ModificPoint=MyersDiff line: 232, el: CtLocalVariableImpl
+2018-08-09 08:16:41,767 INFO main - -->op: RemoveOp: `int ianchor = path.i ` ---> `-` at pos 4 of parent `{ 	if (path.isSnake()) { [...]`
+2018-08-09 08:16:42,518 INFO main - mod_point ModificPoint=MyersDiff line: 233, el: CtLocalVariableImpl
+2018-08-09 08:16:42,518 INFO main - -->op: RemoveOp: `int janchor = path.j ` ---> `-` at pos 5 of parent `{ 	if (path.isSnake()) { [...]`
+2018-08-09 08:16:43,171 INFO main - mod_point ModificPoint=MyersDiff line: 235, el: CtLocalVariableImpl
+2018-08-09 08:16:43,171 INFO main - -->op: RemoveOp: `org.apache.wicket.util.di[...] ` ---> `-` at pos 6 of parent `{ 	if (path.isSnake()) { [...]`
+2018-08-09 08:16:43,786 INFO main - mod_point ModificPoint=MyersDiff line: 237, el: CtInvocationImpl
+2018-08-09 08:16:43,787 INFO main - -->op: RemoveOp: `revision.insertDelta(delt[...] ` ---> `-` at pos 7 of parent `{ 	if (path.isSnake()) { [...]`
+2018-08-09 08:16:45,740 INFO main - mod_point ModificPoint=MyersDiff line: 238, el: CtIfImpl
+2018-08-09 08:16:45,740 INFO main - -->op: ReplaceIfBooleanOp: `if (path.isSnake()) { 	pa[...] ` ---> `if (true) { 	path = Error[...]` at pos 8 of parent `{ 	if (path.isSnake()) { [...]`
+2018-08-09 08:16:48,276 INFO main - mod_point ModificPoint=MyersDiff line: 238, el: CtIfImpl
+2018-08-09 08:16:48,276 INFO main - -->op: ReplaceIfBooleanOp: `if (path.isSnake()) { 	pa[...] ` ---> `if (false) { 	path = Erro[...]` at pos 8 of parent `{ 	if (path.isSnake()) { [...]`
+2018-08-09 08:16:50,631 INFO main - mod_point ModificPoint=MyersDiff line: 238, el: CtIfImpl
+2018-08-09 08:16:50,632 INFO main - -->op: RemoveOp: `if (path.isSnake()) { 	pa[...] ` ---> `-` at pos 8 of parent `{ 	if (path.isSnake()) { [...]`
+2018-08-09 08:16:52,585 INFO main - mod_point ModificPoint=MyersDiff line: 240, el: CtAssignmentImpl
+2018-08-09 08:16:52,585 INFO main - -->op: RemoveOp: `path = path.prev ` ---> `-` at pos 0 of parent `{ 	path = path.prev; }`
+2018-08-09 08:16:54,452 INFO main - mod_point ModificPoint=MyersDiff line: 243, el: CtReturnImpl
+2018-08-09 08:16:54,453 INFO main - -->op: RemoveOp: `return revision ` ---> `-` at pos 6 of parent `{ 	if (path == null) { 		[...]`
+2018-08-09 08:16:55,267 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 159, el: CtLocalVariableImpl
+2018-08-09 08:16:55,268 INFO main - -->op: RemoveOp: `boolean accept = false ` ---> `-` at pos 0 of parent `{ 	boolean accept = false[...]`
+2018-08-09 08:16:55,960 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 161, el: CtIfImpl
+2018-08-09 08:16:55,960 INFO main - -->op: ReplaceIfBooleanOp: `if (pathname.isDirectory([...] ` ---> `if (true) { 	java.lang.St[...]` at pos 1 of parent `{ 	boolean accept = false[...]`
+2018-08-09 08:16:57,869 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 161, el: CtIfImpl
+2018-08-09 08:16:57,869 INFO main - -->op: ReplaceIfBooleanOp: `if (pathname.isDirectory([...] ` ---> `if (false) { 	java.lang.S[...]` at pos 1 of parent `{ 	boolean accept = false[...]`
+2018-08-09 08:16:59,618 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 161, el: CtIfImpl
+2018-08-09 08:16:59,618 INFO main - -->op: RemoveOp: `if (pathname.isDirectory([...] ` ---> `-` at pos 1 of parent `{ 	boolean accept = false[...]`
+2018-08-09 08:17:01,543 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 163, el: CtLocalVariableImpl
+2018-08-09 08:17:01,544 INFO main - -->op: RemoveOp: `java.lang.String relative[...] ` ---> `-` at pos 0 of parent `{ 	java.lang.String relat[...]`
+2018-08-09 08:17:02,369 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 164, el: CtAssignmentImpl
+2018-08-09 08:17:02,370 INFO main - -->op: RemoveOp: `relativePathname = org.ap[...] ` ---> `-` at pos 1 of parent `{ 	java.lang.String relat[...]`
+2018-08-09 08:17:04,115 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 167, el: CtIfImpl
+2018-08-09 08:17:04,116 INFO main - -->op: ReplaceIfBooleanOp: `if ((relativePathname.equ[...] ` ---> `if (true) { 	boolean foun[...]` at pos 2 of parent `{ 	java.lang.String relat[...]`
+2018-08-09 08:17:06,008 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 167, el: CtIfImpl
+2018-08-09 08:17:06,008 INFO main - -->op: ReplaceIfBooleanOp: `if ((relativePathname.equ[...] ` ---> `if (false) { 	boolean fou[...]` at pos 2 of parent `{ 	java.lang.String relat[...]`
+2018-08-09 08:17:07,801 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 167, el: CtIfImpl
+2018-08-09 08:17:07,801 INFO main - -->op: RemoveOp: `if ((relativePathname.equ[...] ` ---> `-` at pos 2 of parent `{ 	java.lang.String relat[...]`
+2018-08-09 08:17:09,613 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 169, el: CtLocalVariableImpl
+2018-08-09 08:17:09,613 INFO main - -->op: RemoveOp: `boolean found = false ` ---> `-` at pos 0 of parent `{ 	boolean found = false;[...]`
+2018-08-09 08:17:10,320 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 170, el: CtForEachImpl
+2018-08-09 08:17:10,321 INFO main - -->op: RemoveOp: `for (java.lang.String ign[...] ` ---> `-` at pos 1 of parent `{ 	boolean found = false;[...]`
+2018-08-09 08:17:12,173 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 172, el: CtIfImpl
+2018-08-09 08:17:12,173 INFO main - -->op: ReplaceIfBooleanOp: `if (pathname.getName().eq[...] ` ---> `if (true) { 	found = true[...]` at pos 0 of parent `{ 	if (pathname.getName()[...]`
+2018-08-09 08:17:13,929 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 172, el: CtIfImpl
+2018-08-09 08:17:13,929 INFO main - -->op: ReplaceIfBooleanOp: `if (pathname.getName().eq[...] ` ---> `if (false) { 	found = tru[...]` at pos 0 of parent `{ 	if (pathname.getName()[...]`
+2018-08-09 08:17:15,790 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 172, el: CtIfImpl
+2018-08-09 08:17:15,790 INFO main - -->op: RemoveOp: `if (pathname.getName().eq[...] ` ---> `-` at pos 0 of parent `{ 	if (pathname.getName()[...]`
+2018-08-09 08:17:17,520 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 178, el: CtIfImpl
+2018-08-09 08:17:17,521 INFO main - -->op: ReplaceIfBooleanOp: `if (found == false) { 	ac[...] ` ---> `if (true) { 	accept = tru[...]` at pos 2 of parent `{ 	boolean found = false;[...]`
+2018-08-09 08:17:19,444 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 178, el: CtIfImpl
+2018-08-09 08:17:19,445 INFO main - -->op: ReplaceIfBooleanOp: `if (found == false) { 	ac[...] ` ---> `if (false) { 	accept = tr[...]` at pos 2 of parent `{ 	boolean found = false;[...]`
+2018-08-09 08:17:21,360 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 178, el: CtIfImpl
+2018-08-09 08:17:21,360 INFO main - -->op: RemoveOp: `if (found == false) { 	ac[...] ` ---> `-` at pos 2 of parent `{ 	boolean found = false;[...]`
+2018-08-09 08:17:23,474 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 180, el: CtAssignmentImpl
+2018-08-09 08:17:23,474 INFO main - -->op: RemoveOp: `accept = true ` ---> `-` at pos 0 of parent `{ 	accept = true; }`
+2018-08-09 08:17:25,219 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 185, el: CtReturnImpl
+2018-08-09 08:17:25,219 INFO main - -->op: RemoveOp: `return accept ` ---> `-` at pos 2 of parent `{ 	boolean accept = false[...]`
+2018-08-09 08:17:26,033 INFO main - mod_point ModificPoint=Snake line: 97, el: CtReturnImpl
+2018-08-09 08:17:26,033 INFO main - -->op: RemoveOp: `return true ` ---> `-` at pos 0 of parent `{ 	return true; }`
+2018-08-09 08:17:26,665 INFO main - mod_point ModificPoint=CssLicenseHeaderHandler line: 42, el: CtReturnImpl
+2018-08-09 08:17:26,665 INFO main - -->op: RemoveOp: `return "cssLicense.txt" ` ---> `-` at pos 0 of parent `{ 	return "cssLicense.txt[...]`
+2018-08-09 08:17:27,345 INFO main - mod_point ModificPoint=CssLicenseHeaderHandler line: 48, el: CtLocalVariableImpl
+2018-08-09 08:17:27,345 INFO main - -->op: RemoveOp: `org.apache.wicket.util.di[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.wicket.util[...]`
+2018-08-09 08:17:27,943 INFO main - mod_point ModificPoint=CssLicenseHeaderHandler line: 52, el: CtLocalVariableImpl
+2018-08-09 08:17:27,943 INFO main - -->op: RemoveOp: `java.lang.String header =[...] ` ---> `-` at pos 0 of parent `{ 	java.lang.String heade[...]`
+2018-08-09 08:17:28,671 INFO main - mod_point ModificPoint=CssLicenseHeaderHandler line: 54, el: CtAssignmentImpl
+2018-08-09 08:17:28,671 INFO main - -->op: RemoveOp: `revision = org.apache.wic[...] ` ---> `-` at pos 1 of parent `{ 	java.lang.String heade[...]`
+2018-08-09 08:17:30,649 INFO main - mod_point ModificPoint=CssLicenseHeaderHandler line: 61, el: CtReturnImpl
+2018-08-09 08:17:30,649 INFO main - -->op: RemoveOp: `return (revision.size()) [...] ` ---> `-` at pos 2 of parent `{ 	org.apache.wicket.util[...]`
+2018-08-09 08:17:31,507 INFO main - mod_point ModificPoint=CssLicenseHeaderHandler line: 67, el: CtReturnImpl
+2018-08-09 08:17:31,507 INFO main - -->op: RemoveOp: `return java.util.Arrays.a[...] ` ---> `-` at pos 0 of parent `{ 	return java.util.Array[...]`
+2018-08-09 08:17:32,263 INFO main - mod_point ModificPoint=DiffNode line: 120, el: CtReturnImpl
+2018-08-09 08:17:32,263 INFO main - -->op: RemoveOp: `return false ` ---> `-` at pos 0 of parent `{ 	return false; }`
+2018-08-09 08:17:32,930 INFO main - mod_point ModificPoint=VelocityLicenseHeaderHandler line: 42, el: CtReturnImpl
+2018-08-09 08:17:32,930 INFO main - -->op: RemoveOp: `return "velocityLicense.t[...] ` ---> `-` at pos 0 of parent `{ 	return "velocityLicens[...]`
+2018-08-09 08:17:33,647 INFO main - mod_point ModificPoint=VelocityLicenseHeaderHandler line: 48, el: CtLocalVariableImpl
+2018-08-09 08:17:33,647 INFO main - -->op: RemoveOp: `org.apache.wicket.util.di[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.wicket.util[...]`
+2018-08-09 08:17:34,407 INFO main - mod_point ModificPoint=VelocityLicenseHeaderHandler line: 52, el: CtLocalVariableImpl
+2018-08-09 08:17:34,407 INFO main - -->op: RemoveOp: `java.lang.String header =[...] ` ---> `-` at pos 0 of parent `{ 	java.lang.String heade[...]`
+2018-08-09 08:17:35,206 INFO main - mod_point ModificPoint=VelocityLicenseHeaderHandler line: 54, el: CtAssignmentImpl
+2018-08-09 08:17:35,206 INFO main - -->op: RemoveOp: `revision = org.apache.wic[...] ` ---> `-` at pos 1 of parent `{ 	java.lang.String heade[...]`
+2018-08-09 08:17:37,114 INFO main - mod_point ModificPoint=VelocityLicenseHeaderHandler line: 61, el: CtReturnImpl
+2018-08-09 08:17:37,114 INFO main - -->op: RemoveOp: `return (revision.size()) [...] ` ---> `-` at pos 2 of parent `{ 	org.apache.wicket.util[...]`
+2018-08-09 08:17:37,993 INFO main - mod_point ModificPoint=VelocityLicenseHeaderHandler line: 67, el: CtReturnImpl
+2018-08-09 08:17:37,994 INFO main - -->op: RemoveOp: `return java.util.Arrays.a[...] ` ---> `-` at pos 0 of parent `{ 	return java.util.Array[...]`
+2018-08-09 08:17:38,797 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 281, el: CtIfImpl
+2018-08-09 08:17:38,797 INFO main - -->op: ReplaceIfBooleanOp: `if ((licenseHeaderHandler[...] ` ---> `if (true) { 	if (((addHea[...]` at pos 0 of parent `{ 	if ((licenseHeaderHand[...]`
+2018-08-09 08:17:40,802 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 281, el: CtIfImpl
+2018-08-09 08:17:40,803 INFO main - -->op: ReplaceIfBooleanOp: `if ((licenseHeaderHandler[...] ` ---> `if (false) { 	if (((addHe[...]` at pos 0 of parent `{ 	if ((licenseHeaderHand[...]`
+2018-08-09 08:17:42,877 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 281, el: CtIfImpl
+2018-08-09 08:17:42,878 INFO main - -->op: RemoveOp: `if ((licenseHeaderHandler[...] ` ---> `-` at pos 0 of parent `{ 	if ((licenseHeaderHand[...]`
+2018-08-09 08:17:44,993 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 283, el: CtIfImpl
+2018-08-09 08:17:44,993 INFO main - -->op: ReplaceIfBooleanOp: `if (((addHeaders) == fals[...] ` ---> `if (true) { 	java.util.Li[...]` at pos 0 of parent `{ 	if (((addHeaders) == f[...]`
+2018-08-09 08:17:46,984 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 283, el: CtIfImpl
+2018-08-09 08:17:46,985 INFO main - -->op: ReplaceIfBooleanOp: `if (((addHeaders) == fals[...] ` ---> `if (false) { 	java.util.L[...]` at pos 0 of parent `{ 	if (((addHeaders) == f[...]`
+2018-08-09 08:17:49,068 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 283, el: CtIfImpl
+2018-08-09 08:17:49,068 INFO main - -->op: RemoveOp: `if (((addHeaders) == fals[...] ` ---> `-` at pos 0 of parent `{ 	if (((addHeaders) == f[...]`
+2018-08-09 08:17:51,156 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 286, el: CtLocalVariableImpl
+2018-08-09 08:17:51,157 INFO main - -->op: RemoveOp: `java.util.List<java.io.Fi[...] ` ---> `-` at pos 0 of parent `{ 	java.util.List<java.io[...]`
+2018-08-09 08:17:52,046 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 288, el: CtIfImpl
+2018-08-09 08:17:52,046 INFO main - -->op: ReplaceIfBooleanOp: `if (files == null) { 	fil[...] ` ---> `if (true) { 	files = new [...]` at pos 1 of parent `{ 	java.util.List<java.io[...]`
+2018-08-09 08:17:53,858 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 288, el: CtIfImpl
+2018-08-09 08:17:53,858 INFO main - -->op: ReplaceIfBooleanOp: `if (files == null) { 	fil[...] ` ---> `if (false) { 	files = new[...]` at pos 1 of parent `{ 	java.util.List<java.io[...]`
+2018-08-09 08:17:56,110 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 288, el: CtIfImpl
+2018-08-09 08:17:56,111 INFO main - -->op: RemoveOp: `if (files == null) { 	fil[...] ` ---> `-` at pos 1 of parent `{ 	java.util.List<java.io[...]`
+2018-08-09 08:17:58,317 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 290, el: CtAssignmentImpl
+2018-08-09 08:17:58,317 INFO main - -->op: RemoveOp: `files = new java.util.Arr[...] ` ---> `-` at pos 0 of parent `{ 	files = new java.util.[...]`
+2018-08-09 08:18:00,625 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 291, el: CtInvocationImpl
+2018-08-09 08:18:00,625 INFO main - -->op: RemoveOp: `badFiles.put(licenseHeade[...] ` ---> `-` at pos 1 of parent `{ 	files = new java.util.[...]`
+2018-08-09 08:18:02,915 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 294, el: CtInvocationImpl
+2018-08-09 08:18:02,915 INFO main - -->op: RemoveOp: `files.add(file) ` ---> `-` at pos 2 of parent `{ 	java.util.List<java.io[...]`
+2018-08-09 08:18:05,108 INFO main - mod_point ModificPoint=XmlLicenseHeaderHandler line: 48, el: CtReturnImpl
+2018-08-09 08:18:05,109 INFO main - -->op: RemoveOp: `return "xmlLicense.txt" ` ---> `-` at pos 0 of parent `{ 	return "xmlLicense.txt[...]`
+2018-08-09 08:18:06,085 INFO main - mod_point ModificPoint=XmlLicenseHeaderHandler line: 54, el: CtLocalVariableImpl
+2018-08-09 08:18:06,085 INFO main - -->op: RemoveOp: `org.apache.wicket.util.di[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.wicket.util[...]`
+2018-08-09 08:18:06,993 INFO main - mod_point ModificPoint=XmlLicenseHeaderHandler line: 58, el: CtLocalVariableImpl
+2018-08-09 08:18:06,993 INFO main - -->op: RemoveOp: `java.lang.String header =[...] ` ---> `-` at pos 0 of parent `{ 	java.lang.String heade[...]`
+2018-08-09 08:18:07,770 INFO main - mod_point ModificPoint=XmlLicenseHeaderHandler line: 60, el: CtIfImpl
+2018-08-09 08:18:07,771 INFO main - -->op: ReplaceIfBooleanOp: `if (header.startsWith("<?[...] ` ---> `if (true) { 	header = hea[...]` at pos 1 of parent `{ 	java.lang.String heade[...]`
+2018-08-09 08:18:10,144 INFO main - mod_point ModificPoint=XmlLicenseHeaderHandler line: 60, el: CtIfImpl
+2018-08-09 08:18:10,145 INFO main - -->op: ReplaceIfBooleanOp: `if (header.startsWith("<?[...] ` ---> `if (false) { 	header = he[...]` at pos 1 of parent `{ 	java.lang.String heade[...]`
+2018-08-09 08:18:12,759 INFO main - mod_point ModificPoint=XmlLicenseHeaderHandler line: 60, el: CtIfImpl
+2018-08-09 08:18:12,759 INFO main - -->op: RemoveOp: `if (header.startsWith("<?[...] ` ---> `-` at pos 1 of parent `{ 	java.lang.String heade[...]`
+2018-08-09 08:18:15,635 INFO main - mod_point ModificPoint=XmlLicenseHeaderHandler line: 62, el: CtAssignmentImpl
+2018-08-09 08:18:15,636 INFO main - -->op: RemoveOp: `header = header.substring[...] ` ---> `-` at pos 0 of parent `{ 	header = header.substr[...]`
+2018-08-09 08:18:18,213 INFO main - mod_point ModificPoint=XmlLicenseHeaderHandler line: 67, el: CtLocalVariableImpl
+2018-08-09 08:18:18,214 INFO main - -->op: RemoveOp: `java.lang.String[] header[...] ` ---> `-` at pos 0 of parent `{ 	java.lang.String[] hea[...]`
+2018-08-09 08:18:19,299 INFO main - mod_point ModificPoint=XmlLicenseHeaderHandler line: 68, el: CtLocalVariableImpl
+2018-08-09 08:18:19,299 INFO main - -->op: RemoveOp: `java.lang.StringBuilder s[...] ` ---> `-` at pos 1 of parent `{ 	java.lang.String[] hea[...]`
+2018-08-09 08:18:20,337 INFO main - mod_point ModificPoint=XmlLicenseHeaderHandler line: 69, el: CtForImpl
+2018-08-09 08:18:20,337 INFO main - -->op: RemoveOp: `for (int i = 0 ; (i < 16)[...] ` ---> `-` at pos 2 of parent `{ 	java.lang.String[] hea[...]`
+2018-08-09 08:18:23,615 INFO main - mod_point ModificPoint=XmlLicenseHeaderHandler line: 71, el: CtIfImpl
+2018-08-09 08:18:23,615 INFO main - -->op: ReplaceIfBooleanOp: `if ((sb.length()) > 0) { [...] ` ---> `if (true) { 	sb.append(or[...]` at pos 0 of parent `{ 	if ((sb.length()) > 0)[...]`
+2018-08-09 08:18:26,637 INFO main - mod_point ModificPoint=XmlLicenseHeaderHandler line: 71, el: CtIfImpl
+2018-08-09 08:18:26,638 INFO main - -->op: ReplaceIfBooleanOp: `if ((sb.length()) > 0) { [...] ` ---> `if (false) { 	sb.append(o[...]` at pos 0 of parent `{ 	if ((sb.length()) > 0)[...]`
+2018-08-09 08:18:29,424 INFO main - mod_point ModificPoint=XmlLicenseHeaderHandler line: 71, el: CtIfImpl
+2018-08-09 08:18:29,425 INFO main - -->op: RemoveOp: `if ((sb.length()) > 0) { [...] ` ---> `-` at pos 0 of parent `{ 	if ((sb.length()) > 0)[...]`
+2018-08-09 08:18:32,135 INFO main - mod_point ModificPoint=XmlLicenseHeaderHandler line: 73, el: CtInvocationImpl
+2018-08-09 08:18:32,135 INFO main - -->op: RemoveOp: `sb.append(org.apache.wick[...] ` ---> `-` at pos 0 of parent `{ 	sb.append(org.apache.w[...]`
+2018-08-09 08:18:35,074 INFO main - mod_point ModificPoint=XmlLicenseHeaderHandler line: 75, el: CtInvocationImpl
+2018-08-09 08:18:35,075 INFO main - -->op: RemoveOp: `sb.append(headers[i]) ` ---> `-` at pos 1 of parent `{ 	if ((sb.length()) > 0)[...]`
+2018-08-09 08:18:37,986 INFO main - mod_point ModificPoint=XmlLicenseHeaderHandler line: 77, el: CtAssignmentImpl
+2018-08-09 08:18:37,987 INFO main - -->op: RemoveOp: `header = sb.toString() ` ---> `-` at pos 3 of parent `{ 	java.lang.String[] hea[...]`
+2018-08-09 08:18:40,479 INFO main - mod_point ModificPoint=XmlLicenseHeaderHandler line: 80, el: CtAssignmentImpl
+2018-08-09 08:18:40,480 INFO main - -->op: RemoveOp: `revision = org.apache.wic[...] ` ---> `-` at pos 2 of parent `{ 	java.lang.String heade[...]`
+2018-08-09 08:18:43,380 INFO main - mod_point ModificPoint=XmlLicenseHeaderHandler line: 88, el: CtReturnImpl
+2018-08-09 08:18:43,380 INFO main - -->op: RemoveOp: `return (revision.size()) [...] ` ---> `-` at pos 2 of parent `{ 	org.apache.wicket.util[...]`
+2018-08-09 08:18:44,520 INFO main - mod_point ModificPoint=XmlLicenseHeaderHandler line: 94, el: CtReturnImpl
+2018-08-09 08:18:44,520 INFO main - -->op: RemoveOp: `return java.util.Arrays.a[...] ` ---> `-` at pos 0 of parent `{ 	return java.util.Array[...]`
+2018-08-09 08:18:45,564 INFO main - mod_point ModificPoint=JavaScriptLicenseHeaderHandler line: 38, el: CtReturnImpl
+2018-08-09 08:18:45,564 INFO main - -->op: RemoveOp: `return "javaScriptLicense[...] ` ---> `-` at pos 0 of parent `{ 	return "javaScriptLice[...]`
+2018-08-09 08:18:46,543 INFO main - mod_point ModificPoint=JavaScriptLicenseHeaderHandler line: 44, el: CtLocalVariableImpl
+2018-08-09 08:18:46,543 INFO main - -->op: RemoveOp: `java.lang.String header =[...] ` ---> `-` at pos 0 of parent `{ 	java.lang.String heade[...]`
+2018-08-09 08:18:47,648 INFO main - mod_point ModificPoint=JavaScriptLicenseHeaderHandler line: 46, el: CtReturnImpl
+2018-08-09 08:18:47,648 INFO main - -->op: RemoveOp: `return getLicenseHeader()[...] ` ---> `-` at pos 1 of parent `{ 	java.lang.String heade[...]`
+2018-08-09 08:18:48,720 INFO main - mod_point ModificPoint=JavaScriptLicenseHeaderHandler line: 52, el: CtReturnImpl
+2018-08-09 08:18:48,721 INFO main - -->op: RemoveOp: `return java.util.Arrays.a[...] ` ---> `-` at pos 0 of parent `{ 	return java.util.Array[...]`
+2018-08-09 08:18:49,912 INFO main - mod_point ModificPoint=JavaLicenseHeaderHandler line: 82, el: CtLocalVariableImpl
+2018-08-09 08:18:49,912 INFO main - -->op: RemoveOp: `java.lang.String header =[...] ` ---> `-` at pos 0 of parent `{ 	java.lang.String heade[...]`
+2018-08-09 08:18:51,049 INFO main - mod_point ModificPoint=JavaLicenseHeaderHandler line: 84, el: CtReturnImpl
+2018-08-09 08:18:51,049 INFO main - -->op: RemoveOp: `return getLicenseHeader()[...] ` ---> `-` at pos 1 of parent `{ 	java.lang.String heade[...]`
+2018-08-09 08:18:52,183 INFO main - mod_point ModificPoint=JavaLicenseHeaderHandler line: 90, el: CtReturnImpl
+2018-08-09 08:18:52,183 INFO main - -->op: RemoveOp: `return java.util.Arrays.a[...] ` ---> `-` at pos 0 of parent `{ 	return java.util.Array[...]`
+2018-08-09 08:18:53,317 INFO main - mod_point ModificPoint=JavaLicenseHeaderHandler line: 96, el: CtReturnImpl
+2018-08-09 08:18:53,317 INFO main - -->op: RemoveOp: `return "javaLicense.txt" ` ---> `-` at pos 0 of parent `{ 	return "javaLicense.tx[...]`
+2018-08-09 08:18:54,448 INFO main - mod_point ModificPoint=JavaLicenseHeaderHandler line: 102, el: CtLocalVariableImpl
+2018-08-09 08:18:54,449 INFO main - -->op: RemoveOp: `java.lang.String licenseT[...] ` ---> `-` at pos 0 of parent `{ 	java.lang.String licen[...]`
+2018-08-09 08:18:55,570 INFO main - mod_point ModificPoint=JavaLicenseHeaderHandler line: 104, el: CtLocalVariableImpl
+2018-08-09 08:18:55,570 INFO main - -->op: RemoveOp: `java.lang.String header =[...] ` ---> `-` at pos 1 of parent `{ 	java.lang.String licen[...]`
+2018-08-09 08:18:56,738 INFO main - mod_point ModificPoint=JavaLicenseHeaderHandler line: 107, el: CtIfImpl
+2018-08-09 08:18:56,738 INFO main - -->op: ReplaceIfBooleanOp: `if (header.contains("Apac[...] ` ---> `if (true) { 	licenseType [...]` at pos 2 of parent `{ 	java.lang.String licen[...]`
+2018-08-09 08:18:59,781 INFO main - mod_point ModificPoint=JavaLicenseHeaderHandler line: 107, el: CtIfImpl
+2018-08-09 08:18:59,781 INFO main - -->op: ReplaceIfBooleanOp: `if (header.contains("Apac[...] ` ---> `if (false) { 	licenseType[...]` at pos 2 of parent `{ 	java.lang.String licen[...]`
+2018-08-09 08:19:02,664 INFO main - mod_point ModificPoint=JavaLicenseHeaderHandler line: 107, el: CtIfImpl
+2018-08-09 08:19:02,664 INFO main - -->op: RemoveOp: `if (header.contains("Apac[...] ` ---> `-` at pos 2 of parent `{ 	java.lang.String licen[...]`
+2018-08-09 08:19:05,358 INFO main - mod_point ModificPoint=JavaLicenseHeaderHandler line: 109, el: CtAssignmentImpl
+2018-08-09 08:19:05,358 INFO main - -->op: RemoveOp: `licenseType = "ASL2" ` ---> `-` at pos 0 of parent `{ 	licenseType = "ASL2"; [...]`
+2018-08-09 08:19:07,684 INFO main - mod_point ModificPoint=JavaLicenseHeaderHandler line: 111, el: CtIfImpl
+2018-08-09 08:19:07,684 INFO main - -->op: ReplaceIfBooleanOp: `if (header.contains("The [...] ` ---> `if (true) { 	licenseType [...]` at pos 0 of parent `{ 	if (header.contains("T[...]`
+2018-08-09 08:19:10,184 INFO main - mod_point ModificPoint=JavaLicenseHeaderHandler line: 111, el: CtIfImpl
+2018-08-09 08:19:10,184 INFO main - -->op: ReplaceIfBooleanOp: `if (header.contains("The [...] ` ---> `if (false) { 	licenseType[...]` at pos 0 of parent `{ 	if (header.contains("T[...]`
+2018-08-09 08:19:12,899 INFO main - mod_point ModificPoint=JavaLicenseHeaderHandler line: 111, el: CtIfImpl
+2018-08-09 08:19:12,899 INFO main - -->op: RemoveOp: `if (header.contains("The [...] ` ---> `-` at pos 0 of parent `{ 	if (header.contains("T[...]`
+2018-08-09 08:19:15,491 INFO main - mod_point ModificPoint=JavaLicenseHeaderHandler line: 113, el: CtAssignmentImpl
+2018-08-09 08:19:15,491 INFO main - -->op: RemoveOp: `licenseType = "ASL1.1" ` ---> `-` at pos 0 of parent `{ 	licenseType = "ASL1.1"[...]`
+2018-08-09 08:19:17,784 INFO main - mod_point ModificPoint=JavaLicenseHeaderHandler line: 116, el: CtReturnImpl
+2018-08-09 08:19:17,784 INFO main - -->op: RemoveOp: `return licenseType ` ---> `-` at pos 3 of parent `{ 	java.lang.String licen[...]`
+2018-08-09 08:19:18,777 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 76, el: CtLocalVariableImpl
+2018-08-09 08:19:18,777 INFO main - -->op: RemoveOp: `boolean accept = false ` ---> `-` at pos 0 of parent `{ 	boolean accept = false[...]`
+2018-08-09 08:19:19,678 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 78, el: CtIfImpl
+2018-08-09 08:19:19,679 INFO main - -->op: ReplaceIfBooleanOp: `if (pathname.isFile()) { [...] ` ---> `if (true) { 	if ((ignoreF[...]` at pos 1 of parent `{ 	boolean accept = false[...]`
+2018-08-09 08:19:22,037 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 78, el: CtIfImpl
+2018-08-09 08:19:22,038 INFO main - -->op: ReplaceIfBooleanOp: `if (pathname.isFile()) { [...] ` ---> `if (false) { 	if ((ignore[...]` at pos 1 of parent `{ 	boolean accept = false[...]`
+2018-08-09 08:19:24,483 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 78, el: CtIfImpl
+2018-08-09 08:19:24,483 INFO main - -->op: RemoveOp: `if (pathname.isFile()) { [...] ` ---> `-` at pos 1 of parent `{ 	boolean accept = false[...]`
+2018-08-09 08:19:26,515 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 80, el: CtIfImpl
+2018-08-09 08:19:26,515 INFO main - -->op: ReplaceIfBooleanOp: `if ((ignoreFile(pathname)[...] ` ---> `if (true) { 	for (java.la[...]` at pos 0 of parent `{ 	if ((ignoreFile(pathna[...]`
+2018-08-09 08:19:28,697 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 80, el: CtIfImpl
+2018-08-09 08:19:28,697 INFO main - -->op: ReplaceIfBooleanOp: `if ((ignoreFile(pathname)[...] ` ---> `if (false) { 	for (java.l[...]` at pos 0 of parent `{ 	if ((ignoreFile(pathna[...]`
+2018-08-09 08:19:30,752 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 80, el: CtIfImpl
+2018-08-09 08:19:30,753 INFO main - -->op: RemoveOp: `if ((ignoreFile(pathname)[...] ` ---> `-` at pos 0 of parent `{ 	if ((ignoreFile(pathna[...]`
+2018-08-09 08:19:32,847 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 82, el: CtForEachImpl
+2018-08-09 08:19:32,847 INFO main - -->op: RemoveOp: `for (java.lang.String suf[...] ` ---> `-` at pos 0 of parent `{ 	for (java.lang.String [...]`
+2018-08-09 08:19:35,249 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 84, el: CtIfImpl
+2018-08-09 08:19:35,250 INFO main - -->op: ReplaceIfBooleanOp: `if (pathname.getName().en[...] ` ---> `if (true) { 	accept = tru[...]` at pos 0 of parent `{ 	if (pathname.getName()[...]`
+2018-08-09 08:19:37,446 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 84, el: CtIfImpl
+2018-08-09 08:19:37,446 INFO main - -->op: ReplaceIfBooleanOp: `if (pathname.getName().en[...] ` ---> `if (false) { 	accept = tr[...]` at pos 0 of parent `{ 	if (pathname.getName()[...]`
+2018-08-09 08:19:39,650 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 84, el: CtIfImpl
+2018-08-09 08:19:39,650 INFO main - -->op: RemoveOp: `if (pathname.getName().en[...] ` ---> `-` at pos 0 of parent `{ 	if (pathname.getName()[...]`
+2018-08-09 08:19:41,760 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 86, el: CtAssignmentImpl
+2018-08-09 08:19:41,760 INFO main - -->op: RemoveOp: `accept = true ` ---> `-` at pos 0 of parent `{ 	accept = true; 	break;[...]`
+2018-08-09 08:19:43,967 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 87, el: CtBreakImpl
+2018-08-09 08:19:43,967 INFO main - -->op: RemoveOp: `break ` ---> `-` at pos 1 of parent `{ 	accept = true; 	break;[...]`
+2018-08-09 08:19:46,276 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 91, el: CtInvocationImpl
+2018-08-09 08:19:46,277 INFO main - -->op: RemoveOp: `org.apache.wicket.util.li[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.wicket.util[...]`
+2018-08-09 08:19:48,286 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 97, el: CtInvocationImpl
+2018-08-09 08:19:48,286 INFO main - -->op: RemoveOp: `org.apache.wicket.util.li[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.wicket.util[...]`
+2018-08-09 08:19:50,422 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 101, el: CtReturnImpl
+2018-08-09 08:19:50,423 INFO main - -->op: RemoveOp: `return accept ` ---> `-` at pos 2 of parent `{ 	boolean accept = false[...]`
+2018-08-09 08:19:51,221 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 106, el: CtLocalVariableImpl
+2018-08-09 08:19:51,221 INFO main - -->op: RemoveOp: `boolean ignore = false ` ---> `-` at pos 0 of parent `{ 	boolean ignore = false[...]`
+2018-08-09 08:19:51,925 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 108, el: CtIfImpl
+2018-08-09 08:19:51,925 INFO main - -->op: ReplaceIfBooleanOp: `if ((ignoreFiles) != null[...] ` ---> `if (true) { 	java.lang.St[...]` at pos 1 of parent `{ 	boolean ignore = false[...]`
+2018-08-09 08:19:53,736 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 108, el: CtIfImpl
+2018-08-09 08:19:53,737 INFO main - -->op: ReplaceIfBooleanOp: `if ((ignoreFiles) != null[...] ` ---> `if (false) { 	java.lang.S[...]` at pos 1 of parent `{ 	boolean ignore = false[...]`
+2018-08-09 08:19:55,775 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 108, el: CtIfImpl
+2018-08-09 08:19:55,776 INFO main - -->op: RemoveOp: `if ((ignoreFiles) != null[...] ` ---> `-` at pos 1 of parent `{ 	boolean ignore = false[...]`
+2018-08-09 08:19:58,130 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 110, el: CtLocalVariableImpl
+2018-08-09 08:19:58,130 INFO main - -->op: RemoveOp: `java.lang.String relative[...] ` ---> `-` at pos 0 of parent `{ 	java.lang.String relat[...]`
+2018-08-09 08:19:58,978 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 111, el: CtAssignmentImpl
+2018-08-09 08:19:58,978 INFO main - -->op: RemoveOp: `relativePathname = org.ap[...] ` ---> `-` at pos 1 of parent `{ 	java.lang.String relat[...]`
+2018-08-09 08:20:01,218 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 115, el: CtForEachImpl
+2018-08-09 08:20:01,219 INFO main - -->op: RemoveOp: `for (java.lang.String ign[...] ` ---> `-` at pos 2 of parent `{ 	java.lang.String relat[...]`
+2018-08-09 08:20:03,640 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 118, el: CtAssignmentImpl
+2018-08-09 08:20:03,641 INFO main - -->op: RemoveOp: `ignorePath = org.apache.w[...] ` ---> `-` at pos 0 of parent `{ 	ignorePath = org.apach[...]`
+2018-08-09 08:20:05,662 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 120, el: CtLocalVariableImpl
+2018-08-09 08:20:05,663 INFO main - -->op: RemoveOp: `java.io.File ignoreFile =[...] ` ---> `-` at pos 1 of parent `{ 	ignorePath = org.apach[...]`
+2018-08-09 08:20:06,558 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 123, el: CtIfImpl
+2018-08-09 08:20:06,558 INFO main - -->op: ReplaceIfBooleanOp: `if (ignoreFile.isDirector[...] ` ---> `if (true) { 	if (pathname[...]` at pos 2 of parent `{ 	ignorePath = org.apach[...]`
+2018-08-09 08:20:08,655 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 123, el: CtIfImpl
+2018-08-09 08:20:08,655 INFO main - -->op: ReplaceIfBooleanOp: `if (ignoreFile.isDirector[...] ` ---> `if (false) { 	if (pathnam[...]` at pos 2 of parent `{ 	ignorePath = org.apach[...]`
+2018-08-09 08:20:10,742 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 123, el: CtIfImpl
+2018-08-09 08:20:10,743 INFO main - -->op: RemoveOp: `if (ignoreFile.isDirector[...] ` ---> `-` at pos 2 of parent `{ 	ignorePath = org.apach[...]`
+2018-08-09 08:20:13,501 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 125, el: CtIfImpl
+2018-08-09 08:20:13,502 INFO main - -->op: ReplaceIfBooleanOp: `if (pathname.getAbsoluteP[...] ` ---> `if (true) { 	ignore = tru[...]` at pos 0 of parent `{ 	if (pathname.getAbsolu[...]`
+2018-08-09 08:20:23,552 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 125, el: CtIfImpl
+2018-08-09 08:20:23,552 INFO main - -->op: ReplaceIfBooleanOp: `if (pathname.getAbsoluteP[...] ` ---> `if (false) { 	ignore = tr[...]` at pos 0 of parent `{ 	if (pathname.getAbsolu[...]`
+2018-08-09 08:20:25,619 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 125, el: CtIfImpl
+2018-08-09 08:20:25,619 INFO main - -->op: RemoveOp: `if (pathname.getAbsoluteP[...] ` ---> `-` at pos 0 of parent `{ 	if (pathname.getAbsolu[...]`
+2018-08-09 08:20:27,716 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 127, el: CtAssignmentImpl
+2018-08-09 08:20:27,716 INFO main - -->op: RemoveOp: `ignore = true ` ---> `-` at pos 0 of parent `{ 	ignore = true; 	break;[...]`
+2018-08-09 08:20:29,879 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 128, el: CtBreakImpl
+2018-08-09 08:20:29,880 INFO main - -->op: RemoveOp: `break ` ---> `-` at pos 1 of parent `{ 	ignore = true; 	break;[...]`
+2018-08-09 08:20:31,891 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 132, el: CtIfImpl
+2018-08-09 08:20:31,891 INFO main - -->op: ReplaceIfBooleanOp: `if (ignoreFile.isFile()) [...] ` ---> `if (true) { 	if (relative[...]` at pos 0 of parent `{ 	if (ignoreFile.isFile([...]`
+2018-08-09 08:20:33,879 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 132, el: CtIfImpl
+2018-08-09 08:20:33,879 INFO main - -->op: ReplaceIfBooleanOp: `if (ignoreFile.isFile()) [...] ` ---> `if (false) { 	if (relativ[...]` at pos 0 of parent `{ 	if (ignoreFile.isFile([...]`
+2018-08-09 08:20:36,027 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 132, el: CtIfImpl
+2018-08-09 08:20:36,027 INFO main - -->op: RemoveOp: `if (ignoreFile.isFile()) [...] ` ---> `-` at pos 0 of parent `{ 	if (ignoreFile.isFile([...]`
+2018-08-09 08:20:37,957 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 140, el: CtIfImpl
+2018-08-09 08:20:37,957 INFO main - -->op: ReplaceIfBooleanOp: `if (pathname.getName().eq[...] ` ---> `if (true) { 	ignore = tru[...]` at pos 0 of parent `{ 	if (pathname.getName()[...]`
+2018-08-09 08:20:40,130 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 140, el: CtIfImpl
+2018-08-09 08:20:40,131 INFO main - -->op: ReplaceIfBooleanOp: `if (pathname.getName().eq[...] ` ---> `if (false) { 	ignore = tr[...]` at pos 0 of parent `{ 	if (pathname.getName()[...]`
+2018-08-09 08:20:42,292 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 140, el: CtIfImpl
+2018-08-09 08:20:42,292 INFO main - -->op: RemoveOp: `if (pathname.getName().eq[...] ` ---> `-` at pos 0 of parent `{ 	if (pathname.getName()[...]`
+2018-08-09 08:20:44,289 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 142, el: CtAssignmentImpl
+2018-08-09 08:20:44,289 INFO main - -->op: RemoveOp: `ignore = true ` ---> `-` at pos 0 of parent `{ 	ignore = true; 	break;[...]`
+2018-08-09 08:20:46,290 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 143, el: CtBreakImpl
+2018-08-09 08:20:46,290 INFO main - -->op: RemoveOp: `break ` ---> `-` at pos 1 of parent `{ 	ignore = true; 	break;[...]`
+2018-08-09 08:20:48,525 INFO main - mod_point ModificPoint=ApacheLicenseHeaderTestCase line: 148, el: CtReturnImpl
+2018-08-09 08:20:48,525 INFO main - -->op: RemoveOp: `return ignore ` ---> `-` at pos 2 of parent `{ 	boolean ignore = false[...]`
+2018-08-09 08:20:49,442 INFO main - mod_point ModificPoint=StringValue line: 968, el: CtIfImpl
+2018-08-09 08:20:49,442 INFO main - -->op: ReplaceIfBooleanOp: `if (obj instanceof org.ap[...] ` ---> `if (true) { 	org.apache.w[...]` at pos 0 of parent `{ 	if (obj instanceof org[...]`
+2018-08-09 08:20:51,707 INFO main - mod_point ModificPoint=StringValue line: 968, el: CtIfImpl
+2018-08-09 08:20:51,708 INFO main - -->op: ReplaceIfBooleanOp: `if (obj instanceof org.ap[...] ` ---> `if (false) { 	org.apache.[...]` at pos 0 of parent `{ 	if (obj instanceof org[...]`
+2018-08-09 08:20:53,767 INFO main - mod_point ModificPoint=StringValue line: 968, el: CtIfImpl
+2018-08-09 08:20:53,767 INFO main - -->op: RemoveOp: `if (obj instanceof org.ap[...] ` ---> `-` at pos 0 of parent `{ 	if (obj instanceof org[...]`
+2018-08-09 08:20:54,545 INFO main - mod_point ModificPoint=StringValue line: 970, el: CtLocalVariableImpl
+2018-08-09 08:20:54,545 INFO main - -->op: RemoveOp: `org.apache.wicket.util.st[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.wicket.util[...]`
+2018-08-09 08:20:55,417 INFO main - mod_point ModificPoint=StringValue line: 971, el: CtReturnImpl
+2018-08-09 08:20:55,417 INFO main - -->op: RemoveOp: `return (org.apache.wicket[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.wicket.util[...]`
+2018-08-09 08:20:56,412 INFO main - mod_point ModificPoint=Objects line: 228, el: CtIfImpl
+2018-08-09 08:20:56,413 INFO main - -->op: ReplaceIfBooleanOp: `if (v1 == v2) { 	result =[...] ` ---> `if (true) { 	result = 0; [...]` at pos 1 of parent `{ 	int result; 	if (v1 ==[...]`
+2018-08-09 08:20:58,448 INFO main - mod_point ModificPoint=Objects line: 228, el: CtIfImpl
+2018-08-09 08:20:58,449 INFO main - -->op: ReplaceIfBooleanOp: `if (v1 == v2) { 	result =[...] ` ---> `if (false) { 	result = 0;[...]` at pos 1 of parent `{ 	int result; 	if (v1 ==[...]`
+2018-08-09 08:21:00,875 INFO main - mod_point ModificPoint=Objects line: 228, el: CtIfImpl
+2018-08-09 08:21:00,875 INFO main - -->op: RemoveOp: `if (v1 == v2) { 	result =[...] ` ---> `-` at pos 1 of parent `{ 	int result; 	if (v1 ==[...]`
+2018-08-09 08:21:01,813 INFO main - mod_point ModificPoint=Objects line: 234, el: CtLocalVariableImpl
+2018-08-09 08:21:01,814 INFO main - -->op: RemoveOp: `int type = org.apache.wic[...] ` ---> `-` at pos 2 of parent `{ 	int t1 = org.apache.wi[...]`
+2018-08-09 08:21:02,572 INFO main - mod_point ModificPoint=Objects line: 234, el: CtLocalVariableImpl
+2018-08-09 08:21:02,572 INFO main - -->op: RemoveOp: `int t2 = org.apache.wicke[...] ` ---> `-` at pos 1 of parent `{ 	int t1 = org.apache.wi[...]`
+2018-08-09 08:21:03,307 INFO main - mod_point ModificPoint=Objects line: 234, el: CtLocalVariableImpl
+2018-08-09 08:21:03,307 INFO main - -->op: RemoveOp: `int t1 = org.apache.wicke[...] ` ---> `-` at pos 0 of parent `{ 	int t1 = org.apache.wi[...]`
+2018-08-09 08:21:04,267 INFO main - mod_point ModificPoint=Objects line: 237, el: CtSwitchImpl
+2018-08-09 08:21:04,268 INFO main - -->op: RemoveOp: `switch (type) { 	case org[...] ` ---> `-` at pos 3 of parent `{ 	int t1 = org.apache.wi[...]`
+2018-08-09 08:21:05,067 INFO main - mod_point ModificPoint=Objects line: 250, el: CtIfImpl
+2018-08-09 08:21:05,067 INFO main - -->op: ReplaceIfBooleanOp: `if ((v1 instanceof java.l[...] ` ---> `if (true) { 	result = ((j[...]` at pos 0 of parent `{ 	if ((v1 instanceof jav[...]`
+2018-08-09 08:21:07,493 INFO main - mod_point ModificPoint=Objects line: 250, el: CtIfImpl
+2018-08-09 08:21:07,494 INFO main - -->op: ReplaceIfBooleanOp: `if ((v1 instanceof java.l[...] ` ---> `if (false) { 	result = (([...]` at pos 0 of parent `{ 	if ((v1 instanceof jav[...]`
+2018-08-09 08:21:10,284 INFO main - mod_point ModificPoint=Objects line: 250, el: CtIfImpl
+2018-08-09 08:21:10,284 INFO main - -->op: RemoveOp: `if ((v1 instanceof java.l[...] ` ---> `-` at pos 0 of parent `{ 	if ((v1 instanceof jav[...]`
+2018-08-09 08:21:13,180 INFO main - mod_point ModificPoint=Objects line: 258, el: CtThrowImpl
+2018-08-09 08:21:13,181 INFO main - -->op: RemoveOp: `throw new java.lang.Illeg[...] ` ---> `-` at pos 0 of parent `{ 	throw new java.lang.Il[...]`
+2018-08-09 08:21:16,213 INFO main - mod_point ModificPoint=Objects line: 444, el: CtIfImpl
+2018-08-09 08:21:16,214 INFO main - -->op: ReplaceIfBooleanOp: `if (t1 == t2) { 	return t[...] ` ---> `if (true) { 	return t1; }[...]` at pos 0 of parent `{ 	if (t1 == t2) { 		retu[...]`
+2018-08-09 08:21:19,154 INFO main - mod_point ModificPoint=Objects line: 444, el: CtIfImpl
+2018-08-09 08:21:19,155 INFO main - -->op: ReplaceIfBooleanOp: `if (t1 == t2) { 	return t[...] ` ---> `if (false) { 	return t1; [...]` at pos 0 of parent `{ 	if (t1 == t2) { 		retu[...]`
+2018-08-09 08:21:21,967 INFO main - mod_point ModificPoint=Objects line: 444, el: CtIfImpl
+2018-08-09 08:21:21,967 INFO main - -->op: RemoveOp: `if (t1 == t2) { 	return t[...] ` ---> `-` at pos 0 of parent `{ 	if (t1 == t2) { 		retu[...]`
+2018-08-09 08:21:25,163 INFO main - mod_point ModificPoint=Objects line: 446, el: CtReturnImpl
+2018-08-09 08:21:25,163 INFO main - -->op: RemoveOp: `return t1 ` ---> `-` at pos 0 of parent `{ 	return t1; }`
+2018-08-09 08:21:27,919 INFO main - mod_point ModificPoint=Objects line: 508, el: CtIfImpl
+2018-08-09 08:21:27,920 INFO main - -->op: ReplaceIfBooleanOp: `if (value != null) { 	jav[...] ` ---> `if (true) { 	java.lang.Cl[...]` at pos 0 of parent `{ 	if (value != null) { 	[...]`
+2018-08-09 08:21:30,556 INFO main - mod_point ModificPoint=Objects line: 508, el: CtIfImpl
+2018-08-09 08:21:30,556 INFO main - -->op: ReplaceIfBooleanOp: `if (value != null) { 	jav[...] ` ---> `if (false) { 	java.lang.C[...]` at pos 0 of parent `{ 	if (value != null) { 	[...]`
+2018-08-09 08:21:33,223 INFO main - mod_point ModificPoint=Objects line: 508, el: CtIfImpl
+2018-08-09 08:21:33,224 INFO main - -->op: RemoveOp: `if (value != null) { 	jav[...] ` ---> `-` at pos 0 of parent `{ 	if (value != null) { 	[...]`
+2018-08-09 08:21:36,204 INFO main - mod_point ModificPoint=Objects line: 510, el: CtLocalVariableImpl
+2018-08-09 08:21:36,204 INFO main - -->op: RemoveOp: `java.lang.Class<?> c = va[...] ` ---> `-` at pos 0 of parent `{ 	java.lang.Class<?> c =[...]`
+2018-08-09 08:21:37,570 INFO main - mod_point ModificPoint=Objects line: 511, el: CtIfImpl
+2018-08-09 08:21:37,570 INFO main - -->op: ReplaceIfBooleanOp: `if (c == (java.lang.Integ[...] ` ---> `if (true) { 	return org.a[...]` at pos 1 of parent `{ 	java.lang.Class<?> c =[...]`
+2018-08-09 08:21:40,525 INFO main - mod_point ModificPoint=Objects line: 511, el: CtIfImpl
+2018-08-09 08:21:40,525 INFO main - -->op: ReplaceIfBooleanOp: `if (c == (java.lang.Integ[...] ` ---> `if (false) { 	return org.[...]` at pos 1 of parent `{ 	java.lang.Class<?> c =[...]`
+2018-08-09 08:21:43,234 INFO main - mod_point ModificPoint=Objects line: 511, el: CtIfImpl
+2018-08-09 08:21:43,234 INFO main - -->op: RemoveOp: `if (c == (java.lang.Integ[...] ` ---> `-` at pos 1 of parent `{ 	java.lang.Class<?> c =[...]`
+2018-08-09 08:21:46,170 INFO main - mod_point ModificPoint=Objects line: 515, el: CtIfImpl
+2018-08-09 08:21:46,171 INFO main - -->op: ReplaceIfBooleanOp: `if (c == (java.lang.Doubl[...] ` ---> `if (true) { 	return org.a[...]` at pos 2 of parent `{ 	java.lang.Class<?> c =[...]`
+2018-08-09 08:21:48,913 INFO main - mod_point ModificPoint=Objects line: 515, el: CtIfImpl
+2018-08-09 08:21:48,914 INFO main - -->op: ReplaceIfBooleanOp: `if (c == (java.lang.Doubl[...] ` ---> `if (false) { 	return org.[...]` at pos 2 of parent `{ 	java.lang.Class<?> c =[...]`
+2018-08-09 08:21:52,202 INFO main - mod_point ModificPoint=Objects line: 515, el: CtIfImpl
+2018-08-09 08:21:52,202 INFO main - -->op: RemoveOp: `if (c == (java.lang.Doubl[...] ` ---> `-` at pos 2 of parent `{ 	java.lang.Class<?> c =[...]`
+2018-08-09 08:21:55,776 INFO main - mod_point ModificPoint=Objects line: 519, el: CtIfImpl
+2018-08-09 08:21:55,777 INFO main - -->op: ReplaceIfBooleanOp: `if (c == (java.lang.Boole[...] ` ---> `if (true) { 	return org.a[...]` at pos 3 of parent `{ 	java.lang.Class<?> c =[...]`
+2018-08-09 08:21:59,233 INFO main - mod_point ModificPoint=Objects line: 519, el: CtIfImpl
+2018-08-09 08:21:59,233 INFO main - -->op: ReplaceIfBooleanOp: `if (c == (java.lang.Boole[...] ` ---> `if (false) { 	return org.[...]` at pos 3 of parent `{ 	java.lang.Class<?> c =[...]`
+2018-08-09 08:22:02,460 INFO main - mod_point ModificPoint=Objects line: 519, el: CtIfImpl
+2018-08-09 08:22:02,460 INFO main - -->op: RemoveOp: `if (c == (java.lang.Boole[...] ` ---> `-` at pos 3 of parent `{ 	java.lang.Class<?> c =[...]`
+2018-08-09 08:22:05,587 INFO main - mod_point ModificPoint=Objects line: 523, el: CtIfImpl
+2018-08-09 08:22:05,587 INFO main - -->op: ReplaceIfBooleanOp: `if (c == (java.lang.Byte.[...] ` ---> `if (true) { 	return org.a[...]` at pos 4 of parent `{ 	java.lang.Class<?> c =[...]`
+2018-08-09 08:22:08,770 INFO main - mod_point ModificPoint=Objects line: 523, el: CtIfImpl
+2018-08-09 08:22:08,770 INFO main - -->op: ReplaceIfBooleanOp: `if (c == (java.lang.Byte.[...] ` ---> `if (false) { 	return org.[...]` at pos 4 of parent `{ 	java.lang.Class<?> c =[...]`
+2018-08-09 08:22:11,409 INFO main - mod_point ModificPoint=Objects line: 523, el: CtIfImpl
+2018-08-09 08:22:11,410 INFO main - -->op: RemoveOp: `if (c == (java.lang.Byte.[...] ` ---> `-` at pos 4 of parent `{ 	java.lang.Class<?> c =[...]`
+2018-08-09 08:22:15,229 INFO main - mod_point ModificPoint=Objects line: 527, el: CtIfImpl
+2018-08-09 08:22:15,229 INFO main - -->op: ReplaceIfBooleanOp: `if (c == (java.lang.Chara[...] ` ---> `if (true) { 	return org.a[...]` at pos 5 of parent `{ 	java.lang.Class<?> c =[...]`
+2018-08-09 08:22:18,761 INFO main - mod_point ModificPoint=Objects line: 527, el: CtIfImpl
+2018-08-09 08:22:18,761 INFO main - -->op: ReplaceIfBooleanOp: `if (c == (java.lang.Chara[...] ` ---> `if (false) { 	return org.[...]` at pos 5 of parent `{ 	java.lang.Class<?> c =[...]`
+2018-08-09 08:22:22,065 INFO main - mod_point ModificPoint=Objects line: 527, el: CtIfImpl
+2018-08-09 08:22:22,065 INFO main - -->op: RemoveOp: `if (c == (java.lang.Chara[...] ` ---> `-` at pos 5 of parent `{ 	java.lang.Class<?> c =[...]`
+2018-08-09 08:22:25,169 INFO main - mod_point ModificPoint=Objects line: 531, el: CtIfImpl
+2018-08-09 08:22:25,170 INFO main - -->op: ReplaceIfBooleanOp: `if (c == (java.lang.Short[...] ` ---> `if (true) { 	return org.a[...]` at pos 6 of parent `{ 	java.lang.Class<?> c =[...]`
+2018-08-09 08:22:29,023 INFO main - mod_point ModificPoint=Objects line: 531, el: CtIfImpl
+2018-08-09 08:22:29,024 INFO main - -->op: ReplaceIfBooleanOp: `if (c == (java.lang.Short[...] ` ---> `if (false) { 	return org.[...]` at pos 6 of parent `{ 	java.lang.Class<?> c =[...]`
+2018-08-09 08:22:31,943 INFO main - mod_point ModificPoint=Objects line: 531, el: CtIfImpl
+2018-08-09 08:22:31,944 INFO main - -->op: RemoveOp: `if (c == (java.lang.Short[...] ` ---> `-` at pos 6 of parent `{ 	java.lang.Class<?> c =[...]`
+2018-08-09 08:22:34,815 INFO main - mod_point ModificPoint=Objects line: 535, el: CtIfImpl
+2018-08-09 08:22:34,816 INFO main - -->op: ReplaceIfBooleanOp: `if (c == (java.lang.Long.[...] ` ---> `if (true) { 	return org.a[...]` at pos 7 of parent `{ 	java.lang.Class<?> c =[...]`
+2018-08-09 08:22:37,473 INFO main - mod_point ModificPoint=Objects line: 535, el: CtIfImpl
+2018-08-09 08:22:37,473 INFO main - -->op: ReplaceIfBooleanOp: `if (c == (java.lang.Long.[...] ` ---> `if (false) { 	return org.[...]` at pos 7 of parent `{ 	java.lang.Class<?> c =[...]`
+2018-08-09 08:22:40,421 INFO main - mod_point ModificPoint=Objects line: 535, el: CtIfImpl
+2018-08-09 08:22:40,422 INFO main - -->op: RemoveOp: `if (c == (java.lang.Long.[...] ` ---> `-` at pos 7 of parent `{ 	java.lang.Class<?> c =[...]`
+2018-08-09 08:22:43,324 INFO main - mod_point ModificPoint=Objects line: 539, el: CtIfImpl
+2018-08-09 08:22:43,324 INFO main - -->op: ReplaceIfBooleanOp: `if (c == (java.lang.Float[...] ` ---> `if (true) { 	return org.a[...]` at pos 8 of parent `{ 	java.lang.Class<?> c =[...]`
+2018-08-09 08:22:46,181 INFO main - mod_point ModificPoint=Objects line: 539, el: CtIfImpl
+2018-08-09 08:22:46,181 INFO main - -->op: ReplaceIfBooleanOp: `if (c == (java.lang.Float[...] ` ---> `if (false) { 	return org.[...]` at pos 8 of parent `{ 	java.lang.Class<?> c =[...]`
+2018-08-09 08:22:50,041 INFO main - mod_point ModificPoint=Objects line: 539, el: CtIfImpl
+2018-08-09 08:22:50,041 INFO main - -->op: RemoveOp: `if (c == (java.lang.Float[...] ` ---> `-` at pos 8 of parent `{ 	java.lang.Class<?> c =[...]`
+2018-08-09 08:22:53,826 INFO main - mod_point ModificPoint=Objects line: 543, el: CtIfImpl
+2018-08-09 08:22:53,827 INFO main - -->op: ReplaceIfBooleanOp: `if (c == (java.math.BigIn[...] ` ---> `if (true) { 	return org.a[...]` at pos 9 of parent `{ 	java.lang.Class<?> c =[...]`
+2018-08-09 08:22:57,178 INFO main - mod_point ModificPoint=Objects line: 543, el: CtIfImpl
+2018-08-09 08:22:57,178 INFO main - -->op: ReplaceIfBooleanOp: `if (c == (java.math.BigIn[...] ` ---> `if (false) { 	return org.[...]` at pos 9 of parent `{ 	java.lang.Class<?> c =[...]`
+2018-08-09 08:23:00,411 INFO main - mod_point ModificPoint=Objects line: 543, el: CtIfImpl
+2018-08-09 08:23:00,412 INFO main - -->op: RemoveOp: `if (c == (java.math.BigIn[...] ` ---> `-` at pos 9 of parent `{ 	java.lang.Class<?> c =[...]`
+2018-08-09 08:23:03,415 INFO main - mod_point ModificPoint=Objects line: 547, el: CtIfImpl
+2018-08-09 08:23:03,415 INFO main - -->op: ReplaceIfBooleanOp: `if (c == (java.math.BigDe[...] ` ---> `if (true) { 	return org.a[...]` at pos 10 of parent `{ 	java.lang.Class<?> c =[...]`
+2018-08-09 08:23:06,903 INFO main - mod_point ModificPoint=Objects line: 547, el: CtIfImpl
+2018-08-09 08:23:06,904 INFO main - -->op: ReplaceIfBooleanOp: `if (c == (java.math.BigDe[...] ` ---> `if (false) { 	return org.[...]` at pos 10 of parent `{ 	java.lang.Class<?> c =[...]`
+2018-08-09 08:23:10,019 INFO main - mod_point ModificPoint=Objects line: 547, el: CtIfImpl
+2018-08-09 08:23:10,019 INFO main - -->op: RemoveOp: `if (c == (java.math.BigDe[...] ` ---> `-` at pos 10 of parent `{ 	java.lang.Class<?> c =[...]`
+2018-08-09 08:23:13,582 INFO main - mod_point ModificPoint=Objects line: 552, el: CtReturnImpl
+2018-08-09 08:23:13,582 INFO main - -->op: RemoveOp: `return org.apache.wicket.[...] ` ---> `-` at pos 1 of parent `{ 	if (value != null) { 	[...]`
+2018-08-09 08:23:15,049 INFO main - mod_point ModificPoint=Objects line: 600, el: CtLocalVariableImpl
+2018-08-09 08:23:15,050 INFO main - -->op: RemoveOp: `boolean result = false ` ---> `-` at pos 0 of parent `{ 	boolean result = false[...]`
+2018-08-09 08:23:16,399 INFO main - mod_point ModificPoint=Objects line: 602, el: CtIfImpl
+2018-08-09 08:23:16,399 INFO main - -->op: ReplaceIfBooleanOp: `if (object1 == object2) {[...] ` ---> `if (true) { 	result = tru[...]` at pos 1 of parent `{ 	boolean result = false[...]`
+2018-08-09 08:23:19,546 INFO main - mod_point ModificPoint=Objects line: 602, el: CtIfImpl
+2018-08-09 08:23:19,546 INFO main - -->op: ReplaceIfBooleanOp: `if (object1 == object2) {[...] ` ---> `if (false) { 	result = tr[...]` at pos 1 of parent `{ 	boolean result = false[...]`
+2018-08-09 08:23:22,615 INFO main - mod_point ModificPoint=Objects line: 602, el: CtIfImpl
+2018-08-09 08:23:22,616 INFO main - -->op: RemoveOp: `if (object1 == object2) {[...] ` ---> `-` at pos 1 of parent `{ 	boolean result = false[...]`
+2018-08-09 08:23:25,461 INFO main - mod_point ModificPoint=Objects line: 604, el: CtAssignmentImpl
+2018-08-09 08:23:25,461 INFO main - -->op: RemoveOp: `result = true ` ---> `-` at pos 0 of parent `{ 	result = true; }`
+2018-08-09 08:23:29,132 INFO main - mod_point ModificPoint=Objects line: 608, el: CtIfImpl
+2018-08-09 08:23:29,133 INFO main - -->op: ReplaceIfBooleanOp: `if ((object1 != null) && [...] ` ---> `if (true) { 	if (((object[...]` at pos 0 of parent `{ 	if ((object1 != null) [...]`
+2018-08-09 08:23:35,902 INFO main - -Found Solution, child variant #395
+2018-08-09 08:23:35,903 DEBUG spoon.support.StandardEnvironment - printing org.apache.wicket.util.license.XmlPrologHeaderHandler to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_WICKET-5359_61122bab/r1/AstorMain-bugs-dot-jar_WICKET-5359_61122bab/src/variant-395
+2018-08-09 08:23:36,020 DEBUG spoon.support.StandardEnvironment - printing org.apache.wicket.util.diff.myers.PathNode to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_WICKET-5359_61122bab/r1/AstorMain-bugs-dot-jar_WICKET-5359_61122bab/src/variant-395
+2018-08-09 08:23:36,068 DEBUG spoon.support.StandardEnvironment - printing org.apache.wicket.util.diff.Chunk to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_WICKET-5359_61122bab/r1/AstorMain-bugs-dot-jar_WICKET-5359_61122bab/src/variant-395
+2018-08-09 08:23:36,091 DEBUG spoon.support.StandardEnvironment - printing org.apache.wicket.util.diff.myers.Snake to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_WICKET-5359_61122bab/r1/AstorMain-bugs-dot-jar_WICKET-5359_61122bab/src/variant-395
+2018-08-09 08:23:36,114 DEBUG spoon.support.StandardEnvironment - printing org.apache.wicket.util.lang.Generics to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_WICKET-5359_61122bab/r1/AstorMain-bugs-dot-jar_WICKET-5359_61122bab/src/variant-395
+2018-08-09 08:23:36,154 DEBUG spoon.support.StandardEnvironment - printing org.apache.wicket.util.license.CssLicenseHeaderHandler to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_WICKET-5359_61122bab/r1/AstorMain-bugs-dot-jar_WICKET-5359_61122bab/src/variant-395
+2018-08-09 08:23:36,187 DEBUG spoon.support.StandardEnvironment - printing org.apache.wicket.util.io.IOUtils to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_WICKET-5359_61122bab/r1/AstorMain-bugs-dot-jar_WICKET-5359_61122bab/src/variant-395
+2018-08-09 08:23:36,240 DEBUG spoon.support.StandardEnvironment - printing org.apache.wicket.util.diff.Delta to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_WICKET-5359_61122bab/r1/AstorMain-bugs-dot-jar_WICKET-5359_61122bab/src/variant-395
+2018-08-09 08:23:36,273 DEBUG spoon.support.StandardEnvironment - printing org.apache.wicket.util.diff.myers.DiffNode to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_WICKET-5359_61122bab/r1/AstorMain-bugs-dot-jar_WICKET-5359_61122bab/src/variant-395
+2018-08-09 08:23:36,300 DEBUG spoon.support.StandardEnvironment - printing org.apache.wicket.util.diff.Diff to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_WICKET-5359_61122bab/r1/AstorMain-bugs-dot-jar_WICKET-5359_61122bab/src/variant-395
+2018-08-09 08:23:36,337 DEBUG spoon.support.StandardEnvironment - printing org.apache.wicket.util.string.Strings to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_WICKET-5359_61122bab/r1/AstorMain-bugs-dot-jar_WICKET-5359_61122bab/src/variant-395
+2018-08-09 08:23:36,414 DEBUG spoon.support.StandardEnvironment - printing org.apache.wicket.util.license.AbstractLicenseHeaderHandler to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_WICKET-5359_61122bab/r1/AstorMain-bugs-dot-jar_WICKET-5359_61122bab/src/variant-395
+2018-08-09 08:23:36,448 DEBUG spoon.support.StandardEnvironment - printing org.apache.wicket.util.string.StringValue to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_WICKET-5359_61122bab/r1/AstorMain-bugs-dot-jar_WICKET-5359_61122bab/src/variant-395
+2018-08-09 08:23:36,487 DEBUG spoon.support.StandardEnvironment - printing org.apache.wicket.util.license.ApacheLicenseHeaderTestCase to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_WICKET-5359_61122bab/r1/AstorMain-bugs-dot-jar_WICKET-5359_61122bab/src/variant-395
+2018-08-09 08:23:36,547 DEBUG spoon.support.StandardEnvironment - printing org.apache.wicket.util.license.VelocityLicenseHeaderHandler to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_WICKET-5359_61122bab/r1/AstorMain-bugs-dot-jar_WICKET-5359_61122bab/src/variant-395
+2018-08-09 08:23:36,573 DEBUG spoon.support.StandardEnvironment - printing org.apache.wicket.util.lang.Objects to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_WICKET-5359_61122bab/r1/AstorMain-bugs-dot-jar_WICKET-5359_61122bab/src/variant-395
+2018-08-09 08:23:36,618 DEBUG spoon.support.StandardEnvironment - printing org.apache.wicket.util.diff.Revision to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_WICKET-5359_61122bab/r1/AstorMain-bugs-dot-jar_WICKET-5359_61122bab/src/variant-395
+2018-08-09 08:23:36,645 DEBUG spoon.support.StandardEnvironment - printing org.apache.wicket.util.string.AppendingStringBuffer to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_WICKET-5359_61122bab/r1/AstorMain-bugs-dot-jar_WICKET-5359_61122bab/src/variant-395
+2018-08-09 08:23:36,703 DEBUG spoon.support.StandardEnvironment - printing org.apache.wicket.util.license.PropertiesLicenseHeaderHandler to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_WICKET-5359_61122bab/r1/AstorMain-bugs-dot-jar_WICKET-5359_61122bab/src/variant-395
+2018-08-09 08:23:36,731 DEBUG spoon.support.StandardEnvironment - printing org.apache.wicket.util.diff.myers.MyersDiff to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_WICKET-5359_61122bab/r1/AstorMain-bugs-dot-jar_WICKET-5359_61122bab/src/variant-395
+2018-08-09 08:23:36,754 DEBUG spoon.support.StandardEnvironment - printing org.apache.wicket.util.license.HtmlLicenseHeaderHandler to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_WICKET-5359_61122bab/r1/AstorMain-bugs-dot-jar_WICKET-5359_61122bab/src/variant-395
+2018-08-09 08:23:36,777 DEBUG spoon.support.StandardEnvironment - printing org.apache.wicket.util.license.XmlLicenseHeaderHandler to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_WICKET-5359_61122bab/r1/AstorMain-bugs-dot-jar_WICKET-5359_61122bab/src/variant-395
+2018-08-09 08:23:36,809 DEBUG spoon.support.StandardEnvironment - printing org.apache.wicket.util.license.JavaScriptLicenseHeaderHandler to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_WICKET-5359_61122bab/r1/AstorMain-bugs-dot-jar_WICKET-5359_61122bab/src/variant-395
+2018-08-09 08:23:36,831 DEBUG spoon.support.StandardEnvironment - printing org.apache.wicket.util.license.JavaLicenseHeaderHandler to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_WICKET-5359_61122bab/r1/AstorMain-bugs-dot-jar_WICKET-5359_61122bab/src/variant-395
+2018-08-09 08:23:36,996 INFO main - 
+----SUMMARY_EXECUTION---
+2018-08-09 08:23:36,997 INFO main - 
+Solution details
+2018-08-09 08:23:36,997 INFO main - 
+ --SOLUTIONS DESCRIPTION--
+
+ ----
+ProgramVariant 395
+ 
+time(sec)= 811
+operation: ReplaceIfBooleanOp
+location= org.apache.wicket.util.lang.Objects
+line= 608
+lineSuspiciousness= 0.577
+original statement= if ((object1 != null) && (object1.getClass().isArray())) {
+	if (((object2 != null) && (object2.getClass().isArray())) && ((object2.getClass()) == (object1.getClass()))) {
+		result = (java.lang.reflect.Array.getLength(object1)) == (java.lang.reflect.Array.getLength(object2));
+		if (result) {
+			for (int i = 0, icount = java.lang.reflect.Array.getLength(object1) ; result && (i < icount) ; i++) {
+				result = org.apache.wicket.util.lang.Objects.isEqual(java.lang.reflect.Array.get(object1, i), java.lang.reflect.Array.get(object2, i));
+			}
+		} 
+	} 
+} else {
+	result = ((object1 != null) && (object2 != null)) && (((org.apache.wicket.util.lang.Objects.compareWithConversion(object1, object2)) == 0) || (object1.equals(object2)));
+}
+fixed statement= if (true) {
+	if (((object2 != null) && (object2.getClass().isArray())) && ((object2.getClass()) == (object1.getClass()))) {
+		result = (java.lang.reflect.Array.getLength(object1)) == (java.lang.reflect.Array.getLength(object2));
+		if (result) {
+			for (int i = 0, icount = java.lang.reflect.Array.getLength(object1) ; result && (i < icount) ; i++) {
+				result = org.apache.wicket.util.lang.Objects.isEqual(java.lang.reflect.Array.get(object1, i), java.lang.reflect.Array.get(object2, i));
+			}
+		} 
+	} 
+} else {
+	result = ((object1 != null) && (object2 != null)) && (((org.apache.wicket.util.lang.Objects.compareWithConversion(object1, object2)) == 0) || (object1.equals(object2)));
+}
+generation= 1
+ingredientScope= -
+validation=|true|0|169|[]|
+2018-08-09 08:23:36,998 INFO fr.inria.main.evolution.AstorMain - Time Total(s): 1961.901

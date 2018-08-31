@@ -1,0 +1,650 @@
+2018-08-07 23:09:24,866 INFO main - command line arguments: [-jvm4testexecution  /home/qxin/jdk1.8.0_111/bin  -dependencies  /home/qx5/elixir_bdj_bugs/maven/bugs-dot-jar_MNG-4837_3fca2bb2/all0.jar  -id  bugs-dot-jar_MNG-4837_3fca2bb2  -failing  org.apache.maven.model.interpolation.StringSearchModelInterpolatorTest  -mode  statement-remove  -location  /home/qx5/elixir_bdj_bugs/maven/bugs-dot-jar_MNG-4837_3fca2bb2  -package  org.apache.maven  -maxtime  120  -stopfirst  true  -srcjavafolder  //maven-model-builder/src/main/java/  -srctestfolder  //maven-model-builder/src/test/java/  -binjavafolder  //maven-model-builder/target/classes/  -bintestfolder  //maven-model-builder/target/test-classes/  -out  /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MNG-4837_3fca2bb2/r1]
+2018-08-07 23:09:35,790 INFO main - -Executing Gzoltar classpath: /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MNG-4837_3fca2bb2/r1/AstorMain-bugs-dot-jar_MNG-4837_3fca2bb2//bin//default from 2 classes with test cases
+2018-08-07 23:09:35,793 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Gzoltar fault localization: min susp value parameter: 0.1
+2018-08-07 23:09:36,744 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - -gz-Adding classpath: [/home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MNG-4837_3fca2bb2/r1/AstorMain-bugs-dot-jar_MNG-4837_3fca2bb2//bin//default, /home/qx5/elixir_bdj_bugs/maven/bugs-dot-jar_MNG-4837_3fca2bb2/all0.jar]
+2018-08-07 23:10:04,475 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.apache.maven.model.building.DefaultModelBuilderFactoryTest#testCompleteWiring
+2018-08-07 23:10:04,476 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Gzoltar Test Result Total:5, fails: 1, GZoltar suspicious 255
+2018-08-07 23:10:04,518 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Gzoltar found: 244 with susp > 0.1, we consider: 244
+2018-08-07 23:10:04,532 INFO main - building model: /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MNG-4837_3fca2bb2/r1/AstorMain-bugs-dot-jar_MNG-4837_3fca2bb2//src//default, compliance level: 8
+2018-08-07 23:10:10,364 INFO main - 
+---- Initial suspicious size: 228
+2018-08-07 23:10:11,181 INFO main - -any mod point created for suspicious Candidate [className=org.apache.maven.model.building.DefaultModelProblemCollector, methodName=org.apache.maven.model.building.DefaultModelProblemCollector{setSource(Ljava/lang/String;)V 0.0, lineNumber=84, susp=1.0]
+2018-08-07 23:10:11,186 INFO main - -any mod point created for suspicious Candidate [className=org.apache.maven.model.building.DefaultModelProblemCollector, methodName=org.apache.maven.model.building.DefaultModelProblemCollector{add(Lorg/apache/maven/model/building/ModelProblem;)V 0.0, lineNumber=131, susp=1.0]
+2018-08-07 23:10:11,195 INFO main - -any mod point created for suspicious Candidate [className=org.apache.maven.model.building.DefaultModelProblemCollector, methodName=org.apache.maven.model.building.DefaultModelProblemCollector{add(Lorg/apache/maven/model/building/ModelProblem$Severity;Ljava/lang/String;Lorg/apache/maven/model/InputLocation;Ljava/lang/Exception;)V 0.0, lineNumber=177, susp=1.0]
+2018-08-07 23:10:11,216 INFO main -  Not ctClass for suspicious code Candidate [className=org.apache.maven.model.building.ModelProblem$Severity, methodName=org.apache.maven.model.building.ModelProblem$Severity{values()[Lorg/apache/maven/model/building/ModelProblem$Severity; 0.0, lineNumber=35, susp=1.0]
+2018-08-07 23:10:11,216 INFO main - -any mod point created for suspicious Candidate [className=org.apache.maven.model.building.ModelProblem$Severity, methodName=org.apache.maven.model.building.ModelProblem$Severity{values()[Lorg/apache/maven/model/building/ModelProblem$Severity; 0.0, lineNumber=35, susp=1.0]
+2018-08-07 23:10:11,271 INFO main - Total suspicious from FL: 228,  220
+2018-08-07 23:10:11,271 INFO main - Total ModPoint created: 220
+2018-08-07 23:10:11,272 INFO main - Creating program variant #1, [Variant id: 1, #gens: 220, #ops: 0, parent:-]
+2018-08-07 23:10:13,268 INFO fr.inria.astor.core.setup.ConfigurationProperties - ----------------------------
+2018-08-07 23:10:13,268 INFO fr.inria.astor.core.setup.ConfigurationProperties - ---Configuration properties:---Execution values
+2018-08-07 23:10:13,269 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:packageToInstrument= org.apache.maven
+2018-08-07 23:10:13,269 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:flthreshold= 0.1
+2018-08-07 23:10:13,269 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:numberExecutions= 1
+2018-08-07 23:10:13,269 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evosuiteresultfolder= evosuite
+2018-08-07 23:10:13,269 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:ignoredTestCases= org.apache.commons.math.ode.nonstiff:org.apache.commons.math.ode2.nonstiff:org.apache.commons.lang.LocaleUtilsTest:org.apache.maven.model.building.DefaultModelBuilderFactoryTest
+2018-08-07 23:10:13,269 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:skipfaultlocalization= false
+2018-08-07 23:10:13,269 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:maxGeneration= 200
+2018-08-07 23:10:13,269 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:maxsuspcandidates= 1000
+2018-08-07 23:10:13,270 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:tmax2= 960000
+2018-08-07 23:10:13,270 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:tmax1= 120000
+2018-08-07 23:10:13,270 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:workingDirectory= /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MNG-4837_3fca2bb2/r1
+2018-08-07 23:10:13,270 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:mode= statement-remove
+2018-08-07 23:10:13,270 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:ignoreflakyinfl= true
+2018-08-07 23:10:13,270 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:uniqueoptogen= false
+2018-08-07 23:10:13,270 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:testcasesregression= org.apache.maven.model.building.DefaultModelBuilderFactoryTest:org.apache.maven.model.path.DefaultUrlNormalizerTest:
+2018-08-07 23:10:13,270 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:pathToMVNRepository= 
+2018-08-07 23:10:13,270 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:executeRegression= true
+2018-08-07 23:10:13,271 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:modificationpointnavigation= weight
+2018-08-07 23:10:13,271 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:maxtime= 120
+2018-08-07 23:10:13,271 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:probagenmutation= false
+2018-08-07 23:10:13,271 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:alternativecompliancelevel= 4
+2018-08-07 23:10:13,271 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:version-location= ./math-version/
+2018-08-07 23:10:13,271 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:location= /home/qx5/elixir_bdj_bugs/maven/bugs-dot-jar_MNG-4837_3fca2bb2
+2018-08-07 23:10:13,271 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:stopfirst= true
+2018-08-07 23:10:13,271 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:jvm4testexecution= /home/qxin/jdk1.8.0_111/bin
+2018-08-07 23:10:13,271 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:bugId= 280
+2018-08-07 23:10:13,271 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:mutationrate= 1 
+2018-08-07 23:10:13,271 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:projectIdentifier= bugs-dot-jar_MNG-4837_3fca2bb2
+2018-08-07 23:10:13,272 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evo_buggy_class= true
+2018-08-07 23:10:13,272 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evoRunOnBuggyClass= true
+2018-08-07 23:10:13,272 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:jvm4evosuitetestexecution= /home/qxin/jdk1.8.0_111/bin
+2018-08-07 23:10:13,272 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:resetoperations= false
+2018-08-07 23:10:13,272 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:seed= 0
+2018-08-07 23:10:13,272 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:testbystep= false
+2018-08-07 23:10:13,272 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:srctestfolder= //maven-model-builder/src/test/java/
+2018-08-07 23:10:13,272 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:javacompliancelevel= 8
+2018-08-07 23:10:13,272 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:bintestfolder= //maven-model-builder/target/test-classes/
+2018-08-07 23:10:13,272 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:commandTrunk= 50000
+2018-08-07 23:10:13,272 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:dependenciespath= /home/qx5/elixir_bdj_bugs/maven/bugs-dot-jar_MNG-4837_3fca2bb2/all0.jar
+2018-08-07 23:10:13,273 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:multipointmodification= false
+2018-08-07 23:10:13,273 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:validation= process
+2018-08-07 23:10:13,273 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:scope= package
+2018-08-07 23:10:13,273 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evosuitetimeout= 120
+2018-08-07 23:10:13,273 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evoDSE= false
+2018-08-07 23:10:13,273 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:elementsToMutate= 10
+2018-08-07 23:10:13,273 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:lastJUnitVersion= ./examples/libs/junit-4.11.jar
+2018-08-07 23:10:13,273 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:failing= org.apache.maven.model.interpolation.StringSearchModelInterpolatorTest
+2018-08-07 23:10:13,273 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:allpoints= false
+2018-08-07 23:10:13,273 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:resourcesfolder= /src/main/resources:/src/test/resources:
+2018-08-07 23:10:13,273 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:regressionforfaultlocalization= true
+2018-08-07 23:10:13,274 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:population= 1
+2018-08-07 23:10:13,274 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:saveall= false
+2018-08-07 23:10:13,274 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:pvariantfoldername= variant-
+2018-08-07 23:10:13,274 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:savesolution= true
+2018-08-07 23:10:13,274 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:srcjavafolder= //maven-model-builder/src/main/java/
+2018-08-07 23:10:13,274 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evo_affected_by_op= true
+2018-08-07 23:10:13,274 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:binjavafolder= //maven-model-builder/target/classes/
+2018-08-07 23:10:13,275 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:reintroduce= original-parents
+2018-08-07 23:10:13,275 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evosuitejar= ./lib/evosuite-master-1.0.4-SNAPSHOT.jar
+2018-08-07 23:10:13,275 INFO fr.inria.astor.core.setup.ConfigurationProperties - ----------------------------
+2018-08-07 23:10:13,276 INFO main - mod_point ModificPoint=StringSearchModelInterpolator line: 85, el: CtLocalVariableImpl
+2018-08-07 23:10:13,278 INFO main - -->op: RemoveOp: `org.codehaus.plexus.inter[...] ` ---> `-` at pos 0 of parent `{ 	org.codehaus.plexus.in[...]`
+2018-08-07 23:10:15,582 INFO main - mod_point ModificPoint=StringSearchModelInterpolator line: 86, el: CtInvocationImpl
+2018-08-07 23:10:15,583 INFO main - -->op: RemoveOp: `interpolator.setCacheAnsw[...] ` ---> `-` at pos 1 of parent `{ 	org.codehaus.plexus.in[...]`
+2018-08-07 23:10:19,962 INFO main - mod_point ModificPoint=StringSearchModelInterpolator line: 88, el: CtReturnImpl
+2018-08-07 23:10:19,962 INFO main - -->op: RemoveOp: `return interpolator ` ---> `-` at pos 2 of parent `{ 	org.codehaus.plexus.in[...]`
+2018-08-07 23:10:21,281 INFO main - mod_point ModificPoint=AbstractStringBasedModelInterpolator line: 112, el: CtAssignmentImpl
+2018-08-07 23:10:21,281 INFO main - -->op: RemoveOp: `org.apache.maven.model.in[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:10:25,021 INFO main - mod_point ModificPoint=AbstractStringBasedModelInterpolator line: 113, el: CtReturnImpl
+2018-08-07 23:10:25,022 INFO main - -->op: RemoveOp: `return org.apache.maven.m[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:10:25,886 INFO main - mod_point ModificPoint=AbstractStringBasedModelInterpolator line: 118, el: CtAssignmentImpl
+2018-08-07 23:10:25,886 INFO main - -->op: RemoveOp: `org.apache.maven.model.in[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:10:30,273 INFO main - mod_point ModificPoint=AbstractStringBasedModelInterpolator line: 119, el: CtReturnImpl
+2018-08-07 23:10:30,273 INFO main - -->op: RemoveOp: `return org.apache.maven.m[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:10:31,495 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 129, el: CtAssignmentImpl
+2018-08-07 23:10:31,495 INFO main - -->op: RemoveOp: `org.apache.maven.model.bu[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:10:35,398 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 130, el: CtReturnImpl
+2018-08-07 23:10:35,399 INFO main - -->op: RemoveOp: `return org.apache.maven.m[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:10:36,544 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 135, el: CtAssignmentImpl
+2018-08-07 23:10:36,544 INFO main - -->op: RemoveOp: `org.apache.maven.model.bu[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:10:40,230 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 136, el: CtReturnImpl
+2018-08-07 23:10:40,231 INFO main - -->op: RemoveOp: `return org.apache.maven.m[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:10:41,420 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 141, el: CtAssignmentImpl
+2018-08-07 23:10:41,421 INFO main - -->op: RemoveOp: `org.apache.maven.model.bu[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:10:45,247 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 142, el: CtReturnImpl
+2018-08-07 23:10:45,248 INFO main - -->op: RemoveOp: `return org.apache.maven.m[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:10:46,385 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 147, el: CtAssignmentImpl
+2018-08-07 23:10:46,386 INFO main - -->op: RemoveOp: `org.apache.maven.model.bu[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:10:50,318 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 148, el: CtReturnImpl
+2018-08-07 23:10:50,318 INFO main - -->op: RemoveOp: `return org.apache.maven.m[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:10:51,381 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 153, el: CtAssignmentImpl
+2018-08-07 23:10:51,381 INFO main - -->op: RemoveOp: `org.apache.maven.model.bu[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:10:55,056 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 154, el: CtReturnImpl
+2018-08-07 23:10:55,057 INFO main - -->op: RemoveOp: `return org.apache.maven.m[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:10:56,134 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 159, el: CtAssignmentImpl
+2018-08-07 23:10:56,134 INFO main - -->op: RemoveOp: `org.apache.maven.model.bu[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:10:59,558 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 160, el: CtReturnImpl
+2018-08-07 23:10:59,558 INFO main - -->op: RemoveOp: `return org.apache.maven.m[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:11:00,555 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 165, el: CtAssignmentImpl
+2018-08-07 23:11:00,556 INFO main - -->op: RemoveOp: `org.apache.maven.model.bu[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:11:04,551 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 166, el: CtReturnImpl
+2018-08-07 23:11:04,551 INFO main - -->op: RemoveOp: `return org.apache.maven.m[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:11:05,615 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 171, el: CtAssignmentImpl
+2018-08-07 23:11:05,616 INFO main - -->op: RemoveOp: `org.apache.maven.model.bu[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:11:09,698 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 172, el: CtReturnImpl
+2018-08-07 23:11:09,699 INFO main - -->op: RemoveOp: `return org.apache.maven.m[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:11:10,775 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 177, el: CtAssignmentImpl
+2018-08-07 23:11:10,775 INFO main - -->op: RemoveOp: `org.apache.maven.model.bu[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:11:14,588 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 178, el: CtReturnImpl
+2018-08-07 23:11:14,591 INFO main - -->op: RemoveOp: `return org.apache.maven.m[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:11:15,575 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 183, el: CtAssignmentImpl
+2018-08-07 23:11:15,575 INFO main - -->op: RemoveOp: `org.apache.maven.model.bu[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:11:19,213 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 184, el: CtReturnImpl
+2018-08-07 23:11:19,213 INFO main - -->op: RemoveOp: `return org.apache.maven.m[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:11:20,242 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 189, el: CtAssignmentImpl
+2018-08-07 23:11:20,242 INFO main - -->op: RemoveOp: `org.apache.maven.model.bu[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:11:24,146 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 190, el: CtReturnImpl
+2018-08-07 23:11:24,146 INFO main - -->op: RemoveOp: `return org.apache.maven.m[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:11:25,505 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 195, el: CtAssignmentImpl
+2018-08-07 23:11:25,505 INFO main - -->op: RemoveOp: `org.apache.maven.model.bu[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:11:29,676 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 196, el: CtReturnImpl
+2018-08-07 23:11:29,676 INFO main - -->op: RemoveOp: `return org.apache.maven.m[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:11:30,907 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 201, el: CtAssignmentImpl
+2018-08-07 23:11:30,908 INFO main - -->op: RemoveOp: `org.apache.maven.model.bu[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:11:34,955 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 202, el: CtReturnImpl
+2018-08-07 23:11:34,955 INFO main - -->op: RemoveOp: `return org.apache.maven.m[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:11:36,109 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 207, el: CtAssignmentImpl
+2018-08-07 23:11:36,109 INFO main - -->op: RemoveOp: `org.apache.maven.model.bu[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:11:40,036 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 208, el: CtReturnImpl
+2018-08-07 23:11:40,036 INFO main - -->op: RemoveOp: `return org.apache.maven.m[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:11:41,052 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 213, el: CtAssignmentImpl
+2018-08-07 23:11:41,053 INFO main - -->op: RemoveOp: `org.apache.maven.model.bu[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:11:44,874 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 214, el: CtReturnImpl
+2018-08-07 23:11:44,874 INFO main - -->op: RemoveOp: `return org.apache.maven.m[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:11:46,048 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 219, el: CtAssignmentImpl
+2018-08-07 23:11:46,048 INFO main - -->op: RemoveOp: `org.apache.maven.model.bu[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:11:50,659 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 220, el: CtReturnImpl
+2018-08-07 23:11:50,660 INFO main - -->op: RemoveOp: `return org.apache.maven.m[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:11:51,864 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 225, el: CtAssignmentImpl
+2018-08-07 23:11:51,864 INFO main - -->op: RemoveOp: `org.apache.maven.model.bu[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:11:56,311 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 226, el: CtReturnImpl
+2018-08-07 23:11:56,311 INFO main - -->op: RemoveOp: `return org.apache.maven.m[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:11:57,291 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 232, el: CtReturnImpl
+2018-08-07 23:11:57,291 INFO main - -->op: RemoveOp: `return build(request, new[...] ` ---> `-` at pos 0 of parent `{ 	return build(request, [...]`
+2018-08-07 23:11:58,555 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 238, el: CtLocalVariableImpl
+2018-08-07 23:11:58,556 INFO main - -->op: RemoveOp: `org.apache.maven.model.bu[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:11:59,488 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 240, el: CtLocalVariableImpl
+2018-08-07 23:11:59,489 INFO main - -->op: RemoveOp: `org.apache.maven.model.bu[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:12:00,406 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 242, el: CtLocalVariableImpl
+2018-08-07 23:12:00,407 INFO main - -->op: RemoveOp: `org.apache.maven.model.pr[...] ` ---> `-` at pos 2 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:12:01,332 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 244, el: CtInvocationImpl
+2018-08-07 23:12:01,333 INFO main - -->op: RemoveOp: `problems.setSource("(exte[...] ` ---> `-` at pos 3 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:12:05,079 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 245, el: CtLocalVariableImpl
+2018-08-07 23:12:05,080 INFO main - -->op: RemoveOp: `java.util.List<org.apache[...] ` ---> `-` at pos 4 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:12:06,162 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 248, el: CtIfImpl
+2018-08-07 23:12:06,164 INFO main - -->op: ReplaceIfBooleanOp: `if (!(activeExternalProfi[...] ` ---> `if (true) { 	java.util.Pr[...]` at pos 5 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:12:10,030 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 248, el: CtIfImpl
+2018-08-07 23:12:10,031 INFO main - -->op: ReplaceIfBooleanOp: `if (!(activeExternalProfi[...] ` ---> `if (false) { 	java.util.P[...]` at pos 5 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:12:13,673 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 248, el: CtIfImpl
+2018-08-07 23:12:13,674 INFO main - -->op: RemoveOp: `if (!(activeExternalProfi[...] ` ---> `-` at pos 5 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:12:17,371 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 259, el: CtLocalVariableImpl
+2018-08-07 23:12:17,372 INFO main - -->op: RemoveOp: `org.apache.maven.model.Mo[...] ` ---> `-` at pos 6 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:12:18,422 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 434, el: CtIfImpl
+2018-08-07 23:12:18,423 INFO main - -->op: ReplaceIfBooleanOp: `if (modelSource == null) [...] ` ---> `if (true) { 	if (pomFile [...]` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:12:22,605 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 434, el: CtIfImpl
+2018-08-07 23:12:22,606 INFO main - -->op: ReplaceIfBooleanOp: `if (modelSource == null) [...] ` ---> `if (false) { 	if (pomFile[...]` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:12:26,888 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 434, el: CtIfImpl
+2018-08-07 23:12:26,889 INFO main - -->op: RemoveOp: `if (modelSource == null) [...] ` ---> `-` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:12:31,367 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 436, el: CtIfImpl
+2018-08-07 23:12:31,368 INFO main - -->op: ReplaceIfBooleanOp: `if (pomFile != null) { 	m[...] ` ---> `if (true) { 	modelSource [...]` at pos 0 of parent `{ 	if (pomFile != null) {[...]`
+2018-08-07 23:12:36,018 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 436, el: CtIfImpl
+2018-08-07 23:12:36,018 INFO main - -->op: ReplaceIfBooleanOp: `if (pomFile != null) { 	m[...] ` ---> `if (false) { 	modelSource[...]` at pos 0 of parent `{ 	if (pomFile != null) {[...]`
+2018-08-07 23:12:41,137 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 436, el: CtIfImpl
+2018-08-07 23:12:41,138 INFO main - -->op: RemoveOp: `if (pomFile != null) { 	m[...] ` ---> `-` at pos 0 of parent `{ 	if (pomFile != null) {[...]`
+2018-08-07 23:12:46,139 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 438, el: CtAssignmentImpl
+2018-08-07 23:12:46,139 INFO main - -->op: RemoveOp: `modelSource = new org.apa[...] ` ---> `-` at pos 0 of parent `{ 	modelSource = new org.[...]`
+2018-08-07 23:12:50,224 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 446, el: CtInvocationImpl
+2018-08-07 23:12:50,224 INFO main - -->op: RemoveOp: `problems.setSource(modelS[...] ` ---> `-` at pos 2 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:12:54,287 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 449, el: CtLocalVariableImpl
+2018-08-07 23:12:54,288 INFO main - -->op: RemoveOp: `boolean strict = (request[...] ` ---> `-` at pos 0 of parent `{ 	boolean strict = (requ[...]`
+2018-08-07 23:12:55,546 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 450, el: CtLocalVariableImpl
+2018-08-07 23:12:55,547 INFO main - -->op: RemoveOp: `org.apache.maven.model.In[...] ` ---> `-` at pos 1 of parent `{ 	boolean strict = (requ[...]`
+2018-08-07 23:12:56,804 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 452, el: CtLocalVariableImpl
+2018-08-07 23:12:56,805 INFO main - -->op: RemoveOp: `java.util.Map<java.lang.S[...] ` ---> `-` at pos 2 of parent `{ 	boolean strict = (requ[...]`
+2018-08-07 23:12:57,910 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 453, el: CtInvocationImpl
+2018-08-07 23:12:57,911 INFO main - -->op: RemoveOp: `options.put(org.apache.ma[...] ` ---> `-` at pos 3 of parent `{ 	boolean strict = (requ[...]`
+2018-08-07 23:13:02,018 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 454, el: CtInvocationImpl
+2018-08-07 23:13:02,019 INFO main - -->op: RemoveOp: `options.put(org.apache.ma[...] ` ---> `-` at pos 4 of parent `{ 	boolean strict = (requ[...]`
+2018-08-07 23:13:06,636 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 455, el: CtInvocationImpl
+2018-08-07 23:13:06,636 INFO main - -->op: RemoveOp: `options.put(org.apache.ma[...] ` ---> `-` at pos 5 of parent `{ 	boolean strict = (requ[...]`
+2018-08-07 23:13:11,117 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 459, el: CtAssignmentImpl
+2018-08-07 23:13:11,117 INFO main - -->op: RemoveOp: `model = modelProcessor.re[...] ` ---> `-` at pos 0 of parent `{ 	model = modelProcessor[...]`
+2018-08-07 23:13:12,174 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 507, el: CtLocalVariableImpl
+2018-08-07 23:13:12,175 INFO main - -->op: RemoveOp: `java.lang.String msg = e.[...] ` ---> `-` at pos 0 of parent `{ 	java.lang.String msg =[...]`
+2018-08-07 23:13:13,507 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 508, el: CtIfImpl
+2018-08-07 23:13:13,507 INFO main - -->op: ReplaceIfBooleanOp: `if ((msg == null) || ((ms[...] ` ---> `if (true) { 	if (e.getCla[...]` at pos 1 of parent `{ 	java.lang.String msg =[...]`
+2018-08-07 23:13:17,747 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 508, el: CtIfImpl
+2018-08-07 23:13:17,747 INFO main - -->op: ReplaceIfBooleanOp: `if ((msg == null) || ((ms[...] ` ---> `if (false) { 	if (e.getCl[...]` at pos 1 of parent `{ 	java.lang.String msg =[...]`
+2018-08-07 23:13:22,229 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 508, el: CtIfImpl
+2018-08-07 23:13:22,230 INFO main - -->op: RemoveOp: `if ((msg == null) || ((ms[...] ` ---> `-` at pos 1 of parent `{ 	java.lang.String msg =[...]`
+2018-08-07 23:13:26,979 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 520, el: CtInvocationImpl
+2018-08-07 23:13:26,979 INFO main - -->op: RemoveOp: `problems.add(org.apache.m[...] ` ---> `-` at pos 2 of parent `{ 	java.lang.String msg =[...]`
+2018-08-07 23:13:31,680 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 521, el: CtThrowImpl
+2018-08-07 23:13:31,680 INFO main - -->op: RemoveOp: `throw new org.apache.mave[...] ` ---> `-` at pos 3 of parent `{ 	java.lang.String msg =[...]`
+2018-08-07 23:13:33,616 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 541, el: CtLocalVariableImpl
+2018-08-07 23:13:33,616 INFO main - -->op: RemoveOp: `org.apache.maven.model.pr[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:13:35,062 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 543, el: CtInvocationImpl
+2018-08-07 23:13:35,062 INFO main - -->op: RemoveOp: `context.setActiveProfileI[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:13:39,656 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 544, el: CtInvocationImpl
+2018-08-07 23:13:39,656 INFO main - -->op: RemoveOp: `context.setInactiveProfil[...] ` ---> `-` at pos 2 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:13:44,295 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 545, el: CtInvocationImpl
+2018-08-07 23:13:44,296 INFO main - -->op: RemoveOp: `context.setSystemProperti[...] ` ---> `-` at pos 3 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:13:48,611 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 546, el: CtInvocationImpl
+2018-08-07 23:13:48,611 INFO main - -->op: RemoveOp: `context.setUserProperties[...] ` ---> `-` at pos 4 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:13:53,480 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 547, el: CtInvocationImpl
+2018-08-07 23:13:53,480 INFO main - -->op: RemoveOp: `context.setProjectDirecto[...] ` ---> `-` at pos 5 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:13:57,890 INFO main - mod_point ModificPoint=DefaultModelBuilder line: 549, el: CtReturnImpl
+2018-08-07 23:13:57,891 INFO main - -->op: RemoveOp: `return context ` ---> `-` at pos 6 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:13:59,499 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 81, el: CtLocalVariableImpl
+2018-08-07 23:13:59,499 INFO main - -->op: RemoveOp: `org.apache.maven.model.bu[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:14:00,618 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 82, el: CtInvocationImpl
+2018-08-07 23:14:00,618 INFO main - -->op: RemoveOp: `processor.setModelLocator[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:14:05,169 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 83, el: CtInvocationImpl
+2018-08-07 23:14:05,170 INFO main - -->op: RemoveOp: `processor.setModelReader([...] ` ---> `-` at pos 2 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:14:09,616 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 84, el: CtReturnImpl
+2018-08-07 23:14:09,616 INFO main - -->op: RemoveOp: `return processor ` ---> `-` at pos 3 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:14:11,244 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 89, el: CtReturnImpl
+2018-08-07 23:14:11,244 INFO main - -->op: RemoveOp: `return new org.apache.mav[...] ` ---> `-` at pos 0 of parent `{ 	return new org.apache.[...]`
+2018-08-07 23:14:12,614 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 94, el: CtReturnImpl
+2018-08-07 23:14:12,614 INFO main - -->op: RemoveOp: `return new org.apache.mav[...] ` ---> `-` at pos 0 of parent `{ 	return new org.apache.[...]`
+2018-08-07 23:14:13,985 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 99, el: CtLocalVariableImpl
+2018-08-07 23:14:13,985 INFO main - -->op: RemoveOp: `org.apache.maven.model.pr[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:14:15,374 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 101, el: CtForEachImpl
+2018-08-07 23:14:15,375 INFO main - -->op: RemoveOp: `for (org.apache.maven.mod[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:14:19,886 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 103, el: CtInvocationImpl
+2018-08-07 23:14:19,886 INFO main - -->op: RemoveOp: `profileSelector.addProfil[...] ` ---> `-` at pos 0 of parent `{ 	profileSelector.addPro[...]`
+2018-08-07 23:14:24,251 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 106, el: CtReturnImpl
+2018-08-07 23:14:24,252 INFO main - -->op: RemoveOp: `return profileSelector ` ---> `-` at pos 2 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:14:25,364 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 111, el: CtReturnImpl
+2018-08-07 23:14:25,364 INFO main - -->op: RemoveOp: `return new org.apache.mav[...] ` ---> `-` at pos 0 of parent `{ 	return new org.apache.[...]`
+2018-08-07 23:14:26,431 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 117, el: CtReturnImpl
+2018-08-07 23:14:26,431 INFO main - -->op: RemoveOp: `return new org.apache.mav[...] ` ---> `-` at pos 0 of parent `{ 	return new org.apache.[...]`
+2018-08-07 23:14:27,500 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 122, el: CtReturnImpl
+2018-08-07 23:14:27,500 INFO main - -->op: RemoveOp: `return new org.apache.mav[...] ` ---> `-` at pos 0 of parent `{ 	return new org.apache.[...]`
+2018-08-07 23:14:28,571 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 127, el: CtLocalVariableImpl
+2018-08-07 23:14:28,571 INFO main - -->op: RemoveOp: `org.apache.maven.model.pa[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:14:29,627 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 128, el: CtLocalVariableImpl
+2018-08-07 23:14:29,627 INFO main - -->op: RemoveOp: `org.apache.maven.model.pa[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:14:31,026 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 129, el: CtReturnImpl
+2018-08-07 23:14:31,027 INFO main - -->op: RemoveOp: `return new org.apache.mav[...] ` ---> `-` at pos 2 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:14:32,254 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 134, el: CtReturnImpl
+2018-08-07 23:14:32,254 INFO main - -->op: RemoveOp: `return new org.apache.mav[...] ` ---> `-` at pos 0 of parent `{ 	return new org.apache.[...]`
+2018-08-07 23:14:33,839 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 139, el: CtReturnImpl
+2018-08-07 23:14:33,839 INFO main - -->op: RemoveOp: `return new org.apache.mav[...] ` ---> `-` at pos 0 of parent `{ 	return new org.apache.[...]`
+2018-08-07 23:14:35,048 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 144, el: CtReturnImpl
+2018-08-07 23:14:35,048 INFO main - -->op: RemoveOp: `return new org.apache.mav[...] ` ---> `-` at pos 0 of parent `{ 	return new org.apache.[...]`
+2018-08-07 23:14:36,357 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 149, el: CtReturnImpl
+2018-08-07 23:14:36,357 INFO main - -->op: RemoveOp: `return new org.apache.mav[...] ` ---> `-` at pos 0 of parent `{ 	return new org.apache.[...]`
+2018-08-07 23:14:37,612 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 154, el: CtReturnImpl
+2018-08-07 23:14:37,612 INFO main - -->op: RemoveOp: `return new org.apache.mav[...] ` ---> `-` at pos 0 of parent `{ 	return new org.apache.[...]`
+2018-08-07 23:14:38,816 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 159, el: CtReturnImpl
+2018-08-07 23:14:38,816 INFO main - -->op: RemoveOp: `return new org.apache.mav[...] ` ---> `-` at pos 0 of parent `{ 	return new org.apache.[...]`
+2018-08-07 23:14:40,124 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 164, el: CtReturnImpl
+2018-08-07 23:14:40,124 INFO main - -->op: RemoveOp: `return new org.apache.mav[...] ` ---> `-` at pos 0 of parent `{ 	return new org.apache.[...]`
+2018-08-07 23:14:41,507 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 169, el: CtReturnImpl
+2018-08-07 23:14:41,507 INFO main - -->op: RemoveOp: `return new org.apache.mav[...] ` ---> `-` at pos 0 of parent `{ 	return new org.apache.[...]`
+2018-08-07 23:14:42,922 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 174, el: CtReturnImpl
+2018-08-07 23:14:42,922 INFO main - -->op: RemoveOp: `return new org.apache.mav[...] ` ---> `-` at pos 0 of parent `{ 	return new org.apache.[...]`
+2018-08-07 23:14:44,123 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 179, el: CtReturnImpl
+2018-08-07 23:14:44,123 INFO main - -->op: RemoveOp: `return new org.apache.mav[...] ` ---> `-` at pos 0 of parent `{ 	return new org.apache.[...]`
+2018-08-07 23:14:45,121 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 184, el: CtReturnImpl
+2018-08-07 23:14:45,121 INFO main - -->op: RemoveOp: `return new org.apache.mav[...] ` ---> `-` at pos 0 of parent `{ 	return new org.apache.[...]`
+2018-08-07 23:14:46,013 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 189, el: CtReturnImpl
+2018-08-07 23:14:46,013 INFO main - -->op: RemoveOp: `return new org.apache.mav[...] ` ---> `-` at pos 0 of parent `{ 	return new org.apache.[...]`
+2018-08-07 23:14:46,867 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 194, el: CtReturnImpl
+2018-08-07 23:14:46,867 INFO main - -->op: RemoveOp: `return new org.apache.mav[...] ` ---> `-` at pos 0 of parent `{ 	return new org.apache.[...]`
+2018-08-07 23:14:47,838 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 199, el: CtReturnImpl
+2018-08-07 23:14:47,839 INFO main - -->op: RemoveOp: `return new org.apache.mav[...] ` ---> `-` at pos 0 of parent `{ 	return new org.apache.[...]`
+2018-08-07 23:14:49,105 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 209, el: CtLocalVariableImpl
+2018-08-07 23:14:49,106 INFO main - -->op: RemoveOp: `org.apache.maven.model.bu[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:14:50,368 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 211, el: CtInvocationImpl
+2018-08-07 23:14:50,368 INFO main - -->op: RemoveOp: `modelBuilder.setModelProc[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:14:54,399 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 212, el: CtInvocationImpl
+2018-08-07 23:14:54,400 INFO main - -->op: RemoveOp: `modelBuilder.setModelVali[...] ` ---> `-` at pos 2 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:14:59,002 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 213, el: CtInvocationImpl
+2018-08-07 23:14:59,002 INFO main - -->op: RemoveOp: `modelBuilder.setModelNorm[...] ` ---> `-` at pos 3 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:15:04,317 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 214, el: CtInvocationImpl
+2018-08-07 23:15:04,317 INFO main - -->op: RemoveOp: `modelBuilder.setModelPath[...] ` ---> `-` at pos 4 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:15:08,392 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 215, el: CtInvocationImpl
+2018-08-07 23:15:08,392 INFO main - -->op: RemoveOp: `modelBuilder.setModelUrlN[...] ` ---> `-` at pos 5 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:15:12,271 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 216, el: CtInvocationImpl
+2018-08-07 23:15:12,271 INFO main - -->op: RemoveOp: `modelBuilder.setModelInte[...] ` ---> `-` at pos 6 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:15:15,866 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 217, el: CtInvocationImpl
+2018-08-07 23:15:15,867 INFO main - -->op: RemoveOp: `modelBuilder.setInheritan[...] ` ---> `-` at pos 7 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:15:19,999 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 218, el: CtInvocationImpl
+2018-08-07 23:15:19,999 INFO main - -->op: RemoveOp: `modelBuilder.setProfileIn[...] ` ---> `-` at pos 8 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:15:24,036 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 219, el: CtInvocationImpl
+2018-08-07 23:15:24,036 INFO main - -->op: RemoveOp: `modelBuilder.setProfileSe[...] ` ---> `-` at pos 9 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:15:28,217 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 220, el: CtInvocationImpl
+2018-08-07 23:15:28,217 INFO main - -->op: RemoveOp: `modelBuilder.setSuperPomP[...] ` ---> `-` at pos 10 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:15:31,743 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 221, el: CtInvocationImpl
+2018-08-07 23:15:31,743 INFO main - -->op: RemoveOp: `modelBuilder.setDependenc[...] ` ---> `-` at pos 11 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:15:35,726 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 222, el: CtInvocationImpl
+2018-08-07 23:15:35,726 INFO main - -->op: RemoveOp: `modelBuilder.setDependenc[...] ` ---> `-` at pos 12 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:15:39,978 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 223, el: CtInvocationImpl
+2018-08-07 23:15:39,978 INFO main - -->op: RemoveOp: `modelBuilder.setLifecycle[...] ` ---> `-` at pos 13 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:15:44,159 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 224, el: CtInvocationImpl
+2018-08-07 23:15:44,159 INFO main - -->op: RemoveOp: `modelBuilder.setPluginMan[...] ` ---> `-` at pos 14 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:15:48,339 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 225, el: CtInvocationImpl
+2018-08-07 23:15:48,340 INFO main - -->op: RemoveOp: `modelBuilder.setPluginCon[...] ` ---> `-` at pos 15 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:15:52,293 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 226, el: CtInvocationImpl
+2018-08-07 23:15:52,294 INFO main - -->op: RemoveOp: `modelBuilder.setReportCon[...] ` ---> `-` at pos 16 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:15:55,670 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 227, el: CtInvocationImpl
+2018-08-07 23:15:55,670 INFO main - -->op: RemoveOp: `modelBuilder.setReporting[...] ` ---> `-` at pos 17 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:15:59,220 INFO main - mod_point ModificPoint=DefaultModelBuilderFactory line: 229, el: CtReturnImpl
+2018-08-07 23:15:59,220 INFO main - -->op: RemoveOp: `return modelBuilder ` ---> `-` at pos 18 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:16:00,117 INFO main - mod_point ModificPoint=DefaultProfileActivationContext line: 49, el: CtReturnImpl
+2018-08-07 23:16:00,117 INFO main - -->op: RemoveOp: `return activeProfileIds ` ---> `-` at pos 0 of parent `{ 	return activeProfileId[...]`
+2018-08-07 23:16:00,753 INFO main - mod_point ModificPoint=DefaultProfileActivationContext line: 60, el: CtIfImpl
+2018-08-07 23:16:00,754 INFO main - -->op: ReplaceIfBooleanOp: `if (activeProfileIds != n[...] ` ---> `if (true) { 	Error in pri[...]` at pos 0 of parent `{ 	if (activeProfileIds ![...]`
+2018-08-07 23:16:03,957 INFO main - mod_point ModificPoint=DefaultProfileActivationContext line: 60, el: CtIfImpl
+2018-08-07 23:16:03,957 INFO main - -->op: ReplaceIfBooleanOp: `if (activeProfileIds != n[...] ` ---> `if (false) { 	Error in pr[...]` at pos 0 of parent `{ 	if (activeProfileIds ![...]`
+2018-08-07 23:16:07,225 INFO main - mod_point ModificPoint=DefaultProfileActivationContext line: 60, el: CtIfImpl
+2018-08-07 23:16:07,225 INFO main - -->op: RemoveOp: `if (activeProfileIds != n[...] ` ---> `-` at pos 0 of parent `{ 	if (activeProfileIds ![...]`
+2018-08-07 23:16:10,516 INFO main - mod_point ModificPoint=DefaultProfileActivationContext line: 62, el: CtAssignmentImpl
+2018-08-07 23:16:10,517 INFO main - -->op: RemoveOp: `org.apache.maven.model.pr[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:16:13,727 INFO main - mod_point ModificPoint=DefaultProfileActivationContext line: 69, el: CtReturnImpl
+2018-08-07 23:16:13,727 INFO main - -->op: RemoveOp: `return org.apache.maven.m[...] ` ---> `-` at pos 1 of parent `{ 	if (activeProfileIds ![...]`
+2018-08-07 23:16:14,452 INFO main - mod_point ModificPoint=DefaultProfileActivationContext line: 74, el: CtReturnImpl
+2018-08-07 23:16:14,452 INFO main - -->op: RemoveOp: `return inactiveProfileIds ` ---> `-` at pos 0 of parent `{ 	return inactiveProfile[...]`
+2018-08-07 23:16:15,168 INFO main - mod_point ModificPoint=DefaultProfileActivationContext line: 85, el: CtIfImpl
+2018-08-07 23:16:15,168 INFO main - -->op: ReplaceIfBooleanOp: `if (inactiveProfileIds !=[...] ` ---> `if (true) { 	Error in pri[...]` at pos 0 of parent `{ 	if (inactiveProfileIds[...]`
+2018-08-07 23:16:18,419 INFO main - mod_point ModificPoint=DefaultProfileActivationContext line: 85, el: CtIfImpl
+2018-08-07 23:16:18,420 INFO main - -->op: ReplaceIfBooleanOp: `if (inactiveProfileIds !=[...] ` ---> `if (false) { 	Error in pr[...]` at pos 0 of parent `{ 	if (inactiveProfileIds[...]`
+2018-08-07 23:16:21,650 INFO main - mod_point ModificPoint=DefaultProfileActivationContext line: 85, el: CtIfImpl
+2018-08-07 23:16:21,651 INFO main - -->op: RemoveOp: `if (inactiveProfileIds !=[...] ` ---> `-` at pos 0 of parent `{ 	if (inactiveProfileIds[...]`
+2018-08-07 23:16:24,422 INFO main - mod_point ModificPoint=DefaultProfileActivationContext line: 87, el: CtAssignmentImpl
+2018-08-07 23:16:24,423 INFO main - -->op: RemoveOp: `org.apache.maven.model.pr[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:16:27,886 INFO main - mod_point ModificPoint=DefaultProfileActivationContext line: 94, el: CtReturnImpl
+2018-08-07 23:16:27,887 INFO main - -->op: RemoveOp: `return org.apache.maven.m[...] ` ---> `-` at pos 1 of parent `{ 	if (inactiveProfileIds[...]`
+2018-08-07 23:16:28,739 INFO main - mod_point ModificPoint=DefaultProfileActivationContext line: 112, el: CtIfImpl
+2018-08-07 23:16:28,739 INFO main - -->op: ReplaceIfBooleanOp: `if (systemProperties != n[...] ` ---> `if (true) { 	Error in pri[...]` at pos 0 of parent `{ 	if (systemProperties ![...]`
+2018-08-07 23:16:32,224 INFO main - mod_point ModificPoint=DefaultProfileActivationContext line: 112, el: CtIfImpl
+2018-08-07 23:16:32,224 INFO main - -->op: ReplaceIfBooleanOp: `if (systemProperties != n[...] ` ---> `if (false) { 	Error in pr[...]` at pos 0 of parent `{ 	if (systemProperties ![...]`
+2018-08-07 23:16:35,496 INFO main - mod_point ModificPoint=DefaultProfileActivationContext line: 112, el: CtIfImpl
+2018-08-07 23:16:35,496 INFO main - -->op: RemoveOp: `if (systemProperties != n[...] ` ---> `-` at pos 0 of parent `{ 	if (systemProperties ![...]`
+2018-08-07 23:16:38,488 INFO main - mod_point ModificPoint=DefaultProfileActivationContext line: 114, el: CtAssignmentImpl
+2018-08-07 23:16:38,489 INFO main - -->op: RemoveOp: `org.apache.maven.model.pr[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:16:41,566 INFO main - mod_point ModificPoint=DefaultProfileActivationContext line: 121, el: CtReturnImpl
+2018-08-07 23:16:41,566 INFO main - -->op: RemoveOp: `return org.apache.maven.m[...] ` ---> `-` at pos 1 of parent `{ 	if (systemProperties ![...]`
+2018-08-07 23:16:42,393 INFO main - mod_point ModificPoint=DefaultProfileActivationContext line: 161, el: CtIfImpl
+2018-08-07 23:16:42,393 INFO main - -->op: ReplaceIfBooleanOp: `if (userProperties != nul[...] ` ---> `if (true) { 	Error in pri[...]` at pos 0 of parent `{ 	if (userProperties != [...]`
+2018-08-07 23:16:45,344 INFO main - mod_point ModificPoint=DefaultProfileActivationContext line: 161, el: CtIfImpl
+2018-08-07 23:16:45,345 INFO main - -->op: ReplaceIfBooleanOp: `if (userProperties != nul[...] ` ---> `if (false) { 	Error in pr[...]` at pos 0 of parent `{ 	if (userProperties != [...]`
+2018-08-07 23:16:48,189 INFO main - mod_point ModificPoint=DefaultProfileActivationContext line: 161, el: CtIfImpl
+2018-08-07 23:16:48,190 INFO main - -->op: RemoveOp: `if (userProperties != nul[...] ` ---> `-` at pos 0 of parent `{ 	if (userProperties != [...]`
+2018-08-07 23:16:51,344 INFO main - mod_point ModificPoint=DefaultProfileActivationContext line: 163, el: CtAssignmentImpl
+2018-08-07 23:16:51,344 INFO main - -->op: RemoveOp: `org.apache.maven.model.pr[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:16:54,258 INFO main - mod_point ModificPoint=DefaultProfileActivationContext line: 170, el: CtReturnImpl
+2018-08-07 23:16:54,259 INFO main - -->op: RemoveOp: `return org.apache.maven.m[...] ` ---> `-` at pos 1 of parent `{ 	if (userProperties != [...]`
+2018-08-07 23:16:54,858 INFO main - mod_point ModificPoint=DefaultProfileActivationContext line: 209, el: CtAssignmentImpl
+2018-08-07 23:16:54,858 INFO main - -->op: RemoveOp: `org.apache.maven.model.pr[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:16:57,890 INFO main - mod_point ModificPoint=DefaultProfileActivationContext line: 211, el: CtReturnImpl
+2018-08-07 23:16:57,891 INFO main - -->op: RemoveOp: `return org.apache.maven.m[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:16:58,765 INFO main - mod_point ModificPoint=DefaultProfileSelector line: 50, el: CtIfImpl
+2018-08-07 23:16:58,765 INFO main - -->op: ReplaceIfBooleanOp: `if (profileActivator != n[...] ` ---> `if (true) { 	activators.a[...]` at pos 0 of parent `{ 	if (profileActivator ![...]`
+2018-08-07 23:17:02,139 INFO main - mod_point ModificPoint=DefaultProfileSelector line: 50, el: CtIfImpl
+2018-08-07 23:17:02,140 INFO main - -->op: ReplaceIfBooleanOp: `if (profileActivator != n[...] ` ---> `if (false) { 	activators.[...]` at pos 0 of parent `{ 	if (profileActivator ![...]`
+2018-08-07 23:17:05,375 INFO main - mod_point ModificPoint=DefaultProfileSelector line: 50, el: CtIfImpl
+2018-08-07 23:17:05,375 INFO main - -->op: RemoveOp: `if (profileActivator != n[...] ` ---> `-` at pos 0 of parent `{ 	if (profileActivator ![...]`
+2018-08-07 23:17:08,937 INFO main - mod_point ModificPoint=DefaultProfileSelector line: 52, el: CtInvocationImpl
+2018-08-07 23:17:08,938 INFO main - -->op: RemoveOp: `activators.add(profileAct[...] ` ---> `-` at pos 0 of parent `{ 	activators.add(profile[...]`
+2018-08-07 23:17:12,460 INFO main - mod_point ModificPoint=DefaultProfileSelector line: 54, el: CtReturnImpl
+2018-08-07 23:17:12,460 INFO main - -->op: RemoveOp: `return org.apache.maven.m[...] ` ---> `-` at pos 1 of parent `{ 	if (profileActivator ![...]`
+2018-08-07 23:17:13,227 INFO main - mod_point ModificPoint=DefaultProfileSelector line: 60, el: CtLocalVariableImpl
+2018-08-07 23:17:13,227 INFO main - -->op: RemoveOp: `java.util.Collection<java[...] ` ---> `-` at pos 0 of parent `{ 	java.util.Collection<j[...]`
+2018-08-07 23:17:13,995 INFO main - mod_point ModificPoint=DefaultProfileSelector line: 61, el: CtLocalVariableImpl
+2018-08-07 23:17:13,995 INFO main - -->op: RemoveOp: `java.util.Collection<java[...] ` ---> `-` at pos 1 of parent `{ 	java.util.Collection<j[...]`
+2018-08-07 23:17:14,810 INFO main - mod_point ModificPoint=DefaultProfileSelector line: 63, el: CtLocalVariableImpl
+2018-08-07 23:17:14,811 INFO main - -->op: RemoveOp: `java.util.List<org.apache[...] ` ---> `-` at pos 2 of parent `{ 	java.util.Collection<j[...]`
+2018-08-07 23:17:15,434 INFO main - mod_point ModificPoint=DefaultProfileSelector line: 64, el: CtLocalVariableImpl
+2018-08-07 23:17:15,434 INFO main - -->op: RemoveOp: `java.util.List<org.apache[...] ` ---> `-` at pos 3 of parent `{ 	java.util.Collection<j[...]`
+2018-08-07 23:17:16,088 INFO main - mod_point ModificPoint=DefaultProfileSelector line: 65, el: CtLocalVariableImpl
+2018-08-07 23:17:16,088 INFO main - -->op: RemoveOp: `boolean activatedPomProfi[...] ` ---> `-` at pos 4 of parent `{ 	java.util.Collection<j[...]`
+2018-08-07 23:17:16,963 INFO main - mod_point ModificPoint=DefaultProfileSelector line: 67, el: CtForEachImpl
+2018-08-07 23:17:16,964 INFO main - -->op: RemoveOp: `for (org.apache.maven.mod[...] ` ---> `-` at pos 5 of parent `{ 	java.util.Collection<j[...]`
+2018-08-07 23:17:19,790 INFO main - mod_point ModificPoint=DefaultProfileSelector line: 95, el: CtIfImpl
+2018-08-07 23:17:19,791 INFO main - -->op: ReplaceIfBooleanOp: `if (!activatedPomProfileN[...] ` ---> `if (true) { 	activeProfil[...]` at pos 6 of parent `{ 	java.util.Collection<j[...]`
+2018-08-07 23:17:22,940 INFO main - mod_point ModificPoint=DefaultProfileSelector line: 95, el: CtIfImpl
+2018-08-07 23:17:22,941 INFO main - -->op: ReplaceIfBooleanOp: `if (!activatedPomProfileN[...] ` ---> `if (false) { 	activeProfi[...]` at pos 6 of parent `{ 	java.util.Collection<j[...]`
+2018-08-07 23:17:26,352 INFO main - mod_point ModificPoint=DefaultProfileSelector line: 95, el: CtIfImpl
+2018-08-07 23:17:26,352 INFO main - -->op: RemoveOp: `if (!activatedPomProfileN[...] ` ---> `-` at pos 6 of parent `{ 	java.util.Collection<j[...]`
+2018-08-07 23:17:29,461 INFO main - mod_point ModificPoint=DefaultProfileSelector line: 97, el: CtInvocationImpl
+2018-08-07 23:17:29,461 INFO main - -->op: RemoveOp: `activeProfiles.addAll(act[...] ` ---> `-` at pos 0 of parent `{ 	activeProfiles.addAll([...]`
+2018-08-07 23:17:32,344 INFO main - mod_point ModificPoint=DefaultProfileSelector line: 100, el: CtReturnImpl
+2018-08-07 23:17:32,345 INFO main - -->op: RemoveOp: `return activeProfiles ` ---> `-` at pos 7 of parent `{ 	java.util.Collection<j[...]`
+2018-08-07 23:17:33,087 INFO main - mod_point ModificPoint=DefaultModelProblemCollector line: 77, el: CtReturnImpl
+2018-08-07 23:17:33,087 INFO main - -->op: RemoveOp: `return problems ` ---> `-` at pos 0 of parent `{ 	return problems; }`
+2018-08-07 23:17:33,807 INFO main - mod_point ModificPoint=DefaultModelProblemCollector line: 82, el: CtAssignmentImpl
+2018-08-07 23:17:33,807 INFO main - -->op: RemoveOp: `org.apache.maven.model.bu[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:17:37,010 INFO main - mod_point ModificPoint=DefaultModelProblemCollector line: 83, el: CtAssignmentImpl
+2018-08-07 23:17:37,010 INFO main - -->op: RemoveOp: `org.apache.maven.model.bu[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:17:40,027 INFO main - mod_point ModificPoint=DefaultModelProblemCollector line: 99, el: CtIfImpl
+2018-08-07 23:17:40,027 INFO main - -->op: ReplaceIfBooleanOp: `if (((source) == null) &&[...] ` ---> `if (true) { 	Error in pri[...]` at pos 0 of parent `{ 	if (((source) == null)[...]`
+2018-08-07 23:17:43,207 INFO main - mod_point ModificPoint=DefaultModelProblemCollector line: 99, el: CtIfImpl
+2018-08-07 23:17:43,207 INFO main - -->op: ReplaceIfBooleanOp: `if (((source) == null) &&[...] ` ---> `if (false) { 	Error in pr[...]` at pos 0 of parent `{ 	if (((source) == null)[...]`
+2018-08-07 23:17:46,426 INFO main - mod_point ModificPoint=DefaultModelProblemCollector line: 99, el: CtIfImpl
+2018-08-07 23:17:46,427 INFO main - -->op: RemoveOp: `if (((source) == null) &&[...] ` ---> `-` at pos 0 of parent `{ 	if (((source) == null)[...]`
+2018-08-07 23:17:49,885 INFO main - mod_point ModificPoint=DefaultModelProblemCollector line: 103, el: CtReturnImpl
+2018-08-07 23:17:49,885 INFO main - -->op: RemoveOp: `return source ` ---> `-` at pos 1 of parent `{ 	if (((source) == null)[...]`
+2018-08-07 23:17:50,453 INFO main - mod_point ModificPoint=DefaultModelProblemCollector line: 108, el: CtReturnImpl
+2018-08-07 23:17:50,454 INFO main - -->op: RemoveOp: `return org.apache.maven.m[...] ` ---> `-` at pos 0 of parent `{ 	return org.apache.mave[...]`
+2018-08-07 23:17:51,166 INFO main - mod_point ModificPoint=DefaultModelProblemCollector line: 118, el: CtReturnImpl
+2018-08-07 23:17:51,166 INFO main - -->op: RemoveOp: `return rootModel ` ---> `-` at pos 0 of parent `{ 	return rootModel; }`
+2018-08-07 23:17:51,934 INFO main - mod_point ModificPoint=DefaultModelProblemCollector line: 123, el: CtReturnImpl
+2018-08-07 23:17:51,934 INFO main - -->op: RemoveOp: `return org.apache.maven.m[...] ` ---> `-` at pos 0 of parent `{ 	return org.apache.mave[...]`
+2018-08-07 23:17:52,627 INFO main - mod_point ModificPoint=DefaultModelProblemCollector line: 128, el: CtInvocationImpl
+2018-08-07 23:17:52,627 INFO main - -->op: RemoveOp: `problems.add(problem) ` ---> `-` at pos 0 of parent `{ 	problems.add(problem);[...]`
+2018-08-07 23:17:55,761 INFO main - mod_point ModificPoint=DefaultModelProblemCollector line: 130, el: CtInvocationImpl
+2018-08-07 23:17:55,761 INFO main - -->op: RemoveOp: `severities.add(problem.ge[...] ` ---> `-` at pos 1 of parent `{ 	problems.add(problem);[...]`
+2018-08-07 23:17:58,995 INFO main - mod_point ModificPoint=DefaultModelProblemCollector line: 145, el: CtLocalVariableImpl
+2018-08-07 23:17:58,995 INFO main - -->op: RemoveOp: `int line = -1 ` ---> `-` at pos 0 of parent `{ 	int line = -1; 	int co[...]`
+2018-08-07 23:17:59,673 INFO main - mod_point ModificPoint=DefaultModelProblemCollector line: 146, el: CtLocalVariableImpl
+2018-08-07 23:17:59,673 INFO main - -->op: RemoveOp: `int column = -1 ` ---> `-` at pos 1 of parent `{ 	int line = -1; 	int co[...]`
+2018-08-07 23:18:00,253 INFO main - mod_point ModificPoint=DefaultModelProblemCollector line: 147, el: CtLocalVariableImpl
+2018-08-07 23:18:00,253 INFO main - -->op: RemoveOp: `java.lang.String source =[...] ` ---> `-` at pos 2 of parent `{ 	int line = -1; 	int co[...]`
+2018-08-07 23:18:03,345 INFO main - mod_point ModificPoint=DefaultModelProblemCollector line: 148, el: CtLocalVariableImpl
+2018-08-07 23:18:03,345 INFO main - -->op: RemoveOp: `java.lang.String modelId [...] ` ---> `-` at pos 3 of parent `{ 	int line = -1; 	int co[...]`
+2018-08-07 23:18:03,961 INFO main - mod_point ModificPoint=DefaultModelProblemCollector line: 150, el: CtIfImpl
+2018-08-07 23:18:03,961 INFO main - -->op: ReplaceIfBooleanOp: `if (location != null) { 	[...] ` ---> `if (true) { 	line = locat[...]` at pos 4 of parent `{ 	int line = -1; 	int co[...]`
+2018-08-07 23:18:07,029 INFO main - mod_point ModificPoint=DefaultModelProblemCollector line: 150, el: CtIfImpl
+2018-08-07 23:18:07,029 INFO main - -->op: ReplaceIfBooleanOp: `if (location != null) { 	[...] ` ---> `if (false) { 	line = loca[...]` at pos 4 of parent `{ 	int line = -1; 	int co[...]`
+2018-08-07 23:18:10,158 INFO main - mod_point ModificPoint=DefaultModelProblemCollector line: 150, el: CtIfImpl
+2018-08-07 23:18:10,159 INFO main - -->op: RemoveOp: `if (location != null) { 	[...] ` ---> `-` at pos 4 of parent `{ 	int line = -1; 	int co[...]`
+2018-08-07 23:18:13,211 INFO main - mod_point ModificPoint=DefaultModelProblemCollector line: 161, el: CtIfImpl
+2018-08-07 23:18:13,212 INFO main - -->op: ReplaceIfBooleanOp: `if (modelId == null) { 	m[...] ` ---> `if (true) { 	modelId = ge[...]` at pos 5 of parent `{ 	int line = -1; 	int co[...]`
+2018-08-07 23:18:15,950 INFO main - mod_point ModificPoint=DefaultModelProblemCollector line: 161, el: CtIfImpl
+2018-08-07 23:18:15,950 INFO main - -->op: ReplaceIfBooleanOp: `if (modelId == null) { 	m[...] ` ---> `if (false) { 	modelId = g[...]` at pos 5 of parent `{ 	int line = -1; 	int co[...]`
+2018-08-07 23:18:19,255 INFO main - mod_point ModificPoint=DefaultModelProblemCollector line: 161, el: CtIfImpl
+2018-08-07 23:18:19,256 INFO main - -->op: RemoveOp: `if (modelId == null) { 	m[...] ` ---> `-` at pos 5 of parent `{ 	int line = -1; 	int co[...]`
+2018-08-07 23:18:22,318 INFO main - mod_point ModificPoint=DefaultModelProblemCollector line: 163, el: CtAssignmentImpl
+2018-08-07 23:18:22,318 INFO main - -->op: RemoveOp: `modelId = getModelId() ` ---> `-` at pos 0 of parent `{ 	modelId = getModelId()[...]`
+2018-08-07 23:18:25,450 INFO main - mod_point ModificPoint=DefaultModelProblemCollector line: 164, el: CtAssignmentImpl
+2018-08-07 23:18:25,450 INFO main - -->op: RemoveOp: `source = getSource() ` ---> `-` at pos 1 of parent `{ 	modelId = getModelId()[...]`
+2018-08-07 23:18:28,382 INFO main - mod_point ModificPoint=DefaultModelProblemCollector line: 167, el: CtIfImpl
+2018-08-07 23:18:28,383 INFO main - -->op: ReplaceIfBooleanOp: `if (((line <= 0) && (colu[...] ` ---> `if (true) { 	org.apache.m[...]` at pos 6 of parent `{ 	int line = -1; 	int co[...]`
+2018-08-07 23:18:31,387 INFO main - mod_point ModificPoint=DefaultModelProblemCollector line: 167, el: CtIfImpl
+2018-08-07 23:18:31,387 INFO main - -->op: ReplaceIfBooleanOp: `if (((line <= 0) && (colu[...] ` ---> `if (false) { 	org.apache.[...]` at pos 6 of parent `{ 	int line = -1; 	int co[...]`
+2018-08-07 23:18:34,700 INFO main - mod_point ModificPoint=DefaultModelProblemCollector line: 167, el: CtIfImpl
+2018-08-07 23:18:34,700 INFO main - -->op: RemoveOp: `if (((line <= 0) && (colu[...] ` ---> `-` at pos 6 of parent `{ 	int line = -1; 	int co[...]`
+2018-08-07 23:18:37,718 INFO main - mod_point ModificPoint=DefaultModelProblemCollector line: 174, el: CtLocalVariableImpl
+2018-08-07 23:18:37,718 INFO main - -->op: RemoveOp: `org.apache.maven.model.bu[...] ` ---> `-` at pos 7 of parent `{ 	int line = -1; 	int co[...]`
+2018-08-07 23:18:38,218 INFO main - mod_point ModificPoint=DefaultModelProblemCollector line: 176, el: CtInvocationImpl
+2018-08-07 23:18:38,218 INFO main - -->op: RemoveOp: `add(problem) ` ---> `-` at pos 8 of parent `{ 	int line = -1; 	int co[...]`
+2018-08-07 23:18:41,354 INFO main - mod_point ModificPoint=DefaultModelProcessor line: 47, el: CtAssignmentImpl
+2018-08-07 23:18:41,354 INFO main - -->op: RemoveOp: `org.apache.maven.model.bu[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:18:44,771 INFO main - mod_point ModificPoint=DefaultModelProcessor line: 48, el: CtReturnImpl
+2018-08-07 23:18:44,772 INFO main - -->op: RemoveOp: `return org.apache.maven.m[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:18:45,452 INFO main - mod_point ModificPoint=DefaultModelProcessor line: 53, el: CtAssignmentImpl
+2018-08-07 23:18:45,452 INFO main - -->op: RemoveOp: `org.apache.maven.model.bu[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:18:48,308 INFO main - mod_point ModificPoint=DefaultModelProcessor line: 54, el: CtReturnImpl
+2018-08-07 23:18:48,308 INFO main - -->op: RemoveOp: `return org.apache.maven.m[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:18:48,915 INFO main - mod_point ModificPoint=DefaultModelProblem line: 98, el: CtReturnImpl
+2018-08-07 23:18:48,915 INFO main - -->op: RemoveOp: `return lineNumber ` ---> `-` at pos 0 of parent `{ 	return lineNumber; }`
+2018-08-07 23:18:49,464 INFO main - mod_point ModificPoint=DefaultModelProblem line: 103, el: CtReturnImpl
+2018-08-07 23:18:49,464 INFO main - -->op: RemoveOp: `return columnNumber ` ---> `-` at pos 0 of parent `{ 	return columnNumber; }`
+2018-08-07 23:18:50,038 INFO main - mod_point ModificPoint=DefaultModelProblem line: 108, el: CtReturnImpl
+2018-08-07 23:18:50,039 INFO main - -->op: RemoveOp: `return modelId ` ---> `-` at pos 0 of parent `{ 	return modelId; }`
+2018-08-07 23:18:50,627 INFO main - mod_point ModificPoint=DefaultModelProblem line: 120, el: CtIfImpl
+2018-08-07 23:18:50,627 INFO main - -->op: ReplaceIfBooleanOp: `if (((message) != null) &[...] ` ---> `if (true) { 	msg = messag[...]` at pos 1 of parent `{ 	java.lang.String msg; [...]`
+2018-08-07 23:18:53,722 INFO main - mod_point ModificPoint=DefaultModelProblem line: 120, el: CtIfImpl
+2018-08-07 23:18:53,723 INFO main - -->op: ReplaceIfBooleanOp: `if (((message) != null) &[...] ` ---> `if (false) { 	msg = messa[...]` at pos 1 of parent `{ 	java.lang.String msg; [...]`
+2018-08-07 23:18:56,548 INFO main - mod_point ModificPoint=DefaultModelProblem line: 120, el: CtIfImpl
+2018-08-07 23:18:56,549 INFO main - -->op: RemoveOp: `if (((message) != null) &[...] ` ---> `-` at pos 1 of parent `{ 	java.lang.String msg; [...]`
+2018-08-07 23:18:57,100 INFO main - mod_point ModificPoint=DefaultModelProblem line: 122, el: CtAssignmentImpl
+2018-08-07 23:18:57,100 INFO main - -->op: RemoveOp: `msg = message ` ---> `-` at pos 0 of parent `{ 	msg = message; }`
+2018-08-07 23:18:57,699 INFO main - mod_point ModificPoint=DefaultModelProblem line: 134, el: CtReturnImpl
+2018-08-07 23:18:57,699 INFO main - -->op: RemoveOp: `return msg ` ---> `-` at pos 2 of parent `{ 	java.lang.String msg; [...]`
+2018-08-07 23:18:58,354 INFO main - mod_point ModificPoint=DefaultModelProblem line: 139, el: CtReturnImpl
+2018-08-07 23:18:58,354 INFO main - -->op: RemoveOp: `return severity ` ---> `-` at pos 0 of parent `{ 	return severity; }`
+2018-08-07 23:18:58,906 INFO main - mod_point ModificPoint=ModelProblemUtils line: 79, el: CtIfImpl
+2018-08-07 23:18:58,906 INFO main - -->op: ReplaceIfBooleanOp: `if (model == null) { 	ret[...] ` ---> `if (true) { 	return ""; }[...]` at pos 0 of parent `{ 	if (model == null) { 	[...]`
+2018-08-07 23:19:02,098 INFO main - mod_point ModificPoint=ModelProblemUtils line: 79, el: CtIfImpl
+2018-08-07 23:19:02,098 INFO main - -->op: ReplaceIfBooleanOp: `if (model == null) { 	ret[...] ` ---> `if (false) { 	return ""; [...]` at pos 0 of parent `{ 	if (model == null) { 	[...]`
+2018-08-07 23:19:05,149 INFO main - mod_point ModificPoint=ModelProblemUtils line: 79, el: CtIfImpl
+2018-08-07 23:19:05,149 INFO main - -->op: RemoveOp: `if (model == null) { 	ret[...] ` ---> `-` at pos 0 of parent `{ 	if (model == null) { 	[...]`
+2018-08-07 23:19:08,305 INFO main - mod_point ModificPoint=ModelProblemUtils line: 81, el: CtReturnImpl
+2018-08-07 23:19:08,305 INFO main - -->op: RemoveOp: `return "" ` ---> `-` at pos 0 of parent `{ 	return ""; }`
+2018-08-07 23:19:11,419 INFO main - mod_point ModificPoint=ModelProblemUtils line: 134, el: CtLocalVariableImpl
+2018-08-07 23:19:11,420 INFO main - -->op: RemoveOp: `java.lang.StringBuilder b[...] ` ---> `-` at pos 0 of parent `{ 	java.lang.StringBuilde[...]`
+2018-08-07 23:19:12,213 INFO main - mod_point ModificPoint=ModelProblemUtils line: 136, el: CtIfImpl
+2018-08-07 23:19:12,214 INFO main - -->op: ReplaceIfBooleanOp: `if (!(problem.getModelId([...] ` ---> `if (true) { 	buffer.appen[...]` at pos 1 of parent `{ 	java.lang.StringBuilde[...]`
+2018-08-07 23:19:15,073 INFO main - mod_point ModificPoint=ModelProblemUtils line: 136, el: CtIfImpl
+2018-08-07 23:19:15,073 INFO main - -->op: ReplaceIfBooleanOp: `if (!(problem.getModelId([...] ` ---> `if (false) { 	buffer.appe[...]` at pos 1 of parent `{ 	java.lang.StringBuilde[...]`
+2018-08-07 23:19:18,046 INFO main - mod_point ModificPoint=ModelProblemUtils line: 136, el: CtIfImpl
+2018-08-07 23:19:18,046 INFO main - -->op: RemoveOp: `if (!(problem.getModelId([...] ` ---> `-` at pos 1 of parent `{ 	java.lang.StringBuilde[...]`
+2018-08-07 23:19:20,987 INFO main - mod_point ModificPoint=ModelProblemUtils line: 150, el: CtIfImpl
+2018-08-07 23:19:20,987 INFO main - -->op: ReplaceIfBooleanOp: `if ((problem.getLineNumbe[...] ` ---> `if (true) { 	if ((buffer.[...]` at pos 2 of parent `{ 	java.lang.StringBuilde[...]`
+2018-08-07 23:19:23,688 INFO main - mod_point ModificPoint=ModelProblemUtils line: 150, el: CtIfImpl
+2018-08-07 23:19:23,688 INFO main - -->op: ReplaceIfBooleanOp: `if ((problem.getLineNumbe[...] ` ---> `if (false) { 	if ((buffer[...]` at pos 2 of parent `{ 	java.lang.StringBuilde[...]`
+2018-08-07 23:19:26,720 INFO main - mod_point ModificPoint=ModelProblemUtils line: 150, el: CtIfImpl
+2018-08-07 23:19:26,720 INFO main - -->op: RemoveOp: `if ((problem.getLineNumbe[...] ` ---> `-` at pos 2 of parent `{ 	java.lang.StringBuilde[...]`
+2018-08-07 23:19:29,576 INFO main - mod_point ModificPoint=ModelProblemUtils line: 159, el: CtIfImpl
+2018-08-07 23:19:29,577 INFO main - -->op: ReplaceIfBooleanOp: `if ((problem.getColumnNum[...] ` ---> `if (true) { 	if ((buffer.[...]` at pos 3 of parent `{ 	java.lang.StringBuilde[...]`
+2018-08-07 23:19:32,438 INFO main - mod_point ModificPoint=ModelProblemUtils line: 159, el: CtIfImpl
+2018-08-07 23:19:32,439 INFO main - -->op: ReplaceIfBooleanOp: `if ((problem.getColumnNum[...] ` ---> `if (false) { 	if ((buffer[...]` at pos 3 of parent `{ 	java.lang.StringBuilde[...]`
+2018-08-07 23:19:35,765 INFO main - mod_point ModificPoint=ModelProblemUtils line: 159, el: CtIfImpl
+2018-08-07 23:19:35,765 INFO main - -->op: RemoveOp: `if ((problem.getColumnNum[...] ` ---> `-` at pos 3 of parent `{ 	java.lang.StringBuilde[...]`
+2018-08-07 23:19:38,844 INFO main - mod_point ModificPoint=ModelProblemUtils line: 168, el: CtReturnImpl
+2018-08-07 23:19:38,844 INFO main - -->op: RemoveOp: `return buffer.toString() ` ---> `-` at pos 4 of parent `{ 	java.lang.StringBuilde[...]`
+2018-08-07 23:19:39,444 INFO main - mod_point ModificPoint=FileModelSource line: 55, el: CtReturnImpl
+2018-08-07 23:19:39,445 INFO main - -->op: RemoveOp: `return new java.io.FileIn[...] ` ---> `-` at pos 0 of parent `{ 	return new java.io.Fil[...]`
+2018-08-07 23:19:40,086 INFO main - mod_point ModificPoint=FileModelSource line: 60, el: CtReturnImpl
+2018-08-07 23:19:40,086 INFO main - -->op: RemoveOp: `return pomFile.getPath() ` ---> `-` at pos 0 of parent `{ 	return pomFile.getPath[...]`
+2018-08-07 23:19:40,752 INFO main - mod_point ModificPoint=DefaultModelPathTranslator line: 49, el: CtAssignmentImpl
+2018-08-07 23:19:40,752 INFO main - -->op: RemoveOp: `org.apache.maven.model.pa[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:19:43,605 INFO main - mod_point ModificPoint=DefaultModelPathTranslator line: 50, el: CtReturnImpl
+2018-08-07 23:19:43,606 INFO main - -->op: RemoveOp: `return org.apache.maven.m[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:19:44,327 INFO main - mod_point ModificPoint=DefaultModelUrlNormalizer line: 46, el: CtAssignmentImpl
+2018-08-07 23:19:44,327 INFO main - -->op: RemoveOp: `org.apache.maven.model.pa[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:19:47,221 INFO main - mod_point ModificPoint=DefaultModelUrlNormalizer line: 47, el: CtReturnImpl
+2018-08-07 23:19:47,221 INFO main - -->op: RemoveOp: `return org.apache.maven.m[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:19:47,957 INFO main - mod_point ModificPoint=DefaultSuperPomProvider line: 52, el: CtAssignmentImpl
+2018-08-07 23:19:47,957 INFO main - -->op: RemoveOp: `org.apache.maven.model.su[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:19:50,850 INFO main - mod_point ModificPoint=DefaultSuperPomProvider line: 53, el: CtReturnImpl
+2018-08-07 23:19:50,850 INFO main - -->op: RemoveOp: `return org.apache.maven.m[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:19:51,480 INFO main - mod_point ModificPoint=FileProfileActivator line: 53, el: CtAssignmentImpl
+2018-08-07 23:19:51,480 INFO main - -->op: RemoveOp: `org.apache.maven.model.pr[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:19:54,439 INFO main - mod_point ModificPoint=FileProfileActivator line: 54, el: CtReturnImpl
+2018-08-07 23:19:54,439 INFO main - -->op: RemoveOp: `return org.apache.maven.m[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:19:55,041 INFO main - mod_point ModificPoint=DefaultModelBuildingRequest line: 102, el: CtReturnImpl
+2018-08-07 23:19:55,041 INFO main - -->op: RemoveOp: `return pomFile ` ---> `-` at pos 0 of parent `{ 	return pomFile; }`
+2018-08-07 23:19:55,737 INFO main - mod_point ModificPoint=DefaultModelBuildingRequest line: 107, el: CtAssignmentImpl
+2018-08-07 23:19:55,737 INFO main - -->op: RemoveOp: `org.apache.maven.model.bu[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:19:58,785 INFO main - mod_point ModificPoint=DefaultModelBuildingRequest line: 109, el: CtReturnImpl
+2018-08-07 23:19:58,786 INFO main - -->op: RemoveOp: `return org.apache.maven.m[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:19:59,453 INFO main - mod_point ModificPoint=DefaultModelBuildingRequest line: 114, el: CtReturnImpl
+2018-08-07 23:19:59,453 INFO main - -->op: RemoveOp: `return modelSource ` ---> `-` at pos 0 of parent `{ 	return modelSource; }`
+2018-08-07 23:20:00,110 INFO main - mod_point ModificPoint=DefaultModelBuildingRequest line: 126, el: CtReturnImpl
+2018-08-07 23:20:00,111 INFO main - -->op: RemoveOp: `return validationLevel ` ---> `-` at pos 0 of parent `{ 	return validationLevel[...]`
+2018-08-07 23:20:00,705 INFO main - mod_point ModificPoint=DefaultModelBuildingRequest line: 143, el: CtAssignmentImpl
+2018-08-07 23:20:00,705 INFO main - -->op: RemoveOp: `org.apache.maven.model.bu[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:20:03,500 INFO main - mod_point ModificPoint=DefaultModelBuildingRequest line: 145, el: CtReturnImpl
+2018-08-07 23:20:03,501 INFO main - -->op: RemoveOp: `return org.apache.maven.m[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.maven.model[...]`
+2018-08-07 23:20:04,118 INFO main - mod_point ModificPoint=DefaultModelBuildingRequest line: 162, el: CtReturnImpl
+2018-08-07 23:20:04,118 INFO main - -->op: RemoveOp: `return locationTracking ` ---> `-` at pos 0 of parent `{ 	return locationTrackin[...]`
+2018-08-07 23:20:04,673 INFO main - mod_point ModificPoint=DefaultModelBuildingRequest line: 174, el: CtIfImpl
+2018-08-07 23:20:04,673 INFO main - -->op: ReplaceIfBooleanOp: `if ((profiles) == null) {[...] ` ---> `if (true) { 	Error in pri[...]` at pos 0 of parent `{ 	if ((profiles) == null[...]`
+2018-08-07 23:20:07,667 INFO main - mod_point ModificPoint=DefaultModelBuildingRequest line: 174, el: CtIfImpl
+2018-08-07 23:20:07,668 INFO main - -->op: ReplaceIfBooleanOp: `if ((profiles) == null) {[...] ` ---> `if (false) { 	Error in pr[...]` at pos 0 of parent `{ 	if ((profiles) == null[...]`
+2018-08-07 23:20:10,674 INFO main - mod_point ModificPoint=DefaultModelBuildingRequest line: 174, el: CtIfImpl
+2018-08-07 23:20:10,674 INFO main - -->op: RemoveOp: `if ((profiles) == null) {[...] ` ---> `-` at pos 0 of parent `{ 	if ((profiles) == null[...]`
+2018-08-07 23:20:13,689 INFO main - mod_point ModificPoint=DefaultModelBuildingRequest line: 176, el: CtAssignmentImpl
+2018-08-07 23:20:13,689 INFO main - -->op: RemoveOp: `profiles = new java.util.[...] ` ---> `-` at pos 0 of parent `{ 	profiles = new java.ut[...]`
+2018-08-07 23:20:16,553 INFO main - mod_point ModificPoint=DefaultModelBuildingRequest line: 179, el: CtReturnImpl
+2018-08-07 23:20:16,553 INFO main - -->op: RemoveOp: `return profiles ` ---> `-` at pos 1 of parent `{ 	if ((profiles) == null[...]`
+2018-08-07 23:20:17,240 INFO main - mod_point ModificPoint=DefaultModelBuildingRequest line: 198, el: CtIfImpl
+2018-08-07 23:20:17,241 INFO main - -->op: ReplaceIfBooleanOp: `if ((activeProfileIds) ==[...] ` ---> `if (true) { 	Error in pri[...]` at pos 0 of parent `{ 	if ((activeProfileIds)[...]`
+2018-08-07 23:20:20,457 INFO main - mod_point ModificPoint=DefaultModelBuildingRequest line: 198, el: CtIfImpl
+2018-08-07 23:20:20,458 INFO main - -->op: ReplaceIfBooleanOp: `if ((activeProfileIds) ==[...] ` ---> `if (false) { 	Error in pr[...]` at pos 0 of parent `{ 	if ((activeProfileIds)[...]`
+2018-08-07 23:20:23,687 INFO main - mod_point ModificPoint=DefaultModelBuildingRequest line: 198, el: CtIfImpl
+2018-08-07 23:20:23,688 INFO main - -->op: RemoveOp: `if ((activeProfileIds) ==[...] ` ---> `-` at pos 0 of parent `{ 	if ((activeProfileIds)[...]`
+2018-08-07 23:20:27,714 INFO main - mod_point ModificPoint=DefaultModelBuildingRequest line: 200, el: CtAssignmentImpl
+2018-08-07 23:20:27,715 INFO main - -->op: RemoveOp: `activeProfileIds = new ja[...] ` ---> `-` at pos 0 of parent `{ 	activeProfileIds = new[...]`
+2018-08-07 23:20:31,495 INFO main - mod_point ModificPoint=DefaultModelBuildingRequest line: 203, el: CtReturnImpl
+2018-08-07 23:20:31,495 INFO main - -->op: RemoveOp: `return activeProfileIds ` ---> `-` at pos 1 of parent `{ 	if ((activeProfileIds)[...]`
+2018-08-07 23:20:32,314 INFO main - mod_point ModificPoint=DefaultModelBuildingRequest line: 222, el: CtIfImpl
+2018-08-07 23:20:32,315 INFO main - -->op: ReplaceIfBooleanOp: `if ((inactiveProfileIds) [...] ` ---> `if (true) { 	Error in pri[...]` at pos 0 of parent `{ 	if ((inactiveProfileId[...]`
+2018-08-07 23:20:35,708 INFO main - mod_point ModificPoint=DefaultModelBuildingRequest line: 222, el: CtIfImpl
+2018-08-07 23:20:35,708 INFO main - -->op: ReplaceIfBooleanOp: `if ((inactiveProfileIds) [...] ` ---> `if (false) { 	Error in pr[...]` at pos 0 of parent `{ 	if ((inactiveProfileId[...]`
+2018-08-07 23:20:39,165 INFO main - mod_point ModificPoint=DefaultModelBuildingRequest line: 222, el: CtIfImpl
+2018-08-07 23:20:39,165 INFO main - -->op: RemoveOp: `if ((inactiveProfileIds) [...] ` ---> `-` at pos 0 of parent `{ 	if ((inactiveProfileId[...]`
+2018-08-07 23:20:42,142 INFO main - mod_point ModificPoint=DefaultModelBuildingRequest line: 224, el: CtAssignmentImpl
+2018-08-07 23:20:42,143 INFO main - -->op: RemoveOp: `inactiveProfileIds = new [...] ` ---> `-` at pos 0 of parent `{ 	inactiveProfileIds = n[...]`
+2018-08-07 23:20:45,484 INFO main - mod_point ModificPoint=DefaultModelBuildingRequest line: 227, el: CtReturnImpl
+2018-08-07 23:20:45,484 INFO main - -->op: RemoveOp: `return inactiveProfileIds ` ---> `-` at pos 1 of parent `{ 	if ((inactiveProfileId[...]`
+2018-08-07 23:20:46,252 INFO main - mod_point ModificPoint=DefaultModelBuildingRequest line: 246, el: CtIfImpl
+2018-08-07 23:20:46,252 INFO main - -->op: ReplaceIfBooleanOp: `if ((systemProperties) ==[...] ` ---> `if (true) { 	Error in pri[...]` at pos 0 of parent `{ 	if ((systemProperties)[...]`
+2018-08-07 23:20:49,266 INFO main - mod_point ModificPoint=DefaultModelBuildingRequest line: 246, el: CtIfImpl
+2018-08-07 23:20:49,266 INFO main - -->op: ReplaceIfBooleanOp: `if ((systemProperties) ==[...] ` ---> `if (false) { 	Error in pr[...]` at pos 0 of parent `{ 	if ((systemProperties)[...]`
+2018-08-07 23:20:52,335 INFO main - mod_point ModificPoint=DefaultModelBuildingRequest line: 246, el: CtIfImpl
+2018-08-07 23:20:52,335 INFO main - -->op: RemoveOp: `if ((systemProperties) ==[...] ` ---> `-` at pos 0 of parent `{ 	if ((systemProperties)[...]`
+2018-08-07 23:20:55,479 INFO main - mod_point ModificPoint=DefaultModelBuildingRequest line: 248, el: CtAssignmentImpl
+2018-08-07 23:20:55,479 INFO main - -->op: RemoveOp: `systemProperties = new ja[...] ` ---> `-` at pos 0 of parent `{ 	systemProperties = new[...]`
+2018-08-07 23:20:58,674 INFO main - mod_point ModificPoint=DefaultModelBuildingRequest line: 251, el: CtReturnImpl
+2018-08-07 23:20:58,674 INFO main - -->op: RemoveOp: `return systemProperties ` ---> `-` at pos 1 of parent `{ 	if ((systemProperties)[...]`
+2018-08-07 23:20:59,410 INFO main - mod_point ModificPoint=DefaultModelBuildingRequest line: 271, el: CtIfImpl
+2018-08-07 23:20:59,411 INFO main - -->op: ReplaceIfBooleanOp: `if ((userProperties) == n[...] ` ---> `if (true) { 	Error in pri[...]` at pos 0 of parent `{ 	if ((userProperties) =[...]`
+2018-08-07 23:21:02,840 INFO main - -Found Solution, child variant #265
+2018-08-07 23:21:02,841 DEBUG spoon.support.StandardEnvironment - printing org.apache.maven.model.path.DefaultModelUrlNormalizer to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MNG-4837_3fca2bb2/r1/AstorMain-bugs-dot-jar_MNG-4837_3fca2bb2/src/variant-265
+2018-08-07 23:21:02,889 DEBUG spoon.support.StandardEnvironment - printing org.apache.maven.model.building.DefaultModelProblem to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MNG-4837_3fca2bb2/r1/AstorMain-bugs-dot-jar_MNG-4837_3fca2bb2/src/variant-265
+2018-08-07 23:21:02,912 DEBUG spoon.support.StandardEnvironment - printing org.apache.maven.model.interpolation.StringSearchModelInterpolator to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MNG-4837_3fca2bb2/r1/AstorMain-bugs-dot-jar_MNG-4837_3fca2bb2/src/variant-265
+2018-08-07 23:21:02,950 DEBUG spoon.support.StandardEnvironment - printing org.apache.maven.model.superpom.DefaultSuperPomProvider to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MNG-4837_3fca2bb2/r1/AstorMain-bugs-dot-jar_MNG-4837_3fca2bb2/src/variant-265
+2018-08-07 23:21:02,977 DEBUG spoon.support.StandardEnvironment - printing org.apache.maven.model.interpolation.AbstractStringBasedModelInterpolator to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MNG-4837_3fca2bb2/r1/AstorMain-bugs-dot-jar_MNG-4837_3fca2bb2/src/variant-265
+2018-08-07 23:21:02,997 DEBUG spoon.support.StandardEnvironment - printing org.apache.maven.model.building.DefaultModelBuilder to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MNG-4837_3fca2bb2/r1/AstorMain-bugs-dot-jar_MNG-4837_3fca2bb2/src/variant-265
+2018-08-07 23:21:03,049 DEBUG spoon.support.StandardEnvironment - printing org.apache.maven.model.profile.activation.FileProfileActivator to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MNG-4837_3fca2bb2/r1/AstorMain-bugs-dot-jar_MNG-4837_3fca2bb2/src/variant-265
+2018-08-07 23:21:03,077 DEBUG spoon.support.StandardEnvironment - printing org.apache.maven.model.building.DefaultModelBuilderFactory to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MNG-4837_3fca2bb2/r1/AstorMain-bugs-dot-jar_MNG-4837_3fca2bb2/src/variant-265
+2018-08-07 23:21:03,098 DEBUG spoon.support.StandardEnvironment - printing org.apache.maven.model.building.ModelProblemUtils to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MNG-4837_3fca2bb2/r1/AstorMain-bugs-dot-jar_MNG-4837_3fca2bb2/src/variant-265
+2018-08-07 23:21:03,113 DEBUG spoon.support.StandardEnvironment - printing org.apache.maven.model.profile.DefaultProfileActivationContext to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MNG-4837_3fca2bb2/r1/AstorMain-bugs-dot-jar_MNG-4837_3fca2bb2/src/variant-265
+2018-08-07 23:21:03,130 DEBUG spoon.support.StandardEnvironment - printing org.apache.maven.model.profile.DefaultProfileSelector to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MNG-4837_3fca2bb2/r1/AstorMain-bugs-dot-jar_MNG-4837_3fca2bb2/src/variant-265
+2018-08-07 23:21:03,148 DEBUG spoon.support.StandardEnvironment - printing org.apache.maven.model.building.DefaultModelProblemCollector to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MNG-4837_3fca2bb2/r1/AstorMain-bugs-dot-jar_MNG-4837_3fca2bb2/src/variant-265
+2018-08-07 23:21:03,168 DEBUG spoon.support.StandardEnvironment - printing org.apache.maven.model.building.DefaultModelBuildingRequest to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MNG-4837_3fca2bb2/r1/AstorMain-bugs-dot-jar_MNG-4837_3fca2bb2/src/variant-265
+2018-08-07 23:21:03,190 DEBUG spoon.support.StandardEnvironment - printing org.apache.maven.model.building.FileModelSource to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MNG-4837_3fca2bb2/r1/AstorMain-bugs-dot-jar_MNG-4837_3fca2bb2/src/variant-265
+2018-08-07 23:21:03,206 DEBUG spoon.support.StandardEnvironment - printing org.apache.maven.model.path.DefaultModelPathTranslator to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MNG-4837_3fca2bb2/r1/AstorMain-bugs-dot-jar_MNG-4837_3fca2bb2/src/variant-265
+2018-08-07 23:21:03,221 DEBUG spoon.support.StandardEnvironment - printing org.apache.maven.model.building.DefaultModelProcessor to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MNG-4837_3fca2bb2/r1/AstorMain-bugs-dot-jar_MNG-4837_3fca2bb2/src/variant-265
+2018-08-07 23:21:03,369 INFO main - 
+----SUMMARY_EXECUTION---
+2018-08-07 23:21:03,370 INFO main - 
+Solution details
+2018-08-07 23:21:03,370 INFO main - 
+ --SOLUTIONS DESCRIPTION--
+
+ ----
+ProgramVariant 265
+ 
+time(sec)= 646
+operation: ReplaceIfBooleanOp
+location= org.apache.maven.model.building.DefaultModelBuildingRequest
+line= 271
+lineSuspiciousness= 1
+original statement= if ((userProperties) == null) {
+	userProperties = new java.util.Properties();
+} 
+fixed statement= if (true) {
+	userProperties = new java.util.Properties();
+} 
+generation= 1
+ingredientScope= -
+validation=|true|0|4|[]|
+2018-08-07 23:21:03,370 INFO fr.inria.main.evolution.AstorMain - Time Total(s): 698.496
