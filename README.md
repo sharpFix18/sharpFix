@@ -1,4 +1,4 @@
-# This is a temporary repository containing supplementary materials associated with the papers titled "Better Code Search and Reuse for Better Program Repair" and "Revisiting ssFix for Better Program Repair".
+# This is a repository containing supplementary materials associated with the papers "Better Code Search and Reuse for Better Program Repair" and "Revisiting ssFix for Better Program Repair".
 
 The experimental materials and results can be found at `./expt0`.
 
