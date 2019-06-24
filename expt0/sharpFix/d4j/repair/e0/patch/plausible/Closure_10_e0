@@ -1,0 +1,41 @@
+*** /home/qx5/defects4j_bugs/bugs/closures/projs/Closure_10_buggy/src/com/google/javascript/jscomp/NodeUtil.java	Tue May 26 12:53:23 2015
+--- /home/qx5/sharpfix_expts/repair/repairflag2_faulocflag0_cignoreflag0/Closure_10/e0/f1/repair/c5/p4/NodeUtil.java	Sat Feb  3 05:12:09 2018
+***************
+*** 1260,1278 ****
+     */
+    static boolean allResultsMatch(Node n, Predicate<Node> p) {
+      switch (n.getType()) {
+!       case Token.ASSIGN:
+!       case Token.COMMA:
+!         return allResultsMatch(n.getLastChild(), p);
+!       case Token.AND:
+!       case Token.OR:
+!         return allResultsMatch(n.getFirstChild(), p)
+!             && allResultsMatch(n.getLastChild(), p);
+!       case Token.HOOK:
+!         return allResultsMatch(n.getFirstChild().getNext(), p)
+!             && allResultsMatch(n.getLastChild(), p);
+!       default:
+!         return p.apply(n);
+!     }
+    }
+  
+    /**
+--- 1260,1276 ----
+     */
+    static boolean allResultsMatch(Node n, Predicate<Node> p) {
+      switch (n.getType()) {
+! 	case Token.ASSIGN:
+! 	case Token.COMMA:
+! 		return anyResultsMatch(n.getLastChild(), p);
+! 	case Token.AND:
+! 	case Token.OR:
+! 		return anyResultsMatch(n.getFirstChild(), p) || anyResultsMatch(n.getLastChild(), p);
+! 	case Token.HOOK:
+! 		return anyResultsMatch(n.getFirstChild().getNext(), p) || anyResultsMatch(n.getLastChild(), p);
+! 	default:
+! 		return p.apply(n);
+! 	}
+    }
+  
+    /**

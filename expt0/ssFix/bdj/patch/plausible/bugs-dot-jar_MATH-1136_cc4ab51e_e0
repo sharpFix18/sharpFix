@@ -1,0 +1,19 @@
+*** /home/qx5/elixir_bdj_bugs/math/bugs-dot-jar_MATH-1136_cc4ab51e//src/main/java/org/apache/commons/math3/distribution/SaddlePointExpansion.java	Fri Jun 22 06:17:42 2018
+--- /home/qx5/ssFix_expts_bdj/repair/repairflag0_faulocflag0_cignoreflag0/bugs-dot-jar_MATH-1136_cc4ab51e/e0/patches/f1/c72/p0/SaddlePointExpansion.java	Fri Jul 27 19:59:32 2018
+***************
+*** 178,184 ****
+      static double logBinomialProbability(int x, int n, double p, double q) {
+          double ret;
+          if (x == 0) {
+!             if (p < 0.1) {
+                  ret = -getDeviancePart(n, n * q) - n * p;
+              } else {
+                  ret = n * FastMath.log(q);
+--- 178,184 ----
+      static double logBinomialProbability(int x, int n, double p, double q) {
+          double ret;
+          if (x == 0) {
+!             if (p < 0) {
+                  ret = -getDeviancePart(n, n * q) - n * p;
+              } else {
+                  ret = n * FastMath.log(q);

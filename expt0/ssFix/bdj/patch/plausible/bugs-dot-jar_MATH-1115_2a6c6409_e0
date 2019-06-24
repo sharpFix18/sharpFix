@@ -1,0 +1,19 @@
+*** /home/qx5/elixir_bdj_bugs/math/bugs-dot-jar_MATH-1115_2a6c6409//src/main/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet.java	Fri Jun 22 06:16:40 2018
+--- /home/qx5/ssFix_expts_bdj/repair/repairflag0_faulocflag0_cignoreflag0/bugs-dot-jar_MATH-1115_2a6c6409/e0/patches/f0/c25/p0/PolygonsSet.java	Fri Jul 27 15:52:37 2018
+***************
+*** 823,829 ****
+          }
+  
+          if ((end == null) && !open) {
+!             throw new MathInternalError();
+          }
+  
+          return loop;
+--- 823,829 ----
+          }
+  
+          if ((end == null) && !open) {
+!             return null;
+          }
+  
+          return loop;

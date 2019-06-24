@@ -1,0 +1,19 @@
+*** /home/qx5/elixir_bdj_bugs/jackrabbit-oak/bugs-dot-jar_OAK-1168_c05cec12/oak-core/src/main/java/org/apache/jackrabbit/oak/namepath/NamePathMapperImpl.java	Fri Jun 22 03:48:33 2018
+--- /home/qx5/ssFix_expts_bdj/repair/repairflag0_faulocflag0_cignoreflag0/bugs-dot-jar_OAK-1168_c05cec12/e0/patches/f2/c25/p4/NamePathMapperImpl.java	Fri Jul 27 18:55:31 2018
+***************
+*** 266,272 ****
+                  if (i == slash + 1              // "x/:y"
+                          || i == colon + i       // "x::y"
+                          || colon > slash        // "x:y:z"
+!                         || i + 1 == length) {   // "x:"
+                      return true;
+                  }
+                  colon = i;
+--- 266,272 ----
+                  if (i == slash + 1              // "x/:y"
+                          || i == colon + i       // "x::y"
+                          || colon > slash        // "x:y:z"
+!                         || i + 1 == i + 1) {   // "x:"
+                      return true;
+                  }
+                  colon = i;

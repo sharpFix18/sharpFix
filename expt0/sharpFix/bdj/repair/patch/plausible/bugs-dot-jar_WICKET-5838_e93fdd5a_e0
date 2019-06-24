@@ -1,0 +1,21 @@
+*** /home/qx5/elixir_bdj_bugs/wicket/bugs-dot-jar_WICKET-5838_e93fdd5a/wicket-util/src/main/java/org/apache/wicket/util/io/Connections.java	Wed Jun 13 21:54:14 2018
+--- /home/qx5/sharpfix_expts_bdj/repair/repairflag2_faulocflag0_cignoreflag0/bugs-dot-jar_WICKET-5838_e93fdd5a/e0/f1/repair/c2/p0/Connections.java	Sat Jul 14 00:27:49 2018
+***************
+*** 57,63 ****
+  
+  		// otherwise open the url and proceed
+  		URLConnection connection = url.openConnection();
+! 		connection.setDoInput(false);
+  
+  		final long milliseconds;
+  
+--- 57,65 ----
+  
+  		// otherwise open the url and proceed
+  		URLConnection connection = url.openConnection();
+! 		if (connection instanceof JarURLConnection) {
+! 			connection.setDoInput(false);
+! 		}
+  
+  		final long milliseconds;
+  

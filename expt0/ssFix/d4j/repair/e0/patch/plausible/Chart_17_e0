@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/charts/projs/Chart_17_buggy/source/org/jfree/data/time/TimeSeries.java	Tue Oct 13 14:44:53 2015
+--- /home/qx5/ssFix_expts/repair/repairflag0_faulocflag0_cignoreflag0/Chart_17/e0/patches/f4/c326/p2/TimeSeries.java	Thu Jan  4 12:08:46 2018
+***************
+*** 876,882 ****
+          if (start < 0) {
+              throw new IllegalArgumentException("Requires start >= 0.");
+          }
+!         if (end < start) {
+              throw new IllegalArgumentException("Requires start <= end.");
+          }
+          TimeSeries copy = (TimeSeries) super.clone();
+--- 876,882 ----
+          if (start < 0) {
+              throw new IllegalArgumentException("Requires start >= 0.");
+          }
+!         if (end < start && start > 0) {
+              throw new IllegalArgumentException("Requires start <= end.");
+          }
+          TimeSeries copy = (TimeSeries) super.clone();

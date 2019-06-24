@@ -1,0 +1,4 @@
+EM,RM,PM:35,35,0
+EM:/home/qx5/defects4j_bugs/bugs/closures/projs/Closure_119_buggy/src/com/google/javascript/jscomp/TypedScopeCreator.java,slc:546,8
+RM:/home/qx5/defects4j_bugs/bugs/closures/projs/Closure_119_buggy/src/com/google/javascript/jscomp/TypedScopeCreator.java,slc:546,8
+PM:/home/qx5/defects4j_bugs/bugs/closures/projs/Closure_119_buggy/src/com/google/javascript/jscomp/NodeUtil.java,slc:1380,6

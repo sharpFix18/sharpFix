@@ -1,0 +1,20 @@
+*** /home/qx5/defects4j_bugs/bugs/langs/projs/Lang_16_buggy/src/main/java/org/apache/commons/lang3/math/NumberUtils.java	Sun Oct 11 19:13:42 2015
+--- /home/qx5/ssFix_expts/repair/repairflag0_faulocflag3_cignoreflag0/Lang_16/e0/patches/f1/c165/p0/NumberUtils.java	Mon Dec 25 04:49:58 2017
+***************
+*** 455,461 ****
+              // a wrong value.
+              return null;
+          }
+!         if (str.startsWith("0x") || str.startsWith("-0x")) {
+              return createInteger(str);
+          }   
+          char lastChar = str.charAt(str.length() - 1);
+--- 455,462 ----
+              // a wrong value.
+              return null;
+          }
+!         if (str.startsWith("0x") || str.startsWith("-0x") || str.startsWith("0X")
+! 				|| str.startsWith("-0X")) {
+              return createInteger(str);
+          }   
+          char lastChar = str.charAt(str.length() - 1);

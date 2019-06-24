@@ -1,0 +1,21 @@
+*** /home/qx5/defects4j_bugs/bugs/closures/projs/Closure_66_buggy/src/com/google/javascript/jscomp/TypeCheck.java	Tue Dec  8 20:30:30 2015
+--- /home/qx5/sharpfix_expts/repair/repairflag5_faulocflag0_cignoreflag0/Closure_66/e0/repair/c93/p0/TypeCheck.java	Wed Jan 31 03:49:34 2018
+***************
+*** 513,519 ****
+          // Object literal keys are handled with OBJECTLIT
+          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {
+            ensureTyped(t, n, STRING_TYPE);
+!         }
+          break;
+  
+        case Token.GET:
+--- 513,521 ----
+          // Object literal keys are handled with OBJECTLIT
+          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {
+            ensureTyped(t, n, STRING_TYPE);
+!         } else {
+! 			typeable = false;
+! 		}
+          break;
+  
+        case Token.GET:

@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/maths/projs/Math_80_buggy/src/main/java/org/apache/commons/math/linear/EigenDecompositionImpl.java	Wed Dec 16 17:28:08 2015
+--- /home/qx5/ssFix_expts/repair/repairflag1_faulocflag0_cignoreflag0/Math_80/e0/c319/p2/EigenDecompositionImpl.java	Fri Dec 15 15:19:14 2017
+***************
+*** 1132,1138 ****
+      private boolean flipIfWarranted(final int n, final int step) {
+          if (1.5 * work[pingPong] < work[4 * (n - 1) + pingPong]) {
+              // flip array
+!             int j = 4 * n - 1;
+              for (int i = 0; i < j; i += 4) {
+                  for (int k = 0; k < 4; k += step) {
+                      final double tmp = work[i + k];
+--- 1132,1138 ----
+      private boolean flipIfWarranted(final int n, final int step) {
+          if (1.5 * work[pingPong] < work[4 * (n - 1) + pingPong]) {
+              // flip array
+!             int j = 4 * n - 7 * n;
+              for (int i = 0; i < j; i += 4) {
+                  for (int k = 0; k < 4; k += step) {
+                      final double tmp = work[i + k];

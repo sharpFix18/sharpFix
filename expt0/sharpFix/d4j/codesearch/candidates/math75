@@ -1,0 +1,4 @@
+EM,RM,PM:-1,-1,0
+EM:null,null
+RM:null,null
+PM:/home/qx5/defects4j_bugs/bugs/maths/projs/Math_75_buggy/src/main/java/org/apache/commons/math/stat/Frequency.java,slc:475,8

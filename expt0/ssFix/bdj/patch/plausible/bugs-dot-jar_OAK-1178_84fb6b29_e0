@@ -1,0 +1,19 @@
+*** /home/qx5/elixir_bdj_bugs/jackrabbit-oak/bugs-dot-jar_OAK-1178_84fb6b29/oak-core/src/main/java/org/apache/jackrabbit/oak/plugins/memory/MemoryNodeBuilder.java	Wed Jun 13 20:59:43 2018
+--- /home/qx5/ssFix_expts_bdj/repair/repairflag0_faulocflag0_cignoreflag0/bugs-dot-jar_OAK-1178_84fb6b29/e0/patches/f8/c6/p0/MemoryNodeBuilder.java	Fri Jul 27 20:26:53 2018
+***************
+*** 260,266 ****
+  
+      @Override
+      public boolean isNew() {
+!         return !isRoot() && !parent.base().hasChildNode(name) && parent.hasChildNode(name);
+      }
+  
+      @Override
+--- 260,266 ----
+  
+      @Override
+      public boolean isNew() {
+!         return !isRoot() && !base.hasChildNode(name) && parent.hasChildNode(name);
+      }
+  
+      @Override

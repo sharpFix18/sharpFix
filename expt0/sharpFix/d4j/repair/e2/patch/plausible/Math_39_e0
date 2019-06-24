@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/maths/projs/Math_39_buggy/src/main/java/org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java	Fri Aug  5 17:12:31 2016
+--- /home/qx5/sharpfix_expts/repair/repairflag2_faulocflag3_cignoreflag0/Math_39/e0/f0/repair/c15/p0/EmbeddedRungeKuttaIntegrator.java	Wed Jan 31 23:06:12 2018
+***************
+*** 260,265 ****
+--- 260,273 ----
+            }
+  
+            computeDerivatives(stepStart + c[k-1] * stepSize, yTmp, yDotK[k]);
++ 		if (!isLastStep) {
++ 			interpolator.storeTime(stepStart);
++ 			final double nextT = stepStart + stepSize;
++ 			final boolean nextIsLast = forward ? (nextT >= t) : (nextT <= t);
++ 			if (nextIsLast) {
++ 				stepSize = t - stepStart;
++ 			}
++ 		}
+  
+          }
+  

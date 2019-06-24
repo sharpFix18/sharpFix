@@ -1,0 +1,21 @@
+*** /home/qx5/elixir_bdj_bugs/wicket/bugs-dot-jar_WICKET-4020_081cdeb2/wicket-core/src/main/java/org/apache/wicket/request/mapper/ResourceMapper.java	Fri Jun 22 04:40:01 2018
+--- /home/qx5/sharpfix_expts_bdj/repair/repairflag2_faulocflag0_cignoreflag0/bugs-dot-jar_WICKET-4020_081cdeb2/e0/f0/repair/c2/p0/ResourceMapper.java	Thu Jul 12 20:00:22 2018
+***************
+*** 244,250 ****
+  			
+  			if (Strings.isEmpty(resourceUrl.getFileName()))
+  			{
+! 				throw new IllegalStateException("caching strategy returned empty name for " + resourceUrl);
+  			}
+  
+  			segments.set(lastSegmentAt, resourceUrl.getFileName());
+--- 244,252 ----
+  			
+  			if (Strings.isEmpty(resourceUrl.getFileName()))
+  			{
+! 				if (Strings.isEmpty(resourceUrl.getFileName())) {
+! 					throw new IllegalStateException("caching strategy returned empty name for " + resourceUrl);
+! 				}
+  			}
+  
+  			segments.set(lastSegmentAt, resourceUrl.getFileName());

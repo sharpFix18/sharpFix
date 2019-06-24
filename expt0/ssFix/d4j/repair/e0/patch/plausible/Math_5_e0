@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/maths/projs/Math_5_buggy/src/main/java/org/apache/commons/math3/complex/Complex.java	Thu May 19 15:35:32 2016
+--- /home/qx5/ssFix_expts/repair/repairflag0_faulocflag0_cignoreflag0/Math_5/e0/patches/f4/c138/p0/Complex.java	Thu Jan  4 02:57:25 2018
+***************
+*** 342,348 ****
+          }
+          if (other instanceof Complex){
+              Complex c = (Complex)other;
+!             if (c.isNaN) {
+                  return isNaN;
+              } else {
+                  return (real == c.real) && (imaginary == c.imaginary);
+--- 342,348 ----
+          }
+          if (other instanceof Complex){
+              Complex c = (Complex)other;
+!             if (isNaN || c.isNaN) {
+                  return isNaN;
+              } else {
+                  return (real == c.real) && (imaginary == c.imaginary);

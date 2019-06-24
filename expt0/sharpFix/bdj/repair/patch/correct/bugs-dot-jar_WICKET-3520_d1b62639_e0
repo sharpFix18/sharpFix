@@ -1,0 +1,19 @@
+*** /home/qx5/elixir_bdj_bugs/wicket/bugs-dot-jar_WICKET-3520_d1b62639/wicket-core/src/main/java/org/apache/wicket/DefaultExceptionMapper.java	Wed Jun 13 21:18:41 2018
+--- /home/qx5/sharpfix_expts_bdj/repair/repairflag2_faulocflag0_cignoreflag0/bugs-dot-jar_WICKET-3520_d1b62639/e0/f0/repair/c3/p0/DefaultExceptionMapper.java	Thu Jul 12 08:03:55 2018
+***************
+*** 121,127 ****
+  			else
+  			{
+  				// IExceptionSettings.SHOW_NO_EXCEPTION_PAGE
+! 				return new EmptyRequestHandler();
+  			}
+  		}
+  	}
+--- 121,127 ----
+  			else
+  			{
+  				// IExceptionSettings.SHOW_NO_EXCEPTION_PAGE
+! 				return new ErrorCodeRequestHandler(500);
+  			}
+  		}
+  	}

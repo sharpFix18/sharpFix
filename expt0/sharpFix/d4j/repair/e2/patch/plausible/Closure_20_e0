@@ -1,0 +1,16 @@
+*** /home/qx5/defects4j_bugs/bugs/closures/projs/Closure_20_buggy/src/com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java	Wed Jul  6 10:27:16 2016
+--- /home/qx5/sharpfix_expts/repair/repairflag2_faulocflag3_cignoreflag0/Closure_20/e0/f0/repair/c8/p1/PeepholeSubstituteAlternateSyntax.java	Thu Feb  1 03:43:31 2018
+***************
+*** 212,217 ****
+--- 212,222 ----
+            callTarget.getString().equals("String")) {
+        // Fold String(a) to ''+(a) - which allows further optimizations
+        Node value = callTarget.getNext();
++ 	if (value != null) {
++ 		if (value.getNext() != null || !NodeUtil.isImmutableValue(value)) {
++ 			return n;
++ 		}
++ 	}
+        if (value != null) {
+          Node addition = IR.add(
+              IR.string("").srcref(callTarget),

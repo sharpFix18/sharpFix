@@ -1,0 +1,21 @@
+*** /home/qx5/elixir_bdj_bugs/math/bugs-dot-jar_MATH-781_3c4cb189//src/main/java/org/apache/commons/math3/optimization/linear/SimplexTableau.java	Fri Jun 22 06:21:17 2018
+--- /home/qx5/sharpfix_expts_bdj/repair/repairflag2_faulocflag0_cignoreflag0/bugs-dot-jar_MATH-781_3c4cb189/e0/f2/repair/c1/m0/p0/SimplexTableau.java	Fri Jul 13 04:02:18 2018
+***************
+*** 336,342 ****
+          for (int i = getNumObjectiveFunctions(); i < getArtificialVariableOffset(); i++) {
+              final double entry = tableau.getEntry(0, i);
+              if (Precision.compareTo(entry, 0d, maxUlps) > 0) {
+!                 columnsToDrop.add(i);
+              }
+          }
+  
+--- 336,344 ----
+          for (int i = getNumObjectiveFunctions(); i < getArtificialVariableOffset(); i++) {
+              final double entry = tableau.getEntry(0, i);
+              if (Precision.compareTo(entry, 0d, maxUlps) > 0) {
+!                 if (Precision.compareTo(entry, 0d, epsilon) > 0) {
+! 					columnsToDrop.add(i);
+! 				}
+              }
+          }
+  

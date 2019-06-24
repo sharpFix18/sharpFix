@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/maths/projs/Math_62_buggy/src/main/java/org/apache/commons/math/optimization/univariate/MultiStartUnivariateRealOptimizer.java	Mon Feb 20 17:09:11 2017
+--- /home/qx5/ssFix_expts/repair/repairflag0_faulocflag0_cignoreflag0/Math_62/e0/patches/f2/c224/p0/MultiStartUnivariateRealOptimizer.java	Thu Jan  4 17:06:42 2018
+***************
+*** 153,159 ****
+                  final double bound1 = (i == 0) ? min : min + generator.nextDouble() * (max - min);
+                  final double bound2 = (i == 0) ? max : min + generator.nextDouble() * (max - min);
+                  optima[i] = optimizer.optimize(f, goal,
+!                                                FastMath.min(bound1, bound2),
+                                                 FastMath.max(bound1, bound2));
+              } catch (FunctionEvaluationException fee) {
+                  optima[i] = null;
+--- 153,159 ----
+                  final double bound1 = (i == 0) ? min : min + generator.nextDouble() * (max - min);
+                  final double bound2 = (i == 0) ? max : min + generator.nextDouble() * (max - min);
+                  optima[i] = optimizer.optimize(f, goal,
+!                                                FastMath.min(bound1, min),
+                                                 FastMath.max(bound1, bound2));
+              } catch (FunctionEvaluationException fee) {
+                  optima[i] = null;

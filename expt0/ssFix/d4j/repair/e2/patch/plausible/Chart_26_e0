@@ -1,0 +1,20 @@
+*** /home/qx5/defects4j_bugs/bugs/charts/projs/Chart_26_buggy/source/org/jfree/chart/axis/Axis.java	Wed Sep 14 14:57:17 2016
+--- /home/qx5/ssFix_expts/repair/repairflag0_faulocflag3_cignoreflag0/Chart_26/e0/patches/f0/c64/p2/Axis.java	Sun Dec 24 23:20:02 2017
+***************
+*** 1188,1195 ****
+  
+          }
+          if (plotState != null && hotspot != null) {
+!             EntityCollection entities = plotState.getOwner()
+!                     .getEntityCollection();
+              if (entities != null) {
+                  entities.add(new AxisLabelEntity(this, hotspot, 
+                          this.labelToolTip, this.labelURL));
+--- 1188,1194 ----
+  
+          }
+          if (plotState != null && hotspot != null) {
+!             EntityCollection entities = null;
+              if (entities != null) {
+                  entities.add(new AxisLabelEntity(this, hotspot, 
+                          this.labelToolTip, this.labelURL));

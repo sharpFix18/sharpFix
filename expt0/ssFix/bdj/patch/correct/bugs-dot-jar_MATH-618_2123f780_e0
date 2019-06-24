@@ -1,0 +1,22 @@
+*** /home/qx5/elixir_bdj_bugs/math/bugs-dot-jar_MATH-618_2123f780//src/main/java/org/apache/commons/math/complex/Complex.java	Fri Jun 22 06:20:27 2018
+--- /home/qx5/ssFix_expts_bdj/repair/repairflag0_faulocflag0_cignoreflag0/bugs-dot-jar_MATH-618_2123f780/e0/patches/f0/c10/p3/Complex.java	Sat Jul 28 10:13:02 2018
+***************
+*** 150,156 ****
+      public Complex add(Complex rhs)
+          throws NullArgumentException {
+          MathUtils.checkNotNull(rhs);
+!         return createComplex(real + rhs.getReal(),
+              imaginary + rhs.getImaginary());
+      }
+  
+--- 150,159 ----
+      public Complex add(Complex rhs)
+          throws NullArgumentException {
+          MathUtils.checkNotNull(rhs);
+!         if (isNaN || rhs.isNaN) {
+! 			return NaN;
+! 		}
+! 		return createComplex(real + rhs.getReal(),
+              imaginary + rhs.getImaginary());
+      }
+  

@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/maths/projs/Math_65_buggy/src/main/java/org/apache/commons/math/optimization/general/AbstractLeastSquaresOptimizer.java	Mon Feb 20 17:10:05 2017
+--- /home/qx5/sharpfix_expts/repair/repairflag2_faulocflag0_cignoreflag0/Math_65/e0/f1/repair/c2/p2/AbstractLeastSquaresOptimizer.java	Fri Feb  2 20:32:18 2018
+***************
+*** 253,259 ****
+          double chiSquare = 0;
+          for (int i = 0; i < rows; ++i) {
+              final double residual = residuals[i];
+!             chiSquare += residual * residual / residualsWeights[i];
+          }
+          return chiSquare;
+      }
+--- 253,259 ----
+          double chiSquare = 0;
+          for (int i = 0; i < rows; ++i) {
+              final double residual = residuals[i];
+!             chiSquare += residualsWeights[i] * residual * residual;
+          }
+          return chiSquare;
+      }

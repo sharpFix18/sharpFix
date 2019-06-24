@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/closures/projs/Closure_12_buggy/src/com/google/javascript/jscomp/FlowSensitiveInlineVariables.java	Mon Feb 20 16:45:38 2017
+--- /home/qx5/sharpfix_expts/repair/repairflag2_faulocflag0_cignoreflag0/Closure_12/e0/f3/repair/c25/p2/FlowSensitiveInlineVariables.java	Sat Feb  3 07:33:40 2018
+***************
+*** 109,115 ****
+          }
+  
+          for (Node c = n.getFirstChild(); c != null; c = c.getNext()) {
+!           if (!ControlFlowGraph.isEnteringNewCfgNode(c) && apply(c)) {
+              return true;
+            }
+          }
+--- 109,115 ----
+          }
+  
+          for (Node c = n.getFirstChild(); c != null; c = c.getNext()) {
+!           if (!c.isEmpty() && apply(c)) {
+              return true;
+            }
+          }

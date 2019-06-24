@@ -1,0 +1,21 @@
+*** /home/qx5/defects4j_bugs/bugs/maths/projs/Math_60_buggy/src/main/java/org/apache/commons/math/util/ContinuedFraction.java	Mon Feb 20 17:07:19 2017
+--- /home/qx5/sharpfix_expts/repair/repairflag2_faulocflag0_cignoreflag0/Math_60/e0/f0/repair/c72/p0/ContinuedFraction.java	Fri Feb  2 14:49:34 2018
+***************
+*** 183,191 ****
+              double r = p2 / q2;
+  
+              if (Double.isNaN(r)) {
+!                 throw new ConvergenceException(
+!                   LocalizedFormats.CONTINUED_FRACTION_NAN_DIVERGENCE,
+!                   x);
+              }
+              relativeError = FastMath.abs(r / c - 1.0);
+  
+--- 183,189 ----
+              double r = p2 / q2;
+  
+              if (Double.isNaN(r)) {
+!                 throw new MaxIterationsExceededException(maxIterations, LocalizedFormats.NON_CONVERGENT_CONTINUED_FRACTION, x);
+              }
+              relativeError = FastMath.abs(r / c - 1.0);
+  

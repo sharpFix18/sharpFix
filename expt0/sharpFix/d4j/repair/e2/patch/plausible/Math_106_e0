@@ -1,0 +1,135 @@
+*** /home/qx5/defects4j_bugs/bugs/maths/projs/Math_106_buggy/src/java/org/apache/commons/math/fraction/ProperFractionFormat.java	Mon Feb 20 17:21:10 2017
+--- /home/qx5/sharpfix_expts/repair/repairflag2_faulocflag3_cignoreflag0/Math_106/e0/f0/repair/c5/m0/p1/ProperFractionFormat.java	Wed Jan 31 15:01:06 2018
+***************
+*** 128,204 ****
+       * @return the parsed {@link Fraction} object.
+       */
+      public Fraction parse(String source, ParsePosition pos) {
+-         // try to parse improper fraction
+          Fraction ret = super.parse(source, pos);
+!         if (ret != null) {
+!             return ret;
+!         }
+!         
+!         int initialIndex = pos.getIndex();
+! 
+!         // parse whitespace
+!         parseAndIgnoreWhitespace(source, pos);
+! 
+!         // parse whole
+!         Number whole = getWholeFormat().parse(source, pos);
+!         if (whole == null) {
+!             // invalid integer number
+!             // set index back to initial, error index should already be set
+!             // character examined.
+!             pos.setIndex(initialIndex);
+!             return null;
+!         }
+! 
+!         // parse whitespace
+!         parseAndIgnoreWhitespace(source, pos);
+!         
+!         // parse numerator
+!         Number num = getNumeratorFormat().parse(source, pos);
+!         if (num == null) {
+!             // invalid integer number
+!             // set index back to initial, error index should already be set
+!             // character examined.
+!             pos.setIndex(initialIndex);
+!             return null;
+!         }
+! 
+!         // parse '/'
+!         int startIndex = pos.getIndex();
+!         char c = parseNextCharacter(source, pos);
+!         switch (c) {
+!         case 0 :
+!             // no '/'
+!             // return num as a fraction
+!             return new Fraction(num.intValue(), 1);
+!         case '/' :
+!             // found '/', continue parsing denominator
+!             break;
+!         default :
+!             // invalid '/'
+!             // set index back to initial, error index should be the last
+!             // character examined.
+!             pos.setIndex(initialIndex);
+!             pos.setErrorIndex(startIndex);
+!             return null;
+!         }
+! 
+!         // parse whitespace
+!         parseAndIgnoreWhitespace(source, pos);
+! 
+!         // parse denominator
+!         Number den = getDenominatorFormat().parse(source, pos);
+!         if (den == null) {
+!             // invalid integer number
+!             // set index back to initial, error index should already be set
+!             // character examined.
+!             pos.setIndex(initialIndex);
+!             return null;
+!         }
+! 
+!         int w = whole.intValue();
+!         int n = num.intValue();
+!         int d = den.intValue();
+!         return new Fraction(((Math.abs(w) * d) + n) * MathUtils.sign(w), d);
+      }
+      
+      /**
+--- 128,180 ----
+       * @return the parsed {@link Fraction} object.
+       */
+      public Fraction parse(String source, ParsePosition pos) {
+          Fraction ret = super.parse(source, pos);
+! 		if (ret != null) {
+! 			return ret;
+! 		}
+! 		int initialIndex = pos.getIndex();
+! 		parseAndIgnoreWhitespace(source, pos);
+! 		Number whole = getWholeFormat().parse(source, pos);
+! 		if (whole == null) {
+! 			pos.setIndex(initialIndex);
+! 			return null;
+! 		}
+! 		parseAndIgnoreWhitespace(source, pos);
+! 		Number num = getNumeratorFormat().parse(source, pos);
+! 		if (num == null) {
+! 			pos.setIndex(initialIndex);
+! 			return null;
+! 		}
+! 		if (num.intValue() < 0) {
+! 			pos.setIndex(initialIndex);
+! 			return null;
+! 		}
+! 		int startIndex = pos.getIndex();
+! 		char c = parseNextCharacter(source, pos);
+! 		switch (c) {
+! 		case 0:
+! 			return new Fraction(num.intValue(), 1);
+! 		case '/':
+! 			break;
+! 		default:
+! 			pos.setIndex(initialIndex);
+! 			pos.setErrorIndex(startIndex);
+! 			return null;
+! 		}
+! 		parseAndIgnoreWhitespace(source, pos);
+! 		Number den = getDenominatorFormat().parse(source, pos);
+! 		if (den == null) {
+! 			pos.setIndex(initialIndex);
+! 			return null;
+! 		}
+! 		if (den.intValue() < 0) {
+! 			pos.setIndex(initialIndex);
+! 			return null;
+! 		}
+! 		int w = whole.intValue();
+! 		int n = num.intValue();
+! 		int d = den.intValue();
+! 		return new Fraction(((Math.abs(w) * d) + n) * MathUtils.sign(w), d);
+      }
+      
+      /**

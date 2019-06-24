@@ -1,0 +1,12 @@
+*** /home/qx5/elixir_bdj_bugs/jackrabbit-oak/bugs-dot-jar_OAK-1959_93c1aa40/oak-core/src/main/java/org/apache/jackrabbit/oak/plugins/index/AsyncIndexUpdate.java	Wed Jun 13 21:02:23 2018
+--- /home/qx5/ssFix_expts_bdj/repair/repairflag0_faulocflag0_cignoreflag0/bugs-dot-jar_OAK-1959_93c1aa40/e0/patches/f10/c1/p5/AsyncIndexUpdate.java	Sat Jul 28 01:07:27 2018
+***************
+*** 198,204 ****
+                  log.warn("Failed to retrieve previously indexed checkpoint {};"
+                          + " re-running the initial {} index update",
+                          beforeCheckpoint, name);
+-                 beforeCheckpoint = null;
+                  before = MISSING_NODE;
+              } else if (noVisibleChanges(state, root)) {
+                  log.debug("No changes since last checkpoint;"
+--- 198,203 ----

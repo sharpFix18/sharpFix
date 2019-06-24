@@ -1,0 +1,22 @@
+*** /home/qx5/defects4j_bugs/bugs/maths/projs/Math_25_buggy/src/main/java/org/apache/commons/math3/optimization/fitting/HarmonicFitter.java	Sun May 22 10:56:33 2016
+--- /home/qx5/sharpfix_expts/repair/repairflag5_faulocflag0_cignoreflag0/Math_25/e0/repair/c5/m0/p1/HarmonicFitter.java	Tue Jan 30 22:23:52 2018
+***************
+*** 320,326 ****
+                  }
+                  a = 0.5 * (yMax - yMin);
+              } else {
+!                 a = FastMath.sqrt(c1 / c2);
+                  omega = FastMath.sqrt(c2 / c3);
+              }
+          }
+--- 320,329 ----
+                  }
+                  a = 0.5 * (yMax - yMin);
+              } else {
+!                 if (c2 == 0) {
+! 					throw new MathIllegalStateException(LocalizedFormats.ZERO_DENOMINATOR);
+! 				}
+! 				a = FastMath.sqrt(c1 / c2);
+                  omega = FastMath.sqrt(c2 / c3);
+              }
+          }

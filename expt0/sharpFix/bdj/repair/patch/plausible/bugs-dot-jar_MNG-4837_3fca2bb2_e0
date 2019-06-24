@@ -1,0 +1,19 @@
+*** /home/qx5/elixir_bdj_bugs/maven/bugs-dot-jar_MNG-4837_3fca2bb2/maven-model-builder/src/main/java/org/apache/maven/model/building/DefaultModelBuildingRequest.java	Wed Jun 13 20:47:47 2018
+--- /home/qx5/sharpfix_expts_bdj/repair/repairflag2_faulocflag0_cignoreflag0/bugs-dot-jar_MNG-4837_3fca2bb2/e0/f4/repair/c32/p0/DefaultModelBuildingRequest.java	Thu Jul 12 08:17:59 2018
+***************
+*** 278,284 ****
+  
+      public DefaultModelBuildingRequest setUserProperties( Properties userProperties )
+      {
+!         if ( userProperties != null )
+          {
+              this.userProperties = new Properties();
+              this.userProperties.putAll( userProperties );
+--- 278,284 ----
+  
+      public DefaultModelBuildingRequest setUserProperties( Properties userProperties )
+      {
+!         if ( systemProperties != null )
+          {
+              this.userProperties = new Properties();
+              this.userProperties.putAll( userProperties );

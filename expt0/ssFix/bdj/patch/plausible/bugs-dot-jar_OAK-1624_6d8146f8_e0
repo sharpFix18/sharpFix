@@ -1,0 +1,19 @@
+*** /home/qx5/elixir_bdj_bugs/jackrabbit-oak/bugs-dot-jar_OAK-1624_6d8146f8/oak-core/src/main/java/org/apache/jackrabbit/oak/plugins/name/Namespaces.java	Wed Jun 13 21:01:58 2018
+--- /home/qx5/ssFix_expts_bdj/repair/repairflag0_faulocflag0_cignoreflag0/bugs-dot-jar_OAK-1624_6d8146f8/e0/patches/f2/c4/p4/Namespaces.java	Fri Jul 27 23:16:14 2018
+***************
+*** 244,250 ****
+  
+          for (int i = 0; i < local.length(); i++) {
+              char ch = local.charAt(i);
+!             if ("/:[]|*".indexOf(ch) != -1) { // TODO: XMLChar check
+                  return false;
+              }
+          }
+--- 244,250 ----
+  
+          for (int i = 0; i < local.length(); i++) {
+              char ch = local.charAt(i);
+!             if ("/:[]|*".indexOf(ch) != -1 || " ()\t\n".indexOf(ch) != -1) { // TODO: XMLChar check
+                  return false;
+              }
+          }

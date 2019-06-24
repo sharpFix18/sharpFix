@@ -1,0 +1,48 @@
+*** /home/qx5/defects4j_bugs/bugs/maths/projs/Math_42_buggy/src/main/java/org/apache/commons/math/optimization/linear/SimplexTableau.java	Tue Oct 13 14:58:05 2015
+--- /home/qx5/sharpfix_expts/repair/repairflag2_faulocflag3_cignoreflag0/Math_42/e0/f5/repair/c1/m0/p1/SimplexTableau.java	Thu Feb  1 00:08:20 2018
+***************
+*** 402,422 ****
+        double[] coefficients = new double[getOriginalNumDecisionVariables()];
+        for (int i = 0; i < coefficients.length; i++) {
+            int colIndex = columnLabels.indexOf("x" + i);
+!           if (colIndex < 0) {
+!             coefficients[i] = 0;
+!             continue;
+!           }
+!           Integer basicRow = getBasicRow(colIndex);
+!           if (basicRows.contains(basicRow)) {
+!               // if multiple variables can take a given value
+!               // then we choose the first and set the rest equal to 0
+!               coefficients[i] = 0 - (restrictToNonNegative ? 0 : mostNegative);
+!           } else {
+!               basicRows.add(basicRow);
+!               coefficients[i] =
+!                   (basicRow == null ? 0 : getEntry(basicRow, getRhsOffset())) -
+!                   (restrictToNonNegative ? 0 : mostNegative);
+!           }
+        }
+        return new RealPointValuePair(coefficients, f.getValue(coefficients));
+      }
+--- 402,423 ----
+        double[] coefficients = new double[getOriginalNumDecisionVariables()];
+        for (int i = 0; i < coefficients.length; i++) {
+            int colIndex = columnLabels.indexOf("x" + i);
+! 		if (colIndex < 0) {
+! 			coefficients[i] = 0;
+! 			continue;
+! 		}
+! 		Integer basicRow = getBasicRow(colIndex);
+! 		if (basicRow != null && basicRow == 0) {
+! 			coefficients[i] = 0;
+! 		} else {
+! 			if (basicRows.contains(basicRow)) {
+! 				coefficients[i] = 0 - (restrictToNonNegative ? 0 : mostNegative);
+! 			} else {
+! 				basicRows.add(basicRow);
+! 				coefficients[i] = (basicRow == null ? 0 : getEntry(basicRow, getRhsOffset()))
+! 						- (restrictToNonNegative ? 0 : mostNegative);
+! 			}
+! 		}
+        }
+        return new RealPointValuePair(coefficients, f.getValue(coefficients));
+      }

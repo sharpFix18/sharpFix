@@ -1,0 +1,19 @@
+*** /home/qx5/elixir_bdj_bugs/wicket/bugs-dot-jar_WICKET-4276_32c76c4a/wicket-extensions/src/main/java/org/apache/wicket/extensions/markup/html/form/select/Select.java	Fri Jun 22 04:41:04 2018
+--- /home/qx5/ssFix_expts_bdj/repair/repairflag0_faulocflag0_cignoreflag0/bugs-dot-jar_WICKET-4276_32c76c4a/e0/patches/f0/c63/p1/Select.java	Tue Aug  7 20:20:41 2018
+***************
+*** 228,234 ****
+  			{
+  				for (String path : paths)
+  				{
+! 					if (path.equals(option.getPath()))
+  					{
+  						return true;
+  					}
+--- 228,234 ----
+  			{
+  				for (String path : paths)
+  				{
+! 					if (!path.equals(option.getPath()))
+  					{
+  						return true;
+  					}

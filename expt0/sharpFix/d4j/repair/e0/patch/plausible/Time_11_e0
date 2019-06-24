@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/times/projs/Time_11_buggy/src/main/java/org/joda/time/tz/DateTimeZoneBuilder.java	Wed Apr  6 20:13:54 2016
+--- /home/qx5/sharpfix_expts/repair/repairflag2_faulocflag0_cignoreflag0/Time_11/e0/f2/repair/c17/p6/DateTimeZoneBuilder.java	Sat Feb  3 05:39:12 2018
+***************
+*** 1457,1463 ****
+              if (tailZone != null) {
+                  if (tailZone.iStartRecurrence.getNameKey()
+                      .equals(tailZone.iEndRecurrence.getNameKey())) {
+!                     if (ZoneInfoCompiler.verbose()) {
+                          System.out.println("Fixing duplicate recurrent name key - " +
+                                             tailZone.iStartRecurrence.getNameKey());
+                      }
+--- 1457,1463 ----
+              if (tailZone != null) {
+                  if (tailZone.iStartRecurrence.getNameKey()
+                      .equals(tailZone.iEndRecurrence.getNameKey())) {
+!                     if (transitions.size() == 1 && tailZone == null) {
+                          System.out.println("Fixing duplicate recurrent name key - " +
+                                             tailZone.iStartRecurrence.getNameKey());
+                      }

@@ -1,0 +1,15 @@
+*** /home/qx5/elixir_bdj_bugs/jackrabbit-oak/bugs-dot-jar_OAK-1035_b2ca8baa/oak-core/src/main/java/org/apache/jackrabbit/oak/plugins/index/property/strategy/ContentMirrorStoreStrategy.java	Wed Jun 13 20:57:54 2018
+--- /home/qx5/ssFix_expts_bdj/repair/repairflag0_faulocflag0_cignoreflag0/bugs-dot-jar_OAK-1035_b2ca8baa/e0/patches/f0/c6/p1/ContentMirrorStoreStrategy.java	Fri Jul 27 16:29:10 2018
+***************
+*** 163,172 ****
+              max = Math.max(10, max / size);
+              int i = 0;
+              for (String p : values) {
+-                 if (count > max && i > 3) {
+-                     count = count / size / i;
+-                     break;
+-                 }
+                  NodeState s = index.getChildNode(p);
+                  if (s.exists()) {
+                      CountingNodeVisitor v = new CountingNodeVisitor(max);
+--- 163,168 ----

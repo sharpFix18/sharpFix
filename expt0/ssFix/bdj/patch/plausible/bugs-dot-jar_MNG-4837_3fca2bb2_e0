@@ -1,0 +1,12 @@
+*** /home/qx5/elixir_bdj_bugs/maven/bugs-dot-jar_MNG-4837_3fca2bb2/maven-model-builder/src/main/java/org/apache/maven/model/interpolation/StringSearchModelInterpolator.java	Wed Jun 13 20:47:48 2018
+--- /home/qx5/ssFix_expts_bdj/repair/repairflag0_faulocflag0_cignoreflag0/bugs-dot-jar_MNG-4837_3fca2bb2/e0/patches/f0/c0/p0/StringSearchModelInterpolator.java	Fri Jul 27 18:28:15 2018
+***************
+*** 261,267 ****
+                                                      }
+                                                      else
+                                                      {
+-                                                         interpolationTargets.add( value );
+                                                      }
+                                                  }
+                                              }
+--- 261,266 ----

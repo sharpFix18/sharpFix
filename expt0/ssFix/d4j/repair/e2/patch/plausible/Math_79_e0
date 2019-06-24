@@ -1,0 +1,21 @@
+*** /home/qx5/defects4j_bugs/bugs/maths/projs/Math_79_buggy/src/main/java/org/apache/commons/math/util/MathUtils.java	Tue Sep 20 15:21:47 2016
+--- /home/qx5/ssFix_expts/repair/repairflag0_faulocflag3_cignoreflag0/Math_79/e0/patches/f0/c2/p1/MathUtils.java	Mon Dec 25 03:48:58 2017
+***************
+*** 1623,1630 ****
+      public static double distance(int[] p1, int[] p2) {
+        int sum = 0;
+        for (int i = 0; i < p1.length; i++) {
+!           final int dp = p1[i] - p2[i];
+!           sum += dp * dp;
+        }
+        return Math.sqrt(sum);
+      }
+--- 1623,1630 ----
+      public static double distance(int[] p1, int[] p2) {
+        int sum = 0;
+        for (int i = 0; i < p1.length; i++) {
+!           final double dp = p1[i] - p2[i];
+! 		sum += dp * dp;
+        }
+        return Math.sqrt(sum);
+      }

@@ -1,0 +1,1224 @@
+2018-08-08 00:35:33,477 INFO main - command line arguments: [-jvm4testexecution  /home/qxin/jdk1.8.0_111/bin  -dependencies  /home/qx5/elixir_bdj_bugs/math/bugs-dot-jar_MATH-288_38983e82/all0.jar  -id  bugs-dot-jar_MATH-288_38983e82  -failing  org.apache.commons.math.optimization.linear.SimplexSolverTest  -mode  statement-remove  -location  /home/qx5/elixir_bdj_bugs/math/bugs-dot-jar_MATH-288_38983e82  -package  org.apache.commons  -maxtime  120  -stopfirst  true  -srcjavafolder  ///src/main/java/  -srctestfolder  ///src/test/java/  -binjavafolder  ///target/classes/  -bintestfolder  ///target/test-classes/  -out  /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MATH-288_38983e82/r1]
+2018-08-08 00:36:19,720 INFO main - -Executing Gzoltar classpath: /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MATH-288_38983e82/r1/AstorMain-bugs-dot-jar_MATH-288_38983e82//bin//default from 224 classes with test cases
+2018-08-08 00:36:19,723 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Gzoltar fault localization: min susp value parameter: 0.1
+2018-08-08 00:36:20,557 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - -gz-Adding classpath: [/home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MATH-288_38983e82/r1/AstorMain-bugs-dot-jar_MATH-288_38983e82//bin//default, /home/qx5/elixir_bdj_bugs/math/bugs-dot-jar_MATH-288_38983e82/all0.jar]
+2018-08-08 00:36:52,512 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.apache.commons.math.ode.nonstiff.GraggBulirschStoerStepInterpolatorTest#derivativesConsistency
+2018-08-08 00:36:52,513 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Test failt: org.apache.commons.math.optimization.linear.SimplexSolverTest#testMath288
+2018-08-08 00:36:52,532 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Gzoltar Test Result Total:2056, fails: 2, GZoltar suspicious 16966
+2018-08-08 00:36:52,631 INFO fr.inria.astor.core.faultlocalization.GZoltarFaultLocalization - Gzoltar found: 562 with susp > 0.1, we consider: 562
+2018-08-08 00:36:52,644 INFO main - building model: /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MATH-288_38983e82/r1/AstorMain-bugs-dot-jar_MATH-288_38983e82//src//default, compliance level: 8
+2018-08-08 00:38:08,421 INFO main - 
+---- Initial suspicious size: 562
+2018-08-08 00:38:09,435 INFO main -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{requiresDenseOutput()Z 0.0, lineNumber=35, susp=0.23570226039551587]
+2018-08-08 00:38:09,435 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{requiresDenseOutput()Z 0.0, lineNumber=35, susp=0.23570226039551587]
+2018-08-08 00:38:09,480 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator, methodName=org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator{integrate(Lorg/apache/commons/math/ode/FirstOrderDifferentialEquations;D[DD[D)D 0.0, lineNumber=708, susp=0.23570226039551587]
+2018-08-08 00:38:09,960 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator, methodName=org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator{integrate(Lorg/apache/commons/math/ode/FirstOrderDifferentialEquations;D[DD[D)D 0.0, lineNumber=864, susp=0.23570226039551587]
+2018-08-08 00:38:10,119 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.nonstiff.GraggBulirschStoerStepInterpolator, methodName=org.apache.commons.math.ode.nonstiff.GraggBulirschStoerStepInterpolator{computeCoefficients(ID)V 0.0, lineNumber=289, susp=0.23570226039551587]
+2018-08-08 00:38:10,168 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.nonstiff.GraggBulirschStoerStepInterpolator, methodName=org.apache.commons.math.ode.nonstiff.GraggBulirschStoerStepInterpolator{computeInterpolatedStateAndDerivatives(DD)V 0.0, lineNumber=353, susp=0.23570226039551587]
+2018-08-08 00:38:10,169 INFO main -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=41, susp=0.22360679774997896]
+2018-08-08 00:38:10,169 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=41, susp=0.22360679774997896]
+2018-08-08 00:38:10,170 INFO main -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=42, susp=0.22360679774997896]
+2018-08-08 00:38:10,170 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=42, susp=0.22360679774997896]
+2018-08-08 00:38:10,170 INFO main -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=44, susp=0.22360679774997896]
+2018-08-08 00:38:10,170 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=44, susp=0.22360679774997896]
+2018-08-08 00:38:10,170 INFO main -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=48, susp=0.22360679774997896]
+2018-08-08 00:38:10,170 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=48, susp=0.22360679774997896]
+2018-08-08 00:38:10,170 INFO main -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=49, susp=0.22360679774997896]
+2018-08-08 00:38:10,170 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=49, susp=0.22360679774997896]
+2018-08-08 00:38:10,170 INFO main -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=50, susp=0.22360679774997896]
+2018-08-08 00:38:10,170 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=50, susp=0.22360679774997896]
+2018-08-08 00:38:10,170 INFO main -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=51, susp=0.22360679774997896]
+2018-08-08 00:38:10,170 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=51, susp=0.22360679774997896]
+2018-08-08 00:38:10,170 INFO main -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=52, susp=0.22360679774997896]
+2018-08-08 00:38:10,170 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=52, susp=0.22360679774997896]
+2018-08-08 00:38:10,171 INFO main -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=53, susp=0.22360679774997896]
+2018-08-08 00:38:10,171 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=53, susp=0.22360679774997896]
+2018-08-08 00:38:10,171 INFO main -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=54, susp=0.22360679774997896]
+2018-08-08 00:38:10,171 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=54, susp=0.22360679774997896]
+2018-08-08 00:38:10,171 INFO main -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=55, susp=0.22360679774997896]
+2018-08-08 00:38:10,171 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=55, susp=0.22360679774997896]
+2018-08-08 00:38:10,171 INFO main -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=56, susp=0.22360679774997896]
+2018-08-08 00:38:10,171 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=56, susp=0.22360679774997896]
+2018-08-08 00:38:10,171 INFO main -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=57, susp=0.22360679774997896]
+2018-08-08 00:38:10,172 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=57, susp=0.22360679774997896]
+2018-08-08 00:38:10,172 INFO main -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=58, susp=0.22360679774997896]
+2018-08-08 00:38:10,172 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=58, susp=0.22360679774997896]
+2018-08-08 00:38:10,172 INFO main -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=59, susp=0.22360679774997896]
+2018-08-08 00:38:10,172 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=59, susp=0.22360679774997896]
+2018-08-08 00:38:10,172 INFO main -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=60, susp=0.22360679774997896]
+2018-08-08 00:38:10,172 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=60, susp=0.22360679774997896]
+2018-08-08 00:38:10,172 INFO main -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=61, susp=0.22360679774997896]
+2018-08-08 00:38:10,172 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=61, susp=0.22360679774997896]
+2018-08-08 00:38:10,172 INFO main -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=62, susp=0.22360679774997896]
+2018-08-08 00:38:10,172 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=62, susp=0.22360679774997896]
+2018-08-08 00:38:10,172 INFO main -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=63, susp=0.22360679774997896]
+2018-08-08 00:38:10,172 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=63, susp=0.22360679774997896]
+2018-08-08 00:38:10,172 INFO main -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=65, susp=0.22360679774997896]
+2018-08-08 00:38:10,172 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=65, susp=0.22360679774997896]
+2018-08-08 00:38:10,172 INFO main -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=66, susp=0.22360679774997896]
+2018-08-08 00:38:10,172 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=66, susp=0.22360679774997896]
+2018-08-08 00:38:10,172 INFO main -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=68, susp=0.22360679774997896]
+2018-08-08 00:38:10,173 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=68, susp=0.22360679774997896]
+2018-08-08 00:38:10,173 INFO main -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=69, susp=0.22360679774997896]
+2018-08-08 00:38:10,173 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=69, susp=0.22360679774997896]
+2018-08-08 00:38:10,173 INFO main -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=73, susp=0.22360679774997896]
+2018-08-08 00:38:10,173 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=73, susp=0.22360679774997896]
+2018-08-08 00:38:10,173 INFO main -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=76, susp=0.22360679774997896]
+2018-08-08 00:38:10,173 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{handleStep(Lorg/apache/commons/math/ode/sampling/StepInterpolator;Z)V 0.0, lineNumber=76, susp=0.22360679774997896]
+2018-08-08 00:38:10,173 INFO main -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{reset()V 0.0, lineNumber=79, susp=0.22360679774997896]
+2018-08-08 00:38:10,173 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils$1{reset()V 0.0, lineNumber=79, susp=0.22360679774997896]
+2018-08-08 00:38:10,173 INFO main -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils{checkDerivativesConsistency(Lorg/apache/commons/math/ode/FirstOrderIntegrator;Lorg/apache/commons/math/ode/TestProblemAbstract;D)V 0.0, lineNumber=32, susp=0.22360679774997896]
+2018-08-08 00:38:10,173 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils{checkDerivativesConsistency(Lorg/apache/commons/math/ode/FirstOrderIntegrator;Lorg/apache/commons/math/ode/TestProblemAbstract;D)V 0.0, lineNumber=32, susp=0.22360679774997896]
+2018-08-08 00:38:10,173 INFO main -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils{checkDerivativesConsistency(Lorg/apache/commons/math/ode/FirstOrderIntegrator;Lorg/apache/commons/math/ode/TestProblemAbstract;D)V 0.0, lineNumber=83, susp=0.22360679774997896]
+2018-08-08 00:38:10,173 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils{checkDerivativesConsistency(Lorg/apache/commons/math/ode/FirstOrderIntegrator;Lorg/apache/commons/math/ode/TestProblemAbstract;D)V 0.0, lineNumber=83, susp=0.22360679774997896]
+2018-08-08 00:38:10,174 INFO main -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils{checkDerivativesConsistency(Lorg/apache/commons/math/ode/FirstOrderIntegrator;Lorg/apache/commons/math/ode/TestProblemAbstract;D)V 0.0, lineNumber=84, susp=0.22360679774997896]
+2018-08-08 00:38:10,174 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils{checkDerivativesConsistency(Lorg/apache/commons/math/ode/FirstOrderIntegrator;Lorg/apache/commons/math/ode/TestProblemAbstract;D)V 0.0, lineNumber=84, susp=0.22360679774997896]
+2018-08-08 00:38:10,174 INFO main -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils{checkDerivativesConsistency(Lorg/apache/commons/math/ode/FirstOrderIntegrator;Lorg/apache/commons/math/ode/TestProblemAbstract;D)V 0.0, lineNumber=85, susp=0.22360679774997896]
+2018-08-08 00:38:10,174 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils, methodName=org.apache.commons.math.ode.sampling.StepInterpolatorTestUtils{checkDerivativesConsistency(Lorg/apache/commons/math/ode/FirstOrderIntegrator;Lorg/apache/commons/math/ode/TestProblemAbstract;D)V 0.0, lineNumber=85, susp=0.22360679774997896]
+2018-08-08 00:38:10,182 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator, methodName=org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator{addStepHandler(Lorg/apache/commons/math/ode/sampling/StepHandler;)V 0.0, lineNumber=290, susp=0.22360679774997896]
+2018-08-08 00:38:10,211 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator, methodName=org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator{integrate(Lorg/apache/commons/math/ode/FirstOrderDifferentialEquations;D[DD[D)D 0.0, lineNumber=585, susp=0.22360679774997896]
+2018-08-08 00:38:10,407 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator, methodName=org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator{integrate(Lorg/apache/commons/math/ode/FirstOrderDifferentialEquations;D[DD[D)D 0.0, lineNumber=757, susp=0.22360679774997896]
+2018-08-08 00:38:10,769 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator, methodName=org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator{integrate(Lorg/apache/commons/math/ode/FirstOrderDifferentialEquations;D[DD[D)D 0.0, lineNumber=939, susp=0.22360679774997896]
+2018-08-08 00:38:10,791 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.nonstiff.GraggBulirschStoerStepInterpolator, methodName=org.apache.commons.math.ode.nonstiff.GraggBulirschStoerStepInterpolator{resetTables(I)V 0.0, lineNumber=149, susp=0.22360679774997896]
+2018-08-08 00:38:10,795 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator, methodName=org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator{rescale([D[D[D)V 0.0, lineNumber=390, susp=0.21320071635561041]
+2018-08-08 00:38:10,866 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator, methodName=org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator{extrapolate(II[[D[D)V 0.0, lineNumber=496, susp=0.21320071635561041]
+2018-08-08 00:38:11,816 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator, methodName=org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator{setStabilityCheck(ZIID)V 0.0, lineNumber=178, susp=0.19611613513818404]
+2018-08-08 00:38:11,832 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator, methodName=org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator{setStepsizeControl(DDDD)V 0.0, lineNumber=231, susp=0.19611613513818404]
+2018-08-08 00:38:11,847 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator, methodName=org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator{setOrderControl(IDD)V 0.0, lineNumber=278, susp=0.19611613513818404]
+2018-08-08 00:38:11,881 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator, methodName=org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator{initializeArrays()V 0.0, lineNumber=348, susp=0.19611613513818404]
+2018-08-08 00:38:11,887 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator, methodName=org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator{setInterpolationControl(ZI)V 0.0, lineNumber=371, susp=0.19611613513818404]
+2018-08-08 00:38:11,896 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.optimization.linear.AbstractLinearOptimizer, methodName=org.apache.commons.math.optimization.linear.AbstractLinearOptimizer{setMaxIterations(I)V 0.0, lineNumber=68, susp=0.1889822365046136]
+2018-08-08 00:38:11,897 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.optimization.linear.AbstractLinearOptimizer, methodName=org.apache.commons.math.optimization.linear.AbstractLinearOptimizer{incrementIterationsCounter()V 0.0, lineNumber=89, susp=0.1889822365046136]
+2018-08-08 00:38:11,916 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.optimization.linear.SimplexSolver, methodName=org.apache.commons.math.optimization.linear.SimplexSolver{doIteration(Lorg/apache/commons/math/optimization/linear/SimplexTableau;)V 0.0, lineNumber=121, susp=0.1889822365046136]
+2018-08-08 00:38:11,921 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.optimization.linear.SimplexTableau, methodName=org.apache.commons.math.optimization.linear.SimplexTableau{divideRow(ID)V 0.0, lineNumber=373, susp=0.1889822365046136]
+2018-08-08 00:38:12,044 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.optimization.linear.SimplexTableau, methodName=org.apache.commons.math.optimization.linear.SimplexTableau{subtractRow(IID)V 0.0, lineNumber=391, susp=0.17149858514250882]
+2018-08-08 00:38:12,077 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.optimization.linear.SimplexTableau, methodName=org.apache.commons.math.optimization.linear.SimplexTableau{getNormalizedConstraints()Ljava/util/List; 0.0, lineNumber=201, susp=0.16666666666666666]
+2018-08-08 00:38:12,086 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.optimization.linear.SimplexTableau, methodName=org.apache.commons.math.optimization.linear.SimplexTableau{getConstraintTypeCounts(Lorg/apache/commons/math/optimization/linear/Relationship;)I 0.0, lineNumber=239, susp=0.16666666666666666]
+2018-08-08 00:38:12,088 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.optimization.linear.SimplexTableau, methodName=org.apache.commons.math.optimization.linear.SimplexTableau{initialize()V 0.0, lineNumber=252, susp=0.16666666666666666]
+2018-08-08 00:38:12,090 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.optimization.linear.SimplexTableau, methodName=org.apache.commons.math.optimization.linear.SimplexTableau{copyArray([D[DI)V 0.0, lineNumber=332, susp=0.16666666666666666]
+2018-08-08 00:38:12,121 INFO main - -any mod point created for suspicious Candidate [className=org.apache.commons.math.linear.ArrayRealVector, methodName=org.apache.commons.math.linear.ArrayRealVector{checkVectorDimensions(I)V 0.0, lineNumber=1292, susp=0.11180339887498948]
+2018-08-08 00:38:12,124 INFO main - Total suspicious from FL: 562,  489
+2018-08-08 00:38:12,124 INFO main - Total ModPoint created: 489
+2018-08-08 00:38:12,125 INFO main - Creating program variant #1, [Variant id: 1, #gens: 489, #ops: 0, parent:-]
+2018-08-08 00:38:15,548 INFO fr.inria.astor.core.setup.ConfigurationProperties - ----------------------------
+2018-08-08 00:38:15,548 INFO fr.inria.astor.core.setup.ConfigurationProperties - ---Configuration properties:---Execution values
+2018-08-08 00:38:15,549 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:packageToInstrument= org.apache.commons
+2018-08-08 00:38:15,549 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:flthreshold= 0.1
+2018-08-08 00:38:15,549 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:numberExecutions= 1
+2018-08-08 00:38:15,549 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evosuiteresultfolder= evosuite
+2018-08-08 00:38:15,549 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:ignoredTestCases= org.apache.commons.math.ode.nonstiff:org.apache.commons.math.ode2.nonstiff:org.apache.commons.lang.LocaleUtilsTest:org.apache.commons.math.ode.nonstiff.GraggBulirschStoerStepInterpolatorTest
+2018-08-08 00:38:15,549 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:skipfaultlocalization= false
+2018-08-08 00:38:15,549 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:maxGeneration= 200
+2018-08-08 00:38:15,549 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:maxsuspcandidates= 1000
+2018-08-08 00:38:15,549 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:tmax2= 960000
+2018-08-08 00:38:15,549 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:tmax1= 120000
+2018-08-08 00:38:15,549 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:workingDirectory= /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MATH-288_38983e82/r1
+2018-08-08 00:38:15,550 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:mode= statement-remove
+2018-08-08 00:38:15,550 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:ignoreflakyinfl= true
+2018-08-08 00:38:15,550 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:uniqueoptogen= false
+2018-08-08 00:38:15,550 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:testcasesregression= org.apache.commons.math.stat.data.LotteryTest:org.apache.commons.math.linear.FieldMatrixImplTest:org.apache.commons.math.ode.sampling.StepNormalizerTest:org.apache.commons.math.stat.descriptive.AggregateSummaryStatisticsTest:org.apache.commons.math.geometry.RotationOrderTest:org.apache.commons.math.analysis.solvers.NewtonSolverTest:org.apache.commons.math.estimation.EstimatedParameterTest:org.apache.commons.math.linear.CholeskyDecompositionImplTest:org.apache.commons.math.linear.Array2DRowRealMatrixTest:org.apache.commons.math.linear.SparseRealMatrixTest:org.apache.commons.math.util.OpenIntToFieldTest:org.apache.commons.math.stat.clustering.KMeansPlusPlusClustererTest:org.apache.commons.math.optimization.fitting.PolynomialFitterTest:org.apache.commons.math.linear.ArrayRealVectorTest:org.apache.commons.math.distribution.HypergeometricDistributionTest:org.apache.commons.math.random.RandomAdaptorTest:org.apache.commons.math.ode.FirstOrderConverterTest:org.apache.commons.math.stat.descriptive.SynchronizedSummaryStatisticsTest:org.apache.commons.math.stat.inference.TestUtilsTest:org.apache.commons.math.stat.data.LewTest:org.apache.commons.math.distribution.GammaDistributionTest:org.apache.commons.math.stat.descriptive.rank.MedianTest:org.apache.commons.math.distribution.ZipfDistributionTest:org.apache.commons.math.ode.nonstiff.DormandPrince54StepInterpolatorTest:org.apache.commons.math.stat.CertifiedDataTest:org.apache.commons.math.ode.nonstiff.HighamHall54IntegratorTest:org.apache.commons.math.complex.FrenchComplexFormatTest:org.apache.commons.math.ode.nonstiff.MidpointStepInterpolatorTest:org.apache.commons.math.analysis.polynomials.PolynomialsUtilsTest:org.apache.commons.math.DuplicateSampleAbscissaExceptionTest:org.apache.commons.math.estimation.MinpackTest:org.apache.commons.math.genetics.FixedGenerationCountTest:org.apache.commons.math.optimization.general.GaussNewtonOptimizerTest:org.apache.commons.math.fraction.BigFractionFormatTest:org.apache.commons.math.random.RandomDataTest:org.apache.commons.math.stat.descriptive.MixedListUnivariateImplTest:org.apache.commons.math.distribution.FDistributionTest:org.apache.commons.math.FunctionEvaluationExceptionTest:org.apache.commons.math.ode.sampling.NordsieckStepInterpolatorTest:org.apache.commons.math.stat.inference.TTestFactoryTest:org.apache.commons.math.stat.descriptive.moment.SkewnessTest:org.apache.commons.math.special.GammaTest:org.apache.commons.math.ode.nonstiff.EulerStepInterpolatorTest:org.apache.commons.math.analysis.integration.RombergIntegratorTest:org.apache.commons.math.ode.nonstiff.HighamHall54StepInterpolatorTest:org.apache.commons.math.analysis.integration.LegendreGaussIntegratorTest:org.apache.commons.math.stat.descriptive.SummaryStatisticsTest:org.apache.commons.math.ode.nonstiff.MidpointIntegratorTest:org.apache.commons.math.stat.descriptive.moment.FirstMomentTest:org.apache.commons.math.stat.descriptive.moment.StandardDeviationTest:org.apache.commons.math.complex.ComplexTest:org.apache.commons.math.distribution.BetaDistributionTest:org.apache.commons.math.special.BetaTest:org.apache.commons.math.special.ErfTest:org.apache.commons.math.ode.nonstiff.GillIntegratorTest:org.apache.commons.math.random.EmpiricalDistributionTest:org.apache.commons.math.stat.descriptive.MultivariateSummaryStatisticsTest:org.apache.commons.math.stat.descriptive.StatisticalSummaryValuesTest:org.apache.commons.math.stat.regression.OLSMultipleLinearRegressionTest:org.apache.commons.math.estimation.LevenbergMarquardtEstimatorTest:org.apache.commons.math.fraction.BigFractionFieldTest:org.apache.commons.math.random.AbstractRandomGeneratorTest:org.apache.commons.math.ode.nonstiff.GraggBulirschStoerStepInterpolatorTest:org.apache.commons.math.genetics.GeneticAlgorithmTestBinary:org.apache.commons.math.linear.BiDiagonalTransformerTest:org.apache.commons.math.util.DefaultTransformerTest:org.apache.commons.math.linear.LUDecompositionImplTest:org.apache.commons.math.random.ValueServerTest:org.apache.commons.math.stat.descriptive.moment.MeanTest:org.apache.commons.math.util.BigRealFieldTest:org.apache.commons.math.linear.QRDecompositionImplTest:org.apache.commons.math.analysis.interpolation.NevilleInterpolatorTest:org.apache.commons.math.stat.descriptive.moment.VarianceTest:org.apache.commons.math.genetics.OnePointCrossoverTest:org.apache.commons.math.stat.ranking.NaturalRankingTest:org.apache.commons.math.optimization.linear.SimplexSolverTest:org.apache.commons.math.stat.descriptive.moment.FourthMomentTest:org.apache.commons.math.linear.BlockRealMatrixTest:org.apache.commons.math.ode.nonstiff.DormandPrince853StepInterpolatorTest:org.apache.commons.math.random.MersenneTwisterTest:org.apache.commons.math.genetics.RandomKeyTest:org.apache.commons.math.stat.descriptive.summary.ProductTest:org.apache.commons.math.fraction.FractionTest:org.apache.commons.math.util.OpenIntToDoubleHashMapTest:org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizerTest:org.apache.commons.math.ode.nonstiff.DormandPrince54IntegratorTest:org.apache.commons.math.analysis.polynomials.PolynomialFunctionTest:org.apache.commons.math.genetics.ChromosomeTest:org.apache.commons.math.stat.descriptive.moment.GeometricMeanTest:org.apache.commons.math.optimization.MultiStartDifferentiableMultivariateRealOptimizerTest:org.apache.commons.math.random.CorrelatedRandomVectorGeneratorTest:org.apache.commons.math.geometry.Vector3DTest:org.apache.commons.math.stat.descriptive.rank.MinTest:org.apache.commons.math.stat.clustering.EuclideanIntegerPointTest:org.apache.commons.math.linear.FieldLUDecompositionImplTest:org.apache.commons.math.analysis.integration.TrapezoidIntegratorTest:org.apache.commons.math.stat.descriptive.moment.VectorialCovarianceTest:org.apache.commons.math.transform.FastHadamardTransformerTest:org.apache.commons.math.optimization.fitting.HarmonicFitterTest:org.apache.commons.math.stat.correlation.PearsonsCorrelationTest:org.apache.commons.math.random.GaussianRandomGeneratorTest:org.apache.commons.math.stat.descriptive.moment.ThirdMomentTest:org.apache.commons.math.fraction.BigFractionTest:org.apache.commons.math.linear.FrenchRealVectorFormatTest:org.apache.commons.math.util.ContinuedFractionTest:org.apache.commons.math.util.TransformerMapTest:org.apache.commons.math.analysis.solvers.BisectionSolverTest:org.apache.commons.math.genetics.BinaryChromosomeTest:org.apache.commons.math.linear.BlockFieldMatrixTest:org.apache.commons.math.ode.nonstiff.ClassicalRungeKuttaStepInterpolatorTest:org.apache.commons.math.linear.SingularValueDecompositionImplTest:org.apache.commons.math.distribution.TDistributionTest:org.apache.commons.math.ode.nonstiff.AdamsBashforthIntegratorTest:org.apache.commons.math.ode.nonstiff.ClassicalRungeKuttaIntegratorTest:org.apache.commons.math.linear.InvalidMatrixExceptionTest:org.apache.commons.math.distribution.BinomialDistributionTest:org.apache.commons.math.linear.EigenSolverTest:org.apache.commons.math.stat.inference.TTestTest:org.apache.commons.math.analysis.polynomials.PolynomialFunctionNewtonFormTest:org.apache.commons.math.random.UniformRandomGeneratorTest:org.apache.commons.math.stat.descriptive.rank.PercentileTest:org.apache.commons.math.analysis.solvers.RiddersSolverTest:org.apache.commons.math.linear.ArrayFieldVectorTest:org.apache.commons.math.ode.ContinuousOutputModelTest:org.apache.commons.math.random.UncorrelatedRandomVectorGeneratorTest:org.apache.commons.math.optimization.linear.SimplexTableauTest:org.apache.commons.math.ConvergenceExceptionTest:org.apache.commons.math.complex.ComplexFormatTest:org.apache.commons.math.util.ResizableDoubleArrayTest:org.apache.commons.math.linear.RealMatrixImplTest:org.apache.commons.math.stat.descriptive.summary.SumTest:org.apache.commons.math.genetics.ElitisticListPopulationTest:org.apache.commons.math.linear.SparseFieldVectorTest:org.apache.commons.math.stat.descriptive.summary.SumSqTest:org.apache.commons.math.linear.SparseRealVectorTest:org.apache.commons.math.analysis.interpolation.DividedDifferenceInterpolatorTest:org.apache.commons.math.linear.EigenDecompositionImplTest:org.apache.commons.math.analysis.integration.SimpsonIntegratorTest:org.apache.commons.math.analysis.polynomials.PolynomialSplineFunctionTest:org.apache.commons.math.genetics.GeneticAlgorithmTestPermutations:org.apache.commons.math.stat.descriptive.moment.KurtosisTest:org.apache.commons.math.transform.FastFourierTransformerTest:org.apache.commons.math.stat.descriptive.moment.VectorialMeanTest:org.apache.commons.math.distribution.NormalDistributionTest:org.apache.commons.math.distribution.PoissonDistributionTest:org.apache.commons.math.geometry.Vector3DFormatTest:org.apache.commons.math.analysis.polynomials.PolynomialFunctionLagrangeFormTest:org.apache.commons.math.genetics.TournamentSelectionTest:org.apache.commons.math.optimization.general.MinpackTest:org.apache.commons.math.stat.descriptive.SynchronizedMultivariateSummaryStatisticsTest:org.apache.commons.math.analysis.solvers.BrentSolverTest:org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegratorTest:org.apache.commons.math.stat.descriptive.AbstractUnivariateStatisticTest:org.apache.commons.math.estimation.WeightedMeasurementTest:org.apache.commons.math.stat.inference.ChiSquareTestTest:org.apache.commons.math.analysis.interpolation.LoessInterpolatorTest:org.apache.commons.math.ode.nonstiff.ThreeEighthesStepInterpolatorTest:org.apache.commons.math.linear.MatrixIndexExceptionTest:org.apache.commons.math.fraction.FractionFormatTest:org.apache.commons.math.genetics.BinaryMutationTest:org.apache.commons.math.distribution.PascalDistributionTest:org.apache.commons.math.optimization.general.NonLinearConjugateGradientOptimizerTest:org.apache.commons.math.complex.ComplexUtilsTest:org.apache.commons.math.util.MathUtilsTest:org.apache.commons.math.analysis.solvers.UnivariateRealSolverFactoryImplTest:org.apache.commons.math.genetics.FitnessCachingTest:org.apache.commons.math.optimization.direct.MultiDirectionalTest:org.apache.commons.math.linear.BigMatrixImplTest:org.apache.commons.math.stat.inference.ChiSquareFactoryTest:org.apache.commons.math.fraction.FractionFieldTest:org.apache.commons.math.stat.descriptive.InteractionTest:org.apache.commons.math.stat.correlation.CovarianceTest:org.apache.commons.math.optimization.univariate.BrentMinimizerTest:org.apache.commons.math.linear.QRSolverTest:org.apache.commons.math.linear.RealVectorFormatTest:org.apache.commons.math.analysis.solvers.LaguerreSolverTest:org.apache.commons.math.linear.CholeskySolverTest:org.apache.commons.math.distribution.WeibullDistributionTest:org.apache.commons.math.stat.StatUtilsTest:org.apache.commons.math.analysis.interpolation.SplineInterpolatorTest:org.apache.commons.math.analysis.solvers.MullerSolverTest:org.apache.commons.math.linear.TriDiagonalTransformerTest:org.apache.commons.math.distribution.ChiSquareDistributionTest:org.apache.commons.math.analysis.solvers.UnivariateRealSolverUtilsTest:org.apache.commons.math.transform.FastSineTransformerTest:org.apache.commons.math.stat.inference.OneWayAnovaTest:org.apache.commons.math.transform.FastCosineTransformerTest:org.apache.commons.math.ArgumentOutsideDomainExceptionTest:org.apache.commons.math.ode.nonstiff.DormandPrince853IntegratorTest:org.apache.commons.math.ode.nonstiff.EulerIntegratorTest:org.apache.commons.math.stat.descriptive.rank.MaxTest:org.apache.commons.math.complex.ComplexFieldTest:org.apache.commons.math.stat.descriptive.ListUnivariateImplTest:org.apache.commons.math.MaxIterationsExceededExceptionTest:org.apache.commons.math.stat.descriptive.DescriptiveStatisticsTest:org.apache.commons.math.linear.MatrixUtilsTest:org.apache.commons.math.optimization.MultiStartDifferentiableMultivariateVectorialOptimizerTest:org.apache.commons.math.optimization.direct.NelderMeadTest:org.apache.commons.math.geometry.RotationTest:org.apache.commons.math.ode.sampling.DummyStepInterpolatorTest:org.apache.commons.math.genetics.RandomKeyMutationTest:org.apache.commons.math.linear.SingularValueSolverTest:org.apache.commons.math.util.BigRealTest:org.apache.commons.math.distribution.ExponentialDistributionTest:org.apache.commons.math.stat.descriptive.SynchronizedDescriptiveStatisticsTest:org.apache.commons.math.geometry.FrenchVector3DFormatTest:org.apache.commons.math.ode.nonstiff.AdamsMoultonIntegratorTest:org.apache.commons.math.stat.regression.SimpleRegressionTest:org.apache.commons.math.optimization.MultiStartMultivariateRealOptimizerTest:org.apache.commons.math.stat.regression.GLSMultipleLinearRegressionTest:org.apache.commons.math.ode.nonstiff.ThreeEighthesIntegratorTest:org.apache.commons.math.ode.nonstiff.GillStepInterpolatorTest:org.apache.commons.math.linear.LUSolverTest:org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizerTest:org.apache.commons.math.MathConfigurationExceptionTest:org.apache.commons.math.estimation.GaussNewtonEstimatorTest:org.apache.commons.math.genetics.ListPopulationTest:org.apache.commons.math.MathExceptionTest:org.apache.commons.math.distribution.CauchyDistributionTest:org.apache.commons.math.stat.correlation.SpearmansRankCorrelationTest:org.apache.commons.math.linear.SparseFieldMatrixTest:org.apache.commons.math.stat.descriptive.summary.SumLogTest:org.apache.commons.math.stat.FrequencyTest:org.apache.commons.math.stat.descriptive.moment.SecondMomentTest:
+2018-08-08 00:38:15,551 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:pathToMVNRepository= 
+2018-08-08 00:38:15,551 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:executeRegression= true
+2018-08-08 00:38:15,551 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:modificationpointnavigation= weight
+2018-08-08 00:38:15,551 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:maxtime= 120
+2018-08-08 00:38:15,551 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:probagenmutation= false
+2018-08-08 00:38:15,552 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:alternativecompliancelevel= 4
+2018-08-08 00:38:15,552 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:version-location= ./math-version/
+2018-08-08 00:38:15,552 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:location= /home/qx5/elixir_bdj_bugs/math/bugs-dot-jar_MATH-288_38983e82
+2018-08-08 00:38:15,552 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:stopfirst= true
+2018-08-08 00:38:15,552 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:jvm4testexecution= /home/qxin/jdk1.8.0_111/bin
+2018-08-08 00:38:15,552 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:bugId= 280
+2018-08-08 00:38:15,552 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:mutationrate= 1 
+2018-08-08 00:38:15,552 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:projectIdentifier= bugs-dot-jar_MATH-288_38983e82
+2018-08-08 00:38:15,552 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evo_buggy_class= true
+2018-08-08 00:38:15,552 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evoRunOnBuggyClass= true
+2018-08-08 00:38:15,552 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:jvm4evosuitetestexecution= /home/qxin/jdk1.8.0_111/bin
+2018-08-08 00:38:15,553 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:resetoperations= false
+2018-08-08 00:38:15,553 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:seed= 0
+2018-08-08 00:38:15,553 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:testbystep= false
+2018-08-08 00:38:15,553 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:srctestfolder= ///src/test/java/
+2018-08-08 00:38:15,553 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:javacompliancelevel= 8
+2018-08-08 00:38:15,553 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:bintestfolder= ///target/test-classes/
+2018-08-08 00:38:15,553 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:commandTrunk= 50000
+2018-08-08 00:38:15,553 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:dependenciespath= /home/qx5/elixir_bdj_bugs/math/bugs-dot-jar_MATH-288_38983e82/all0.jar
+2018-08-08 00:38:15,553 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:multipointmodification= false
+2018-08-08 00:38:15,553 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:validation= process
+2018-08-08 00:38:15,553 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:scope= package
+2018-08-08 00:38:15,553 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evosuitetimeout= 120
+2018-08-08 00:38:15,553 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evoDSE= false
+2018-08-08 00:38:15,553 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:elementsToMutate= 10
+2018-08-08 00:38:15,554 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:lastJUnitVersion= ./examples/libs/junit-4.11.jar
+2018-08-08 00:38:15,554 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:failing= org.apache.commons.math.optimization.linear.SimplexSolverTest
+2018-08-08 00:38:15,554 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:allpoints= false
+2018-08-08 00:38:15,554 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:resourcesfolder= /src/main/resources:/src/test/resources:
+2018-08-08 00:38:15,554 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:regressionforfaultlocalization= true
+2018-08-08 00:38:15,554 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:population= 1
+2018-08-08 00:38:15,554 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:saveall= false
+2018-08-08 00:38:15,554 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:pvariantfoldername= variant-
+2018-08-08 00:38:15,554 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:savesolution= true
+2018-08-08 00:38:15,554 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:srcjavafolder= ///src/main/java/
+2018-08-08 00:38:15,554 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evo_affected_by_op= true
+2018-08-08 00:38:15,554 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:binjavafolder= ///target/classes/
+2018-08-08 00:38:15,555 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:reintroduce= original-parents
+2018-08-08 00:38:15,555 INFO fr.inria.astor.core.setup.ConfigurationProperties - p:evosuitejar= ./lib/evosuite-master-1.0.4-SNAPSHOT.jar
+2018-08-08 00:38:15,555 INFO fr.inria.astor.core.setup.ConfigurationProperties - ----------------------------
+2018-08-08 00:38:15,557 INFO main - mod_point ModificPoint=SimplexSolver line: 168, el: CtReturnImpl
+2018-08-08 00:38:15,558 INFO main - -->op: RemoveOp: `return  ` ---> `-` at pos 0 of parent `{ 	return ; }`
+2018-08-08 00:38:19,867 INFO main - mod_point ModificPoint=SimplexTableau line: 308, el: CtReturnImpl
+2018-08-08 00:38:19,867 INFO main - -->op: RemoveOp: `return  ` ---> `-` at pos 0 of parent `{ 	return ; }`
+2018-08-08 00:38:24,388 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 821, el: CtAssignmentImpl
+2018-08-08 00:38:24,388 INFO main - -->op: RemoveOp: `hNew = hInt ` ---> `-` at pos 0 of parent `{ 	hNew = hInt; 	reject =[...]`
+2018-08-08 00:38:26,738 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 822, el: CtAssignmentImpl
+2018-08-08 00:38:26,739 INFO main - -->op: RemoveOp: `reject = true ` ---> `-` at pos 1 of parent `{ 	hNew = hInt; 	reject =[...]`
+2018-08-08 00:38:28,782 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 893, el: CtAssignmentImpl
+2018-08-08 00:38:28,783 INFO main - -->op: RemoveOp: `optimalIter = java.lang.M[...] ` ---> `-` at pos 0 of parent `{ 	optimalIter = java.lan[...]`
+2018-08-08 00:38:30,906 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 698, el: CtAssignmentImpl
+2018-08-08 00:38:30,906 INFO main - -->op: RemoveOp: `reject = true ` ---> `-` at pos 0 of parent `{ 	reject = true; 	loop =[...]`
+2018-08-08 00:38:37,294 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 699, el: CtAssignmentImpl
+2018-08-08 00:38:37,295 INFO main - -->op: RemoveOp: `loop = false ` ---> `-` at pos 1 of parent `{ 	reject = true; 	loop =[...]`
+2018-08-08 00:38:40,494 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 700, el: CtAssignmentImpl
+2018-08-08 00:38:40,494 INFO main - -->op: RemoveOp: `targetIter = k ` ---> `-` at pos 2 of parent `{ 	reject = true; 	loop =[...]`
+2018-08-08 00:38:47,454 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 701, el: CtIfImpl
+2018-08-08 00:38:47,454 INFO main - -->op: ReplaceIfBooleanOp: `if ((targetIter > 1) && ([...] ` ---> `if (true) { 	--targetIter[...]` at pos 3 of parent `{ 	reject = true; 	loop =[...]`
+2018-08-08 00:38:50,598 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 701, el: CtIfImpl
+2018-08-08 00:38:50,598 INFO main - -->op: ReplaceIfBooleanOp: `if ((targetIter > 1) && ([...] ` ---> `if (false) { 	--targetIte[...]` at pos 3 of parent `{ 	reject = true; 	loop =[...]`
+2018-08-08 00:38:55,040 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 701, el: CtIfImpl
+2018-08-08 00:38:55,040 INFO main - -->op: RemoveOp: `if ((targetIter > 1) && ([...] ` ---> `-` at pos 3 of parent `{ 	reject = true; 	loop =[...]`
+2018-08-08 00:38:57,632 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 706, el: CtAssignmentImpl
+2018-08-08 00:38:57,632 INFO main - -->op: RemoveOp: `hNew = optimalStep[target[...] ` ---> `-` at pos 4 of parent `{ 	reject = true; 	loop =[...]`
+2018-08-08 00:39:00,348 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 720, el: CtLocalVariableImpl
+2018-08-08 00:39:00,348 INFO main - -->op: RemoveOp: `final double ratio = ((do[...] ` ---> `-` at pos 0 of parent `{ 	final double ratio = ([...]`
+2018-08-08 00:39:01,562 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 721, el: CtIfImpl
+2018-08-08 00:39:01,563 INFO main - -->op: ReplaceIfBooleanOp: `if (error > (ratio * rati[...] ` ---> `if (true) { 	reject = tru[...]` at pos 1 of parent `{ 	final double ratio = ([...]`
+2018-08-08 00:39:08,158 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 721, el: CtIfImpl
+2018-08-08 00:39:08,159 INFO main - -->op: ReplaceIfBooleanOp: `if (error > (ratio * rati[...] ` ---> `if (false) { 	reject = tr[...]` at pos 1 of parent `{ 	final double ratio = ([...]`
+2018-08-08 00:39:13,669 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 721, el: CtIfImpl
+2018-08-08 00:39:13,670 INFO main - -->op: RemoveOp: `if (error > (ratio * rati[...] ` ---> `-` at pos 1 of parent `{ 	final double ratio = ([...]`
+2018-08-08 00:39:20,284 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 887, el: CtAssignmentImpl
+2018-08-08 00:39:20,284 INFO main - -->op: RemoveOp: `optimalIter = k - 1 ` ---> `-` at pos 0 of parent `{ 	optimalIter = k - 1; 	[...]`
+2018-08-08 00:39:21,573 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 888, el: CtIfImpl
+2018-08-08 00:39:21,574 INFO main - -->op: ReplaceIfBooleanOp: `if ((k > 2) && ((costPerT[...] ` ---> `if (true) { 	optimalIter [...]` at pos 1 of parent `{ 	optimalIter = k - 1; 	[...]`
+2018-08-08 00:39:24,962 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 888, el: CtIfImpl
+2018-08-08 00:39:24,963 INFO main - -->op: ReplaceIfBooleanOp: `if ((k > 2) && ((costPerT[...] ` ---> `if (false) { 	optimalIter[...]` at pos 1 of parent `{ 	optimalIter = k - 1; 	[...]`
+2018-08-08 00:39:28,772 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 888, el: CtIfImpl
+2018-08-08 00:39:28,772 INFO main - -->op: RemoveOp: `if ((k > 2) && ((costPerT[...] ` ---> `-` at pos 1 of parent `{ 	optimalIter = k - 1; 	[...]`
+2018-08-08 00:39:37,147 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 892, el: CtIfImpl
+2018-08-08 00:39:37,148 INFO main - -->op: ReplaceIfBooleanOp: `if ((costPerTimeUnit[k]) [...] ` ---> `if (true) { 	optimalIter [...]` at pos 2 of parent `{ 	optimalIter = k - 1; 	[...]`
+2018-08-08 00:39:41,204 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 892, el: CtIfImpl
+2018-08-08 00:39:41,204 INFO main - -->op: ReplaceIfBooleanOp: `if ((costPerTimeUnit[k]) [...] ` ---> `if (false) { 	optimalIter[...]` at pos 2 of parent `{ 	optimalIter = k - 1; 	[...]`
+2018-08-08 00:39:43,393 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 892, el: CtIfImpl
+2018-08-08 00:39:43,393 INFO main - -->op: RemoveOp: `if ((costPerTimeUnit[k]) [...] ` ---> `-` at pos 2 of parent `{ 	optimalIter = k - 1; 	[...]`
+2018-08-08 00:39:45,529 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 905, el: CtAssignmentImpl
+2018-08-08 00:39:45,529 INFO main - -->op: RemoveOp: `hNew = optimalStep[optima[...] ` ---> `-` at pos 0 of parent `{ 	hNew = optimalStep[opt[...]`
+2018-08-08 00:39:50,557 INFO main - mod_point ModificPoint=CombinedEventsManager line: 132, el: CtReturnImpl
+2018-08-08 00:39:50,558 INFO main - -->op: RemoveOp: `return false ` ---> `-` at pos 0 of parent `{ 	return false; }`
+2018-08-08 00:39:52,475 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 457, el: CtReturnImpl
+2018-08-08 00:39:52,476 INFO main - -->op: RemoveOp: `return false ` ---> `-` at pos 0 of parent `{ 	return false; }`
+2018-08-08 00:39:56,801 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 640, el: CtAssignmentImpl
+2018-08-08 00:39:56,801 INFO main - -->op: RemoveOp: `hNew = java.lang.Math.abs[...] ` ---> `-` at pos 0 of parent `{ 	hNew = java.lang.Math.[...]`
+2018-08-08 00:39:59,032 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 641, el: CtAssignmentImpl
+2018-08-08 00:39:59,033 INFO main - -->op: RemoveOp: `reject = true ` ---> `-` at pos 1 of parent `{ 	hNew = java.lang.Math.[...]`
+2018-08-08 00:40:00,962 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 642, el: CtAssignmentImpl
+2018-08-08 00:40:00,963 INFO main - -->op: RemoveOp: `loop = false ` ---> `-` at pos 2 of parent `{ 	hNew = java.lang.Math.[...]`
+2018-08-08 00:40:09,085 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 278, el: CtLocalVariableImpl
+2018-08-08 00:40:09,085 INFO main - -->op: RemoveOp: `final double fac1 = (0.5 [...] ` ---> `-` at pos 0 of parent `{ 	final double fac1 = (0[...]`
+2018-08-08 00:40:10,060 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 279, el: CtLocalVariableImpl
+2018-08-08 00:40:10,060 INFO main - -->op: RemoveOp: `final double fac2 = ((2 *[...] ` ---> `-` at pos 1 of parent `{ 	final double fac1 = (0[...]`
+2018-08-08 00:40:10,707 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 280, el: CtAssignmentImpl
+2018-08-08 00:40:10,707 INFO main - -->op: RemoveOp: `polynoms[(j + 4)][i] = 16[...] ` ---> `-` at pos 2 of parent `{ 	final double fac1 = (0[...]`
+2018-08-08 00:40:16,714 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 688, el: CtAssignmentImpl
+2018-08-08 00:40:16,714 INFO main - -->op: RemoveOp: `loop = false ` ---> `-` at pos 0 of parent `{ 	loop = false; }`
+2018-08-08 00:40:19,238 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 693, el: CtLocalVariableImpl
+2018-08-08 00:40:19,239 INFO main - -->op: RemoveOp: `final double ratio = (((d[...] ` ---> `-` at pos 0 of parent `{ 	final double ratio = ([...]`
+2018-08-08 00:40:20,733 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 695, el: CtIfImpl
+2018-08-08 00:40:20,733 INFO main - -->op: ReplaceIfBooleanOp: `if (error > (ratio * rati[...] ` ---> `if (true) { 	reject = tru[...]` at pos 1 of parent `{ 	final double ratio = ([...]`
+2018-08-08 00:40:32,054 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 695, el: CtIfImpl
+2018-08-08 00:40:32,054 INFO main - -->op: ReplaceIfBooleanOp: `if (error > (ratio * rati[...] ` ---> `if (false) { 	reject = tr[...]` at pos 1 of parent `{ 	final double ratio = ([...]`
+2018-08-08 00:40:34,705 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 695, el: CtIfImpl
+2018-08-08 00:40:34,705 INFO main - -->op: RemoveOp: `if (error > (ratio * rati[...] ` ---> `-` at pos 1 of parent `{ 	final double ratio = ([...]`
+2018-08-08 00:40:37,706 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 767, el: CtForImpl
+2018-08-08 00:40:37,707 INFO main - -->op: RemoveOp: `for (int j = 1 ; j <= k ;[...] ` ---> `-` at pos 0 of parent `{ 	for (int j = 1 ; j <= [...]`
+2018-08-08 00:40:45,200 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 768, el: CtInvocationImpl
+2018-08-08 00:40:45,200 INFO main - -->op: RemoveOp: `extrapolate(0, j, diagona[...] ` ---> `-` at pos 0 of parent `{ 	extrapolate(0, j, diag[...]`
+2018-08-08 00:40:47,345 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 772, el: CtInvocationImpl
+2018-08-08 00:40:47,346 INFO main - -->op: RemoveOp: `computeDerivatives(((step[...] ` ---> `-` at pos 1 of parent `{ 	for (int j = 1 ; j <= [...]`
+2018-08-08 00:40:49,486 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 774, el: CtLocalVariableImpl
+2018-08-08 00:40:49,486 INFO main - -->op: RemoveOp: `final int mu = ((2 * k) -[...] ` ---> `-` at pos 2 of parent `{ 	for (int j = 1 ; j <= [...]`
+2018-08-08 00:40:50,348 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 776, el: CtForImpl
+2018-08-08 00:40:50,349 INFO main - -->op: RemoveOp: `for (int l = 0 ; l < mu ;[...] ` ---> `-` at pos 3 of parent `{ 	for (int j = 1 ; j <= [...]`
+2018-08-08 00:40:56,755 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 779, el: CtLocalVariableImpl
+2018-08-08 00:40:56,755 INFO main - -->op: RemoveOp: `final int l2 = l / 2 ` ---> `-` at pos 0 of parent `{ 	final int l2 = l / 2; [...]`
+2018-08-08 00:40:58,578 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 780, el: CtLocalVariableImpl
+2018-08-08 00:40:58,579 INFO main - -->op: RemoveOp: `double factor = java.lang[...] ` ---> `-` at pos 1 of parent `{ 	final int l2 = l / 2; [...]`
+2018-08-08 00:40:59,652 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 781, el: CtLocalVariableImpl
+2018-08-08 00:40:59,653 INFO main - -->op: RemoveOp: `int middleIndex = (fk[l2][...] ` ---> `-` at pos 2 of parent `{ 	final int l2 = l / 2; [...]`
+2018-08-08 00:41:01,532 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 782, el: CtForImpl
+2018-08-08 00:41:01,532 INFO main - -->op: RemoveOp: `for (int i = 0 ; i < (y0.[...] ` ---> `-` at pos 3 of parent `{ 	final int l2 = l / 2; [...]`
+2018-08-08 00:41:05,214 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 783, el: CtAssignmentImpl
+2018-08-08 00:41:05,225 INFO main - -->op: RemoveOp: `yMidDots[(l + 1)][i] = fa[...] ` ---> `-` at pos 0 of parent `{ 	yMidDots[(l + 1)][i] =[...]`
+2018-08-08 00:41:10,629 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 785, el: CtForImpl
+2018-08-08 00:41:10,629 INFO main - -->op: RemoveOp: `for (int j = 1 ; j <= (k [...] ` ---> `-` at pos 4 of parent `{ 	final int l2 = l / 2; [...]`
+2018-08-08 00:41:22,672 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 786, el: CtAssignmentImpl
+2018-08-08 00:41:22,672 INFO main - -->op: RemoveOp: `factor = java.lang.Math.p[...] ` ---> `-` at pos 0 of parent `{ 	factor = java.lang.Mat[...]`
+2018-08-08 00:41:25,029 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 787, el: CtAssignmentImpl
+2018-08-08 00:41:25,029 INFO main - -->op: RemoveOp: `middleIndex = (fk[(l2 + j[...] ` ---> `-` at pos 1 of parent `{ 	factor = java.lang.Mat[...]`
+2018-08-08 00:41:27,287 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 788, el: CtForImpl
+2018-08-08 00:41:27,287 INFO main - -->op: RemoveOp: `for (int i = 0 ; i < (y0.[...] ` ---> `-` at pos 2 of parent `{ 	factor = java.lang.Mat[...]`
+2018-08-08 00:41:29,245 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 789, el: CtAssignmentImpl
+2018-08-08 00:41:29,245 INFO main - -->op: RemoveOp: `diagonal[(j - 1)][i] = fa[...] ` ---> `-` at pos 0 of parent `{ 	diagonal[(j - 1)][i] =[...]`
+2018-08-08 00:41:31,390 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 791, el: CtInvocationImpl
+2018-08-08 00:41:31,390 INFO main - -->op: RemoveOp: `extrapolate(l2, j, diagon[...] ` ---> `-` at pos 3 of parent `{ 	factor = java.lang.Mat[...]`
+2018-08-08 00:41:33,645 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 793, el: CtForImpl
+2018-08-08 00:41:33,645 INFO main - -->op: RemoveOp: `for (int i = 0 ; i < (y0.[...] ` ---> `-` at pos 5 of parent `{ 	final int l2 = l / 2; [...]`
+2018-08-08 00:41:36,365 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 794, el: CtOperatorAssignmentImpl
+2018-08-08 00:41:36,365 INFO main - -->op: RemoveOp: `yMidDots[(l + 1)][i] *= s[...] ` ---> `-` at pos 0 of parent `{ 	yMidDots[(l + 1)][i] *[...]`
+2018-08-08 00:41:38,986 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 798, el: CtForImpl
+2018-08-08 00:41:38,987 INFO main - -->op: RemoveOp: `for (int j = (l + 1) / 2 [...] ` ---> `-` at pos 6 of parent `{ 	final int l2 = l / 2; [...]`
+2018-08-08 00:41:41,243 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 799, el: CtForImpl
+2018-08-08 00:41:41,243 INFO main - -->op: RemoveOp: `for (int m = (fk[j].lengt[...] ` ---> `-` at pos 0 of parent `{ 	for (int m = (fk[j].le[...]`
+2018-08-08 00:41:43,598 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 800, el: CtForImpl
+2018-08-08 00:41:43,598 INFO main - -->op: RemoveOp: `for (int i = 0 ; i < (y0.[...] ` ---> `-` at pos 0 of parent `{ 	for (int i = 0 ; i < ([...]`
+2018-08-08 00:41:45,714 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 801, el: CtOperatorAssignmentImpl
+2018-08-08 00:41:45,714 INFO main - -->op: RemoveOp: `fk[j][m][i] -= fk[j][(m -[...] ` ---> `-` at pos 0 of parent `{ 	fk[j][m][i] -= fk[j][([...]`
+2018-08-08 00:41:47,920 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 808, el: CtIfImpl
+2018-08-08 00:41:47,921 INFO main - -->op: ReplaceIfBooleanOp: `if (mu >= 0) { 	final org[...] ` ---> `if (true) { 	final org.ap[...]` at pos 4 of parent `{ 	for (int j = 1 ; j <= [...]`
+2018-08-08 00:41:50,176 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 808, el: CtIfImpl
+2018-08-08 00:41:50,177 INFO main - -->op: ReplaceIfBooleanOp: `if (mu >= 0) { 	final org[...] ` ---> `if (false) { 	final org.a[...]` at pos 4 of parent `{ 	for (int j = 1 ; j <= [...]`
+2018-08-08 00:41:52,214 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 808, el: CtIfImpl
+2018-08-08 00:41:52,215 INFO main - -->op: RemoveOp: `if (mu >= 0) { 	final org[...] ` ---> `-` at pos 4 of parent `{ 	for (int j = 1 ; j <= [...]`
+2018-08-08 00:41:54,484 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 811, el: CtLocalVariableImpl
+2018-08-08 00:41:54,484 INFO main - -->op: RemoveOp: `final org.apache.commons.[...] ` ---> `-` at pos 0 of parent `{ 	final org.apache.commo[...]`
+2018-08-08 00:41:55,469 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 813, el: CtInvocationImpl
+2018-08-08 00:41:55,469 INFO main - -->op: RemoveOp: `gbsInterpolator.computeCo[...] ` ---> `-` at pos 1 of parent `{ 	final org.apache.commo[...]`
+2018-08-08 00:41:57,908 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 815, el: CtIfImpl
+2018-08-08 00:41:57,909 INFO main - -->op: ReplaceIfBooleanOp: `if (useInterpolationError[...] ` ---> `if (true) { 	final double[...]` at pos 2 of parent `{ 	final org.apache.commo[...]`
+2018-08-08 00:41:59,976 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 815, el: CtIfImpl
+2018-08-08 00:41:59,976 INFO main - -->op: ReplaceIfBooleanOp: `if (useInterpolationError[...] ` ---> `if (false) { 	final doubl[...]` at pos 2 of parent `{ 	final org.apache.commo[...]`
+2018-08-08 00:42:02,269 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 815, el: CtIfImpl
+2018-08-08 00:42:02,269 INFO main - -->op: RemoveOp: `if (useInterpolationError[...] ` ---> `-` at pos 2 of parent `{ 	final org.apache.commo[...]`
+2018-08-08 00:42:04,268 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 817, el: CtLocalVariableImpl
+2018-08-08 00:42:04,269 INFO main - -->op: RemoveOp: `final double interpError [...] ` ---> `-` at pos 0 of parent `{ 	final double interpErr[...]`
+2018-08-08 00:42:05,218 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 818, el: CtAssignmentImpl
+2018-08-08 00:42:05,219 INFO main - -->op: RemoveOp: `hInt = java.lang.Math.abs[...] ` ---> `-` at pos 1 of parent `{ 	final double interpErr[...]`
+2018-08-08 00:42:07,752 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 820, el: CtIfImpl
+2018-08-08 00:42:07,752 INFO main - -->op: ReplaceIfBooleanOp: `if (interpError > 10.0) {[...] ` ---> `if (true) { 	hNew = hInt;[...]` at pos 2 of parent `{ 	final double interpErr[...]`
+2018-08-08 00:42:10,040 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 820, el: CtIfImpl
+2018-08-08 00:42:10,041 INFO main - -->op: ReplaceIfBooleanOp: `if (interpError > 10.0) {[...] ` ---> `if (false) { 	hNew = hInt[...]` at pos 2 of parent `{ 	final double interpErr[...]`
+2018-08-08 00:42:12,359 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 820, el: CtIfImpl
+2018-08-08 00:42:12,359 INFO main - -->op: RemoveOp: `if (interpError > 10.0) {[...] ` ---> `-` at pos 2 of parent `{ 	final double interpErr[...]`
+2018-08-08 00:42:14,836 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 827, el: CtIfImpl
+2018-08-08 00:42:14,837 INFO main - -->op: ReplaceIfBooleanOp: `if (!reject) { 	interpola[...] ` ---> `if (true) { 	interpolator[...]` at pos 3 of parent `{ 	final org.apache.commo[...]`
+2018-08-08 00:42:17,028 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 827, el: CtIfImpl
+2018-08-08 00:42:17,028 INFO main - -->op: ReplaceIfBooleanOp: `if (!reject) { 	interpola[...] ` ---> `if (false) { 	interpolato[...]` at pos 3 of parent `{ 	final org.apache.commo[...]`
+2018-08-08 00:42:19,302 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 827, el: CtIfImpl
+2018-08-08 00:42:19,302 INFO main - -->op: RemoveOp: `if (!reject) { 	interpola[...] ` ---> `-` at pos 3 of parent `{ 	final org.apache.commo[...]`
+2018-08-08 00:42:21,573 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 828, el: CtInvocationImpl
+2018-08-08 00:42:21,573 INFO main - -->op: RemoveOp: `interpolator.storeTime((([...] ` ---> `-` at pos 0 of parent `{ 	interpolator.storeTime[...]`
+2018-08-08 00:42:23,752 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 829, el: CtIfImpl
+2018-08-08 00:42:23,752 INFO main - -->op: ReplaceIfBooleanOp: `if (eventsHandlersManager[...] ` ---> `if (true) { 	final double[...]` at pos 1 of parent `{ 	interpolator.storeTime[...]`
+2018-08-08 00:42:25,760 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 829, el: CtIfImpl
+2018-08-08 00:42:25,760 INFO main - -->op: ReplaceIfBooleanOp: `if (eventsHandlersManager[...] ` ---> `if (false) { 	final doubl[...]` at pos 1 of parent `{ 	interpolator.storeTime[...]`
+2018-08-08 00:42:28,061 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 829, el: CtIfImpl
+2018-08-08 00:42:28,062 INFO main - -->op: RemoveOp: `if (eventsHandlersManager[...] ` ---> `-` at pos 1 of parent `{ 	interpolator.storeTime[...]`
+2018-08-08 00:42:30,437 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 841, el: CtIfImpl
+2018-08-08 00:42:30,438 INFO main - -->op: ReplaceIfBooleanOp: `if (!reject) { 	firstStep[...] ` ---> `if (true) { 	firstStepAlr[...]` at pos 5 of parent `{ 	for (int j = 1 ; j <= [...]`
+2018-08-08 00:42:32,673 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 841, el: CtIfImpl
+2018-08-08 00:42:32,681 INFO main - -->op: ReplaceIfBooleanOp: `if (!reject) { 	firstStep[...] ` ---> `if (false) { 	firstStepAl[...]` at pos 5 of parent `{ 	for (int j = 1 ; j <= [...]`
+2018-08-08 00:42:35,063 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 841, el: CtIfImpl
+2018-08-08 00:42:35,063 INFO main - -->op: RemoveOp: `if (!reject) { 	firstStep[...] ` ---> `-` at pos 5 of parent `{ 	for (int j = 1 ; j <= [...]`
+2018-08-08 00:42:37,579 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 843, el: CtAssignmentImpl
+2018-08-08 00:42:37,579 INFO main - -->op: RemoveOp: `firstStepAlreadyComputed [...] ` ---> `-` at pos 0 of parent `{ 	firstStepAlreadyComput[...]`
+2018-08-08 00:42:40,314 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 844, el: CtInvocationImpl
+2018-08-08 00:42:40,314 INFO main - -->op: RemoveOp: `java.lang.System.arraycop[...] ` ---> `-` at pos 1 of parent `{ 	firstStepAlreadyComput[...]`
+2018-08-08 00:42:42,431 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 863, el: CtInvocationImpl
+2018-08-08 00:42:42,431 INFO main - -->op: RemoveOp: `handler.handleStep(interp[...] ` ---> `-` at pos 0 of parent `{ 	handler.handleStep(int[...]`
+2018-08-08 00:42:44,846 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 882, el: CtAssignmentImpl
+2018-08-08 00:42:44,846 INFO main - -->op: RemoveOp: `optimalIter = k - 1 ` ---> `-` at pos 0 of parent `{ 	optimalIter = k - 1; }`
+2018-08-08 00:42:47,054 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 883, el: CtIfImpl
+2018-08-08 00:42:47,054 INFO main - -->op: ReplaceIfBooleanOp: `if ((costPerTimeUnit[k]) [...] ` ---> `if (true) { 	optimalIter [...]` at pos 0 of parent `{ 	if ((costPerTimeUnit[k[...]`
+2018-08-08 00:42:49,464 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 883, el: CtIfImpl
+2018-08-08 00:42:49,464 INFO main - -->op: ReplaceIfBooleanOp: `if ((costPerTimeUnit[k]) [...] ` ---> `if (false) { 	optimalIter[...]` at pos 0 of parent `{ 	if ((costPerTimeUnit[k[...]`
+2018-08-08 00:42:51,677 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 883, el: CtIfImpl
+2018-08-08 00:42:51,677 INFO main - -->op: RemoveOp: `if ((costPerTimeUnit[k]) [...] ` ---> `-` at pos 0 of parent `{ 	if ((costPerTimeUnit[k[...]`
+2018-08-08 00:42:53,775 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 884, el: CtAssignmentImpl
+2018-08-08 00:42:53,775 INFO main - -->op: RemoveOp: `optimalIter = java.lang.M[...] ` ---> `-` at pos 0 of parent `{ 	optimalIter = java.lan[...]`
+2018-08-08 00:42:55,965 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 900, el: CtAssignmentImpl
+2018-08-08 00:42:55,966 INFO main - -->op: RemoveOp: `targetIter = java.lang.Ma[...] ` ---> `-` at pos 0 of parent `{ 	targetIter = java.lang[...]`
+2018-08-08 00:42:58,554 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 901, el: CtAssignmentImpl
+2018-08-08 00:42:58,554 INFO main - -->op: RemoveOp: `hNew = java.lang.Math.min[...] ` ---> `-` at pos 1 of parent `{ 	targetIter = java.lang[...]`
+2018-08-08 00:43:00,815 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 909, el: CtAssignmentImpl
+2018-08-08 00:43:00,815 INFO main - -->op: RemoveOp: `hNew = filterStep((((opti[...] ` ---> `-` at pos 0 of parent `{ 	hNew = filterStep((((o[...]`
+2018-08-08 00:43:03,052 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 933, el: CtAssignmentImpl
+2018-08-08 00:43:03,052 INFO main - -->op: RemoveOp: `lastStep = false ` ---> `-` at pos 0 of parent `{ 	lastStep = false; 	pre[...]`
+2018-08-08 00:43:05,140 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 934, el: CtAssignmentImpl
+2018-08-08 00:43:05,140 INFO main - -->op: RemoveOp: `previousRejected = true ` ---> `-` at pos 1 of parent `{ 	lastStep = false; 	pre[...]`
+2018-08-08 00:43:07,572 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 238, el: CtIfImpl
+2018-08-08 00:43:07,573 INFO main - -->op: ReplaceIfBooleanOp: `if (((polynoms) == null) [...] ` ---> `if (true) { 	resetTables([...]` at pos 0 of parent `{ 	if (((polynoms) == nul[...]`
+2018-08-08 00:43:10,206 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 238, el: CtIfImpl
+2018-08-08 00:43:10,207 INFO main - -->op: ReplaceIfBooleanOp: `if (((polynoms) == null) [...] ` ---> `if (false) { 	resetTables[...]` at pos 0 of parent `{ 	if (((polynoms) == nul[...]`
+2018-08-08 00:43:12,587 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 238, el: CtIfImpl
+2018-08-08 00:43:12,588 INFO main - -->op: RemoveOp: `if (((polynoms) == null) [...] ` ---> `-` at pos 0 of parent `{ 	if (((polynoms) == nul[...]`
+2018-08-08 00:43:14,822 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 242, el: CtAssignmentImpl
+2018-08-08 00:43:14,822 INFO main - -->op: RemoveOp: `currentDegree = mu + 4 ` ---> `-` at pos 1 of parent `{ 	if (((polynoms) == nul[...]`
+2018-08-08 00:43:17,586 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 244, el: CtForImpl
+2018-08-08 00:43:17,586 INFO main - -->op: RemoveOp: `for (int i = 0 ; i < (cur[...] ` ---> `-` at pos 2 of parent `{ 	if (((polynoms) == nul[...]`
+2018-08-08 00:43:20,382 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 246, el: CtLocalVariableImpl
+2018-08-08 00:43:20,383 INFO main - -->op: RemoveOp: `final double yp0 = h * (y[...] ` ---> `-` at pos 0 of parent `{ 	final double yp0 = h *[...]`
+2018-08-08 00:43:21,556 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 247, el: CtLocalVariableImpl
+2018-08-08 00:43:21,556 INFO main - -->op: RemoveOp: `final double yp1 = h * (y[...] ` ---> `-` at pos 1 of parent `{ 	final double yp0 = h *[...]`
+2018-08-08 00:43:22,578 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 248, el: CtLocalVariableImpl
+2018-08-08 00:43:22,578 INFO main - -->op: RemoveOp: `final double ydiff = (y1[[...] ` ---> `-` at pos 2 of parent `{ 	final double yp0 = h *[...]`
+2018-08-08 00:43:23,536 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 249, el: CtLocalVariableImpl
+2018-08-08 00:43:23,536 INFO main - -->op: RemoveOp: `final double aspl = ydiff[...] ` ---> `-` at pos 3 of parent `{ 	final double yp0 = h *[...]`
+2018-08-08 00:43:24,568 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 250, el: CtLocalVariableImpl
+2018-08-08 00:43:24,569 INFO main - -->op: RemoveOp: `final double bspl = yp0 -[...] ` ---> `-` at pos 4 of parent `{ 	final double yp0 = h *[...]`
+2018-08-08 00:43:25,642 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 252, el: CtAssignmentImpl
+2018-08-08 00:43:25,643 INFO main - -->op: RemoveOp: `polynoms[0][i] = currentS[...] ` ---> `-` at pos 5 of parent `{ 	final double yp0 = h *[...]`
+2018-08-08 00:43:28,201 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 253, el: CtAssignmentImpl
+2018-08-08 00:43:28,202 INFO main - -->op: RemoveOp: `polynoms[1][i] = ydiff ` ---> `-` at pos 6 of parent `{ 	final double yp0 = h *[...]`
+2018-08-08 00:43:30,439 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 254, el: CtAssignmentImpl
+2018-08-08 00:43:30,439 INFO main - -->op: RemoveOp: `polynoms[2][i] = aspl ` ---> `-` at pos 7 of parent `{ 	final double yp0 = h *[...]`
+2018-08-08 00:43:32,827 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 255, el: CtAssignmentImpl
+2018-08-08 00:43:32,828 INFO main - -->op: RemoveOp: `polynoms[3][i] = bspl ` ---> `-` at pos 8 of parent `{ 	final double yp0 = h *[...]`
+2018-08-08 00:43:36,018 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 257, el: CtIfImpl
+2018-08-08 00:43:36,018 INFO main - -->op: ReplaceIfBooleanOp: `if (mu < 0) { 	return ; }[...] ` ---> `if (true) { 	return ; } ` at pos 9 of parent `{ 	final double yp0 = h *[...]`
+2018-08-08 00:43:38,769 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 257, el: CtIfImpl
+2018-08-08 00:43:38,772 INFO main - -->op: ReplaceIfBooleanOp: `if (mu < 0) { 	return ; }[...] ` ---> `if (false) { 	return ; } ` at pos 9 of parent `{ 	final double yp0 = h *[...]`
+2018-08-08 00:43:41,814 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 257, el: CtIfImpl
+2018-08-08 00:43:41,815 INFO main - -->op: RemoveOp: `if (mu < 0) { 	return ; }[...] ` ---> `-` at pos 9 of parent `{ 	final double yp0 = h *[...]`
+2018-08-08 00:43:44,443 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 262, el: CtLocalVariableImpl
+2018-08-08 00:43:44,443 INFO main - -->op: RemoveOp: `final double ph0 = (0.5 *[...] ` ---> `-` at pos 10 of parent `{ 	final double yp0 = h *[...]`
+2018-08-08 00:43:45,455 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 263, el: CtAssignmentImpl
+2018-08-08 00:43:45,455 INFO main - -->op: RemoveOp: `polynoms[4][i] = 16 * ((y[...] ` ---> `-` at pos 11 of parent `{ 	final double yp0 = h *[...]`
+2018-08-08 00:43:48,206 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 265, el: CtIfImpl
+2018-08-08 00:43:48,207 INFO main - -->op: ReplaceIfBooleanOp: `if (mu > 0) { 	final doub[...] ` ---> `if (true) { 	final double[...]` at pos 12 of parent `{ 	final double yp0 = h *[...]`
+2018-08-08 00:43:50,666 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 265, el: CtIfImpl
+2018-08-08 00:43:50,667 INFO main - -->op: ReplaceIfBooleanOp: `if (mu > 0) { 	final doub[...] ` ---> `if (false) { 	final doubl[...]` at pos 12 of parent `{ 	final double yp0 = h *[...]`
+2018-08-08 00:43:53,769 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 265, el: CtIfImpl
+2018-08-08 00:43:53,770 INFO main - -->op: RemoveOp: `if (mu > 0) { 	final doub[...] ` ---> `-` at pos 12 of parent `{ 	final double yp0 = h *[...]`
+2018-08-08 00:43:56,467 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 266, el: CtLocalVariableImpl
+2018-08-08 00:43:56,468 INFO main - -->op: RemoveOp: `final double ph1 = ydiff [...] ` ---> `-` at pos 0 of parent `{ 	final double ph1 = ydi[...]`
+2018-08-08 00:43:57,480 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 267, el: CtAssignmentImpl
+2018-08-08 00:43:57,481 INFO main - -->op: RemoveOp: `polynoms[5][i] = 16 * ((y[...] ` ---> `-` at pos 1 of parent `{ 	final double ph1 = ydi[...]`
+2018-08-08 00:43:59,788 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 269, el: CtIfImpl
+2018-08-08 00:43:59,788 INFO main - -->op: ReplaceIfBooleanOp: `if (mu > 1) { 	final doub[...] ` ---> `if (true) { 	final double[...]` at pos 2 of parent `{ 	final double ph1 = ydi[...]`
+2018-08-08 00:44:02,162 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 269, el: CtIfImpl
+2018-08-08 00:44:02,163 INFO main - -->op: ReplaceIfBooleanOp: `if (mu > 1) { 	final doub[...] ` ---> `if (false) { 	final doubl[...]` at pos 2 of parent `{ 	final double ph1 = ydi[...]`
+2018-08-08 00:44:05,265 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 269, el: CtIfImpl
+2018-08-08 00:44:05,266 INFO main - -->op: RemoveOp: `if (mu > 1) { 	final doub[...] ` ---> `-` at pos 2 of parent `{ 	final double ph1 = ydi[...]`
+2018-08-08 00:44:08,111 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 270, el: CtLocalVariableImpl
+2018-08-08 00:44:08,111 INFO main - -->op: RemoveOp: `final double ph2 = yp1 - [...] ` ---> `-` at pos 0 of parent `{ 	final double ph2 = yp1[...]`
+2018-08-08 00:44:09,321 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 271, el: CtAssignmentImpl
+2018-08-08 00:44:09,321 INFO main - -->op: RemoveOp: `polynoms[6][i] = 16 * ((([...] ` ---> `-` at pos 1 of parent `{ 	final double ph2 = yp1[...]`
+2018-08-08 00:44:11,905 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 273, el: CtIfImpl
+2018-08-08 00:44:11,906 INFO main - -->op: ReplaceIfBooleanOp: `if (mu > 2) { 	final doub[...] ` ---> `if (true) { 	final double[...]` at pos 2 of parent `{ 	final double ph2 = yp1[...]`
+2018-08-08 00:44:14,567 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 273, el: CtIfImpl
+2018-08-08 00:44:14,567 INFO main - -->op: ReplaceIfBooleanOp: `if (mu > 2) { 	final doub[...] ` ---> `if (false) { 	final doubl[...]` at pos 2 of parent `{ 	final double ph2 = yp1[...]`
+2018-08-08 00:44:17,589 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 273, el: CtIfImpl
+2018-08-08 00:44:17,589 INFO main - -->op: RemoveOp: `if (mu > 2) { 	final doub[...] ` ---> `-` at pos 2 of parent `{ 	final double ph2 = yp1[...]`
+2018-08-08 00:44:19,928 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 274, el: CtLocalVariableImpl
+2018-08-08 00:44:19,928 INFO main - -->op: RemoveOp: `final double ph3 = 6 * (b[...] ` ---> `-` at pos 0 of parent `{ 	final double ph3 = 6 *[...]`
+2018-08-08 00:44:21,086 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 275, el: CtAssignmentImpl
+2018-08-08 00:44:21,086 INFO main - -->op: RemoveOp: `polynoms[7][i] = 16 * ((([...] ` ---> `-` at pos 1 of parent `{ 	final double ph3 = 6 *[...]`
+2018-08-08 00:44:23,519 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 277, el: CtForImpl
+2018-08-08 00:44:23,519 INFO main - -->op: RemoveOp: `for (int j = 4 ; j <= mu [...] ` ---> `-` at pos 2 of parent `{ 	final double ph3 = 6 *[...]`
+2018-08-08 00:44:25,443 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 296, el: CtLocalVariableImpl
+2018-08-08 00:44:25,443 INFO main - -->op: RemoveOp: `double error = 0 ` ---> `-` at pos 0 of parent `{ 	double error = 0; 	if [...]`
+2018-08-08 00:44:26,306 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 297, el: CtIfImpl
+2018-08-08 00:44:26,307 INFO main - -->op: ReplaceIfBooleanOp: `if ((currentDegree) >= 5)[...] ` ---> `if (true) { 	for (int i =[...]` at pos 1 of parent `{ 	double error = 0; 	if [...]`
+2018-08-08 00:44:28,466 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 297, el: CtIfImpl
+2018-08-08 00:44:28,467 INFO main - -->op: ReplaceIfBooleanOp: `if ((currentDegree) >= 5)[...] ` ---> `if (false) { 	for (int i [...]` at pos 1 of parent `{ 	double error = 0; 	if [...]`
+2018-08-08 00:44:30,624 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 297, el: CtIfImpl
+2018-08-08 00:44:30,624 INFO main - -->op: RemoveOp: `if ((currentDegree) >= 5)[...] ` ---> `-` at pos 1 of parent `{ 	double error = 0; 	if [...]`
+2018-08-08 00:44:32,767 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 298, el: CtForImpl
+2018-08-08 00:44:32,767 INFO main - -->op: RemoveOp: `for (int i = 0 ; i < (cur[...] ` ---> `-` at pos 0 of parent `{ 	for (int i = 0 ; i < ([...]`
+2018-08-08 00:44:34,764 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 299, el: CtLocalVariableImpl
+2018-08-08 00:44:34,764 INFO main - -->op: RemoveOp: `final double e = (polynom[...] ` ---> `-` at pos 0 of parent `{ 	final double e = (poly[...]`
+2018-08-08 00:44:35,667 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 300, el: CtOperatorAssignmentImpl
+2018-08-08 00:44:35,668 INFO main - -->op: RemoveOp: `error += e * e ` ---> `-` at pos 1 of parent `{ 	final double e = (poly[...]`
+2018-08-08 00:44:37,740 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 302, el: CtAssignmentImpl
+2018-08-08 00:44:37,740 INFO main - -->op: RemoveOp: `error = (java.lang.Math.s[...] ` ---> `-` at pos 1 of parent `{ 	for (int i = 0 ; i < ([...]`
+2018-08-08 00:44:40,043 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 304, el: CtReturnImpl
+2018-08-08 00:44:40,044 INFO main - -->op: RemoveOp: `return error ` ---> `-` at pos 2 of parent `{ 	double error = 0; 	if [...]`
+2018-08-08 00:44:41,354 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 313, el: CtLocalVariableImpl
+2018-08-08 00:44:41,354 INFO main - -->op: RemoveOp: `final int dimension = cur[...] ` ---> `-` at pos 0 of parent `{ 	final int dimension = [...]`
+2018-08-08 00:44:42,187 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 315, el: CtLocalVariableImpl
+2018-08-08 00:44:42,187 INFO main - -->op: RemoveOp: `final double oneMinusThet[...] ` ---> `-` at pos 1 of parent `{ 	final int dimension = [...]`
+2018-08-08 00:44:43,095 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 316, el: CtLocalVariableImpl
+2018-08-08 00:44:43,096 INFO main - -->op: RemoveOp: `final double theta05 = th[...] ` ---> `-` at pos 2 of parent `{ 	final int dimension = [...]`
+2018-08-08 00:44:44,052 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 317, el: CtLocalVariableImpl
+2018-08-08 00:44:44,053 INFO main - -->op: RemoveOp: `final double tOmT = theta[...] ` ---> `-` at pos 3 of parent `{ 	final int dimension = [...]`
+2018-08-08 00:44:44,824 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 318, el: CtLocalVariableImpl
+2018-08-08 00:44:44,825 INFO main - -->op: RemoveOp: `final double t4 = tOmT * [...] ` ---> `-` at pos 4 of parent `{ 	final int dimension = [...]`
+2018-08-08 00:44:45,701 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 319, el: CtLocalVariableImpl
+2018-08-08 00:44:45,701 INFO main - -->op: RemoveOp: `final double t4Dot = (2 *[...] ` ---> `-` at pos 5 of parent `{ 	final int dimension = [...]`
+2018-08-08 00:44:46,556 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 320, el: CtLocalVariableImpl
+2018-08-08 00:44:46,556 INFO main - -->op: RemoveOp: `final double dot1 = 1.0 /[...] ` ---> `-` at pos 6 of parent `{ 	final int dimension = [...]`
+2018-08-08 00:44:47,350 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 321, el: CtLocalVariableImpl
+2018-08-08 00:44:47,350 INFO main - -->op: RemoveOp: `final double dot2 = (thet[...] ` ---> `-` at pos 7 of parent `{ 	final int dimension = [...]`
+2018-08-08 00:44:48,262 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 322, el: CtLocalVariableImpl
+2018-08-08 00:44:48,263 INFO main - -->op: RemoveOp: `final double dot3 = ((((3[...] ` ---> `-` at pos 8 of parent `{ 	final int dimension = [...]`
+2018-08-08 00:44:49,070 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 324, el: CtForImpl
+2018-08-08 00:44:49,070 INFO main - -->op: RemoveOp: `for (int i = 0 ; i < dime[...] ` ---> `-` at pos 9 of parent `{ 	final int dimension = [...]`
+2018-08-08 00:44:51,376 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 326, el: CtLocalVariableImpl
+2018-08-08 00:44:51,376 INFO main - -->op: RemoveOp: `final double p0 = polynom[...] ` ---> `-` at pos 0 of parent `{ 	final double p0 = poly[...]`
+2018-08-08 00:44:52,303 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 327, el: CtLocalVariableImpl
+2018-08-08 00:44:52,304 INFO main - -->op: RemoveOp: `final double p1 = polynom[...] ` ---> `-` at pos 1 of parent `{ 	final double p0 = poly[...]`
+2018-08-08 00:44:53,070 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 328, el: CtLocalVariableImpl
+2018-08-08 00:44:53,070 INFO main - -->op: RemoveOp: `final double p2 = polynom[...] ` ---> `-` at pos 2 of parent `{ 	final double p0 = poly[...]`
+2018-08-08 00:44:53,844 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 329, el: CtLocalVariableImpl
+2018-08-08 00:44:53,844 INFO main - -->op: RemoveOp: `final double p3 = polynom[...] ` ---> `-` at pos 3 of parent `{ 	final double p0 = poly[...]`
+2018-08-08 00:44:54,606 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 330, el: CtAssignmentImpl
+2018-08-08 00:44:54,607 INFO main - -->op: RemoveOp: `interpolatedState[i] = p0[...] ` ---> `-` at pos 4 of parent `{ 	final double p0 = poly[...]`
+2018-08-08 00:44:56,633 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 331, el: CtAssignmentImpl
+2018-08-08 00:44:56,633 INFO main - -->op: RemoveOp: `interpolatedDerivatives[i[...] ` ---> `-` at pos 5 of parent `{ 	final double p0 = poly[...]`
+2018-08-08 00:44:58,718 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 333, el: CtIfImpl
+2018-08-08 00:44:58,718 INFO main - -->op: ReplaceIfBooleanOp: `if ((currentDegree) > 3) [...] ` ---> `if (true) { 	double cDot [...]` at pos 6 of parent `{ 	final double p0 = poly[...]`
+2018-08-08 00:45:01,071 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 333, el: CtIfImpl
+2018-08-08 00:45:01,072 INFO main - -->op: ReplaceIfBooleanOp: `if ((currentDegree) > 3) [...] ` ---> `if (false) { 	double cDot[...]` at pos 6 of parent `{ 	final double p0 = poly[...]`
+2018-08-08 00:45:03,222 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 333, el: CtIfImpl
+2018-08-08 00:45:03,223 INFO main - -->op: RemoveOp: `if ((currentDegree) > 3) [...] ` ---> `-` at pos 6 of parent `{ 	final double p0 = poly[...]`
+2018-08-08 00:45:05,508 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 334, el: CtLocalVariableImpl
+2018-08-08 00:45:05,508 INFO main - -->op: RemoveOp: `double cDot = 0 ` ---> `-` at pos 0 of parent `{ 	double cDot = 0; 	doub[...]`
+2018-08-08 00:45:06,348 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 335, el: CtLocalVariableImpl
+2018-08-08 00:45:06,349 INFO main - -->op: RemoveOp: `double c = polynoms[curre[...] ` ---> `-` at pos 1 of parent `{ 	double cDot = 0; 	doub[...]`
+2018-08-08 00:45:07,228 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 336, el: CtForImpl
+2018-08-08 00:45:07,229 INFO main - -->op: RemoveOp: `for (int j = (currentDegr[...] ` ---> `-` at pos 2 of parent `{ 	double cDot = 0; 	doub[...]`
+2018-08-08 00:45:09,225 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 337, el: CtLocalVariableImpl
+2018-08-08 00:45:09,225 INFO main - -->op: RemoveOp: `final double d = 1.0 / (j[...] ` ---> `-` at pos 0 of parent `{ 	final double d = 1.0 /[...]`
+2018-08-08 00:45:10,168 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 338, el: CtAssignmentImpl
+2018-08-08 00:45:10,168 INFO main - -->op: RemoveOp: `cDot = d * ((theta05 * cD[...] ` ---> `-` at pos 1 of parent `{ 	final double d = 1.0 /[...]`
+2018-08-08 00:45:12,454 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 339, el: CtAssignmentImpl
+2018-08-08 00:45:12,454 INFO main - -->op: RemoveOp: `c = (polynoms[j][i]) + (([...] ` ---> `-` at pos 2 of parent `{ 	final double d = 1.0 /[...]`
+2018-08-08 00:45:14,618 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 341, el: CtOperatorAssignmentImpl
+2018-08-08 00:45:14,619 INFO main - -->op: RemoveOp: `interpolatedState[i] += t[...] ` ---> `-` at pos 3 of parent `{ 	double cDot = 0; 	doub[...]`
+2018-08-08 00:45:16,784 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 342, el: CtOperatorAssignmentImpl
+2018-08-08 00:45:16,785 INFO main - -->op: RemoveOp: `interpolatedDerivatives[i[...] ` ---> `-` at pos 4 of parent `{ 	double cDot = 0; 	doub[...]`
+2018-08-08 00:45:18,910 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 347, el: CtIfImpl
+2018-08-08 00:45:18,911 INFO main - -->op: ReplaceIfBooleanOp: `if ((h) == 0) { 	java.lan[...] ` ---> `if (true) { 	java.lang.Sy[...]` at pos 10 of parent `{ 	final int dimension = [...]`
+2018-08-08 00:45:21,092 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 347, el: CtIfImpl
+2018-08-08 00:45:21,093 INFO main - -->op: ReplaceIfBooleanOp: `if ((h) == 0) { 	java.lan[...] ` ---> `if (false) { 	java.lang.S[...]` at pos 10 of parent `{ 	final int dimension = [...]`
+2018-08-08 00:45:23,424 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 347, el: CtIfImpl
+2018-08-08 00:45:23,425 INFO main - -->op: RemoveOp: `if ((h) == 0) { 	java.lan[...] ` ---> `-` at pos 10 of parent `{ 	final int dimension = [...]`
+2018-08-08 00:45:25,450 INFO main - mod_point ModificPoint=SimplexSolver line: 151, el: CtReturnImpl
+2018-08-08 00:45:25,450 INFO main - -->op: RemoveOp: `return false ` ---> `-` at pos 0 of parent `{ 	return false; }`
+2018-08-08 00:45:27,642 INFO main - mod_point ModificPoint=SimplexSolver line: 190, el: CtInvocationImpl
+2018-08-08 00:45:27,642 INFO main - -->op: RemoveOp: `doIteration(tableau) ` ---> `-` at pos 0 of parent `{ 	doIteration(tableau); [...]`
+2018-08-08 00:47:29,021 INFO main - The Process that runs JUnit test cases had problems: process hasn't exited
+2018-08-08 00:47:29,021 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 285, el: CtAssignmentImpl
+2018-08-08 00:47:29,021 INFO main - -->op: RemoveOp: `denseOutput = (requiresDe[...] ` ---> `-` at pos 1 of parent `{ 	super.addStepHandler(h[...]`
+2018-08-08 00:47:31,936 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 288, el: CtInvocationImpl
+2018-08-08 00:47:31,936 INFO main - -->op: RemoveOp: `initializeArrays() ` ---> `-` at pos 2 of parent `{ 	super.addStepHandler(h[...]`
+2018-08-08 00:47:34,085 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 322, el: CtForImpl
+2018-08-08 00:47:34,085 INFO main - -->op: RemoveOp: `for (int k = 0 ; k < size[...] ` ---> `-` at pos 0 of parent `{ 	for (int k = 0 ; k < s[...]`
+2018-08-08 00:47:36,305 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 323, el: CtAssignmentImpl
+2018-08-08 00:47:36,305 INFO main - -->op: RemoveOp: `sequence[k] = (4 * k) + 2 ` ---> `-` at pos 0 of parent `{ 	sequence[k] = (4 * k) [...]`
+2018-08-08 00:47:38,377 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 380, el: CtForImpl
+2018-08-08 00:47:38,377 INFO main - -->op: RemoveOp: `for (int i = 0 ; i < (sca[...] ` ---> `-` at pos 0 of parent `{ 	for (int i = 0 ; i < ([...]`
+2018-08-08 00:47:40,310 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 381, el: CtLocalVariableImpl
+2018-08-08 00:47:40,311 INFO main - -->op: RemoveOp: `final double yi = java.la[...] ` ---> `-` at pos 0 of parent `{ 	final double yi = java[...]`
+2018-08-08 00:47:41,177 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 382, el: CtAssignmentImpl
+2018-08-08 00:47:41,177 INFO main - -->op: RemoveOp: `scale[i] = (scalAbsoluteT[...] ` ---> `-` at pos 1 of parent `{ 	final double yi = java[...]`
+2018-08-08 00:47:43,264 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 484, el: CtForImpl
+2018-08-08 00:47:43,264 INFO main - -->op: RemoveOp: `for (int i = 0 ; i < (las[...] ` ---> `-` at pos 0 of parent `{ 	for (int i = 0 ; i < ([...]`
+2018-08-08 00:47:45,503 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 486, el: CtAssignmentImpl
+2018-08-08 00:47:45,503 INFO main - -->op: RemoveOp: `diag[((k - j) - 1)][i] = [...] ` ---> `-` at pos 0 of parent `{ 	diag[((k - j) - 1)][i][...]`
+2018-08-08 00:47:47,750 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 543, el: CtAssignmentImpl
+2018-08-08 00:47:47,750 INFO main - -->op: RemoveOp: `yDot1 = new double[y0.len[...] ` ---> `-` at pos 0 of parent `{ 	yDot1 = new double[y0.[...]`
+2018-08-08 00:47:49,829 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 544, el: CtAssignmentImpl
+2018-08-08 00:47:49,829 INFO main - -->op: RemoveOp: `yMidDots = new double[1 +[...] ` ---> `-` at pos 1 of parent `{ 	yDot1 = new double[y0.[...]`
+2018-08-08 00:47:52,023 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 545, el: CtForImpl
+2018-08-08 00:47:52,023 INFO main - -->op: RemoveOp: `for (int j = 0 ; j < (yMi[...] ` ---> `-` at pos 2 of parent `{ 	yDot1 = new double[y0.[...]`
+2018-08-08 00:47:54,074 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 546, el: CtAssignmentImpl
+2018-08-08 00:47:54,074 INFO main - -->op: RemoveOp: `yMidDots[j] = new double[[...] ` ---> `-` at pos 0 of parent `{ 	yMidDots[j] = new doub[...]`
+2018-08-08 00:47:56,138 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 567, el: CtAssignmentImpl
+2018-08-08 00:47:56,138 INFO main - -->op: RemoveOp: `interpolator = new org.ap[...] ` ---> `-` at pos 0 of parent `{ 	interpolator = new org[...]`
+2018-08-08 00:47:58,126 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 584, el: CtInvocationImpl
+2018-08-08 00:47:58,127 INFO main - -->op: RemoveOp: `handler.reset() ` ---> `-` at pos 0 of parent `{ 	handler.reset(); }`
+2018-08-08 00:48:00,243 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 669, el: CtAssignmentImpl
+2018-08-08 00:48:00,243 INFO main - -->op: RemoveOp: `maxError = java.lang.Math[...] ` ---> `-` at pos 0 of parent `{ 	maxError = java.lang.M[...]`
+2018-08-08 00:48:02,533 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 672, el: CtLocalVariableImpl
+2018-08-08 00:48:02,534 INFO main - -->op: RemoveOp: `final double exp = 1.0 / [...] ` ---> `-` at pos 1 of parent `{ 	maxError = java.lang.M[...]`
+2018-08-08 00:48:03,426 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 673, el: CtLocalVariableImpl
+2018-08-08 00:48:03,426 INFO main - -->op: RemoveOp: `double fac = (stepControl[...] ` ---> `-` at pos 2 of parent `{ 	maxError = java.lang.M[...]`
+2018-08-08 00:48:04,381 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 674, el: CtLocalVariableImpl
+2018-08-08 00:48:04,381 INFO main - -->op: RemoveOp: `final double pow = java.l[...] ` ---> `-` at pos 3 of parent `{ 	maxError = java.lang.M[...]`
+2018-08-08 00:48:05,330 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 675, el: CtAssignmentImpl
+2018-08-08 00:48:05,330 INFO main - -->op: RemoveOp: `fac = java.lang.Math.max([...] ` ---> `-` at pos 4 of parent `{ 	maxError = java.lang.M[...]`
+2018-08-08 00:48:07,783 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 676, el: CtAssignmentImpl
+2018-08-08 00:48:07,784 INFO main - -->op: RemoveOp: `optimalStep[k] = java.lan[...] ` ---> `-` at pos 5 of parent `{ 	maxError = java.lang.M[...]`
+2018-08-08 00:48:10,070 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 677, el: CtAssignmentImpl
+2018-08-08 00:48:10,071 INFO main - -->op: RemoveOp: `costPerTimeUnit[k] = (cos[...] ` ---> `-` at pos 6 of parent `{ 	maxError = java.lang.M[...]`
+2018-08-08 00:48:12,389 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 680, el: CtSwitchImpl
+2018-08-08 00:48:12,390 INFO main - -->op: RemoveOp: `switch (k - targetIter) {[...] ` ---> `-` at pos 7 of parent `{ 	maxError = java.lang.M[...]`
+2018-08-08 00:48:14,591 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 686, el: CtIfImpl
+2018-08-08 00:48:14,592 INFO main - -->op: ReplaceIfBooleanOp: `if (error <= 1.0) { 	loop[...] ` ---> `if (true) { 	loop = false[...]` at pos 0 of parent `{ 	if (error <= 1.0) { 		[...]`
+2018-08-08 00:48:16,954 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 686, el: CtIfImpl
+2018-08-08 00:48:16,954 INFO main - -->op: ReplaceIfBooleanOp: `if (error <= 1.0) { 	loop[...] ` ---> `if (false) { 	loop = fals[...]` at pos 0 of parent `{ 	if (error <= 1.0) { 		[...]`
+2018-08-08 00:48:19,406 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 686, el: CtIfImpl
+2018-08-08 00:48:19,406 INFO main - -->op: RemoveOp: `if (error <= 1.0) { 	loop[...] ` ---> `-` at pos 0 of parent `{ 	if (error <= 1.0) { 		[...]`
+2018-08-08 00:48:22,121 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 715, el: CtAssignmentImpl
+2018-08-08 00:48:22,121 INFO main - -->op: RemoveOp: `loop = false ` ---> `-` at pos 0 of parent `{ 	loop = false; }`
+2018-08-08 00:48:24,722 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 751, el: CtAssignmentImpl
+2018-08-08 00:48:24,722 INFO main - -->op: RemoveOp: `loop = false ` ---> `-` at pos 0 of parent `{ 	loop = false; }`
+2018-08-08 00:48:27,007 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 763, el: CtLocalVariableImpl
+2018-08-08 00:48:27,010 INFO main - -->op: RemoveOp: `double hInt = getMaxStep([...] ` ---> `-` at pos 9 of parent `{ 	double error; 	boolean[...]`
+2018-08-08 00:48:27,947 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 764, el: CtIfImpl
+2018-08-08 00:48:27,949 INFO main - -->op: ReplaceIfBooleanOp: `if ((denseOutput) && (!re[...] ` ---> `if (true) { 	for (int j =[...]` at pos 10 of parent `{ 	double error; 	boolean[...]`
+2018-08-08 00:48:30,214 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 764, el: CtIfImpl
+2018-08-08 00:48:30,217 INFO main - -->op: ReplaceIfBooleanOp: `if ((denseOutput) && (!re[...] ` ---> `if (false) { 	for (int j [...]` at pos 10 of parent `{ 	double error; 	boolean[...]`
+2018-08-08 00:48:34,092 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 764, el: CtIfImpl
+2018-08-08 00:48:34,094 INFO main - -->op: RemoveOp: `if ((denseOutput) && (!re[...] ` ---> `-` at pos 10 of parent `{ 	double error; 	boolean[...]`
+2018-08-08 00:48:36,446 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 849, el: CtIfImpl
+2018-08-08 00:48:36,449 INFO main - -->op: ReplaceIfBooleanOp: `if (!reject) { 	final dou[...] ` ---> `if (true) { 	final double[...]` at pos 11 of parent `{ 	double error; 	boolean[...]`
+2018-08-08 00:48:43,367 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 849, el: CtIfImpl
+2018-08-08 00:48:43,369 INFO main - -->op: ReplaceIfBooleanOp: `if (!reject) { 	final dou[...] ` ---> `if (false) { 	final doubl[...]` at pos 11 of parent `{ 	double error; 	boolean[...]`
+2018-08-08 00:48:49,483 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 849, el: CtIfImpl
+2018-08-08 00:48:49,485 INFO main - -->op: RemoveOp: `if (!reject) { 	final dou[...] ` ---> `-` at pos 11 of parent `{ 	double error; 	boolean[...]`
+2018-08-08 00:48:55,526 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 852, el: CtLocalVariableImpl
+2018-08-08 00:48:55,527 INFO main - -->op: RemoveOp: `final double nextStep = ([...] ` ---> `-` at pos 0 of parent `{ 	final double nextStep [...]`
+2018-08-08 00:48:59,559 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 853, el: CtInvocationImpl
+2018-08-08 00:48:59,559 INFO main - -->op: RemoveOp: `java.lang.System.arraycop[...] ` ---> `-` at pos 1 of parent `{ 	final double nextStep [...]`
+2018-08-08 00:49:08,095 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 855, el: CtInvocationImpl
+2018-08-08 00:49:08,095 INFO main - -->op: RemoveOp: `eventsHandlersManager.ste[...] ` ---> `-` at pos 2 of parent `{ 	final double nextStep [...]`
+2018-08-08 00:49:16,540 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 856, el: CtIfImpl
+2018-08-08 00:49:16,541 INFO main - -->op: ReplaceIfBooleanOp: `if (eventsHandlersManager[...] ` ---> `if (true) { 	lastStep = t[...]` at pos 3 of parent `{ 	final double nextStep [...]`
+2018-08-08 00:49:23,822 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 856, el: CtIfImpl
+2018-08-08 00:49:23,823 INFO main - -->op: ReplaceIfBooleanOp: `if (eventsHandlersManager[...] ` ---> `if (false) { 	lastStep = [...]` at pos 3 of parent `{ 	final double nextStep [...]`
+2018-08-08 00:49:31,218 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 856, el: CtIfImpl
+2018-08-08 00:49:31,219 INFO main - -->op: RemoveOp: `if (eventsHandlersManager[...] ` ---> `-` at pos 3 of parent `{ 	final double nextStep [...]`
+2018-08-08 00:49:45,831 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 861, el: CtInvocationImpl
+2018-08-08 00:49:45,831 INFO main - -->op: RemoveOp: `interpolator.storeTime(ne[...] ` ---> `-` at pos 4 of parent `{ 	final double nextStep [...]`
+2018-08-08 00:49:54,215 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 862, el: CtForEachImpl
+2018-08-08 00:49:54,216 INFO main - -->op: RemoveOp: `for (org.apache.commons.m[...] ` ---> `-` at pos 5 of parent `{ 	final double nextStep [...]`
+2018-08-08 00:50:00,067 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 865, el: CtAssignmentImpl
+2018-08-08 00:50:00,068 INFO main - -->op: RemoveOp: `stepStart = nextStep ` ---> `-` at pos 6 of parent `{ 	final double nextStep [...]`
+2018-08-08 00:50:10,191 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 867, el: CtIfImpl
+2018-08-08 00:50:10,191 INFO main - -->op: ReplaceIfBooleanOp: `if ((eventsHandlersManage[...] ` ---> `if (true) { 	firstStepAlr[...]` at pos 7 of parent `{ 	final double nextStep [...]`
+2018-08-08 00:50:16,371 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 867, el: CtIfImpl
+2018-08-08 00:50:16,372 INFO main - -->op: ReplaceIfBooleanOp: `if ((eventsHandlersManage[...] ` ---> `if (false) { 	firstStepAl[...]` at pos 7 of parent `{ 	final double nextStep [...]`
+2018-08-08 00:50:24,172 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 867, el: CtIfImpl
+2018-08-08 00:50:24,173 INFO main - -->op: RemoveOp: `if ((eventsHandlersManage[...] ` ---> `-` at pos 7 of parent `{ 	final double nextStep [...]`
+2018-08-08 00:50:31,430 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 874, el: CtIfImpl
+2018-08-08 00:50:31,430 INFO main - -->op: ReplaceIfBooleanOp: `if (k == 1) { 	optimalIte[...] ` ---> `if (true) { 	optimalIter [...]` at pos 9 of parent `{ 	final double nextStep [...]`
+2018-08-08 00:50:40,286 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 874, el: CtIfImpl
+2018-08-08 00:50:40,287 INFO main - -->op: ReplaceIfBooleanOp: `if (k == 1) { 	optimalIte[...] ` ---> `if (false) { 	optimalIter[...]` at pos 9 of parent `{ 	final double nextStep [...]`
+2018-08-08 00:50:55,277 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 874, el: CtIfImpl
+2018-08-08 00:50:55,278 INFO main - -->op: RemoveOp: `if (k == 1) { 	optimalIte[...] ` ---> `-` at pos 9 of parent `{ 	final double nextStep [...]`
+2018-08-08 00:50:58,816 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 879, el: CtIfImpl
+2018-08-08 00:50:58,816 INFO main - -->op: ReplaceIfBooleanOp: `if (k <= targetIter) { 	o[...] ` ---> `if (true) { 	optimalIter [...]` at pos 0 of parent `{ 	if (k <= targetIter) {[...]`
+2018-08-08 00:51:05,352 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 879, el: CtIfImpl
+2018-08-08 00:51:05,353 INFO main - -->op: ReplaceIfBooleanOp: `if (k <= targetIter) { 	o[...] ` ---> `if (false) { 	optimalIter[...]` at pos 0 of parent `{ 	if (k <= targetIter) {[...]`
+2018-08-08 00:51:17,647 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 879, el: CtIfImpl
+2018-08-08 00:51:17,648 INFO main - -->op: RemoveOp: `if (k <= targetIter) { 	o[...] ` ---> `-` at pos 0 of parent `{ 	if (k <= targetIter) {[...]`
+2018-08-08 00:51:18,737 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 880, el: CtAssignmentImpl
+2018-08-08 00:51:18,737 INFO main - -->op: RemoveOp: `optimalIter = k ` ---> `-` at pos 0 of parent `{ 	optimalIter = k; 	if ([...]`
+2018-08-08 00:51:23,708 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 881, el: CtIfImpl
+2018-08-08 00:51:23,708 INFO main - -->op: ReplaceIfBooleanOp: `if ((costPerTimeUnit[(k -[...] ` ---> `if (true) { 	optimalIter [...]` at pos 1 of parent `{ 	optimalIter = k; 	if ([...]`
+2018-08-08 00:51:31,069 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 881, el: CtIfImpl
+2018-08-08 00:51:31,070 INFO main - -->op: ReplaceIfBooleanOp: `if ((costPerTimeUnit[(k -[...] ` ---> `if (false) { 	optimalIter[...]` at pos 1 of parent `{ 	optimalIter = k; 	if ([...]`
+2018-08-08 00:51:37,859 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 881, el: CtIfImpl
+2018-08-08 00:51:37,859 INFO main - -->op: RemoveOp: `if ((costPerTimeUnit[(k -[...] ` ---> `-` at pos 1 of parent `{ 	optimalIter = k; 	if ([...]`
+2018-08-08 00:51:48,024 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 897, el: CtIfImpl
+2018-08-08 00:51:48,024 INFO main - -->op: ReplaceIfBooleanOp: `if (previousRejected) { 	[...] ` ---> `if (true) { 	targetIter =[...]` at pos 10 of parent `{ 	final double nextStep [...]`
+2018-08-08 00:52:01,630 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 897, el: CtIfImpl
+2018-08-08 00:52:01,631 INFO main - -->op: ReplaceIfBooleanOp: `if (previousRejected) { 	[...] ` ---> `if (false) { 	targetIter [...]` at pos 10 of parent `{ 	final double nextStep [...]`
+2018-08-08 00:52:09,179 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 897, el: CtIfImpl
+2018-08-08 00:52:09,180 INFO main - -->op: RemoveOp: `if (previousRejected) { 	[...] ` ---> `-` at pos 10 of parent `{ 	final double nextStep [...]`
+2018-08-08 00:52:16,665 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 904, el: CtIfImpl
+2018-08-08 00:52:16,665 INFO main - -->op: ReplaceIfBooleanOp: `if (optimalIter <= k) { 	[...] ` ---> `if (true) { 	hNew = optim[...]` at pos 0 of parent `{ 	if (optimalIter <= k) [...]`
+2018-08-08 00:52:23,093 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 904, el: CtIfImpl
+2018-08-08 00:52:23,093 INFO main - -->op: ReplaceIfBooleanOp: `if (optimalIter <= k) { 	[...] ` ---> `if (false) { 	hNew = opti[...]` at pos 0 of parent `{ 	if (optimalIter <= k) [...]`
+2018-08-08 00:52:29,956 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 904, el: CtIfImpl
+2018-08-08 00:52:29,957 INFO main - -->op: RemoveOp: `if (optimalIter <= k) { 	[...] ` ---> `-` at pos 0 of parent `{ 	if (optimalIter <= k) [...]`
+2018-08-08 00:52:35,658 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 907, el: CtIfImpl
+2018-08-08 00:52:35,658 INFO main - -->op: ReplaceIfBooleanOp: `if ((k < targetIter) && ([...] ` ---> `if (true) { 	hNew = filte[...]` at pos 0 of parent `{ 	if ((k < targetIter) &[...]`
+2018-08-08 00:52:40,096 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 907, el: CtIfImpl
+2018-08-08 00:52:40,097 INFO main - -->op: ReplaceIfBooleanOp: `if ((k < targetIter) && ([...] ` ---> `if (false) { 	hNew = filt[...]` at pos 0 of parent `{ 	if ((k < targetIter) &[...]`
+2018-08-08 00:52:45,760 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 907, el: CtIfImpl
+2018-08-08 00:52:45,760 INFO main - -->op: RemoveOp: `if ((k < targetIter) && ([...] ` ---> `-` at pos 0 of parent `{ 	if ((k < targetIter) &[...]`
+2018-08-08 00:52:49,805 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 912, el: CtAssignmentImpl
+2018-08-08 00:52:49,805 INFO main - -->op: RemoveOp: `hNew = filterStep((((opti[...] ` ---> `-` at pos 0 of parent `{ 	hNew = filterStep((((o[...]`
+2018-08-08 00:52:57,377 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 917, el: CtAssignmentImpl
+2018-08-08 00:52:57,377 INFO main - -->op: RemoveOp: `targetIter = optimalIter ` ---> `-` at pos 1 of parent `{ 	if (optimalIter <= k) [...]`
+2018-08-08 00:53:03,368 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 921, el: CtAssignmentImpl
+2018-08-08 00:53:03,369 INFO main - -->op: RemoveOp: `newStep = true ` ---> `-` at pos 11 of parent `{ 	final double nextStep [...]`
+2018-08-08 00:53:07,173 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 925, el: CtAssignmentImpl
+2018-08-08 00:53:07,175 INFO main - -->op: RemoveOp: `hNew = java.lang.Math.min[...] ` ---> `-` at pos 12 of parent `{ 	double error; 	boolean[...]`
+2018-08-08 00:53:14,227 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 926, el: CtIfImpl
+2018-08-08 00:53:14,229 INFO main - -->op: ReplaceIfBooleanOp: `if (!forward) { 	hNew = -[...] ` ---> `if (true) { 	hNew = -hNew[...]` at pos 13 of parent `{ 	double error; 	boolean[...]`
+2018-08-08 00:53:19,669 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 926, el: CtIfImpl
+2018-08-08 00:53:19,671 INFO main - -->op: ReplaceIfBooleanOp: `if (!forward) { 	hNew = -[...] ` ---> `if (false) { 	hNew = -hNe[...]` at pos 13 of parent `{ 	double error; 	boolean[...]`
+2018-08-08 00:53:27,082 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 926, el: CtIfImpl
+2018-08-08 00:53:27,084 INFO main - -->op: RemoveOp: `if (!forward) { 	hNew = -[...] ` ---> `-` at pos 13 of parent `{ 	double error; 	boolean[...]`
+2018-08-08 00:53:33,800 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 930, el: CtAssignmentImpl
+2018-08-08 00:53:33,802 INFO main - -->op: RemoveOp: `firstTime = false ` ---> `-` at pos 14 of parent `{ 	double error; 	boolean[...]`
+2018-08-08 00:53:41,428 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 932, el: CtIfImpl
+2018-08-08 00:53:41,429 INFO main - -->op: ReplaceIfBooleanOp: `if (reject) { 	lastStep =[...] ` ---> `if (true) { 	lastStep = f[...]` at pos 15 of parent `{ 	double error; 	boolean[...]`
+2018-08-08 00:53:46,891 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 932, el: CtIfImpl
+2018-08-08 00:53:46,893 INFO main - -->op: ReplaceIfBooleanOp: `if (reject) { 	lastStep =[...] ` ---> `if (false) { 	lastStep = [...]` at pos 15 of parent `{ 	double error; 	boolean[...]`
+2018-08-08 00:53:56,357 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 932, el: CtIfImpl
+2018-08-08 00:53:56,359 INFO main - -->op: RemoveOp: `if (reject) { 	lastStep =[...] ` ---> `-` at pos 15 of parent `{ 	double error; 	boolean[...]`
+2018-08-08 00:54:09,939 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 936, el: CtAssignmentImpl
+2018-08-08 00:54:09,939 INFO main - -->op: RemoveOp: `previousRejected = false ` ---> `-` at pos 0 of parent `{ 	previousRejected = fal[...]`
+2018-08-08 00:54:14,966 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 111, el: CtIfImpl
+2018-08-08 00:54:14,967 INFO main - -->op: ReplaceIfBooleanOp: `if (maxDegree < 0) { 	pol[...] ` ---> `if (true) { 	Error in pri[...]` at pos 0 of parent `{ 	if (maxDegree < 0) { 	[...]`
+2018-08-08 00:54:23,368 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 111, el: CtIfImpl
+2018-08-08 00:54:23,369 INFO main - -->op: ReplaceIfBooleanOp: `if (maxDegree < 0) { 	pol[...] ` ---> `if (false) { 	Error in pr[...]` at pos 0 of parent `{ 	if (maxDegree < 0) { 	[...]`
+2018-08-08 00:54:27,482 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 111, el: CtIfImpl
+2018-08-08 00:54:27,482 INFO main - -->op: RemoveOp: `if (maxDegree < 0) { 	pol[...] ` ---> `-` at pos 0 of parent `{ 	if (maxDegree < 0) { 	[...]`
+2018-08-08 00:54:30,669 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 117, el: CtLocalVariableImpl
+2018-08-08 00:54:30,669 INFO main - -->op: RemoveOp: `final double[][] newPols [...] ` ---> `-` at pos 0 of parent `{ 	final double[][] newPo[...]`
+2018-08-08 00:54:33,151 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 118, el: CtIfImpl
+2018-08-08 00:54:33,153 INFO main - -->op: ReplaceIfBooleanOp: `if ((polynoms) != null) {[...] ` ---> `if (true) { 	java.lang.Sy[...]` at pos 1 of parent `{ 	final double[][] newPo[...]`
+2018-08-08 00:54:36,594 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 118, el: CtIfImpl
+2018-08-08 00:54:36,595 INFO main - -->op: ReplaceIfBooleanOp: `if ((polynoms) != null) {[...] ` ---> `if (false) { 	java.lang.S[...]` at pos 1 of parent `{ 	final double[][] newPo[...]`
+2018-08-08 00:54:42,057 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 118, el: CtIfImpl
+2018-08-08 00:54:42,058 INFO main - -->op: RemoveOp: `if ((polynoms) != null) {[...] ` ---> `-` at pos 1 of parent `{ 	final double[][] newPo[...]`
+2018-08-08 00:54:45,839 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 124, el: CtForImpl
+2018-08-08 00:54:45,839 INFO main - -->op: RemoveOp: `for (int i = 0 ; i < (new[...] ` ---> `-` at pos 0 of parent `{ 	for (int i = 0 ; i < ([...]`
+2018-08-08 00:54:49,144 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 125, el: CtAssignmentImpl
+2018-08-08 00:54:49,144 INFO main - -->op: RemoveOp: `newPols[i] = new double[c[...] ` ---> `-` at pos 0 of parent `{ 	newPols[i] = new doubl[...]`
+2018-08-08 00:54:51,486 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 128, el: CtAssignmentImpl
+2018-08-08 00:54:51,487 INFO main - -->op: RemoveOp: `polynoms = newPols ` ---> `-` at pos 2 of parent `{ 	final double[][] newPo[...]`
+2018-08-08 00:54:54,157 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 131, el: CtIfImpl
+2018-08-08 00:54:54,158 INFO main - -->op: ReplaceIfBooleanOp: `if (maxDegree <= 4) { 	er[...] ` ---> `if (true) { 	Error in pri[...]` at pos 3 of parent `{ 	final double[][] newPo[...]`
+2018-08-08 00:54:55,813 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 131, el: CtIfImpl
+2018-08-08 00:54:55,814 INFO main - -->op: ReplaceIfBooleanOp: `if (maxDegree <= 4) { 	er[...] ` ---> `if (false) { 	Error in pr[...]` at pos 3 of parent `{ 	final double[][] newPo[...]`
+2018-08-08 00:54:57,447 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 131, el: CtIfImpl
+2018-08-08 00:54:57,447 INFO main - -->op: RemoveOp: `if (maxDegree <= 4) { 	er[...] ` ---> `-` at pos 3 of parent `{ 	final double[][] newPo[...]`
+2018-08-08 00:54:59,193 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 134, el: CtAssignmentImpl
+2018-08-08 00:54:59,193 INFO main - -->op: RemoveOp: `errfac = new double[maxDe[...] ` ---> `-` at pos 0 of parent `{ 	errfac = new double[ma[...]`
+2018-08-08 00:55:01,503 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 135, el: CtForImpl
+2018-08-08 00:55:01,504 INFO main - -->op: RemoveOp: `for (int i = 0 ; i < (err[...] ` ---> `-` at pos 1 of parent `{ 	errfac = new double[ma[...]`
+2018-08-08 00:55:04,052 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 136, el: CtLocalVariableImpl
+2018-08-08 00:55:04,052 INFO main - -->op: RemoveOp: `final int ip5 = i + 5 ` ---> `-` at pos 0 of parent `{ 	final int ip5 = i + 5;[...]`
+2018-08-08 00:55:06,120 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 137, el: CtAssignmentImpl
+2018-08-08 00:55:06,120 INFO main - -->op: RemoveOp: `errfac[i] = 1.0 / (ip5 * [...] ` ---> `-` at pos 1 of parent `{ 	final int ip5 = i + 5;[...]`
+2018-08-08 00:55:10,281 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 138, el: CtLocalVariableImpl
+2018-08-08 00:55:10,281 INFO main - -->op: RemoveOp: `final double e = 0.5 * (j[...] ` ---> `-` at pos 2 of parent `{ 	final int ip5 = i + 5;[...]`
+2018-08-08 00:55:11,672 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 139, el: CtForImpl
+2018-08-08 00:55:11,673 INFO main - -->op: RemoveOp: `for (int j = 0 ; j <= i ;[...] ` ---> `-` at pos 3 of parent `{ 	final int ip5 = i + 5;[...]`
+2018-08-08 00:55:14,457 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 140, el: CtOperatorAssignmentImpl
+2018-08-08 00:55:14,457 INFO main - -->op: RemoveOp: `errfac[i] *= e / (j + 1) ` ---> `-` at pos 0 of parent `{ 	errfac[i] *= e / (j + [...]`
+2018-08-08 00:55:17,941 INFO main - mod_point ModificPoint=GraggBulirschStoerStepInterpolator line: 145, el: CtAssignmentImpl
+2018-08-08 00:55:17,942 INFO main - -->op: RemoveOp: `currentDegree = 0 ` ---> `-` at pos 4 of parent `{ 	final double[][] newPo[...]`
+2018-08-08 00:55:22,005 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 379, el: CtIfImpl
+2018-08-08 00:55:22,006 INFO main - -->op: ReplaceIfBooleanOp: `if ((vecAbsoluteTolerance[...] ` ---> `if (true) { 	for (int i =[...]` at pos 0 of parent `{ 	if ((vecAbsoluteTolera[...]`
+2018-08-08 00:55:25,628 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 379, el: CtIfImpl
+2018-08-08 00:55:25,629 INFO main - -->op: ReplaceIfBooleanOp: `if ((vecAbsoluteTolerance[...] ` ---> `if (false) { 	for (int i [...]` at pos 0 of parent `{ 	if ((vecAbsoluteTolera[...]`
+2018-08-08 00:55:28,934 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 379, el: CtIfImpl
+2018-08-08 00:55:28,935 INFO main - -->op: RemoveOp: `if ((vecAbsoluteTolerance[...] ` ---> `-` at pos 0 of parent `{ 	if ((vecAbsoluteTolera[...]`
+2018-08-08 00:55:31,835 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 415, el: CtLocalVariableImpl
+2018-08-08 00:55:31,835 INFO main - -->op: RemoveOp: `final int n = sequence[k] ` ---> `-` at pos 0 of parent `{ 	final int n = sequence[...]`
+2018-08-08 00:55:33,860 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 416, el: CtLocalVariableImpl
+2018-08-08 00:55:33,860 INFO main - -->op: RemoveOp: `final double subStep = st[...] ` ---> `-` at pos 1 of parent `{ 	final int n = sequence[...]`
+2018-08-08 00:55:34,927 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 417, el: CtLocalVariableImpl
+2018-08-08 00:55:34,927 INFO main - -->op: RemoveOp: `final double subStep2 = 2[...] ` ---> `-` at pos 2 of parent `{ 	final int n = sequence[...]`
+2018-08-08 00:55:35,727 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 420, el: CtLocalVariableImpl
+2018-08-08 00:55:35,728 INFO main - -->op: RemoveOp: `double t = t0 + subStep ` ---> `-` at pos 3 of parent `{ 	final int n = sequence[...]`
+2018-08-08 00:55:37,797 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 421, el: CtForImpl
+2018-08-08 00:55:37,797 INFO main - -->op: RemoveOp: `for (int i = 0 ; i < (y0.[...] ` ---> `-` at pos 4 of parent `{ 	final int n = sequence[...]`
+2018-08-08 00:55:42,004 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 422, el: CtAssignmentImpl
+2018-08-08 00:55:42,005 INFO main - -->op: RemoveOp: `yTmp[i] = y0[i] ` ---> `-` at pos 0 of parent `{ 	yTmp[i] = y0[i]; 	yEnd[...]`
+2018-08-08 00:55:49,834 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 423, el: CtAssignmentImpl
+2018-08-08 00:55:49,834 INFO main - -->op: RemoveOp: `yEnd[i] = (y0[i]) + (subS[...] ` ---> `-` at pos 1 of parent `{ 	yTmp[i] = y0[i]; 	yEnd[...]`
+2018-08-08 00:55:57,741 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 425, el: CtInvocationImpl
+2018-08-08 00:55:57,742 INFO main - -->op: RemoveOp: `computeDerivatives(t, yEn[...] ` ---> `-` at pos 5 of parent `{ 	final int n = sequence[...]`
+2018-08-08 00:56:04,553 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 428, el: CtForImpl
+2018-08-08 00:56:04,553 INFO main - -->op: RemoveOp: `for (int j = 1 ; j < n ; [...] ` ---> `-` at pos 6 of parent `{ 	final int n = sequence[...]`
+2018-08-08 00:56:08,573 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 430, el: CtIfImpl
+2018-08-08 00:56:08,573 INFO main - -->op: ReplaceIfBooleanOp: `if ((2 * j) == n) { 	java[...] ` ---> `if (true) { 	java.lang.Sy[...]` at pos 0 of parent `{ 	if ((2 * j) == n) { 		[...]`
+2018-08-08 00:56:15,858 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 430, el: CtIfImpl
+2018-08-08 00:56:15,859 INFO main - -->op: ReplaceIfBooleanOp: `if ((2 * j) == n) { 	java[...] ` ---> `if (false) { 	java.lang.S[...]` at pos 0 of parent `{ 	if ((2 * j) == n) { 		[...]`
+2018-08-08 00:56:19,684 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 430, el: CtIfImpl
+2018-08-08 00:56:19,685 INFO main - -->op: RemoveOp: `if ((2 * j) == n) { 	java[...] ` ---> `-` at pos 0 of parent `{ 	if ((2 * j) == n) { 		[...]`
+2018-08-08 00:56:26,094 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 432, el: CtInvocationImpl
+2018-08-08 00:56:26,095 INFO main - -->op: RemoveOp: `java.lang.System.arraycop[...] ` ---> `-` at pos 0 of parent `{ 	java.lang.System.array[...]`
+2018-08-08 00:56:30,519 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 435, el: CtOperatorAssignmentImpl
+2018-08-08 00:56:30,519 INFO main - -->op: RemoveOp: `t += subStep ` ---> `-` at pos 1 of parent `{ 	if ((2 * j) == n) { 		[...]`
+2018-08-08 00:56:37,396 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 436, el: CtForImpl
+2018-08-08 00:56:37,396 INFO main - -->op: RemoveOp: `for (int i = 0 ; i < (y0.[...] ` ---> `-` at pos 2 of parent `{ 	if ((2 * j) == n) { 		[...]`
+2018-08-08 00:56:42,351 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 437, el: CtLocalVariableImpl
+2018-08-08 00:56:42,351 INFO main - -->op: RemoveOp: `final double middle = yEn[...] ` ---> `-` at pos 0 of parent `{ 	final double middle = [...]`
+2018-08-08 00:56:45,259 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 438, el: CtAssignmentImpl
+2018-08-08 00:56:45,259 INFO main - -->op: RemoveOp: `yEnd[i] = (yTmp[i]) + (su[...] ` ---> `-` at pos 1 of parent `{ 	final double middle = [...]`
+2018-08-08 00:56:52,393 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 439, el: CtAssignmentImpl
+2018-08-08 00:56:52,393 INFO main - -->op: RemoveOp: `yTmp[i] = middle ` ---> `-` at pos 2 of parent `{ 	final double middle = [...]`
+2018-08-08 00:56:56,747 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 442, el: CtInvocationImpl
+2018-08-08 00:56:56,747 INFO main - -->op: RemoveOp: `computeDerivatives(t, yEn[...] ` ---> `-` at pos 3 of parent `{ 	if ((2 * j) == n) { 		[...]`
+2018-08-08 00:57:04,662 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 445, el: CtIfImpl
+2018-08-08 00:57:04,662 INFO main - -->op: ReplaceIfBooleanOp: `if (((performTest) && (j [...] ` ---> `if (true) { 	double initi[...]` at pos 4 of parent `{ 	if ((2 * j) == n) { 		[...]`
+2018-08-08 00:57:13,998 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 445, el: CtIfImpl
+2018-08-08 00:57:13,999 INFO main - -->op: ReplaceIfBooleanOp: `if (((performTest) && (j [...] ` ---> `if (false) { 	double init[...]` at pos 4 of parent `{ 	if ((2 * j) == n) { 		[...]`
+2018-08-08 00:57:23,376 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 445, el: CtIfImpl
+2018-08-08 00:57:23,377 INFO main - -->op: RemoveOp: `if (((performTest) && (j [...] ` ---> `-` at pos 4 of parent `{ 	if ((2 * j) == n) { 		[...]`
+2018-08-08 00:57:27,604 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 446, el: CtLocalVariableImpl
+2018-08-08 00:57:27,605 INFO main - -->op: RemoveOp: `double initialNorm = 0.0 ` ---> `-` at pos 0 of parent `{ 	double initialNorm = 0[...]`
+2018-08-08 00:57:29,973 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 447, el: CtForImpl
+2018-08-08 00:57:29,973 INFO main - -->op: RemoveOp: `for (int l = 0 ; l < (y0.[...] ` ---> `-` at pos 1 of parent `{ 	double initialNorm = 0[...]`
+2018-08-08 00:57:33,530 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 448, el: CtLocalVariableImpl
+2018-08-08 00:57:33,530 INFO main - -->op: RemoveOp: `final double ratio = (f[0[...] ` ---> `-` at pos 0 of parent `{ 	final double ratio = ([...]`
+2018-08-08 00:57:36,331 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 449, el: CtOperatorAssignmentImpl
+2018-08-08 00:57:36,331 INFO main - -->op: RemoveOp: `initialNorm += ratio * ra[...] ` ---> `-` at pos 1 of parent `{ 	final double ratio = ([...]`
+2018-08-08 00:57:40,063 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 451, el: CtLocalVariableImpl
+2018-08-08 00:57:40,064 INFO main - -->op: RemoveOp: `double deltaNorm = 0.0 ` ---> `-` at pos 2 of parent `{ 	double initialNorm = 0[...]`
+2018-08-08 00:57:42,721 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 452, el: CtForImpl
+2018-08-08 00:57:42,721 INFO main - -->op: RemoveOp: `for (int l = 0 ; l < (y0.[...] ` ---> `-` at pos 3 of parent `{ 	double initialNorm = 0[...]`
+2018-08-08 00:57:47,550 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 453, el: CtLocalVariableImpl
+2018-08-08 00:57:47,550 INFO main - -->op: RemoveOp: `final double ratio = ((f[[...] ` ---> `-` at pos 0 of parent `{ 	final double ratio = ([...]`
+2018-08-08 00:57:50,674 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 454, el: CtOperatorAssignmentImpl
+2018-08-08 00:57:50,674 INFO main - -->op: RemoveOp: `deltaNorm += ratio * rati[...] ` ---> `-` at pos 1 of parent `{ 	final double ratio = ([...]`
+2018-08-08 00:57:58,337 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 456, el: CtIfImpl
+2018-08-08 00:57:58,337 INFO main - -->op: ReplaceIfBooleanOp: `if (deltaNorm > (4 * (jav[...] ` ---> `if (true) { 	return false[...]` at pos 4 of parent `{ 	double initialNorm = 0[...]`
+2018-08-08 00:58:03,618 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 456, el: CtIfImpl
+2018-08-08 00:58:03,618 INFO main - -->op: ReplaceIfBooleanOp: `if (deltaNorm > (4 * (jav[...] ` ---> `if (false) { 	return fals[...]` at pos 4 of parent `{ 	double initialNorm = 0[...]`
+2018-08-08 00:58:07,491 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 456, el: CtIfImpl
+2018-08-08 00:58:07,491 INFO main - -->op: RemoveOp: `if (deltaNorm > (4 * (jav[...] ` ---> `-` at pos 4 of parent `{ 	double initialNorm = 0[...]`
+2018-08-08 00:58:15,232 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 464, el: CtForImpl
+2018-08-08 00:58:15,233 INFO main - -->op: RemoveOp: `for (int i = 0 ; i < (y0.[...] ` ---> `-` at pos 7 of parent `{ 	final int n = sequence[...]`
+2018-08-08 00:58:22,183 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 465, el: CtAssignmentImpl
+2018-08-08 00:58:22,183 INFO main - -->op: RemoveOp: `yEnd[i] = 0.5 * (((yTmp[i[...] ` ---> `-` at pos 0 of parent `{ 	yEnd[i] = 0.5 * (((yTm[...]`
+2018-08-08 00:58:29,374 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 468, el: CtReturnImpl
+2018-08-08 00:58:29,375 INFO main - -->op: RemoveOp: `return true ` ---> `-` at pos 8 of parent `{ 	final int n = sequence[...]`
+2018-08-08 00:58:30,274 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 483, el: CtForImpl
+2018-08-08 00:58:30,275 INFO main - -->op: RemoveOp: `for (int j = 1 ; j < k ; [...] ` ---> `-` at pos 0 of parent `{ 	for (int j = 1 ; j < k[...]`
+2018-08-08 00:58:38,612 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 492, el: CtForImpl
+2018-08-08 00:58:38,612 INFO main - -->op: RemoveOp: `for (int i = 0 ; i < (las[...] ` ---> `-` at pos 1 of parent `{ 	for (int j = 1 ; j < k[...]`
+2018-08-08 00:58:47,764 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 494, el: CtAssignmentImpl
+2018-08-08 00:58:47,765 INFO main - -->op: RemoveOp: `last[i] = (diag[0][i]) + [...] ` ---> `-` at pos 0 of parent `{ 	last[i] = (diag[0][i])[...]`
+2018-08-08 00:58:52,557 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 505, el: CtInvocationImpl
+2018-08-08 00:58:52,559 INFO main - -->op: RemoveOp: `setEquations(equations) ` ---> `-` at pos 1 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 00:58:58,217 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 506, el: CtInvocationImpl
+2018-08-08 00:58:58,219 INFO main - -->op: RemoveOp: `resetEvaluations() ` ---> `-` at pos 2 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 00:59:02,161 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 507, el: CtLocalVariableImpl
+2018-08-08 00:59:02,163 INFO main - -->op: RemoveOp: `final boolean forward = t[...] ` ---> `-` at pos 3 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 00:59:04,744 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 510, el: CtLocalVariableImpl
+2018-08-08 00:59:04,745 INFO main - -->op: RemoveOp: `final double[] yDot0 = ne[...] ` ---> `-` at pos 4 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 00:59:05,589 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 511, el: CtLocalVariableImpl
+2018-08-08 00:59:05,591 INFO main - -->op: RemoveOp: `final double[] y1 = new d[...] ` ---> `-` at pos 5 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 00:59:08,828 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 512, el: CtLocalVariableImpl
+2018-08-08 00:59:08,829 INFO main - -->op: RemoveOp: `final double[] yTmp = new[...] ` ---> `-` at pos 6 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 00:59:12,718 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 513, el: CtLocalVariableImpl
+2018-08-08 00:59:12,720 INFO main - -->op: RemoveOp: `final double[] yTmpDot = [...] ` ---> `-` at pos 7 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 00:59:14,722 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 515, el: CtLocalVariableImpl
+2018-08-08 00:59:14,724 INFO main - -->op: RemoveOp: `final double[][] diagonal[...] ` ---> `-` at pos 8 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 00:59:17,036 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 516, el: CtLocalVariableImpl
+2018-08-08 00:59:17,037 INFO main - -->op: RemoveOp: `final double[][] y1Diag =[...] ` ---> `-` at pos 9 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 00:59:20,794 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 517, el: CtForImpl
+2018-08-08 00:59:20,795 INFO main - -->op: RemoveOp: `for (int k = 0 ; k < ((se[...] ` ---> `-` at pos 10 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 00:59:26,518 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 518, el: CtAssignmentImpl
+2018-08-08 00:59:26,518 INFO main - -->op: RemoveOp: `diagonal[k] = new double[[...] ` ---> `-` at pos 0 of parent `{ 	diagonal[k] = new doub[...]`
+2018-08-08 00:59:33,918 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 519, el: CtAssignmentImpl
+2018-08-08 00:59:33,918 INFO main - -->op: RemoveOp: `y1Diag[k] = new double[y0[...] ` ---> `-` at pos 1 of parent `{ 	diagonal[k] = new doub[...]`
+2018-08-08 00:59:38,167 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 522, el: CtLocalVariableImpl
+2018-08-08 00:59:38,170 INFO main - -->op: RemoveOp: `final double[][][] fk = n[...] ` ---> `-` at pos 11 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 00:59:41,202 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 523, el: CtForImpl
+2018-08-08 00:59:41,204 INFO main - -->op: RemoveOp: `for (int k = 0 ; k < (seq[...] ` ---> `-` at pos 12 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 00:59:45,585 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 525, el: CtAssignmentImpl
+2018-08-08 00:59:45,585 INFO main - -->op: RemoveOp: `fk[k] = new double[(seque[...] ` ---> `-` at pos 0 of parent `{ 	fk[k] = new double[(se[...]`
+2018-08-08 00:59:52,194 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 528, el: CtAssignmentImpl
+2018-08-08 00:59:52,194 INFO main - -->op: RemoveOp: `fk[k][0] = yDot0 ` ---> `-` at pos 1 of parent `{ 	fk[k] = new double[(se[...]`
+2018-08-08 00:59:54,599 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 530, el: CtForImpl
+2018-08-08 00:59:54,599 INFO main - -->op: RemoveOp: `for (int l = 0 ; l < (seq[...] ` ---> `-` at pos 2 of parent `{ 	fk[k] = new double[(se[...]`
+2018-08-08 00:59:58,397 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 531, el: CtAssignmentImpl
+2018-08-08 00:59:58,397 INFO main - -->op: RemoveOp: `fk[k][(l + 1)] = new doub[...] ` ---> `-` at pos 0 of parent `{ 	fk[k][(l + 1)] = new d[...]`
+2018-08-08 01:00:00,921 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 536, el: CtIfImpl
+2018-08-08 01:00:00,922 INFO main - -->op: ReplaceIfBooleanOp: `if (y != y0) { 	java.lang[...] ` ---> `if (true) { 	java.lang.Sy[...]` at pos 13 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 01:00:03,186 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 536, el: CtIfImpl
+2018-08-08 01:00:03,188 INFO main - -->op: ReplaceIfBooleanOp: `if (y != y0) { 	java.lang[...] ` ---> `if (false) { 	java.lang.S[...]` at pos 13 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 01:00:05,540 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 536, el: CtIfImpl
+2018-08-08 01:00:05,543 INFO main - -->op: RemoveOp: `if (y != y0) { 	java.lang[...] ` ---> `-` at pos 13 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 01:00:07,702 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 537, el: CtInvocationImpl
+2018-08-08 01:00:07,703 INFO main - -->op: RemoveOp: `java.lang.System.arraycop[...] ` ---> `-` at pos 0 of parent `{ 	java.lang.System.array[...]`
+2018-08-08 01:00:10,150 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 540, el: CtLocalVariableImpl
+2018-08-08 01:00:10,152 INFO main - -->op: RemoveOp: `double[] yDot1 = null ` ---> `-` at pos 14 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 01:00:11,155 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 541, el: CtLocalVariableImpl
+2018-08-08 01:00:11,156 INFO main - -->op: RemoveOp: `double[][] yMidDots = nul[...] ` ---> `-` at pos 15 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 01:00:12,034 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 542, el: CtIfImpl
+2018-08-08 01:00:12,035 INFO main - -->op: ReplaceIfBooleanOp: `if (denseOutput) { 	yDot1[...] ` ---> `if (true) { 	yDot1 = Erro[...]` at pos 16 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 01:00:15,262 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 542, el: CtIfImpl
+2018-08-08 01:00:15,265 INFO main - -->op: ReplaceIfBooleanOp: `if (denseOutput) { 	yDot1[...] ` ---> `if (false) { 	yDot1 = Err[...]` at pos 16 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 01:00:20,113 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 542, el: CtIfImpl
+2018-08-08 01:00:20,116 INFO main - -->op: RemoveOp: `if (denseOutput) { 	yDot1[...] ` ---> `-` at pos 16 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 01:00:22,969 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 554, el: CtLocalVariableImpl
+2018-08-08 01:00:22,970 INFO main - -->op: RemoveOp: `final double[] scale = ne[...] ` ---> `-` at pos 17 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 01:00:24,998 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 555, el: CtInvocationImpl
+2018-08-08 01:00:24,999 INFO main - -->op: RemoveOp: `rescale(y, y, scale) ` ---> `-` at pos 18 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 01:00:27,866 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 558, el: CtLocalVariableImpl
+2018-08-08 01:00:27,868 INFO main - -->op: RemoveOp: `final double tol = (vecRe[...] ` ---> `-` at pos 19 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 01:00:29,059 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 560, el: CtLocalVariableImpl
+2018-08-08 01:00:29,060 INFO main - -->op: RemoveOp: `final double log10R = (ja[...] ` ---> `-` at pos 20 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 01:00:30,607 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 561, el: CtLocalVariableImpl
+2018-08-08 01:00:30,609 INFO main - -->op: RemoveOp: `int targetIter = java.lan[...] ` ---> `-` at pos 21 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 01:00:31,960 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 565, el: CtLocalVariableImpl
+2018-08-08 01:00:31,961 INFO main - -->op: RemoveOp: `org.apache.commons.math.o[...] ` ---> `-` at pos 22 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 01:00:33,195 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 566, el: CtIfImpl
+2018-08-08 01:00:33,197 INFO main - -->op: ReplaceIfBooleanOp: `if ((denseOutput) || (!(e[...] ` ---> `if (true) { 	interpolator[...]` at pos 23 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 01:00:36,195 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 566, el: CtIfImpl
+2018-08-08 01:00:36,197 INFO main - -->op: ReplaceIfBooleanOp: `if ((denseOutput) || (!(e[...] ` ---> `if (false) { 	interpolato[...]` at pos 23 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 01:00:39,676 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 566, el: CtIfImpl
+2018-08-08 01:00:39,678 INFO main - -->op: RemoveOp: `if ((denseOutput) || (!(e[...] ` ---> `-` at pos 23 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 01:00:42,686 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 573, el: CtInvocationImpl
+2018-08-08 01:00:42,688 INFO main - -->op: RemoveOp: `interpolator.storeTime(t0[...] ` ---> `-` at pos 24 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 01:00:45,909 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 575, el: CtAssignmentImpl
+2018-08-08 01:00:45,913 INFO main - -->op: RemoveOp: `stepStart = t0 ` ---> `-` at pos 25 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 01:00:50,124 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 576, el: CtLocalVariableImpl
+2018-08-08 01:00:50,127 INFO main - -->op: RemoveOp: `double hNew = 0 ` ---> `-` at pos 26 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 01:00:51,694 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 577, el: CtLocalVariableImpl
+2018-08-08 01:00:51,695 INFO main - -->op: RemoveOp: `double maxError = java.la[...] ` ---> `-` at pos 27 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 01:00:53,065 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 578, el: CtLocalVariableImpl
+2018-08-08 01:00:53,066 INFO main - -->op: RemoveOp: `boolean previousRejected [...] ` ---> `-` at pos 28 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 01:00:54,573 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 579, el: CtLocalVariableImpl
+2018-08-08 01:00:54,575 INFO main - -->op: RemoveOp: `boolean firstTime = true ` ---> `-` at pos 29 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 01:00:55,689 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 580, el: CtLocalVariableImpl
+2018-08-08 01:00:55,690 INFO main - -->op: RemoveOp: `boolean newStep = true ` ---> `-` at pos 30 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 01:00:56,454 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 581, el: CtLocalVariableImpl
+2018-08-08 01:00:56,455 INFO main - -->op: RemoveOp: `boolean lastStep = false ` ---> `-` at pos 31 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 01:00:57,340 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 582, el: CtLocalVariableImpl
+2018-08-08 01:00:57,341 INFO main - -->op: RemoveOp: `boolean firstStepAlreadyC[...] ` ---> `-` at pos 32 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 01:00:58,746 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 583, el: CtForEachImpl
+2018-08-08 01:00:58,748 INFO main - -->op: RemoveOp: `for (org.apache.commons.m[...] ` ---> `-` at pos 33 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 01:01:01,749 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 586, el: CtAssignmentImpl
+2018-08-08 01:01:01,751 INFO main - -->op: RemoveOp: `costPerTimeUnit[0] = 0 ` ---> `-` at pos 34 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 01:01:04,546 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 587, el: CtWhileImpl
+2018-08-08 01:01:04,550 INFO main - -->op: RemoveOp: `while (!lastStep) { 	doub[...] ` ---> `-` at pos 35 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 01:01:06,377 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 590, el: CtLocalVariableImpl
+2018-08-08 01:01:06,380 INFO main - -->op: RemoveOp: `boolean reject = false ` ---> `-` at pos 1 of parent `{ 	double error; 	boolean[...]`
+2018-08-08 01:01:07,273 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 592, el: CtIfImpl
+2018-08-08 01:01:07,274 INFO main - -->op: ReplaceIfBooleanOp: `if (newStep) { 	interpola[...] ` ---> `if (true) { 	interpolator[...]` at pos 2 of parent `{ 	double error; 	boolean[...]`
+2018-08-08 01:01:09,355 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 592, el: CtIfImpl
+2018-08-08 01:01:09,356 INFO main - -->op: ReplaceIfBooleanOp: `if (newStep) { 	interpola[...] ` ---> `if (false) { 	interpolato[...]` at pos 2 of parent `{ 	double error; 	boolean[...]`
+2018-08-08 01:01:11,241 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 592, el: CtIfImpl
+2018-08-08 01:01:11,242 INFO main - -->op: RemoveOp: `if (newStep) { 	interpola[...] ` ---> `-` at pos 2 of parent `{ 	double error; 	boolean[...]`
+2018-08-08 01:01:13,020 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 594, el: CtInvocationImpl
+2018-08-08 01:01:13,020 INFO main - -->op: RemoveOp: `interpolator.shift() ` ---> `-` at pos 0 of parent `{ 	interpolator.shift(); [...]`
+2018-08-08 01:01:14,696 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 597, el: CtIfImpl
+2018-08-08 01:01:14,696 INFO main - -->op: ReplaceIfBooleanOp: `if (!firstStepAlreadyComp[...] ` ---> `if (true) { 	computeDeriv[...]` at pos 1 of parent `{ 	interpolator.shift(); [...]`
+2018-08-08 01:01:16,466 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 597, el: CtIfImpl
+2018-08-08 01:01:16,466 INFO main - -->op: ReplaceIfBooleanOp: `if (!firstStepAlreadyComp[...] ` ---> `if (false) { 	computeDeri[...]` at pos 1 of parent `{ 	interpolator.shift(); [...]`
+2018-08-08 01:01:18,261 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 597, el: CtIfImpl
+2018-08-08 01:01:18,261 INFO main - -->op: RemoveOp: `if (!firstStepAlreadyComp[...] ` ---> `-` at pos 1 of parent `{ 	interpolator.shift(); [...]`
+2018-08-08 01:01:19,717 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 598, el: CtInvocationImpl
+2018-08-08 01:01:19,717 INFO main - -->op: RemoveOp: `computeDerivatives(stepSt[...] ` ---> `-` at pos 0 of parent `{ 	computeDerivatives(ste[...]`
+2018-08-08 01:01:21,300 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 601, el: CtIfImpl
+2018-08-08 01:01:21,301 INFO main - -->op: ReplaceIfBooleanOp: `if (firstTime) { 	hNew = [...] ` ---> `if (true) { 	hNew = initi[...]` at pos 2 of parent `{ 	interpolator.shift(); [...]`
+2018-08-08 01:01:23,061 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 601, el: CtIfImpl
+2018-08-08 01:01:23,061 INFO main - -->op: ReplaceIfBooleanOp: `if (firstTime) { 	hNew = [...] ` ---> `if (false) { 	hNew = init[...]` at pos 2 of parent `{ 	interpolator.shift(); [...]`
+2018-08-08 01:01:24,801 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 601, el: CtIfImpl
+2018-08-08 01:01:24,802 INFO main - -->op: RemoveOp: `if (firstTime) { 	hNew = [...] ` ---> `-` at pos 2 of parent `{ 	interpolator.shift(); [...]`
+2018-08-08 01:01:26,561 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 603, el: CtAssignmentImpl
+2018-08-08 01:01:26,561 INFO main - -->op: RemoveOp: `hNew = initializeStep(equ[...] ` ---> `-` at pos 0 of parent `{ 	hNew = initializeStep([...]`
+2018-08-08 01:01:28,268 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 607, el: CtIfImpl
+2018-08-08 01:01:28,268 INFO main - -->op: ReplaceIfBooleanOp: `if (!forward) { 	hNew = -[...] ` ---> `if (true) { 	hNew = -hNew[...]` at pos 1 of parent `{ 	hNew = initializeStep([...]`
+2018-08-08 01:01:29,965 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 607, el: CtIfImpl
+2018-08-08 01:01:29,965 INFO main - -->op: ReplaceIfBooleanOp: `if (!forward) { 	hNew = -[...] ` ---> `if (false) { 	hNew = -hNe[...]` at pos 1 of parent `{ 	hNew = initializeStep([...]`
+2018-08-08 01:01:31,607 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 607, el: CtIfImpl
+2018-08-08 01:01:31,607 INFO main - -->op: RemoveOp: `if (!forward) { 	hNew = -[...] ` ---> `-` at pos 1 of parent `{ 	hNew = initializeStep([...]`
+2018-08-08 01:01:33,322 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 613, el: CtAssignmentImpl
+2018-08-08 01:01:33,322 INFO main - -->op: RemoveOp: `newStep = false ` ---> `-` at pos 3 of parent `{ 	interpolator.shift(); [...]`
+2018-08-08 01:01:35,034 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 617, el: CtAssignmentImpl
+2018-08-08 01:01:35,036 INFO main - -->op: RemoveOp: `stepSize = hNew ` ---> `-` at pos 3 of parent `{ 	double error; 	boolean[...]`
+2018-08-08 01:01:36,712 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 620, el: CtIfImpl
+2018-08-08 01:01:36,713 INFO main - -->op: ReplaceIfBooleanOp: `if ((forward && (((stepSt[...] ` ---> `if (true) { 	Error in pri[...]` at pos 4 of parent `{ 	double error; 	boolean[...]`
+2018-08-08 01:01:38,333 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 620, el: CtIfImpl
+2018-08-08 01:01:38,335 INFO main - -->op: ReplaceIfBooleanOp: `if ((forward && (((stepSt[...] ` ---> `if (false) { 	Error in pr[...]` at pos 4 of parent `{ 	double error; 	boolean[...]`
+2018-08-08 01:01:39,800 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 620, el: CtIfImpl
+2018-08-08 01:01:39,802 INFO main - -->op: RemoveOp: `if ((forward && (((stepSt[...] ` ---> `-` at pos 4 of parent `{ 	double error; 	boolean[...]`
+2018-08-08 01:01:41,366 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 624, el: CtLocalVariableImpl
+2018-08-08 01:01:41,368 INFO main - -->op: RemoveOp: `final double nextT = (ste[...] ` ---> `-` at pos 5 of parent `{ 	double error; 	boolean[...]`
+2018-08-08 01:01:42,073 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 625, el: CtAssignmentImpl
+2018-08-08 01:01:42,075 INFO main - -->op: RemoveOp: `lastStep = forward ? next[...] ` ---> `-` at pos 6 of parent `{ 	double error; 	boolean[...]`
+2018-08-08 01:01:43,642 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 628, el: CtLocalVariableImpl
+2018-08-08 01:01:43,644 INFO main - -->op: RemoveOp: `int k = -1 ` ---> `-` at pos 7 of parent `{ 	double error; 	boolean[...]`
+2018-08-08 01:01:44,346 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 629, el: CtForImpl
+2018-08-08 01:01:44,347 INFO main - -->op: RemoveOp: `for (boolean loop = true [...] ` ---> `-` at pos 8 of parent `{ 	double error; 	boolean[...]`
+2018-08-08 01:01:45,924 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 631, el: CtUnaryOperatorImpl
+2018-08-08 01:01:45,925 INFO main - -->op: RemoveOp: `++k ` ---> `-` at pos 0 of parent `{ 	++k; 	if (!(tryStep(st[...]`
+2018-08-08 01:01:47,473 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 634, el: CtIfImpl
+2018-08-08 01:01:47,474 INFO main - -->op: ReplaceIfBooleanOp: `if (!(tryStep(stepStart, [...] ` ---> `if (true) { 	hNew = java.[...]` at pos 1 of parent `{ 	++k; 	if (!(tryStep(st[...]`
+2018-08-08 01:01:49,001 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 634, el: CtIfImpl
+2018-08-08 01:01:49,003 INFO main - -->op: ReplaceIfBooleanOp: `if (!(tryStep(stepStart, [...] ` ---> `if (false) { 	hNew = java[...]` at pos 1 of parent `{ 	++k; 	if (!(tryStep(st[...]`
+2018-08-08 01:01:50,591 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 634, el: CtIfImpl
+2018-08-08 01:01:50,593 INFO main - -->op: RemoveOp: `if (!(tryStep(stepStart, [...] ` ---> `-` at pos 1 of parent `{ 	++k; 	if (!(tryStep(st[...]`
+2018-08-08 01:01:52,219 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 647, el: CtIfImpl
+2018-08-08 01:01:52,220 INFO main - -->op: ReplaceIfBooleanOp: `if (k > 0) { 	extrapolate[...] ` ---> `if (true) { 	extrapolate([...]` at pos 0 of parent `{ 	if (k > 0) { 		extrapo[...]`
+2018-08-08 01:01:53,859 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 647, el: CtIfImpl
+2018-08-08 01:01:53,861 INFO main - -->op: ReplaceIfBooleanOp: `if (k > 0) { 	extrapolate[...] ` ---> `if (false) { 	extrapolate[...]` at pos 0 of parent `{ 	if (k > 0) { 		extrapo[...]`
+2018-08-08 01:01:55,475 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 647, el: CtIfImpl
+2018-08-08 01:01:55,476 INFO main - -->op: RemoveOp: `if (k > 0) { 	extrapolate[...] ` ---> `-` at pos 0 of parent `{ 	if (k > 0) { 		extrapo[...]`
+2018-08-08 01:01:57,010 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 651, el: CtInvocationImpl
+2018-08-08 01:01:57,011 INFO main - -->op: RemoveOp: `extrapolate(0, k, y1Diag,[...] ` ---> `-` at pos 0 of parent `{ 	extrapolate(0, k, y1Di[...]`
+2018-08-08 01:01:58,813 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 652, el: CtInvocationImpl
+2018-08-08 01:01:58,814 INFO main - -->op: RemoveOp: `rescale(y, y1, scale) ` ---> `-` at pos 1 of parent `{ 	extrapolate(0, k, y1Di[...]`
+2018-08-08 01:02:00,475 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 655, el: CtAssignmentImpl
+2018-08-08 01:02:00,476 INFO main - -->op: RemoveOp: `error = 0 ` ---> `-` at pos 2 of parent `{ 	extrapolate(0, k, y1Di[...]`
+2018-08-08 01:02:01,163 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 656, el: CtForImpl
+2018-08-08 01:02:01,163 INFO main - -->op: RemoveOp: `for (int j = 0 ; j < (y0.[...] ` ---> `-` at pos 3 of parent `{ 	extrapolate(0, k, y1Di[...]`
+2018-08-08 01:02:02,807 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 657, el: CtLocalVariableImpl
+2018-08-08 01:02:02,807 INFO main - -->op: RemoveOp: `final double e = (java.la[...] ` ---> `-` at pos 0 of parent `{ 	final double e = (java[...]`
+2018-08-08 01:02:03,756 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 658, el: CtOperatorAssignmentImpl
+2018-08-08 01:02:03,756 INFO main - -->op: RemoveOp: `error += e * e ` ---> `-` at pos 1 of parent `{ 	final double e = (java[...]`
+2018-08-08 01:02:05,790 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 660, el: CtAssignmentImpl
+2018-08-08 01:02:05,790 INFO main - -->op: RemoveOp: `error = java.lang.Math.sq[...] ` ---> `-` at pos 4 of parent `{ 	extrapolate(0, k, y1Di[...]`
+2018-08-08 01:02:07,748 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 662, el: CtIfImpl
+2018-08-08 01:02:07,749 INFO main - -->op: ReplaceIfBooleanOp: `if ((error > 1.0E15) || ([...] ` ---> `if (true) { 	hNew = java.[...]` at pos 5 of parent `{ 	extrapolate(0, k, y1Di[...]`
+2018-08-08 01:02:10,003 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 662, el: CtIfImpl
+2018-08-08 01:02:10,004 INFO main - -->op: ReplaceIfBooleanOp: `if ((error > 1.0E15) || ([...] ` ---> `if (false) { 	hNew = java[...]` at pos 5 of parent `{ 	extrapolate(0, k, y1Di[...]`
+2018-08-08 01:02:12,385 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 662, el: CtIfImpl
+2018-08-08 01:02:12,386 INFO main - -->op: RemoveOp: `if ((error > 1.0E15) || ([...] ` ---> `-` at pos 5 of parent `{ 	extrapolate(0, k, y1Di[...]`
+2018-08-08 01:02:14,415 INFO main - mod_point ModificPoint=SimplexTableau line: 297, el: CtReturnImpl
+2018-08-08 01:02:14,416 INFO main - -->op: RemoveOp: `return null ` ---> `-` at pos 0 of parent `{ 	return null; }`
+2018-08-08 01:02:16,208 INFO main - mod_point ModificPoint=SimplexSolver line: 154, el: CtReturnImpl
+2018-08-08 01:02:16,209 INFO main - -->op: RemoveOp: `return true ` ---> `-` at pos 2 of parent `{ 	if ((tableau.getNumArt[...]`
+2018-08-08 01:02:17,072 INFO main - mod_point ModificPoint=SimplexSolver line: 192, el: CtReturnImpl
+2018-08-08 01:02:17,073 INFO main - -->op: RemoveOp: `return tableau.getSolutio[...] ` ---> `-` at pos 4 of parent `{ 	final org.apache.commo[...]`
+2018-08-08 01:02:18,224 INFO main - mod_point ModificPoint=SimplexTableau line: 282, el: CtReturnImpl
+2018-08-08 01:02:18,224 INFO main - -->op: RemoveOp: `return getBasicRow(col, f[...] ` ---> `-` at pos 0 of parent `{ 	return getBasicRow(col[...]`
+2018-08-08 01:02:19,082 INFO main - mod_point ModificPoint=SimplexTableau line: 340, el: CtLocalVariableImpl
+2018-08-08 01:02:19,082 INFO main - -->op: RemoveOp: `double[] coefficients = n[...] ` ---> `-` at pos 0 of parent `{ 	double[] coefficients [...]`
+2018-08-08 01:02:20,437 INFO main - mod_point ModificPoint=SimplexTableau line: 341, el: CtLocalVariableImpl
+2018-08-08 01:02:20,437 INFO main - -->op: RemoveOp: `java.lang.Integer negativ[...] ` ---> `-` at pos 1 of parent `{ 	double[] coefficients [...]`
+2018-08-08 01:02:21,217 INFO main - mod_point ModificPoint=SimplexTableau line: 342, el: CtLocalVariableImpl
+2018-08-08 01:02:21,217 INFO main - -->op: RemoveOp: `double mostNegative = neg[...] ` ---> `-` at pos 2 of parent `{ 	double[] coefficients [...]`
+2018-08-08 01:02:22,044 INFO main - mod_point ModificPoint=SimplexTableau line: 343, el: CtLocalVariableImpl
+2018-08-08 01:02:22,045 INFO main - -->op: RemoveOp: `java.util.Set<java.lang.I[...] ` ---> `-` at pos 3 of parent `{ 	double[] coefficients [...]`
+2018-08-08 01:02:22,786 INFO main - mod_point ModificPoint=SimplexTableau line: 344, el: CtForImpl
+2018-08-08 01:02:22,786 INFO main - -->op: RemoveOp: `for (int i = 0 ; i < (coe[...] ` ---> `-` at pos 4 of parent `{ 	double[] coefficients [...]`
+2018-08-08 01:02:24,874 INFO main - mod_point ModificPoint=SimplexTableau line: 345, el: CtLocalVariableImpl
+2018-08-08 01:02:24,874 INFO main - -->op: RemoveOp: `java.lang.Integer basicRo[...] ` ---> `-` at pos 0 of parent `{ 	java.lang.Integer basi[...]`
+2018-08-08 01:02:26,089 INFO main - mod_point ModificPoint=SimplexTableau line: 346, el: CtIfImpl
+2018-08-08 01:02:26,089 INFO main - -->op: ReplaceIfBooleanOp: `if (basicRows.contains(ba[...] ` ---> `if (true) { 	coefficients[...]` at pos 1 of parent `{ 	java.lang.Integer basi[...]`
+2018-08-08 01:02:28,104 INFO main - mod_point ModificPoint=SimplexTableau line: 346, el: CtIfImpl
+2018-08-08 01:02:28,104 INFO main - -->op: ReplaceIfBooleanOp: `if (basicRows.contains(ba[...] ` ---> `if (false) { 	coefficient[...]` at pos 1 of parent `{ 	java.lang.Integer basi[...]`
+2018-08-08 01:02:30,519 INFO main - mod_point ModificPoint=SimplexTableau line: 346, el: CtIfImpl
+2018-08-08 01:02:30,519 INFO main - -->op: RemoveOp: `if (basicRows.contains(ba[...] ` ---> `-` at pos 1 of parent `{ 	java.lang.Integer basi[...]`
+2018-08-08 01:02:32,998 INFO main - mod_point ModificPoint=SimplexTableau line: 351, el: CtInvocationImpl
+2018-08-08 01:02:32,999 INFO main - -->op: RemoveOp: `basicRows.add(basicRow) ` ---> `-` at pos 0 of parent `{ 	basicRows.add(basicRow[...]`
+2018-08-08 01:02:35,227 INFO main - mod_point ModificPoint=SimplexTableau line: 352, el: CtAssignmentImpl
+2018-08-08 01:02:35,227 INFO main - -->op: RemoveOp: `coefficients[i] = (basicR[...] ` ---> `-` at pos 1 of parent `{ 	basicRows.add(basicRow[...]`
+2018-08-08 01:02:37,763 INFO main - mod_point ModificPoint=SimplexTableau line: 357, el: CtReturnImpl
+2018-08-08 01:02:37,764 INFO main - -->op: RemoveOp: `return new org.apache.com[...] ` ---> `-` at pos 5 of parent `{ 	double[] coefficients [...]`
+2018-08-08 01:02:38,913 INFO main - mod_point ModificPoint=SimplexTableau line: 458, el: CtReturnImpl
+2018-08-08 01:02:38,913 INFO main - -->op: RemoveOp: `return (getNumObjectiveFu[...] ` ---> `-` at pos 0 of parent `{ 	return (getNumObjectiv[...]`
+2018-08-08 01:02:39,908 INFO main - mod_point ModificPoint=SimplexTableau line: 481, el: CtReturnImpl
+2018-08-08 01:02:39,908 INFO main - -->op: RemoveOp: `return restrictToNonNegat[...] ` ---> `-` at pos 0 of parent `{ 	return restrictToNonNe[...]`
+2018-08-08 01:02:40,925 INFO main - mod_point ModificPoint=LinearObjectiveFunction line: 92, el: CtReturnImpl
+2018-08-08 01:02:40,925 INFO main - -->op: RemoveOp: `return (coefficients.dotP[...] ` ---> `-` at pos 0 of parent `{ 	return (coefficients.d[...]`
+2018-08-08 01:02:41,927 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 168, el: CtAssignmentImpl
+2018-08-08 01:02:41,927 INFO main - -->op: RemoveOp: `org.apache.commons.math.o[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.commons.mat[...]`
+2018-08-08 01:02:44,262 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 169, el: CtAssignmentImpl
+2018-08-08 01:02:44,263 INFO main - -->op: RemoveOp: `org.apache.commons.math.o[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.commons.mat[...]`
+2018-08-08 01:02:47,036 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 170, el: CtAssignmentImpl
+2018-08-08 01:02:47,036 INFO main - -->op: RemoveOp: `org.apache.commons.math.o[...] ` ---> `-` at pos 2 of parent `{ 	org.apache.commons.mat[...]`
+2018-08-08 01:02:49,653 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 172, el: CtIfImpl
+2018-08-08 01:02:49,653 INFO main - -->op: ReplaceIfBooleanOp: `if ((stabilityReduction <[...] ` ---> `if (true) { 	Error in pri[...]` at pos 3 of parent `{ 	org.apache.commons.mat[...]`
+2018-08-08 01:02:52,124 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 172, el: CtIfImpl
+2018-08-08 01:02:52,124 INFO main - -->op: ReplaceIfBooleanOp: `if ((stabilityReduction <[...] ` ---> `if (false) { 	Error in pr[...]` at pos 3 of parent `{ 	org.apache.commons.mat[...]`
+2018-08-08 01:02:54,772 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 172, el: CtIfImpl
+2018-08-08 01:02:54,772 INFO main - -->op: RemoveOp: `if ((stabilityReduction <[...] ` ---> `-` at pos 3 of parent `{ 	org.apache.commons.mat[...]`
+2018-08-08 01:02:57,823 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 173, el: CtAssignmentImpl
+2018-08-08 01:02:57,823 INFO main - -->op: RemoveOp: `org.apache.commons.math.o[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.commons.mat[...]`
+2018-08-08 01:03:00,342 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 207, el: CtIfImpl
+2018-08-08 01:03:00,343 INFO main - -->op: ReplaceIfBooleanOp: `if ((stepControl1 < 1.0E-[...] ` ---> `if (true) { 	Error in pri[...]` at pos 0 of parent `{ 	if ((stepControl1 < 1.[...]`
+2018-08-08 01:03:02,628 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 207, el: CtIfImpl
+2018-08-08 01:03:02,628 INFO main - -->op: ReplaceIfBooleanOp: `if ((stepControl1 < 1.0E-[...] ` ---> `if (false) { 	Error in pr[...]` at pos 0 of parent `{ 	if ((stepControl1 < 1.[...]`
+2018-08-08 01:03:05,342 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 207, el: CtIfImpl
+2018-08-08 01:03:05,342 INFO main - -->op: RemoveOp: `if ((stepControl1 < 1.0E-[...] ` ---> `-` at pos 0 of parent `{ 	if ((stepControl1 < 1.[...]`
+2018-08-08 01:03:08,154 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 208, el: CtAssignmentImpl
+2018-08-08 01:03:08,154 INFO main - -->op: RemoveOp: `org.apache.commons.math.o[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.commons.mat[...]`
+2018-08-08 01:03:10,786 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 213, el: CtIfImpl
+2018-08-08 01:03:10,786 INFO main - -->op: ReplaceIfBooleanOp: `if ((stepControl2 < 1.0E-[...] ` ---> `if (true) { 	Error in pri[...]` at pos 1 of parent `{ 	if ((stepControl1 < 1.[...]`
+2018-08-08 01:03:13,462 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 213, el: CtIfImpl
+2018-08-08 01:03:13,463 INFO main - -->op: ReplaceIfBooleanOp: `if ((stepControl2 < 1.0E-[...] ` ---> `if (false) { 	Error in pr[...]` at pos 1 of parent `{ 	if ((stepControl1 < 1.[...]`
+2018-08-08 01:03:16,355 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 213, el: CtIfImpl
+2018-08-08 01:03:16,356 INFO main - -->op: RemoveOp: `if ((stepControl2 < 1.0E-[...] ` ---> `-` at pos 1 of parent `{ 	if ((stepControl1 < 1.[...]`
+2018-08-08 01:03:19,241 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 214, el: CtAssignmentImpl
+2018-08-08 01:03:19,241 INFO main - -->op: RemoveOp: `org.apache.commons.math.o[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.commons.mat[...]`
+2018-08-08 01:03:22,968 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 219, el: CtIfImpl
+2018-08-08 01:03:22,969 INFO main - -->op: ReplaceIfBooleanOp: `if ((stepControl3 < 1.0E-[...] ` ---> `if (true) { 	Error in pri[...]` at pos 2 of parent `{ 	if ((stepControl1 < 1.[...]`
+2018-08-08 01:03:25,384 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 219, el: CtIfImpl
+2018-08-08 01:03:25,385 INFO main - -->op: ReplaceIfBooleanOp: `if ((stepControl3 < 1.0E-[...] ` ---> `if (false) { 	Error in pr[...]` at pos 2 of parent `{ 	if ((stepControl1 < 1.[...]`
+2018-08-08 01:03:28,466 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 219, el: CtIfImpl
+2018-08-08 01:03:28,466 INFO main - -->op: RemoveOp: `if ((stepControl3 < 1.0E-[...] ` ---> `-` at pos 2 of parent `{ 	if ((stepControl1 < 1.[...]`
+2018-08-08 01:03:31,292 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 220, el: CtAssignmentImpl
+2018-08-08 01:03:31,292 INFO main - -->op: RemoveOp: `org.apache.commons.math.o[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.commons.mat[...]`
+2018-08-08 01:03:34,023 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 225, el: CtIfImpl
+2018-08-08 01:03:34,024 INFO main - -->op: ReplaceIfBooleanOp: `if ((stepControl4 < 1.000[...] ` ---> `if (true) { 	Error in pri[...]` at pos 3 of parent `{ 	if ((stepControl1 < 1.[...]`
+2018-08-08 01:03:36,580 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 225, el: CtIfImpl
+2018-08-08 01:03:36,581 INFO main - -->op: ReplaceIfBooleanOp: `if ((stepControl4 < 1.000[...] ` ---> `if (false) { 	Error in pr[...]` at pos 3 of parent `{ 	if ((stepControl1 < 1.[...]`
+2018-08-08 01:03:39,069 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 225, el: CtIfImpl
+2018-08-08 01:03:39,070 INFO main - -->op: RemoveOp: `if ((stepControl4 < 1.000[...] ` ---> `-` at pos 3 of parent `{ 	if ((stepControl1 < 1.[...]`
+2018-08-08 01:03:41,640 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 226, el: CtAssignmentImpl
+2018-08-08 01:03:41,640 INFO main - -->op: RemoveOp: `org.apache.commons.math.o[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.commons.mat[...]`
+2018-08-08 01:03:44,511 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 259, el: CtIfImpl
+2018-08-08 01:03:44,511 INFO main - -->op: ReplaceIfBooleanOp: `if ((maxOrder <= 6) || (([...] ` ---> `if (true) { 	Error in pri[...]` at pos 0 of parent `{ 	if ((maxOrder <= 6) ||[...]`
+2018-08-08 01:03:47,271 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 259, el: CtIfImpl
+2018-08-08 01:03:47,271 INFO main - -->op: ReplaceIfBooleanOp: `if ((maxOrder <= 6) || (([...] ` ---> `if (false) { 	Error in pr[...]` at pos 0 of parent `{ 	if ((maxOrder <= 6) ||[...]`
+2018-08-08 01:03:50,024 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 259, el: CtIfImpl
+2018-08-08 01:03:50,025 INFO main - -->op: RemoveOp: `if ((maxOrder <= 6) || (([...] ` ---> `-` at pos 0 of parent `{ 	if ((maxOrder <= 6) ||[...]`
+2018-08-08 01:03:53,056 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 260, el: CtAssignmentImpl
+2018-08-08 01:03:53,056 INFO main - -->op: RemoveOp: `org.apache.commons.math.o[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.commons.mat[...]`
+2018-08-08 01:03:55,629 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 263, el: CtIfImpl
+2018-08-08 01:03:55,629 INFO main - -->op: ReplaceIfBooleanOp: `if ((orderControl1 < 1.0E[...] ` ---> `if (true) { 	Error in pri[...]` at pos 1 of parent `{ 	if ((maxOrder <= 6) ||[...]`
+2018-08-08 01:03:58,170 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 263, el: CtIfImpl
+2018-08-08 01:03:58,170 INFO main - -->op: ReplaceIfBooleanOp: `if ((orderControl1 < 1.0E[...] ` ---> `if (false) { 	Error in pr[...]` at pos 1 of parent `{ 	if ((maxOrder <= 6) ||[...]`
+2018-08-08 01:04:00,633 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 263, el: CtIfImpl
+2018-08-08 01:04:00,633 INFO main - -->op: RemoveOp: `if ((orderControl1 < 1.0E[...] ` ---> `-` at pos 1 of parent `{ 	if ((maxOrder <= 6) ||[...]`
+2018-08-08 01:04:03,205 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 264, el: CtAssignmentImpl
+2018-08-08 01:04:03,205 INFO main - -->op: RemoveOp: `org.apache.commons.math.o[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.commons.mat[...]`
+2018-08-08 01:04:06,353 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 269, el: CtIfImpl
+2018-08-08 01:04:06,353 INFO main - -->op: ReplaceIfBooleanOp: `if ((orderControl2 < 1.0E[...] ` ---> `if (true) { 	Error in pri[...]` at pos 2 of parent `{ 	if ((maxOrder <= 6) ||[...]`
+2018-08-08 01:04:09,210 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 269, el: CtIfImpl
+2018-08-08 01:04:09,210 INFO main - -->op: ReplaceIfBooleanOp: `if ((orderControl2 < 1.0E[...] ` ---> `if (false) { 	Error in pr[...]` at pos 2 of parent `{ 	if ((maxOrder <= 6) ||[...]`
+2018-08-08 01:04:11,979 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 269, el: CtIfImpl
+2018-08-08 01:04:11,979 INFO main - -->op: RemoveOp: `if ((orderControl2 < 1.0E[...] ` ---> `-` at pos 2 of parent `{ 	if ((maxOrder <= 6) ||[...]`
+2018-08-08 01:04:14,771 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 270, el: CtAssignmentImpl
+2018-08-08 01:04:14,771 INFO main - -->op: RemoveOp: `org.apache.commons.math.o[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.commons.mat[...]`
+2018-08-08 01:04:17,426 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 276, el: CtInvocationImpl
+2018-08-08 01:04:17,426 INFO main - -->op: RemoveOp: `initializeArrays() ` ---> `-` at pos 3 of parent `{ 	if ((maxOrder <= 6) ||[...]`
+2018-08-08 01:04:20,257 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 309, el: CtLocalVariableImpl
+2018-08-08 01:04:20,257 INFO main - -->op: RemoveOp: `final int size = (maxOrde[...] ` ---> `-` at pos 0 of parent `{ 	final int size = (maxO[...]`
+2018-08-08 01:04:22,508 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 311, el: CtIfImpl
+2018-08-08 01:04:22,508 INFO main - -->op: ReplaceIfBooleanOp: `if (((sequence) == null) [...] ` ---> `if (true) { 	Error in pri[...]` at pos 1 of parent `{ 	final int size = (maxO[...]`
+2018-08-08 01:04:25,377 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 311, el: CtIfImpl
+2018-08-08 01:04:25,377 INFO main - -->op: ReplaceIfBooleanOp: `if (((sequence) == null) [...] ` ---> `if (false) { 	Error in pr[...]` at pos 1 of parent `{ 	final int size = (maxO[...]`
+2018-08-08 01:04:28,093 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 311, el: CtIfImpl
+2018-08-08 01:04:28,094 INFO main - -->op: RemoveOp: `if (((sequence) == null) [...] ` ---> `-` at pos 1 of parent `{ 	final int size = (maxO[...]`
+2018-08-08 01:04:31,584 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 313, el: CtAssignmentImpl
+2018-08-08 01:04:31,585 INFO main - -->op: RemoveOp: `sequence = new int[size] ` ---> `-` at pos 0 of parent `{ 	sequence = new int[siz[...]`
+2018-08-08 01:04:34,483 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 314, el: CtAssignmentImpl
+2018-08-08 01:04:34,484 INFO main - -->op: RemoveOp: `costPerStep = new int[siz[...] ` ---> `-` at pos 1 of parent `{ 	sequence = new int[siz[...]`
+2018-08-08 01:04:37,460 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 315, el: CtAssignmentImpl
+2018-08-08 01:04:37,460 INFO main - -->op: RemoveOp: `coeff = new double[size][[...] ` ---> `-` at pos 2 of parent `{ 	sequence = new int[siz[...]`
+2018-08-08 01:04:40,743 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 316, el: CtAssignmentImpl
+2018-08-08 01:04:40,743 INFO main - -->op: RemoveOp: `costPerTimeUnit = new dou[...] ` ---> `-` at pos 3 of parent `{ 	sequence = new int[siz[...]`
+2018-08-08 01:04:43,818 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 317, el: CtAssignmentImpl
+2018-08-08 01:04:43,818 INFO main - -->op: RemoveOp: `optimalStep = new double[[...] ` ---> `-` at pos 4 of parent `{ 	sequence = new int[siz[...]`
+2018-08-08 01:04:46,856 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 320, el: CtIfImpl
+2018-08-08 01:04:46,856 INFO main - -->op: ReplaceIfBooleanOp: `if (denseOutput) { 	for ([...] ` ---> `if (true) { 	for (int k =[...]` at pos 2 of parent `{ 	final int size = (maxO[...]`
+2018-08-08 01:04:50,248 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 320, el: CtIfImpl
+2018-08-08 01:04:50,249 INFO main - -->op: ReplaceIfBooleanOp: `if (denseOutput) { 	for ([...] ` ---> `if (false) { 	for (int k [...]` at pos 2 of parent `{ 	final int size = (maxO[...]`
+2018-08-08 01:04:53,170 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 320, el: CtIfImpl
+2018-08-08 01:04:53,170 INFO main - -->op: RemoveOp: `if (denseOutput) { 	for ([...] ` ---> `-` at pos 2 of parent `{ 	final int size = (maxO[...]`
+2018-08-08 01:04:56,163 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 327, el: CtForImpl
+2018-08-08 01:04:56,163 INFO main - -->op: RemoveOp: `for (int k = 0 ; k < size[...] ` ---> `-` at pos 0 of parent `{ 	for (int k = 0 ; k < s[...]`
+2018-08-08 01:04:59,185 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 328, el: CtAssignmentImpl
+2018-08-08 01:04:59,185 INFO main - -->op: RemoveOp: `sequence[k] = 2 * (k + 1) ` ---> `-` at pos 0 of parent `{ 	sequence[k] = 2 * (k +[...]`
+2018-08-08 01:05:02,552 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 334, el: CtAssignmentImpl
+2018-08-08 01:05:02,552 INFO main - -->op: RemoveOp: `costPerStep[0] = (sequenc[...] ` ---> `-` at pos 3 of parent `{ 	final int size = (maxO[...]`
+2018-08-08 01:05:05,364 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 335, el: CtForImpl
+2018-08-08 01:05:05,365 INFO main - -->op: RemoveOp: `for (int k = 1 ; k < size[...] ` ---> `-` at pos 4 of parent `{ 	final int size = (maxO[...]`
+2018-08-08 01:05:07,972 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 336, el: CtAssignmentImpl
+2018-08-08 01:05:07,972 INFO main - -->op: RemoveOp: `costPerStep[k] = (costPer[...] ` ---> `-` at pos 0 of parent `{ 	costPerStep[k] = (cost[...]`
+2018-08-08 01:05:10,653 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 340, el: CtForImpl
+2018-08-08 01:05:10,653 INFO main - -->op: RemoveOp: `for (int k = 0 ; k < size[...] ` ---> `-` at pos 5 of parent `{ 	final int size = (maxO[...]`
+2018-08-08 01:05:13,250 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 341, el: CtAssignmentImpl
+2018-08-08 01:05:13,250 INFO main - -->op: RemoveOp: `coeff[k] = k > 0 ? new do[...] ` ---> `-` at pos 0 of parent `{ 	coeff[k] = k > 0 ? new[...]`
+2018-08-08 01:05:15,701 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 342, el: CtForImpl
+2018-08-08 01:05:15,701 INFO main - -->op: RemoveOp: `for (int l = 0 ; l < k ; [...] ` ---> `-` at pos 1 of parent `{ 	coeff[k] = k > 0 ? new[...]`
+2018-08-08 01:05:18,538 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 343, el: CtLocalVariableImpl
+2018-08-08 01:05:18,538 INFO main - -->op: RemoveOp: `final double ratio = ((do[...] ` ---> `-` at pos 0 of parent `{ 	final double ratio = ([...]`
+2018-08-08 01:05:19,551 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 344, el: CtAssignmentImpl
+2018-08-08 01:05:19,551 INFO main - -->op: RemoveOp: `coeff[k][l] = 1.0 / ((rat[...] ` ---> `-` at pos 1 of parent `{ 	final double ratio = ([...]`
+2018-08-08 01:05:22,632 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 363, el: CtAssignmentImpl
+2018-08-08 01:05:22,632 INFO main - -->op: RemoveOp: `org.apache.commons.math.o[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.commons.mat[...]`
+2018-08-08 01:05:27,277 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 365, el: CtIfImpl
+2018-08-08 01:05:27,277 INFO main - -->op: ReplaceIfBooleanOp: `if ((mudif <= 0) || (mudi[...] ` ---> `if (true) { 	Error in pri[...]` at pos 1 of parent `{ 	org.apache.commons.mat[...]`
+2018-08-08 01:05:30,010 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 365, el: CtIfImpl
+2018-08-08 01:05:30,011 INFO main - -->op: ReplaceIfBooleanOp: `if ((mudif <= 0) || (mudi[...] ` ---> `if (false) { 	Error in pr[...]` at pos 1 of parent `{ 	org.apache.commons.mat[...]`
+2018-08-08 01:05:33,483 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 365, el: CtIfImpl
+2018-08-08 01:05:33,484 INFO main - -->op: RemoveOp: `if ((mudif <= 0) || (mudi[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.commons.mat[...]`
+2018-08-08 01:05:36,427 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 366, el: CtAssignmentImpl
+2018-08-08 01:05:36,427 INFO main - -->op: RemoveOp: `org.apache.commons.math.o[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.commons.mat[...]`
+2018-08-08 01:05:39,258 INFO main - mod_point ModificPoint=GraggBulirschStoerIntegrator line: 504, el: CtInvocationImpl
+2018-08-08 01:05:39,261 INFO main - -->op: RemoveOp: `sanityChecks(equations, t[...] ` ---> `-` at pos 0 of parent `{ 	sanityChecks(equations[...]`
+2018-08-08 01:05:41,746 INFO main - mod_point ModificPoint=SimplexSolver line: 146, el: CtIfImpl
+2018-08-08 01:05:41,746 INFO main - -->op: ReplaceIfBooleanOp: `if ((tableau.getNumArtifi[...] ` ---> `if (true) { 	return false[...]` at pos 0 of parent `{ 	if ((tableau.getNumArt[...]`
+2018-08-08 01:05:44,620 INFO main - mod_point ModificPoint=SimplexSolver line: 146, el: CtIfImpl
+2018-08-08 01:05:44,620 INFO main - -->op: ReplaceIfBooleanOp: `if ((tableau.getNumArtifi[...] ` ---> `if (false) { 	return fals[...]` at pos 0 of parent `{ 	if ((tableau.getNumArt[...]`
+2018-08-08 01:05:47,862 INFO main - mod_point ModificPoint=SimplexSolver line: 146, el: CtIfImpl
+2018-08-08 01:05:47,863 INFO main - -->op: RemoveOp: `if ((tableau.getNumArtifi[...] ` ---> `-` at pos 0 of parent `{ 	if ((tableau.getNumArt[...]`
+2018-08-08 01:05:50,666 INFO main - mod_point ModificPoint=SimplexSolver line: 149, el: CtForImpl
+2018-08-08 01:05:50,666 INFO main - -->op: RemoveOp: `for (int i = tableau.getN[...] ` ---> `-` at pos 1 of parent `{ 	if ((tableau.getNumArt[...]`
+2018-08-08 01:05:53,355 INFO main - mod_point ModificPoint=SimplexSolver line: 150, el: CtIfImpl
+2018-08-08 01:05:53,356 INFO main - -->op: ReplaceIfBooleanOp: `if ((org.apache.commons.m[...] ` ---> `if (true) { 	return false[...]` at pos 0 of parent `{ 	if ((org.apache.common[...]`
+2018-08-08 01:05:56,020 INFO main - mod_point ModificPoint=SimplexSolver line: 150, el: CtIfImpl
+2018-08-08 01:05:56,020 INFO main - -->op: ReplaceIfBooleanOp: `if ((org.apache.commons.m[...] ` ---> `if (false) { 	return fals[...]` at pos 0 of parent `{ 	if ((org.apache.common[...]`
+2018-08-08 01:05:58,840 INFO main - mod_point ModificPoint=SimplexSolver line: 150, el: CtIfImpl
+2018-08-08 01:05:58,840 INFO main - -->op: RemoveOp: `if ((org.apache.commons.m[...] ` ---> `-` at pos 0 of parent `{ 	if ((org.apache.common[...]`
+2018-08-08 01:06:01,831 INFO main - mod_point ModificPoint=SimplexSolver line: 188, el: CtInvocationImpl
+2018-08-08 01:06:01,832 INFO main - -->op: RemoveOp: `tableau.discardArtificial[...] ` ---> `-` at pos 2 of parent `{ 	final org.apache.commo[...]`
+2018-08-08 01:06:04,676 INFO main - mod_point ModificPoint=SimplexSolver line: 189, el: CtWhileImpl
+2018-08-08 01:06:04,676 INFO main - -->op: RemoveOp: `while (!(isOptimal(tablea[...] ` ---> `-` at pos 3 of parent `{ 	final org.apache.commo[...]`
+2018-08-08 01:06:07,209 INFO main - mod_point ModificPoint=SimplexTableau line: 170, el: CtAssignmentImpl
+2018-08-08 01:06:07,209 INFO main - -->op: RemoveOp: `matrix[row][((getSlackVar[...] ` ---> `-` at pos 0 of parent `{ 	matrix[row][((getSlack[...]`
+2018-08-08 01:06:09,931 INFO main - mod_point ModificPoint=AbstractLinearOptimizer line: 67, el: CtAssignmentImpl
+2018-08-08 01:06:09,931 INFO main - -->op: RemoveOp: `org.apache.commons.math.o[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.commons.mat[...]`
+2018-08-08 01:06:12,518 INFO main - mod_point ModificPoint=AbstractLinearOptimizer line: 86, el: CtIfImpl
+2018-08-08 01:06:12,518 INFO main - -->op: ReplaceIfBooleanOp: `if ((++(iterations)) > (m[...] ` ---> `if (true) { 	throw new or[...]` at pos 0 of parent `{ 	if ((++(iterations)) >[...]`
+2018-08-08 01:06:15,136 INFO main - mod_point ModificPoint=AbstractLinearOptimizer line: 86, el: CtIfImpl
+2018-08-08 01:06:15,136 INFO main - -->op: ReplaceIfBooleanOp: `if ((++(iterations)) > (m[...] ` ---> `if (false) { 	throw new o[...]` at pos 0 of parent `{ 	if ((++(iterations)) >[...]`
+2018-08-08 01:06:17,893 INFO main - mod_point ModificPoint=AbstractLinearOptimizer line: 86, el: CtIfImpl
+2018-08-08 01:06:17,893 INFO main - -->op: RemoveOp: `if ((++(iterations)) > (m[...] ` ---> `-` at pos 0 of parent `{ 	if ((++(iterations)) >[...]`
+2018-08-08 01:06:20,727 INFO main - mod_point ModificPoint=AbstractLinearOptimizer line: 98, el: CtAssignmentImpl
+2018-08-08 01:06:20,728 INFO main - -->op: RemoveOp: `org.apache.commons.math.o[...] ` ---> `-` at pos 0 of parent `{ 	org.apache.commons.mat[...]`
+2018-08-08 01:06:23,466 INFO main - mod_point ModificPoint=AbstractLinearOptimizer line: 99, el: CtAssignmentImpl
+2018-08-08 01:06:23,466 INFO main - -->op: RemoveOp: `org.apache.commons.math.o[...] ` ---> `-` at pos 1 of parent `{ 	org.apache.commons.mat[...]`
+2018-08-08 01:06:27,749 INFO main - mod_point ModificPoint=AbstractLinearOptimizer line: 100, el: CtAssignmentImpl
+2018-08-08 01:06:27,750 INFO main - -->op: RemoveOp: `org.apache.commons.math.o[...] ` ---> `-` at pos 2 of parent `{ 	org.apache.commons.mat[...]`
+2018-08-08 01:06:30,294 INFO main - mod_point ModificPoint=AbstractLinearOptimizer line: 101, el: CtAssignmentImpl
+2018-08-08 01:06:30,294 INFO main - -->op: RemoveOp: `org.apache.commons.math.o[...] ` ---> `-` at pos 3 of parent `{ 	org.apache.commons.mat[...]`
+2018-08-08 01:06:33,764 INFO main - mod_point ModificPoint=AbstractLinearOptimizer line: 103, el: CtAssignmentImpl
+2018-08-08 01:06:33,765 INFO main - -->op: RemoveOp: `iterations = 0 ` ---> `-` at pos 4 of parent `{ 	org.apache.commons.mat[...]`
+2018-08-08 01:06:36,870 INFO main - mod_point ModificPoint=AbstractLinearOptimizer line: 106, el: CtReturnImpl
+2018-08-08 01:06:36,871 INFO main - -->op: RemoveOp: `return doOptimize() ` ---> `-` at pos 5 of parent `{ 	org.apache.commons.mat[...]`
+2018-08-08 01:06:38,004 INFO main - mod_point ModificPoint=SimplexSolver line: 59, el: CtLocalVariableImpl
+2018-08-08 01:06:38,004 INFO main - -->op: RemoveOp: `double minValue = 0 ` ---> `-` at pos 0 of parent `{ 	double minValue = 0; 	[...]`
+2018-08-08 01:06:39,207 INFO main - mod_point ModificPoint=SimplexSolver line: 60, el: CtLocalVariableImpl
+2018-08-08 01:06:39,208 INFO main - -->op: RemoveOp: `java.lang.Integer minPos [...] ` ---> `-` at pos 1 of parent `{ 	double minValue = 0; 	[...]`
+2018-08-08 01:06:40,170 INFO main - mod_point ModificPoint=SimplexSolver line: 61, el: CtForImpl
+2018-08-08 01:06:40,171 INFO main - -->op: RemoveOp: `for (int i = tableau.getN[...] ` ---> `-` at pos 2 of parent `{ 	double minValue = 0; 	[...]`
+2018-08-08 01:06:42,706 INFO main - mod_point ModificPoint=SimplexSolver line: 62, el: CtIfImpl
+2018-08-08 01:06:42,706 INFO main - -->op: ReplaceIfBooleanOp: `if ((org.apache.commons.m[...] ` ---> `if (true) { 	minValue = t[...]` at pos 0 of parent `{ 	if ((org.apache.common[...]`
+2018-08-08 01:06:45,309 INFO main - mod_point ModificPoint=SimplexSolver line: 62, el: CtIfImpl
+2018-08-08 01:06:45,309 INFO main - -->op: ReplaceIfBooleanOp: `if ((org.apache.commons.m[...] ` ---> `if (false) { 	minValue = [...]` at pos 0 of parent `{ 	if ((org.apache.common[...]`
+2018-08-08 01:06:47,998 INFO main - mod_point ModificPoint=SimplexSolver line: 62, el: CtIfImpl
+2018-08-08 01:06:47,998 INFO main - -->op: RemoveOp: `if ((org.apache.commons.m[...] ` ---> `-` at pos 0 of parent `{ 	if ((org.apache.common[...]`
+2018-08-08 01:06:50,667 INFO main - mod_point ModificPoint=SimplexSolver line: 63, el: CtAssignmentImpl
+2018-08-08 01:06:50,667 INFO main - -->op: RemoveOp: `minValue = tableau.getEnt[...] ` ---> `-` at pos 0 of parent `{ 	minValue = tableau.get[...]`
+2018-08-08 01:07:03,815 INFO main - -Found Solution, child variant #513
+2018-08-08 01:07:03,816 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MATH-288_38983e82/r1/AstorMain-bugs-dot-jar_MATH-288_38983e82/src/variant-513
+2018-08-08 01:07:03,996 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.math.ode.events.CombinedEventsManager to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MATH-288_38983e82/r1/AstorMain-bugs-dot-jar_MATH-288_38983e82/src/variant-513
+2018-08-08 01:07:04,036 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.math.optimization.RealPointValuePair to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MATH-288_38983e82/r1/AstorMain-bugs-dot-jar_MATH-288_38983e82/src/variant-513
+2018-08-08 01:07:04,081 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.math.optimization.linear.LinearObjectiveFunction to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MATH-288_38983e82/r1/AstorMain-bugs-dot-jar_MATH-288_38983e82/src/variant-513
+2018-08-08 01:07:04,126 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.math.util.MathUtils to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MATH-288_38983e82/r1/AstorMain-bugs-dot-jar_MATH-288_38983e82/src/variant-513
+2018-08-08 01:07:04,234 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.math.optimization.linear.LinearConstraint to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MATH-288_38983e82/r1/AstorMain-bugs-dot-jar_MATH-288_38983e82/src/variant-513
+2018-08-08 01:07:04,278 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.math.ode.AbstractIntegrator to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MATH-288_38983e82/r1/AstorMain-bugs-dot-jar_MATH-288_38983e82/src/variant-513
+2018-08-08 01:07:04,330 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.math.linear.ArrayRealVector to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MATH-288_38983e82/r1/AstorMain-bugs-dot-jar_MATH-288_38983e82/src/variant-513
+2018-08-08 01:07:04,472 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.math.optimization.linear.SimplexTableau to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MATH-288_38983e82/r1/AstorMain-bugs-dot-jar_MATH-288_38983e82/src/variant-513
+2018-08-08 01:07:04,516 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.math.ode.sampling.AbstractStepInterpolator to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MATH-288_38983e82/r1/AstorMain-bugs-dot-jar_MATH-288_38983e82/src/variant-513
+2018-08-08 01:07:04,579 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.math.optimization.linear.AbstractLinearOptimizer to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MATH-288_38983e82/r1/AstorMain-bugs-dot-jar_MATH-288_38983e82/src/variant-513
+2018-08-08 01:07:04,619 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.math.optimization.linear.SimplexSolver to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MATH-288_38983e82/r1/AstorMain-bugs-dot-jar_MATH-288_38983e82/src/variant-513
+2018-08-08 01:07:04,655 DEBUG spoon.support.StandardEnvironment - printing org.apache.commons.math.ode.nonstiff.GraggBulirschStoerStepInterpolator to /home/qxin/jkali_expts_bdj/repair/bugs-dot-jar_MATH-288_38983e82/r1/AstorMain-bugs-dot-jar_MATH-288_38983e82/src/variant-513
+2018-08-08 01:07:04,803 INFO main - 
+----SUMMARY_EXECUTION---
+2018-08-08 01:07:04,803 INFO main - 
+Solution details
+2018-08-08 01:07:04,804 INFO main - 
+ --SOLUTIONS DESCRIPTION--
+
+ ----
+ProgramVariant 513
+ 
+time(sec)= 1715
+operation: RemoveOp
+location= org.apache.commons.math.optimization.linear.SimplexSolver
+line= 63
+lineSuspiciousness= 0.189
+original statement= minValue = tableau.getEntry(0, i)
+fixed statement= minValue = tableau.getEntry(0, i)
+generation= 1
+ingredientScope= -
+validation=|true|0|1948|[]|
+2018-08-08 01:07:04,804 INFO fr.inria.main.evolution.AstorMain - Time Total(s): 1891.307

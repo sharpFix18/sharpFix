@@ -1,0 +1,14 @@
+*** /home/qx5/elixir_bdj_bugs/jackrabbit-oak/bugs-dot-jar_OAK-1289_0c3e3d70/oak-core/src/main/java/org/apache/jackrabbit/oak/plugins/mongomk/Revision.java	Wed Jun 13 21:01:25 2018
+--- /home/qx5/ssFix_expts_bdj/repair/repairflag0_faulocflag0_cignoreflag0/bugs-dot-jar_OAK-1289_0c3e3d70/e0/patches/f4/c31/p5/Revision.java	Fri Jul 27 23:06:00 2018
+***************
+*** 81,86 ****
+--- 81,89 ----
+       */
+      int compareRevisionTime(Revision other) {
+          if (clusterId != other.clusterId) {
++ 			return clusterId < other.clusterId ? -1 : 1;
++ 		}
++ 		if (clusterId != other.clusterId) {
+              throw new IllegalArgumentException(
+                      "Trying to compare revisions of different cluster ids: " + 
+                              this + " and " + other);

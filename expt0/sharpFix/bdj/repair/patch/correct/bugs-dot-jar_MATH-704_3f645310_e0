@@ -1,0 +1,19 @@
+*** /home/qx5/elixir_bdj_bugs/math/bugs-dot-jar_MATH-704_3f645310//src/main/java/org/apache/commons/math/stat/descriptive/moment/Variance.java	Fri Jun 22 06:20:42 2018
+--- /home/qx5/sharpfix_expts_bdj/repair/repairflag2_faulocflag0_cignoreflag0/bugs-dot-jar_MATH-704_3f645310/e0/f10/repair/c10/p30/Variance.java	Fri Jul 13 01:48:45 2018
+***************
+*** 517,523 ****
+                  }
+  
+                  double sumWts = 0;
+!                 for (int i = 0; i < weights.length; i++) {
+                      sumWts += weights[i];
+                  }
+  
+--- 517,523 ----
+                  }
+  
+                  double sumWts = 0;
+!                 for (int i = begin; i < begin + length; i++) {
+                      sumWts += weights[i];
+                  }
+  

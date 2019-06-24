@@ -1,0 +1,19 @@
+*** /home/qx5/elixir_bdj_bugs/accumulo/bugs-dot-jar_ACCUMULO-4029_5ca779a0/core/src/main/java/org/apache/accumulo/core/data/thrift/TMutation.java	Wed Jun 13 20:52:39 2018
+--- /home/qx5/ssFix_expts_bdj/repair/repairflag0_faulocflag0_cignoreflag0/bugs-dot-jar_ACCUMULO-4029_5ca779a0/e0/patches/f1/c0/p0/TMutation.java	Sat Jul 28 00:31:01 2018
+***************
+*** 461,467 ****
+  
+    @Override
+    public int hashCode() {
+!     return 0;
+    }
+  
+    @Override
+--- 461,467 ----
+  
+    @Override
+    public int hashCode() {
+!     return 2;
+    }
+  
+    @Override

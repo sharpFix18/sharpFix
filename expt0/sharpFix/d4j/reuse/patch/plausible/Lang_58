@@ -1,0 +1,23 @@
+*** /home/qx5/defects4j_bugs/bugs/langs/projs/Lang_58_buggy/NumberUtils.java	Mon Nov 30 20:52:24 2015
+--- /home/qx5/sharpfix_expts/candidatereuse/Lang_58/p5/NumberUtils.java	Sun Jan 28 21:07:39 2018
+***************
+*** 449,458 ****
+              switch (lastChar) {
+                  case 'l' :
+                  case 'L' :
+!                     if (dec == null
+!                         && exp == null
+!                         && isDigits(numeric.substring(1))
+!                         && (numeric.charAt(0) == '-' || Character.isDigit(numeric.charAt(0)))) {
+                          try {
+                              return createLong(numeric);
+                          } catch (NumberFormatException nfe) {
+--- 449,456 ----
+              switch (lastChar) {
+                  case 'l' :
+                  case 'L' :
+!                     if (dec == null && exp == null
+! 							&& (numeric.charAt(0) == '-' && isDigits(numeric.substring(1)) || isDigits(numeric))) {
+                          try {
+                              return createLong(numeric);
+                          } catch (NumberFormatException nfe) {

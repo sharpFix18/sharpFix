@@ -1,4 +1,0 @@
-EM,RM,PM:205,205,0
-EM:/home/qx5/defects4j_bugs/bugs/closures/projs/Closure_119_buggy/src/com/google/javascript/jscomp/TypeInference.java,slc:444,8
-RM:/home/qx5/defects4j_bugs/bugs/closures/projs/Closure_119_buggy/src/com/google/javascript/jscomp/TypeInference.java,slc:444,8
-PM:/home/qx5/defects4j_bugs/bugs/closures/projs/Closure_119_buggy/src/com/google/javascript/jscomp/PeepholeRemoveDeadCode.java,slc:215,8

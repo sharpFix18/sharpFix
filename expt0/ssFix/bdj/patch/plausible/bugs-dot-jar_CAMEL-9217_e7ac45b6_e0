@@ -1,0 +1,13 @@
+*** /home/qx5/elixir_bdj_bugs/camel/bugs-dot-jar_CAMEL-9217_e7ac45b6/camel-core/src/main/java/org/apache/camel/impl/DefaultComponent.java	Wed Jun 13 21:55:38 2018
+--- /home/qx5/ssFix_expts_bdj/repair/repairflag0_faulocflag0_cignoreflag0/bugs-dot-jar_CAMEL-9217_e7ac45b6/e0/patches/f3/c29/p0/DefaultComponent.java	Sat Jul 28 07:20:04 2018
+***************
+*** 198,205 ****
+      protected void validateURI(String uri, String path, Map<String, Object> parameters) {
+          // check for uri containing & but no ? marker
+          if (uri.contains("&") && !uri.contains("?")) {
+-             throw new ResolveEndpointFailedException(uri, "Invalid uri syntax: no ? marker however the uri "
+-                 + "has & parameter separators. Check the uri if its missing a ? marker.");
+          }
+  
+          // check for uri containing double && markers without include by RAW
+--- 198,203 ----

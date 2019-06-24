@@ -1,0 +1,19 @@
+*** /home/qx5/elixir_bdj_bugs/jackrabbit-oak/bugs-dot-jar_OAK-479_3270e761/oak-jcr/src/main/java/org/apache/jackrabbit/oak/jcr/NodeImpl.java	Wed Jun 13 21:12:40 2018
+--- /home/qx5/ssFix_expts_bdj/repair/repairflag0_faulocflag0_cignoreflag0/bugs-dot-jar_OAK-479_3270e761/e0/patches/f0/c41/p1/NodeImpl.java	Sat Jul 28 12:41:21 2018
+***************
+*** 964,970 ****
+          if (getDepth() == 0) {
+              return dlg.sessionDelegate.getDefinitionProvider().getRootDefinition();
+          } else {
+!             return dlg.sessionDelegate.getDefinitionProvider().getDefinition(getParent(), this);
+          }
+      }
+  
+--- 964,970 ----
+          if (getDepth() == 0) {
+              return dlg.sessionDelegate.getDefinitionProvider().getRootDefinition();
+          } else {
+!             return getParent().getDefinition();
+          }
+      }
+  

@@ -1,4 +1,0 @@
-EM,RM,PM:-1,39,2
-EM:null,null
-RM:/home/qx5/defects4j_bugs/bugs/closures/projs/Closure_92_buggy/src/com/google/javascript/rhino/jstype/JSTypeRegistry.java,slc:565,4
-PM:/home/qx5/defects4j_bugs/bugs/closures/projs/Closure_92_buggy/src/com/google/javascript/jscomp/NameReferenceGraph.java,slc:270,6

@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/closures/projs/Closure_109_buggy/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java	Mon Feb 20 17:27:55 2017
+--- /home/qx5/sharpfix_expts/repair/repairflag2_faulocflag0_cignoreflag0/Closure_109/e0/f4/repair/c47/m1/p0/JsDocInfoParser.java	Mon Feb  5 03:31:58 2018
+***************
+*** 1938,1944 ****
+     */
+    private Node parseTypeName(JsDocToken token) {
+      if (token != JsDocToken.STRING) {
+!       return reportGenericTypeSyntaxWarning();
+      }
+  
+      String typeName = stream.getString();
+--- 1938,1944 ----
+     */
+    private Node parseTypeName(JsDocToken token) {
+      if (token != JsDocToken.STRING) {
+!       return newNode(Token.EMPTY);
+      }
+  
+      String typeName = stream.getString();

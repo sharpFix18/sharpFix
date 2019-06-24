@@ -1,0 +1,19 @@
+*** /home/qx5/elixir_bdj_bugs/wicket/bugs-dot-jar_WICKET-5226_8e518d88/wicket-cdi/src/main/java/org/apache/wicket/cdi/ComponentInjector.java	Wed Jun 13 21:43:21 2018
+--- /home/qx5/sharpfix_expts_bdj/repair/repairflag2_faulocflag0_cignoreflag0/bugs-dot-jar_WICKET-5226_8e518d88/e0/f4/repair/c57/m1/p0/ComponentInjector.java	Fri Jul 13 14:34:51 2018
+***************
+*** 48,54 ****
+  	{
+  		Class<? extends Component> componentClass = component.getClass();
+  
+! 		if (componentClass.isMemberClass() && Modifier.isStatic(componentClass.getModifiers()) == false)
+  		{
+  			LOG.debug("Skipping non-static inner class '{}' ", componentClass);
+  		}
+--- 48,54 ----
+  	{
+  		Class<? extends Component> componentClass = component.getClass();
+  
+! 		if (Component.class.isAssignableFrom(componentClass) && Modifier.isStatic(componentClass.getModifiers()) == false)
+  		{
+  			LOG.debug("Skipping non-static inner class '{}' ", componentClass);
+  		}

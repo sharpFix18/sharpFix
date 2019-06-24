@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/times/projs/Time_17_buggy/src/main/java/org/joda/time/DateTimeZone.java	Mon Feb 20 16:48:21 2017
+--- /home/qx5/ssFix_expts/repair/repairflag0_faulocflag3_cignoreflag0/Time_17/e0/patches/f0/c10/p1/DateTimeZone.java	Mon Dec 25 14:49:50 2017
+***************
+*** 1162,1168 ****
+       */
+      public long adjustOffset(long instant, boolean earlierOrLater) {
+          long before = convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR);
+!         long after = convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR);
+          if (before == after) {
+              return instant;
+          }
+--- 1162,1168 ----
+       */
+      public long adjustOffset(long instant, boolean earlierOrLater) {
+          long before = convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR);
+!         long after = convertUTCToLocal(instant + 6L * DateTimeConstants.MILLIS_PER_HOUR);
+          if (before == after) {
+              return instant;
+          }

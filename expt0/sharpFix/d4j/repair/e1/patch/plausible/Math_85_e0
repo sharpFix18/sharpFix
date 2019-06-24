@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/maths/projs/Math_85_buggy/src/java/org/apache/commons/math/analysis/solvers/UnivariateRealSolverUtils.java	Tue Oct 13 15:09:31 2015
+--- /home/qx5/sharpfix_expts/repair/repairflag5_faulocflag0_cignoreflag0/Math_85/e0/repair/c5/p0/UnivariateRealSolverUtils.java	Wed Jan 31 01:41:26 2018
+***************
+*** 195,201 ****
+          } while ((fa * fb > 0.0) && (numIterations < maximumIterations) && 
+                  ((a > lowerBound) || (b < upperBound)));
+     
+!         if (fa * fb >= 0.0 ) {
+              throw new ConvergenceException(
+                        "number of iterations={0}, maximum iterations={1}, " +
+                        "initial={2}, lower bound={3}, upper bound={4}, final a value={5}, " +
+--- 195,201 ----
+          } while ((fa * fb > 0.0) && (numIterations < maximumIterations) && 
+                  ((a > lowerBound) || (b < upperBound)));
+     
+!         if (fa * fb > 0.0 ) {
+              throw new ConvergenceException(
+                        "number of iterations={0}, maximum iterations={1}, " +
+                        "initial={2}, lower bound={3}, upper bound={4}, final a value={5}, " +

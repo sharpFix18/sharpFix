@@ -1,0 +1,20 @@
+*** /home/qx5/elixir_bdj_bugs/jackrabbit-oak/bugs-dot-jar_OAK-421_36e70bd7/oak-core/src/main/java/org/apache/jackrabbit/oak/plugins/memory/MemoryNodeBuilder.java	Wed Jun 13 21:10:05 2018
+--- /home/qx5/sharpfix_expts_bdj/repair/repairflag2_faulocflag0_cignoreflag0/bugs-dot-jar_OAK-421_36e70bd7/e0/f1/repair/c57/p1/MemoryNodeBuilder.java	Fri Jul 13 01:25:23 2018
+***************
+*** 263,269 ****
+      @Override
+      public void reset(NodeState newBase) {
+          if (this == root) {
+!             baseState = checkNotNull(newBase);
+              writeState = new MutableNodeState(baseState);
+              revision++;
+          } else {
+--- 263,270 ----
+      @Override
+      public void reset(NodeState newBase) {
+          if (this == root) {
+!             this.revision = -1;
+! 			baseState = checkNotNull(newBase);
+              writeState = new MutableNodeState(baseState);
+              revision++;
+          } else {

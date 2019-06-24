@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/langs/projs/Lang_6_buggy/src/main/java/org/apache/commons/lang3/StringEscapeUtils.java	Sun Mar  5 09:51:17 2017
+--- /home/qx5/sharpfix_expts/repair/repairflag2_faulocflag0_cignoreflag0/Lang_6/e0/f2/repair/c6/p0/StringEscapeUtils.java	Sat Feb  3 21:26:27 2018
+***************
+*** 553,559 ****
+       * @since 2.4
+       */
+      public static final String escapeCsv(String input) {
+!         return ESCAPE_CSV.translate(input);
+      }
+  
+      /**
+--- 553,559 ----
+       * @since 2.4
+       */
+      public static final String escapeCsv(String input) {
+!         return ESCAPE_XML.translate(input);
+      }
+  
+      /**

@@ -1,0 +1,23 @@
+*** /home/qx5/defects4j_bugs/bugs/closures/projs/Closure_126_buggy/src/com/google/javascript/jscomp/MinimizeExitPoints.java	Wed Aug 10 19:40:42 2016
+--- /home/qx5/sharpfix_expts/repair/repairflag2_faulocflag3_cignoreflag0/Closure_126/e0/f0/repair/c6/p0/MinimizeExitPoints.java	Wed Jan 31 22:27:55 2018
+***************
+*** 135,142 ****
+          tryMinimizeExits(catchCodeBlock, exitType, labelName);
+        }
+        if (NodeUtil.hasFinally(n)) {
+!         Node finallyBlock = n.getLastChild();
+!         tryMinimizeExits(finallyBlock, exitType, labelName);
+        }
+      }
+  
+--- 135,144 ----
+          tryMinimizeExits(catchCodeBlock, exitType, labelName);
+        }
+        if (NodeUtil.hasFinally(n)) {
+!         if (n.isLabel()) {
+! 			Node finallyBlock = n.getLastChild();
+! 			tryMinimizeExits(finallyBlock, exitType, labelName);
+! 		}
+        }
+      }
+  

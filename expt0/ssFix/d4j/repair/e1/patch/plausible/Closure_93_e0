@@ -1,0 +1,12 @@
+*** /home/qx5/defects4j_bugs/bugs/closures/projs/Closure_93_buggy/src/com/google/javascript/jscomp/ProcessClosurePrimitives.java	Mon Feb 20 17:18:54 2017
+--- /home/qx5/ssFix_expts/repair/repairflag1_faulocflag0_cignoreflag0/Closure_93/e0/c278/p0/ProcessClosurePrimitives.java	Fri Dec 15 13:20:36 2017
+***************
+*** 787,792 ****
+--- 787,793 ----
+            // In this case, the name was implicitly provided by two independent
+            // modules. We need to move this code up to a common module.
+            int indexOfDot = namespace.indexOf('.');
++ 		indexOfDot = namespace.indexOf('.', indexOfDot + 1);
+            if (indexOfDot == -1) {
+              // Any old place is fine.
+              compiler.getNodeForCodeInsertion(minimumModule)

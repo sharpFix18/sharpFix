@@ -1,0 +1,22 @@
+*** /home/qx5/defects4j_bugs/bugs/times/projs/Time_2_buggy/src/main/java/org/joda/time/Partial.java	Mon Feb 20 16:46:08 2017
+--- /home/qx5/sharpfix_expts/repair/repairflag2_faulocflag0_cignoreflag0/Time_2/e0/f0/repair/c181/p3/Partial.java	Fri Feb  2 17:24:57 2018
+***************
+*** 221,227 ****
+                  } else if (compare == 0) {
+                      if (types[i - 1].getRangeDurationType() == null) {
+                          if (loopType.getRangeDurationType() == null) {
+!                             throw new IllegalArgumentException("Types array must not contain duplicate: " + loopType.getName());
+                          }
+                      } else {
+                          if (loopType.getRangeDurationType() == null) {
+--- 221,230 ----
+                  } else if (compare == 0) {
+                      if (types[i - 1].getRangeDurationType() == null) {
+                          if (loopType.getRangeDurationType() == null) {
+!                             if (i > 0 && types[i - 1] == types[i]) {
+! 								throw new IllegalArgumentException(
+! 										"Types array must not contain duplicate: " + loopType.getName());
+! 							}
+                          }
+                      } else {
+                          if (loopType.getRangeDurationType() == null) {

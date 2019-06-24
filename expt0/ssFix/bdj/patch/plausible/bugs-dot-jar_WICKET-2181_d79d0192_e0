@@ -1,0 +1,19 @@
+*** /home/qx5/elixir_bdj_bugs/wicket/bugs-dot-jar_WICKET-2181_d79d0192/wicket/src/main/java/org/apache/wicket/markup/html/list/PageableListView.java	Wed Jun 13 21:15:02 2018
+--- /home/qx5/ssFix_expts_bdj/repair/repairflag0_faulocflag0_cignoreflag0/bugs-dot-jar_WICKET-2181_d79d0192/e0/patches/f0/c9/p0/PageableListView.java	Fri Jul 27 14:28:40 2018
+***************
+*** 84,90 ****
+  	public final int getCurrentPage()
+  	{
+  		// If first cell is out of range, bring page back into range
+! 		while ((currentPage * rowsPerPage) >= getList().size())
+  		{
+  			currentPage--;
+  		}
+--- 84,90 ----
+  	public final int getCurrentPage()
+  	{
+  		// If first cell is out of range, bring page back into range
+! 		while ((currentPage * rowsPerPage) > getList().size())
+  		{
+  			currentPage--;
+  		}

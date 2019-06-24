@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/closures/projs/Closure_93_buggy/src/com/google/javascript/jscomp/ProcessClosurePrimitives.java	Mon Feb 20 17:18:54 2017
+--- /home/qx5/sharpfix_expts/repair/repairflag5_faulocflag0_cignoreflag0/Closure_93/e0/repair/c4/p0/ProcessClosurePrimitives.java	Tue Jan 30 23:30:25 2018
+***************
+*** 786,792 ****
+          } else {
+            // In this case, the name was implicitly provided by two independent
+            // modules. We need to move this code up to a common module.
+!           int indexOfDot = namespace.indexOf('.');
+            if (indexOfDot == -1) {
+              // Any old place is fine.
+              compiler.getNodeForCodeInsertion(minimumModule)
+--- 786,792 ----
+          } else {
+            // In this case, the name was implicitly provided by two independent
+            // modules. We need to move this code up to a common module.
+!           int indexOfDot = namespace.lastIndexOf('.');
+            if (indexOfDot == -1) {
+              // Any old place is fine.
+              compiler.getNodeForCodeInsertion(minimumModule)

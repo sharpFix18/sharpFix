@@ -1,0 +1,12 @@
+*** /home/qx5/defects4j_bugs/bugs/maths/projs/Math_28_buggy/src/main/java/org/apache/commons/math3/optimization/linear/SimplexSolver.java	Mon Feb 20 16:57:42 2017
+--- /home/qx5/ssFix_expts/repair/repairflag0_faulocflag3_cignoreflag0/Math_28/e0/patches/f2/c0/p25/SimplexSolver.java	Mon Dec 25 06:05:35 2017
+***************
+*** 137,143 ****
+                  for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1 && minRow != row; i++) {
+                      if (row == tableau.getBasicRow(i)) {
+                          if (i < minIndex) {
+-                             minIndex = i;
+                              minRow = row;
+                          }
+                      }
+--- 137,142 ----

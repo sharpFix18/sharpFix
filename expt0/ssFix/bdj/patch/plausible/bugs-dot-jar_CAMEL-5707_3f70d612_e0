@@ -1,0 +1,19 @@
+*** /home/qx5/elixir_bdj_bugs/camel/bugs-dot-jar_CAMEL-5707_3f70d612/camel-core/src/main/java/org/apache/camel/builder/NotifyBuilder.java	Fri Jun 22 03:29:26 2018
+--- /home/qx5/ssFix_expts_bdj/repair/repairflag0_faulocflag0_cignoreflag0/bugs-dot-jar_CAMEL-5707_3f70d612/e0/patches/f11/c187/p1/NotifyBuilder.java	Fri Jul 27 22:04:34 2018
+***************
+*** 444,450 ****
+              @Override
+              public boolean onExchangeCompleted(Exchange exchange) {
+                  if (exchange.getExchangeId().equals(id)) {
+!                     done.set(false);
+                  }
+                  return true;
+              }
+--- 444,450 ----
+              @Override
+              public boolean onExchangeCompleted(Exchange exchange) {
+                  if (exchange.getExchangeId().equals(id)) {
+!                     done.set(true);
+                  }
+                  return true;
+              }

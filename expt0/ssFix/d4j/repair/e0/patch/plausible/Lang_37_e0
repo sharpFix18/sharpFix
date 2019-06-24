@@ -1,0 +1,24 @@
+*** /home/qx5/defects4j_bugs/bugs/langs/projs/Lang_37_buggy/src/java/org/apache/commons/lang3/ArrayUtils.java	Thu Sep 10 14:22:08 2015
+--- /home/qx5/ssFix_expts/repair/repairflag0_faulocflag0_cignoreflag0/Lang_37/e0/patches/f2/c78/p0/ArrayUtils.java	Thu Jan  4 11:46:55 2018
+***************
+*** 2958,2963 ****
+--- 2958,2976 ----
+          }
+          T[] joinedArray = (T[]) Array.newInstance(array1.getClass().getComponentType(),
+                                                              array1.length + array2.length);
++ 		try {
++ 			System.arraycopy(array2, 0, joinedArray, array1.length,
++ 					array2.length);
++ 		} catch (ArrayStoreException ase) {
++ 			final Class<?> type1 = array1.getClass().getComponentType();
++ 			final Class<?> type2 = array2.getClass().getComponentType();
++ 			if (!type1.isAssignableFrom(type2)) {
++ 				throw new IllegalArgumentException("Cannot store "
++ 						+ type2.getName() + " in an array of "
++ 						+ type1.getName());
++ 			}
++ 			throw ase;
++ 		}
+          System.arraycopy(array1, 0, joinedArray, 0, array1.length);
+          System.arraycopy(array2, 0, joinedArray, array1.length, array2.length);
+          return joinedArray;

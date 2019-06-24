@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/closures/projs/Closure_38_buggy/src/com/google/javascript/jscomp/CodeConsumer.java	Mon Feb 20 16:59:46 2017
+--- /home/qx5/ssFix_expts/repair/repairflag0_faulocflag3_cignoreflag0/Closure_38/e0/patches/f1/c8/p1/CodeConsumer.java	Mon Dec 25 00:29:17 2017
+***************
+*** 241,247 ****
+      // This is not pretty printing. This is to prevent misparsing of x- -4 as
+      // x--4 (which is a syntax error).
+      char prev = getLastChar();
+!     if (x < 0 && prev == '-') {
+        add(" ");
+      }
+  
+--- 241,247 ----
+      // This is not pretty printing. This is to prevent misparsing of x- -4 as
+      // x--4 (which is a syntax error).
+      char prev = getLastChar();
+!     if (prev == '-' && prev == '-') {
+        add(" ");
+      }
+  

@@ -1,0 +1,18 @@
+*** /home/qx5/defects4j_bugs/bugs/maths/projs/Math_28_buggy/src/main/java/org/apache/commons/math3/optimization/linear/SimplexSolver.java	Mon Feb 20 16:57:42 2017
+--- /home/qx5/sharpfix_expts/repair/repairflag2_faulocflag3_cignoreflag0/Math_28/e0/f0/repair/c7/p1/SimplexSolver.java	Wed Jan 31 18:40:52 2018
+***************
+*** 132,137 ****
+--- 132,144 ----
+              // see http://www.stanford.edu/class/msande310/blandrule.pdf
+              // see http://en.wikipedia.org/wiki/Bland%27s_rule (not equivalent to the above paper)
+              Integer minRow = null;
++ 			for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1; i++) {
++ 				final double entry = tableau.getEntry(0, i);
++ 				if (entry < minRatio) {
++ 					minRatio = entry;
++ 					minRow = i;
++ 				}
++ 			}
+              int minIndex = tableau.getWidth();
+              for (Integer row : minRatioPositions) {
+                  for (int i = tableau.getNumObjectiveFunctions(); i < tableau.getWidth() - 1 && minRow != row; i++) {

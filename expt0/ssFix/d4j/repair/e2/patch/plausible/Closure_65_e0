@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/closures/projs/Closure_65_buggy/src/com/google/javascript/jscomp/CodeGenerator.java	Tue Dec  8 20:29:35 2015
+--- /home/qx5/ssFix_expts/repair/repairflag0_faulocflag3_cignoreflag0/Closure_65/e0/patches/f2/c579/p1/CodeGenerator.java	Mon Dec 25 15:45:34 2017
+***************
+*** 1012,1018 ****
+      for (int i = 0; i < s.length(); i++) {
+        char c = s.charAt(i);
+        switch (c) {
+!         case '\0': sb.append("\\0"); break;
+          case '\n': sb.append("\\n"); break;
+          case '\r': sb.append("\\r"); break;
+          case '\t': sb.append("\\t"); break;
+--- 1012,1018 ----
+      for (int i = 0; i < s.length(); i++) {
+        char c = s.charAt(i);
+        switch (c) {
+!         case '\0': sb.append("\\000"); break;
+          case '\n': sb.append("\\n"); break;
+          case '\r': sb.append("\\r"); break;
+          case '\t': sb.append("\\t"); break;

@@ -1,0 +1,19 @@
+*** /home/qx5/defects4j_bugs/bugs/closures/projs/Closure_86_buggy/src/com/google/javascript/jscomp/NodeUtil.java	Tue Dec  8 20:37:16 2015
+--- /home/qx5/ssFix_expts/repair/repairflag1_faulocflag0_cignoreflag0/Closure_86/e0/c1/p0/NodeUtil.java	Fri Dec 15 13:07:31 2017
+***************
+*** 2459,2465 ****
+              || isToStringMethodCall(value)
+              || locals.apply(value);
+        case Token.NEW:
+!         return true;
+        case Token.FUNCTION:
+        case Token.REGEXP:
+        case Token.ARRAYLIT:
+--- 2459,2465 ----
+              || isToStringMethodCall(value)
+              || locals.apply(value);
+        case Token.NEW:
+!         return false;
+        case Token.FUNCTION:
+        case Token.REGEXP:
+        case Token.ARRAYLIT:

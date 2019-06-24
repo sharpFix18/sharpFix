@@ -1,0 +1,19 @@
+*** /home/qx5/elixir_bdj_bugs/camel/bugs-dot-jar_CAMEL-4542_c408c3ed/camel-core/src/main/java/org/apache/camel/model/language/MethodCallExpression.java	Tue Jul  3 06:43:30 2018
+--- /home/qx5/sharpfix_expts_bdj/repair/repairflag2_faulocflag0_cignoreflag0/bugs-dot-jar_CAMEL-4542_c408c3ed/e0/f3/repair/c2/p0/MethodCallExpression.java	Tue Aug  7 17:59:05 2018
+***************
+*** 170,176 ****
+              BeanHolder holder = new RegistryBean(camelContext, ref);
+              // get the bean which will check that it exists
+              instance = holder.getBean();
+!             answer = new BeanExpression(ref, getMethod());
+          }
+  
+          validateHasMethod(camelContext, instance, beanType, getMethod());
+--- 170,176 ----
+              BeanHolder holder = new RegistryBean(camelContext, ref);
+              // get the bean which will check that it exists
+              instance = holder.getBean();
+!             answer = new BeanExpression(instance, getMethod());
+          }
+  
+          validateHasMethod(camelContext, instance, beanType, getMethod());

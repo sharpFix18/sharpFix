@@ -1,0 +1,19 @@
+*** /home/qx5/elixir_bdj_bugs/camel/bugs-dot-jar_CAMEL-7459_57ba1bde/camel-core/src/main/java/org/apache/camel/util/URISupport.java	Wed Jun 13 21:39:11 2018
+--- /home/qx5/ssFix_expts_bdj/repair/repairflag0_faulocflag0_cignoreflag0/bugs-dot-jar_CAMEL-7459_57ba1bde/e0/patches/f7/c73/p0/URISupport.java	Sat Jul 28 06:38:31 2018
+***************
+*** 174,180 ****
+  
+                      // we only end the raw marker if its )& or at the end of the value
+  
+!                     boolean end = ch == RAW_TOKEN_END.charAt(0) && (next == '&' || next == '\u0000');
+                      if (end) {
+                          // raw value end, so add that as a parameter, and reset flags
+                          addParameter(key.toString(), value.toString(), rc, useRaw || isRaw);
+--- 174,180 ----
+  
+                      // we only end the raw marker if its )& or at the end of the value
+  
+!                     boolean end = ch == RAW_TOKEN_END.charAt(0) && (next == '&' || next == '|');
+                      if (end) {
+                          // raw value end, so add that as a parameter, and reset flags
+                          addParameter(key.toString(), value.toString(), rc, useRaw || isRaw);
